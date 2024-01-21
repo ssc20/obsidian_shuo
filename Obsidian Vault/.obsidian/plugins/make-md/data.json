@@ -18,7 +18,7 @@
   "saveAllContextToFrontmatter": true,
   "editorFlowStyle": "seamless",
   "autoOpenFileContext": false,
-  "activeView": "Spaces/Home",
+  "activeView": "spaces://$tags",
   "hideFrontmatter": true,
   "activeSpace": "",
   "defaultDateFormat": "MMM dd yyyy",
@@ -35,9 +35,8 @@
   "showRibbon": true,
   "deleteFileOption": "trash",
   "expandedSpaces": [
-    "Spaces/Home/Spaces/Home/Other",
-    "Spaces/Home/Spaces/Home/mac_obsidian",
-    "Spaces/Home/Spaces/Home/CS50"
+    "spaces://$tags/spaces://#pset",
+    "spaces://$tags/spaces://#pset"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
