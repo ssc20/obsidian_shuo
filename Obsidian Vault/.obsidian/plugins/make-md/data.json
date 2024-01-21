@@ -35,7 +35,9 @@
   "showRibbon": true,
   "deleteFileOption": "trash",
   "expandedSpaces": [
-    "Spaces/Home/Spaces/Home/Other"
+    "Spaces/Home/Spaces/Home/Other",
+    "Spaces/Home/Spaces/Home/mac_obsidian",
+    "Spaces/Home/Spaces/Home/CS50"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
