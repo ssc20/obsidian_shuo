@@ -1213,7 +1213,7 @@ int main(void)
     printf("%i\n", length);
 }
 ```
-
+#lowertoupper 
 - `ctype.h` is another library that is useful
 	- imagine we wanted to create a program that converted all lowercase char to uppercase
 	- in the terminal window type `code uppercase.c` and write code as follows:
