@@ -980,6 +980,24 @@ int main(void)
 }
 ```
 - notice that `score[0]` examines the value at this location of memory by `indexing into` the array called `scores` at location `0` to see what value is stored there
+- You can see how while the above code works, there is still an opportunity for improving our code. Revise your code as follows:
+```c
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+	// Get scores
+	int scores[3];
+	for (int i = 0; i < 3; i++)
+	{
+		scores[i] = get_int("Score: ");
+	}
+
+	// Print average
+	printf("Average: %f\n", (scores[0] + scores[1] + scores[2]) / 3.0);
+}
+```
 
 
 
