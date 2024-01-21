@@ -999,8 +999,82 @@ int main(void)
 }
 ```
 - notice how we can index into `scores` by using `scores[i]` where `i` is supplied by the `for` loop
+- We can simplify or *abstract away* the calculation of the average. See below:
 
+```c
+#include <cs50.h>
+#include <stdio.h>
 
+// Constant
+const int N = 3;
+
+// Prototype
+float average(int length, int array[]);
+
+int main(void)
+{
+    // Get scores
+    int scores[N];
+    for (int i = 0; i < N; i++)
+    {
+        scores[i] = get_int("Score: ");
+    }
+
+    // Print average
+    printf("Average: %f\n", average(N, scores));
+}
+
+float average(int length, int array[])
+{
+    // Calculate average
+    int sum = 0;
+    for (int i = 0; i < length; i++)
+    {
+        sum += array[i];
+    }
+    return sum / (float) length;
+}
+
+```
+
+- Notice a new function called `average` has been declared
+	- further, notice a `const` or constant value of `N` is declared
+	- most importantly, notice how the `average` function takes `int array[]`, which means that the compiler passes an array to the function
+- not only can arrays be containers: they can be passed between functions
+## Strings
+- a `string` is simply an array of variables of type `char`: an array of characters
+- considering the following image, you can see how a string is an array of characters that begins with the first character
+	- it also ends with a special character called a `NUL character:`
+		- ![[CleanShot 2024-01-21 at 16.51.41@2x.png]]
+	- imagining this in decimal, your array would look like the following:
+		- ![[CleanShot 2024-01-21 at 16.52.04@2x.png]]
+- Implementing this in your own code, type `code hi.c` in the terminal window and write code as follows:
+```c
+#include <stdio.h>
+
+int main(void)
+{
+	char c1 = 'H';
+	char c2 = 'I';
+	char c3 = '!';
+
+	printf("%c%c%c\n", c1, c2, c3);
+}
+```
+- notice that this will output a string of characters
+- Similarly, make the following modification to your code:
+```c
+#include <stdio.h>
+
+int main(void)
+{
+	char c1 = 'H';
+	char c2 = 'I';
+	char c3 = '!';
+
+	prinf(%i %i %i\n", c1, c2, c3);
+}
+```
 # Week 1
 ## PSET1 
 ### LLamas
