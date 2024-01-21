@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Spaces/Home/CS50/CS50 Notes.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -162,8 +162,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -184,7 +183,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b5a8f20e69892e09",
+  "active": "f358563627da0082",
   "lastOpenFiles": [
     "Spaces/Home/CS50/CS50 Notes.md",
     "Spaces/Home/CS50/CS50 - Credit.md",

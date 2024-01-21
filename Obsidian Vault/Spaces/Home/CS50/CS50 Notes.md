@@ -7,42 +7,45 @@
 #cs50/week/2
 
 
-Conditional statements
-- Conditional expressions allow your programs to make decisions and take different forks in the road
 
+# Week 2
+## PSET 2
+### INFO
+#cs50/pset/2
+1. Log into cs50.dev using your GitHub account
+2. Run `update50` in your codespace's terminal window to ensure your codespace is up-to-date and, when prompted, click **Rebuild now**
+3. Submit **Scrabble**
+4. Submit **Readability**
+5. Submit one of:
+	1. **Caesar**, if feeling less comfrotable
+	2. **Substitution**, if feeling more comfortable
+If you submit both Caesar and Substitution, we'll record the higher of your two scores.
 
-# PSET 2 - SCRABBLE
+When to do it?
+Tuesday, December 31, 2024 at 11:59 PM EST.
+
+### PSET 2 - SCRABBLE
 #cs50/pset/2/scrabble
-### Problem to solve
+
+#### Problem to solve
 In the game of Scrabble, players create words to score points, and the number of points is the sum of the point values of each letter in the word.
 
 For example, if we wanted to score the word "CODE", we would note that the 'C' is worth 3 points, the 'O' is worth 1 point, the 'D' is worth 2 points, and the 'E' is worth 1 point. Summing these, we get that "CODE" is worth 7 points.
 
 In a file called `scrabble.c` in a folder called `scrabble`, implement a program in C that determines the winner of a short Scrabble-like game. Your program should prompt for input twice: once for "Player 1" to input their word and once for "Player 2" to input their word. Then, depending on which player scores the most points your program should either print "Player 1 wins!", "Player 2 wins!", or "Tie!" (in the event that two players score equal points).
 
-### Advice and Hints
+#### Advice and Hints
 - write some code that you know will compile
 - Write some pseudocode before writing more code
 - Convert the pseudocode to code
 
-### Correctness
+#### Correctness
 - in terminal run
 	- `check50 cs50/problems/2024/x/scrabble`
 - submit:
 	- `submit50 cs50/problems/2024/x/scrabble`
 
-### PSET 2
-1. Log into cs50.dev using your GitHub account
-2. Run `update50` in your codespace's terminal window to ensure your codespace is up-to-date and, when prompted, click **Rebuild now**
-3. Submit Scrabble
-4. Submit Readability
-5. Submit one of:
-	1. Caesar, if feeling less comfrotable
-	2. Substitution, if feeling more comfortable
-If you submit both Caesar and Substitution, we'll record the higher of your two scores.
 
-When to do it?
-Tuesday, December 31, 2024 at 11:59 PM EST.
 
 Advice
 - try out any of David's programs from class via Week 2's examples
@@ -50,7 +53,10 @@ Advice
 - If you see any errors when compiling your code with `make` , focus first on fixing the very first error you see, scrolling up as needed. 
 - If unsure what it means, try asking `help50` for help. 
 - For instance, if trying to compile `readability` and `make readability` is yielding errors, try running `help50 make readability` instead!
-# Compiling
+
+## Notes
+
+### Compiling
 #cs50/week/2/compiling
 - compilers have acted as an abstraction
 
@@ -93,6 +99,7 @@ int main(void)
 - make has been inputting these command line arguments for you
 - compiling is 1 of 4 steps that get involved in turning binary into outputs
 
+### Preprocessing
 - Preprocessing
 	```c
 	#include <cs50.h>
@@ -155,7 +162,7 @@ void meow(void)
 	- generally the midnset is if you're good to decomplile it, 
 		- could implement?
 	- having techniques 
-# Debugging
+### Debugging
 #cs50/week/2/debugging
 - going through Mario program
 	- ![[CleanShot 2024-01-13 at 21.03.07.png]]
@@ -228,7 +235,8 @@ int main(void)
 ```
 - within cs50.h one line of code thta defines return value, the function name and the arguments for get_string
 #cs50/week/2/libraries
-#cs50/week/1/c 
+
+### Command-line Arguments (argc, argv[])
 
 ```c
 int main(int argc, string argv[])
@@ -239,7 +247,7 @@ int main(int argc, string argv[])
 - the above code is an example of an alternative to `int main(void)`
 #cs50/week/2/command-line-arguments/argc #cs50/week/2/command-line-arguments/argv 
 
-Exit status
+### Exit status
 #cs50/week/2/command-line-arguments/exitstatus
 - one other thing about the code we've been writing
 - all programs eventually exit because we see that they exit
@@ -262,7 +270,7 @@ Exit status
 - get in the habit of automatically testing your code
 	- these test can detect the status codes, knowing that your code succeeds or fails
 - goal of this week: is to solve problems
-
+### Cryptography
 #cs50/week/2/arrays/cryptography
 - cryptography is the art of the science of encrypting
 	- encrypting: scrambling information
@@ -317,127 +325,8 @@ Exit status
 
 #cs50/week/2 
 
-#cs50/week/1/scope
-scope: characteristic of a variable that defines
-- from which functions that this variable can be accessed
 
-- local variables can only be accesssed within teh functions in which they are creatd
-- global variables can be accessed by any function in the program
-
-- so far in the course, you've almost always been working only with local variables
-```c
-int main(void)
-{
-	int result = triple(5);
-}
-
-int triple(int x)
-{
-	return x * 3;*
-}
-```
-
-- here, x is local to the function `triple()`. 
-- no other function can refer to that variable, not even `main()`. `result` is **local** to `main()`
-
-- global variables exist too
-- if a variable is declared outside of all functions, **any** function may refer to it
-
-```c
-#include <stdio.h>
-
-float flobal = 0.5050;
-
-int main(void)
-{
-	triple();
-	printf(%f\n", global);
-}
-
-void triple(void)
-{
-	global *= 3;
-}
-```
-
-- if i go through the program
-	- main calls triple
-	- triple multiples global by 3
-		- 1.5 something (return)
-		- main prints out the value of global
-		- it will print out global times 3, 1.51
-	- have to be careful when working with global because of its flexibility (dangerous consequences)
-- why does this distinction matter
-	- local variables are **passed by value** in function calls
-	- the callee (function receiving the variable passed in as input) doesn't actually receive the variable itself
-	- again:
-		- when a variable is passed by value, the **callee** receives a *copy* of the passed variable, not the variable itself
-		- this means that the variable in the **caller** is unchanged unless overwritten.
-	- the variable in the caller is unchanged unless you override it
-
-```c
-int main(void)
-{
-	int foo = 4;
-	triple(foo);
-}
-
-int triple(int x)
-{
-	return x *= 3;
-}
-
-```
-
-- in this code, foo is not changed at all
-	- int foo = 4
-	- call triple of foo
-	- you can see that there's no effect
-
-compared to
-
-```c
-
-int main(void)
-{
-	int foo = 4;
-	foo = triple(foo);
-}
-
-int triple(int x)
-{
-	return x *= 3;
-}
-
-```
-
-- this here, we are overriding/reassigning what `foo` is equal to
-	- you would see ``printf("%i\n", foo)`` to equal 12
-- things can get insidious if the same variable name appears in multiple functions
-	- which is perfectly okay as long as the variables exist in different scopes
-
-do you know what gets printed out at the end of this particular program?
-
-```c
-int increment(int x);
-
-int main(void)
-{
-	int x = 1;
-	int y;
-	y = increment(x);
-	printf("x is %i, y is %i\n", x, y);
-}
-
-int increment(int x)
-{
-	x++;
-	return x;
-}
-```
-
-- (do i get `x is 1, y is 2`?)
-
+### More on Debugging
 #cs50/week/2/debugging #cs50/week/2/debugging/debug50
 
 
@@ -560,7 +449,7 @@ bool check_phrase(string phrase)
 
 
 #cs50/week/2/arrays 
-# Arrays - Info
+### Arrays 
 
 - arrays are a fundamental **data structure**, and they are extremely useful
 - we use arrays to hold values of the same type at contiguous memory locations
@@ -868,7 +757,7 @@ int main(void)
 }
 ```
 
-Strings
+### Strings
 #cs50/week/2/arrays/strings
 - strings work the same way, almost like scrabble?
 - strings are nothing more than arrays where elements are characters
@@ -906,7 +795,7 @@ what can we do to loop through the number of characters in a string?
 		- need to print f at the END!
 		- (I really gotta think about what I'm doing before I move on...)
 questions
-## Command line arguments
+### Command line arguments
 #cs50/week/2/command-line-arguments
 - you may have seen several programs like this before
 - if i type in `make alphabetical`
@@ -969,13 +858,7 @@ QUESTIONS
 	- we can also look at `cowsay -f dragon "RAWR"
 		- in one single command i ran `cowsay`, then `"RAWR` for what the dragon should be saying
 
-## Scrabble
-
-![[CleanShot 2024-01-19 at 23.21.34.png]]
-
-![[CleanShot 2024-01-19 at 23.21.47.png]]
-
-# More Array Notes
+### More Array Notes
 - Compiling
 	- encryption is the act of hiding plain text from prying eyes
 		- decrypting is the act of taking an encrypted piece of text and returning it to a human-readable form
@@ -1099,7 +982,10 @@ int main(void)
 - notice that `score[0]` examines the value at this location of memory by `indexing into` the array called `scores` at location `0` to see what value is stored there
 
 
-# PSET1 
+
+# Week 1
+## PSET1 
+### LLamas
 #CS50/pset/1/llamas 
 Objective
 - goal of *n* llamas
@@ -1135,7 +1021,213 @@ while (n < 1);
 ```
 How might you adapt this code to ensure a start size of at least 9, and an end size of at least the start size?
 
-# PSET1 CS50- MARIO (MORE)
+### PSET1 CS50- MARIO (MORE)
+
+### PSET1 - CREDIT
+#CS50/pset/1/credit 
+
+2023-12-30
+
+```
+int credit(long) // get the # inputted by user? 
+
+>> I need to apply Luhn's algorithm first
+> Then I will validate whether or not the card is valid
+> Then I will validate the card's provider
+this will determine criteria
+
+>> Luhn's
+>> multiply every other digit by 2, starting with the number's second-to-last digit, 
+>> 	then add those products' digits' together
+>> add the sum to the sum of the digits that weren't multiplied by 2
+>> if the total's last digit: 0 (or formally, if the total modulo 10 is congruent to 0), number is valid
+
+AMEX: 15-digit numbers
+Master Card: 16-digit numbers
+Visa: 13 and 16-digit numbers
+
+AMEX: starting 34 or 37
+MasterCard = 
+51,
+52,
+53,
+54,
+55
+
+Visa numbers:
+Starting with
+"4"
+
+
+int main(void)
+take user input (get_long);
+
+
+```
+
+Credit/debit card
+- plastic card which you can pay for goods/services
+- printed on card = number that's stored in db somewhere
+	- when card is buying something, creditor knows whom to bill
+- lots of ppl w/ CC's in this wolrd
+	- so numbers are long
+	- AMEX: 15 digit numbers
+	- MC: 16-digit Numbers
+	- Visa: 13 & 16 digit numbers
+- decimal numbers (0-9) not binary
+- thism eans that AMEX could print as many as 10^15 unique cards
+	- a quadrillion
+
+- not really though
+	- some CC# have some structure to them
+	- All AMEX numbers start with 34 or 37
+	- most MC # start with 51, 52, 53, 54, 55
+		- or have other potential starting numbres which we won't concern ourselves with for this problem
+	- all Visa numbers start with 4
+	- credit card numbers have a checksum built into them, a mathematical relationship between at least one number and others.
+		- that checksum enables computers to detect typos (e.g., transpositions), if not fraudulent numbers
+		- wihtout having to query a db
+		- dishonest mathematician could certain craft a fake number that nonetheless resepcts the mathematical constraint, so a database lookup is still necessary for more rigorous checks.
+- LUHN'S ALGORITHM
+	- most cards use an algorithm invented by Hans Peter Luhn of IBM
+	- LuhnCC number is syntactically valid as follows:
+	  1. multiply every other digit by 2, starting with the number's second-to-last digit, then
+		  1. add those products' digits together
+	  2. Add the sum of the digits that weren't multiplied by 2
+	  3. if the total's last digit is 0 (or, put more formally, if the total modulo 10 is congruent to 0), the number is valid
+- Take David's Visa for example: 4003600000000014
+	1. For the sake of discussion, let’s first underline every other digit, starting with the number’s second-to-last digit:
+    
+    4003600000000014
+    
+    Okay, let’s multiply each of the underlined digits by 2:
+    
+    1•2 + 0•2 + 0•2 + 0•2 + 0•2 + 6•2 + 0•2 + 4•2
+    
+    That gives us:
+    
+    2 + 0 + 0 + 0 + 0 + 12 + 0 + 8
+    
+    Now let’s add those products’ digits (i.e., not the products themselves) together:
+    
+    2 + 0 + 0 + 0 + 0 + 1 + 2 + 0 + 8 = 13
+    
+2. Now let’s add that sum (13) to the sum of the digits that weren’t multiplied by 2 (starting from the end):
+    
+    13 + 4 + 0 + 0 + 0 + 0 + 0 + 3 + 0 = 20
+    
+3. Yup, the last digit in that sum (20) is a 0, so David’s card is legit!
+Implementation Details
+- in the file called `credit.c` in the `credit` directory, write a program that prompts the user for a credit card number and then reports (via `printf`) whether it is a valid American Express, MasterCard, or Visa card number, per the definitions of each's format herein
+- so we can automate some tests of code, ask that program's last line of output be `AMEX\n` or `MASTERCARD\n` or `VISA\n` or `INVALID\n`
+- Simplicity, we can assume that user's input will be entirely numeric (i.e. devoid of hyphens) and it won't have leading zeroes.
+- do not assume that the user's input will fit in an `int` ! Best to use `get_long` from CS50's library to get users' input
+Consider the below representative of how your own program should behave when passed a valid credit card number
+```
+$ ./credit
+Number: 400360000000014
+VISA
+```
+Now, `get_long` itself will reject hyphens (and more) anyway:
+```
+$ ./credit
+Number: 4003-6000-0000-0014
+Number: foo
+Number: 40360000000000014
+VISA
+```
+
+But up to us to catch inputs that are not credit card numbers (e.g. a phone number, even if numeric:
+```
+$ ./credit
+Number: 6176292929
+INVALID
+```
+test out your program with a whole bunch of inputs, both valid and invalid.
+
+Here are a few card numbers that PayPal recommends for testing.
+
+
+#### Stack Overflow:
+--
+```c
+#include <stdio.h>
+#include <cs50.h>
+
+// Luhn's Algorithm
+
+int main(void) 
+{
+    long cardNumber = get_long("Please, enter your card number: ");
+    int sum1 = 0, num = 0, remainder = 0, sum2 = 0;
+    long temp = cardNumber;
+    
+    while (temp > 0) 
+    {
+        num = ((temp / 10) % 10) * 2; // Multiplying every other digit by 2, starting with the number’s second-to-last digit
+        while (num > 0) 
+        {
+            remainder = num % 10;
+            sum1 += remainder; // Adding those products’ digits together
+            num /= 10;
+        }
+        temp /= 100;
+    }
+    
+    // So as to restore the initial values of remainder and temp for the use in next loop
+    remainder = 0;
+    temp = cardNumber;
+    
+    while (temp > 0) 
+    {
+        remainder = temp % 10;
+        sum2 += remainder; // Sum of the digits that weren’t multiplied by 2
+        temp /= 100;
+    }
+    
+    ((sum1 + sum2) % 10) == 0 ? printf("Valid\n") : printf("Invalid\n");
+    return 0;
+}
+```
+
+```c
+ while (temp > 0) 
+    {
+        num = ((temp / 10) % 10) * 2; // Multiplying every other digit by 2, starting with the number’s second-to-last digit
+        while (num > 0) 
+        {
+            remainder = num % 10;
+            sum1 += remainder; // Adding those products’ digits together
+            num /= 10;
+        }
+        temp /= 100;
+```
+
+num = ((temp / 10)) % 10) * 2 = 2
+
+remainder = 2 % 10 = 2
+sum1 += remainder = sum1 + remainder = 0+2 = 2
+num /= 10 = num = 2/10 = 0.2 END 
+
+temp/= 100; = 4003600000000014/100 
+
+temp = 40036000000000
+since temp > 0
+
+
+#### Finding the first digit, finding the last digit:
+
+
+
+To find the last digit of a number, we use the modulo operator %. When the module divided by 10 returns its last digit.
+
+Suppose that if n = 1234
+
+the last digit = n% 10 => 4
+
+Finding the first digit of a number is less expensive than the last digit. To find the first digit of a number, we divide the given number by 10 until the number is greater than 10. At the end, we are left with the first digit.
+
+
 #CS50/pset/1/mario
 
 - [x] Recreate pyramids using hashes for bricks
@@ -1325,7 +1417,7 @@ Height: 4
 - open `mario.c` to implement this problem as described
 
 
-# This is CS50 Week 1
+## Notes
 #cs50/week/1
 Today
 - variables and types
@@ -1333,7 +1425,7 @@ Today
 - Functions, Loops, and Conditionals
 - Problem Set 1
 
-## Variables and Types
+### Variables and Types
 How would you explain what a variable is in a single sentence?
 - containers that allows us to store a value in them
 - a variable is a name for a value that can change
@@ -1382,7 +1474,7 @@ calls = calls / 2;
 // "Truncation" is generally what happens if you have float divisions on integers
 ```
 
-## Inputs and printing
+### Inputs and printing
 `int calls = get_int("Calls: ");`
 
 `get_int("Calls: ");`
@@ -1396,9 +1488,9 @@ printf("calls is %\n", calls);
 
 ```
 
-## Functions Loops and Variables
+### Functions Loops and Variables
 
-### While loops
+#### While loops
 ```c
 int j = 0:
 while (j < 4)
@@ -1410,7 +1502,7 @@ printf("\n");
 ```
 go to through this loop: j=0, j = 1, j = 2 , j = 3
 - great for not sure how many times you want to do something
-### For Loops
+#### For Loops
 - inverse of the while loops
 ```c
 for (int j= 0; j < 4; j++)
@@ -1435,7 +1527,7 @@ for (int i = 0; i < 4; i++)
 }
 ```
 
-## Mario
+### Mario - Example
 - let's write a program to print a right-aligned pyramid
 ```
 #
@@ -1461,219 +1553,15 @@ is it ever useful to put the definition above main?
 
 can't have two varibels with same name
 
-print_row is up, print_row is towards the bottom of the srouce code
+`print_row` is up, `print_row` is towards the bottom of the srouce code
 - it's on a separate function with the same name
 
 - there's probably an assocaiton with the height and the row length
-For loops
+#### For loops (2)
 - so long as you have declared the variable within the loop
 	- you have access to  it
 	- variable `i` for example , is declared and initialized in the loop
 		- access to it within the culry braces
 	- this concept is called "scope"
-## functions
 
 
-# PSET1 - CREDIT
-#CS50/pset/1/credit 
-
-2023-12-30
-
-```
-int credit(long) // get the # inputted by user? 
-
->> I need to apply Luhn's algorithm first
-> Then I will validate whether or not the card is valid
-> Then I will validate the card's provider
-this will determine criteria
-
->> Luhn's
->> multiply every other digit by 2, starting with the number's second-to-last digit, 
->> 	then add those products' digits' together
->> add the sum to the sum of the digits that weren't multiplied by 2
->> if the total's last digit: 0 (or formally, if the total modulo 10 is congruent to 0), number is valid
-
-AMEX: 15-digit numbers
-Master Card: 16-digit numbers
-Visa: 13 and 16-digit numbers
-
-AMEX: starting 34 or 37
-MasterCard = 
-51,
-52,
-53,
-54,
-55
-
-Visa numbers:
-Starting with
-"4"
-
-
-int main(void)
-take user input (get_long);
-
-
-```
-
-Credit/debit card
-- plastic card which you can pay for goods/services
-- printed on card = number that's stored in db somewhere
-	- when card is buying something, creditor knows whom to bill
-- lots of ppl w/ CC's in this wolrd
-	- so numbers are long
-	- AMEX: 15 digit numbers
-	- MC: 16-digit Numbers
-	- Visa: 13 & 16 digit numbers
-- decimal numbers (0-9) not binary
-- thism eans that AMEX could print as many as 10^15 unique cards
-	- a quadrillion
-
-- not really though
-	- some CC# have some structure to them
-	- All AMEX numbers start with 34 or 37
-	- most MC # start with 51, 52, 53, 54, 55
-		- or have other potential starting numbres which we won't concern ourselves with for this problem
-	- all Visa numbers start with 4
-	- credit card numbers have a checksum built into them, a mathematical relationship between at least one number and others.
-		- that checksum enables computers to detect typos (e.g., transpositions), if not fraudulent numbers
-		- wihtout having to query a db
-		- dishonest mathematician could certain craft a fake number that nonetheless resepcts the mathematical constraint, so a database lookup is still necessary for more rigorous checks.
-- LUHN'S ALGORITHM
-	- most cards use an algorithm invented by Hans Peter Luhn of IBM
-	- LuhnCC number is syntactically valid as follows:
-	  1. multiply every other digit by 2, starting with the number's second-to-last digit, then
-		  1. add those products' digits together
-	  2. Add the sum of the digits that weren't multiplied by 2
-	  3. if the total's last digit is 0 (or, put more formally, if the total modulo 10 is congruent to 0), the number is valid
-- Take David's Visa for example: 4003600000000014
-	1. For the sake of discussion, let’s first underline every other digit, starting with the number’s second-to-last digit:
-    
-    4003600000000014
-    
-    Okay, let’s multiply each of the underlined digits by 2:
-    
-    1•2 + 0•2 + 0•2 + 0•2 + 0•2 + 6•2 + 0•2 + 4•2
-    
-    That gives us:
-    
-    2 + 0 + 0 + 0 + 0 + 12 + 0 + 8
-    
-    Now let’s add those products’ digits (i.e., not the products themselves) together:
-    
-    2 + 0 + 0 + 0 + 0 + 1 + 2 + 0 + 8 = 13
-    
-2. Now let’s add that sum (13) to the sum of the digits that weren’t multiplied by 2 (starting from the end):
-    
-    13 + 4 + 0 + 0 + 0 + 0 + 0 + 3 + 0 = 20
-    
-3. Yup, the last digit in that sum (20) is a 0, so David’s card is legit!
-Implementation Details
-- in the file called `credit.c` in the `credit` directory, write a program that prompts the user for a credit card number and then reports (via `printf`) whether it is a valid American Express, MasterCard, or Visa card number, per the definitions of each's format herein
-- so we can automate some tests of code, ask that program's last line of output be `AMEX\n` or `MASTERCARD\n` or `VISA\n` or `INVALID\n`
-- Simplicity, we can assume that user's input will be entirely numeric (i.e. devoid of hyphens) and it won't have leading zeroes.
-- do not assume that the user's input will fit in an `int` ! Best to use `get_long` from CS50's library to get users' input
-Consider the below representative of how your own program should behave when passed a valid credit card number
-```
-$ ./credit
-Number: 400360000000014
-VISA
-```
-Now, `get_long` itself will reject hyphens (and more) anyway:
-```
-$ ./credit
-Number: 4003-6000-0000-0014
-Number: foo
-Number: 40360000000000014
-VISA
-```
-
-But up to us to catch inputs that are not credit card numbers (e.g. a phone number, even if numeric:
-```
-$ ./credit
-Number: 6176292929
-INVALID
-```
-test out your program with a whole bunch of inputs, both valid and invalid.
-
-Here are a few card numbers that PayPal recommends for testing.
-
-
-Stack Overflow:
---
-```c
-#include <stdio.h>
-#include <cs50.h>
-
-// Luhn's Algorithm
-
-int main(void) 
-{
-    long cardNumber = get_long("Please, enter your card number: ");
-    int sum1 = 0, num = 0, remainder = 0, sum2 = 0;
-    long temp = cardNumber;
-    
-    while (temp > 0) 
-    {
-        num = ((temp / 10) % 10) * 2; // Multiplying every other digit by 2, starting with the number’s second-to-last digit
-        while (num > 0) 
-        {
-            remainder = num % 10;
-            sum1 += remainder; // Adding those products’ digits together
-            num /= 10;
-        }
-        temp /= 100;
-    }
-    
-    // So as to restore the initial values of remainder and temp for the use in next loop
-    remainder = 0;
-    temp = cardNumber;
-    
-    while (temp > 0) 
-    {
-        remainder = temp % 10;
-        sum2 += remainder; // Sum of the digits that weren’t multiplied by 2
-        temp /= 100;
-    }
-    
-    ((sum1 + sum2) % 10) == 0 ? printf("Valid\n") : printf("Invalid\n");
-    return 0;
-}
-```
-
-```c
- while (temp > 0) 
-    {
-        num = ((temp / 10) % 10) * 2; // Multiplying every other digit by 2, starting with the number’s second-to-last digit
-        while (num > 0) 
-        {
-            remainder = num % 10;
-            sum1 += remainder; // Adding those products’ digits together
-            num /= 10;
-        }
-        temp /= 100;
-```
-
-num = ((temp / 10)) % 10) * 2 = 2
-
-remainder = 2 % 10 = 2
-sum1 += remainder = sum1 + remainder = 0+2 = 2
-num /= 10 = num = 2/10 = 0.2 END 
-
-temp/= 100; = 4003600000000014/100 
-
-temp = 40036000000000
-since temp > 0
-
-
-Finding the first digit, finding the last digit:
---
-
-
-To find the last digit of a number, we use the modulo operator %. When the module divided by 10 returns its last digit.
-
-Suppose that if n = 1234
-
-the last digit = n% 10 => 4
-
-Finding the first digit of a number is less expensive than the last digit. To find the first digit of a number, we divide the given number by 10 until the number is greater than 10. At the end, we are left with the first digit.
