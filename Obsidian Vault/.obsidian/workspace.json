@@ -80,9 +80,17 @@
               "type": "recent-files",
               "state": {}
             }
+          },
+          {
+            "id": "3e64269a98f0fcad",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -168,7 +176,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f358563627da0082",
+  "active": "f961b4aef42f4e13",
   "lastOpenFiles": [
     "Spaces/Home/Other/Untitled.md",
     "Spaces/Home/CS50/CS50 Sections.md",
