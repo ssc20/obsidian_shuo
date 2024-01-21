@@ -18,5 +18,8 @@
   "obsidian-plugin-toc",
   "tag-wrangler",
   "obsidian-tasks-plugin",
-  "templater-obsidian"
+  "templater-obsidian",
+  "obsidian-kanban",
+  "obsidian-outliner",
+  "obsidian-list-callouts"
 ]
