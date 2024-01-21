@@ -36,6 +36,8 @@
   "deleteFileOption": "trash",
   "expandedSpaces": [
     "spaces://$tags/spaces://#pset",
+    "spaces://$tags/spaces://#pset",
+    "Spaces/Home/Spaces/Home/CS50",
     "spaces://$tags/spaces://#pset"
   ],
   "expandFolderOnClick": true,

@@ -1,16 +1,18 @@
+
+---
+
+
+
+#cs50/week/2/arrays
+#cs50/week/2
+
+
 Conditional statements
 - Conditional expressions allow your programs to make decisions and take different forks in the road
-- 
-
-#CS50/arrays
-#cs50/week2
 
 
-cs50/pset/1
-
-
-## Scrabble
-#cs50/pset/1
+# PSET 2 - SCRABBLE
+#cs50/pset/2/scrabble
 ### Problem to solve
 In the game of Scrabble, players create words to score points, and the number of points is the sum of the point values of each letter in the word.
 
@@ -29,7 +31,7 @@ In a file called `scrabble.c` in a folder called `scrabble`, implement a program
 - submit:
 	- `submit50 cs50/problems/2024/x/scrabble`
 
-# Problem Set 2
+### PSET 2
 1. Log into cs50.dev using your GitHub account
 2. Run `update50` in your codespace's terminal window to ensure your codespace is up-to-date and, when prompted, click **Rebuild now**
 3. Submit Scrabble
@@ -49,7 +51,7 @@ Advice
 - If unsure what it means, try asking `help50` for help. 
 - For instance, if trying to compile `readability` and `make readability` is yielding errors, try running `help50 make readability` instead!
 # Compiling
-#compiling
+#cs50/week/2/compiling
 - compilers have acted as an abstraction
 
 source code > compiler > machine code
@@ -154,7 +156,7 @@ void meow(void)
 		- could implement?
 	- having techniques 
 # Debugging
-#debugging
+#cs50/week/2/debugging
 - going through Mario program
 	- ![[CleanShot 2024-01-13 at 21.03.07.png]]
 		- seeing 4 hashes in a line, I'm looking for only 3
@@ -225,8 +227,8 @@ int main(void)
 }
 ```
 - within cs50.h one line of code thta defines return value, the function name and the arguments for get_string
-#libraries
-#c 
+#cs50/week/2/libraries
+#cs50/week/1/c 
 
 ```c
 int main(int argc, string argv[])
@@ -235,10 +237,10 @@ int main(int argc, string argv[])
 }
 ```
 - the above code is an example of an alternative to `int main(void)`
-#argc #argv 
+#cs50/week/2/command-line-arguments/argc #cs50/week/2/command-line-arguments/argv 
 
 Exit status
-#exitstatus
+#cs50/week/2/command-line-arguments/exitstatus
 - one other thing about the code we've been writing
 - all programs eventually exit because we see that they exit
 - every program has an "exit status"
@@ -261,7 +263,7 @@ Exit status
 	- these test can detect the status codes, knowing that your code succeeds or fails
 - goal of this week: is to solve problems
 
-#cryptography
+#cs50/week/2/arrays/cryptography
 - cryptography is the art of the science of encrypting
 	- encrypting: scrambling information
 	- ability to send info securely
@@ -313,9 +315,9 @@ Exit status
 
 
 
-#cs50/week2 
+#cs50/week/2 
 
-#scope
+#cs50/week/1/scope
 scope: characteristic of a variable that defines
 - from which functions that this variable can be accessed
 
@@ -436,7 +438,7 @@ int increment(int x)
 
 - (do i get `x is 1, y is 2`?)
 
-#debugging #debug50
+#cs50/week/2/debugging #cs50/week/2/debugging/debug50
 
 
 - guess program
@@ -500,7 +502,7 @@ int main(void)
 
 ```
 
-#debugging
+#cs50/week/2/debugging
 
 - secret program
 	- type in the right password, you should see "come right in"
@@ -557,7 +559,8 @@ bool check_phrase(string phrase)
 	- mission success!
 
 
-#CS50/arrays 
+#cs50/week/2/arrays 
+# Arrays - Info
 
 - arrays are a fundamental **data structure**, and they are extremely useful
 - we use arrays to hold values of the same type at contiguous memory locations
@@ -584,7 +587,7 @@ bool check_phrase(string phrase)
 	- it will not prevent you from going "out of bounds" of your array; be careful!
 		- might get a `segmentation fault`
 - Array declarations
-- #array/declaration
+- #cs50/week/2/arrays/declaration
 - `type name[size];`
 	- the `type` is what kind of variable each element of the array will be
 	- the `name` is what you want to call your array
@@ -613,7 +616,7 @@ truthtable[10] = true;
 	- this is legal, but if something exists in memory where 10 is,
 		- might suffer **segmentation fault**
 - when declaring and initializing an array simultaneously, there is a special syntax that may be used to fill up the array with its starting values
-- #cs50/neat
+- #cs50/tip
 ```c
 // instantiation syntax
 bool truthtable[3] = { false, true, true };
@@ -664,7 +667,7 @@ for(int j = 0; j < 5; j++)
 	- (means we're making a copy)
 	- the callee doesn't get its own variables, but its own *copy*
 - arrays do not follow this rule
-	-  #scoping 
+	-  #cs50/week/1/scoping 
 	- arrays are **passed by reference**
 	- the callee receives the actual array, ==not a copy of it==
 		- what does that mean when the callee manipulates elements of the array?
@@ -742,7 +745,7 @@ void set_int(int x)
 ```
 
 
-#casting
+#cs50/week/2/casting
 
 - in C, `char` is essentially a small integer type
 - integral data type, stored as a number
@@ -781,7 +784,7 @@ void set_int(int x)
 	2. if the destination array is not large enough to hold the result, it can lead to buffer overflows, a common source of bugs and security vulnerabilities
 	3. functions like `strncpy` and `strncat` allow you to specify the maximum number of characters to copy/concatenate and can be safer alternatives
 
-#CS50/arrays 
+#cs50/week/2/arrays 
 - C needs to know 3 things for an array
 	- name of the array
 	- size of the array
@@ -815,7 +818,7 @@ Questions
 	- however this only goes for `int nights[5] = {7, 8, 6, 7, 8};`
 
 **Doubling up**
-#cs50/arrays #cs50/example
+#cs50/week/2/arrays #cs50/week/2/arrays/strings/example
 - create an array of integers in where each integer is 2 times the value of the previous integer
 - the first element is 1.
 - print the array, integer by integer
@@ -866,7 +869,7 @@ int main(void)
 ```
 
 Strings
-#cs50/arrays/strings
+#cs50/week/2/arrays/strings
 - strings work the same way, almost like scrabble?
 - strings are nothing more than arrays where elements are characters
 - HELLO
@@ -876,7 +879,7 @@ Strings
 	- Consider `H E L L O` again
 		- `{72, 69, 76, 76, 79}`
 
-#cs50/example 
+#cs50/week/2/arrays/strings/example 
 Alphabetical
 - write a program to check if an array of characters is in alphabetical order or not
 - Assume the characters are all upper case
@@ -891,7 +894,7 @@ what can we do to loop through the number of characters in a string?
 	- remember that these values are CASE SENSITIVE
 - Looking at `B`, the integer is greater than `A`
 - If these characters are not in alphabetical order... print `Not in alphabetical order\n`?
-#tip
+#cs50/tip
 - you can input `return 0;` to state that your program has finished
 - looking at the code again:
 	- ![[CleanShot 2024-01-19 at 22.35.13.png]]
@@ -904,7 +907,7 @@ what can we do to loop through the number of characters in a string?
 		- (I really gotta think about what I'm doing before I move on...)
 questions
 ## Command line arguments
-#cs50/command-line-arguments
+#cs50/week/2/command-line-arguments
 - you may have seen several programs like this before
 - if i type in `make alphabetical`
 	- i am feeding it some kind of values..
@@ -1097,6 +1100,7 @@ int main(void)
 
 
 # PSET1 
+#CS50/pset/1/llamas 
 Objective
 - goal of *n* llamas
 - each year, `n / 3` new llamas are born & `n / 4` llamas pass away
@@ -1132,7 +1136,7 @@ while (n < 1);
 How might you adapt this code to ensure a start size of at least 9, and an end size of at least the start size?
 
 # PSET1 CS50- MARIO (MORE)
-#CS50/pset1
+#CS50/pset/1/mario
 
 - [x] Recreate pyramids using hashes for bricks
 	- [x] 2 hash space between 1st and 2nd pyramids
@@ -1322,7 +1326,7 @@ Height: 4
 
 
 # This is CS50 Week 1
-#cs50/week1
+#cs50/week/1
 Today
 - variables and types
 - Input and Printing
@@ -1471,7 +1475,7 @@ For loops
 
 
 # PSET1 - CREDIT
-#CS50/pset1 
+#CS50/pset/1/credit 
 
 2023-12-30
 
