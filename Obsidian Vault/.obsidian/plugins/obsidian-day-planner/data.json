@@ -16,7 +16,7 @@
   "timestampFormat": "HH:mm",
   "hourFormat": "H",
   "dataviewSource": "",
-  "showDataviewMigrationWarning": true,
+  "showDataviewMigrationWarning": false,
   "extendDurationUntilNext": false,
   "defaultDurationMinutes": 30,
   "showTimestampInTaskBlock": false,

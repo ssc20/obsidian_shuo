@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/Other/Untitled.md",
+                "file": "Making a test File.md",
                 "mode": "source",
                 "source": true
               }
@@ -89,8 +89,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
@@ -110,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/Other/Untitled.md",
+                "file": "Making a test File.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/Other/Untitled.md",
+                "file": "Making a test File.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,11 +149,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/Other/Untitled.md"
+                "file": "Making a test File.md"
               }
             }
+          },
+          {
+            "id": "c9f43c291d6a6a5d",
+            "type": "leaf",
+            "state": {
+              "type": "timeline",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -176,10 +184,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3e64269a98f0fcad",
+  "active": "5579791afde64774",
   "lastOpenFiles": [
-    "Spaces/Home/mac_obsidian/mac_obsidian.md",
     "Spaces/Home/Other/Untitled.md",
+    "Spaces/Home/mac_obsidian/mac_obsidian.md",
     "Spaces/Home/CS50/CS50 Sections.md",
     "Making a test File.md",
     "Spaces/Home/Other",
