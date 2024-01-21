@@ -27,6 +27,11 @@ Tuesday, December 31, 2024 at 11:59 PM EST.
 ### PSET 2 - SCRABBLE
 #cs50/pset/2/scrabble
 
+
+```c
+int upper[i] = toupper(word[i]); // take the returned value of toupper
+```
+
 #### Problem to solve
 In the game of Scrabble, players create words to score points, and the number of points is the sum of the point values of each letter in the word.
 
