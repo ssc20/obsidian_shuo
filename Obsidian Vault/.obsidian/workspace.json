@@ -4,37 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "3f4819e050bb6135",
+        "id": "023083c5f6da206d",
         "type": "tabs",
         "children": [
           {
-            "id": "58ab8b25e1fa95bd",
+            "id": "f358563627da0082",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Sections.md",
+                "file": "Spaces/Home/Other/Untitled.md",
                 "mode": "source",
                 "source": true
               }
-            }
-          },
-          {
-            "id": "d13acb6ec86b2902",
-            "type": "leaf",
-            "state": {
-              "type": "make-file-view",
-              "state": {
-                "path": "https://www.make.md/static/latest.md"
-              }
-            }
-          },
-          {
-            "id": "7ef420bea6572eb6",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
             }
           }
         ]
@@ -98,16 +80,9 @@
               "type": "recent-files",
               "state": {}
             }
-          },
-          {
-            "id": "5a0bc2eaffdf5ed7",
-            "type": "leaf",
-            "state": {
-              "type": "mk-path-view",
-              "state": {}
-            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -127,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Sections.md",
+                "file": "Spaces/Home/Other/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Sections.md",
+                "file": "Spaces/Home/Other/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Sections.md"
+                "file": "Spaces/Home/Other/Untitled.md"
               }
             }
           }
@@ -193,13 +168,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "5579791afde64774",
+  "active": "f358563627da0082",
   "lastOpenFiles": [
+    "Spaces/Home/Other/Untitled.md",
+    "Spaces/Home/CS50/CS50 Sections.md",
+    "Making a test File.md",
     "Spaces/Home/Other",
     "Spaces/Home/CS50",
     "Spaces/Home/Other/Tahjay.md",
     "Spaces/Home/Other/Interlude.md",
-    "Spaces/Home/CS50/CS50 Sections.md",
     "Spaces/Home",
     "Spaces"
   ]
