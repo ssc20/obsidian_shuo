@@ -65,6 +65,143 @@ Advice
 - If unsure what it means, try asking `help50` for help. 
 - For instance, if trying to compile `readability` and `make readability` is yielding errors, try running `help50 make readability` instead!
 
+#### Code Journal
+my initial entry before chat'gpt lol.
+```c
+#include <cs50.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+// constant of 2 players
+const int N = 2;
+
+// prototype
+
+// scrabble takes the string word then converts to uppercase, and scores it.
+int scrabble(string word);
+
+// main; take the input of users as "string", then plug into "scrabble"
+int main(void)
+{
+    // intialize an array of strings of length "N" (2)
+    string words[N];
+    // arrays must be intialized with a "known" length, however syntax allows us to only specify 1 value for the timebeing.
+    int scores[N] = {0};
+    // also note we have 2 arrays, words and scores
+    // receive input from players
+    for (int i = 0; i < N; i++)
+    {
+        words[i] = get_string("Player %i: ", i + 1);
+        scores[i] = scrabble(words[i]);
+    }
+
+    if (scores[0] > scores[1])
+    {
+        printf("Player 1 wins!\n");
+    }
+    else if (scores[1] > scores[0])
+    {
+        printf("Player 2 wins!\n");
+    }
+    else
+    {
+        printf("Tie!");
+    }
+
+    // printf("Player 1: %s, Player 2: %s\n", words[0], words[1]);
+    // printf("Player 1: %i, Player 2: %i\n", scores[0], scores[1]);
+
+
+}
+
+int scrabble(string word)
+{
+    // convert each letter to lowercase, then calculate score
+    int score = 0;
+    // setting scoringsystem array 'system' to cs50's provided system (A = 1 pt, B = 3 pt)
+    int system[26] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+
+    // toupper 'for' loop
+    for (int i = 0, n = strlen(word); i < n; i++)
+    {
+
+        // conversion of each word's char to uppercase
+        int a = toupper(word[i]); // take the returned value of toupper
+        int sx = a - 64 - 1;
+
+        if (a <= 64 || a >= 91 )
+        {
+            score += 0;
+        }
+
+        else
+        {
+        score += system[sx];
+        }
+    }
+
+    return score;
+}
+
+
+
+// }
+
+
+
+
+// // prototype
+
+// // implement a function that takes the string input
+// int scrabble(string x, string y);
+
+// // main; take the input of users as "string", then plug into "scrabble"
+// int main(void)
+// {
+//     string a = get_string("Player 1: ");
+//     string b = get_string("Player 2: ");
+//     scrabble(a, b);
+//     printf("Player 1: %s, Player 2: %s\n", a, b);
+// }
+
+// int scrabble(string a, string b)
+// {
+
+
+
+// }
+
+/*
+
+
+> get_string x 2
+    > (i need 2 strings, player a, player b)
+
+> somewhere, i need to dictate the array's positioning
+>> so points[0] (position "A" or 0 = 1, Position "B" = 3)
+>>> simultaneously, i need to dignify CAPS == LOWER totals
+    ..... add or minus 32 depending on what case it is, there should be a unified point total
+    if char[0] (say the word is "at")
+    >>>> if (char[0] == A || a)
+        {
+            char[0] = 1
+        }
+>> can i reference multiple arrays? array for the original point total, array for string.
+> i could calculate the strlen?
+    > this would be used for identifying how many times to
+    iterate
+        > as in, for x char in the array(string) do i check the points for
+            > after evaluating the strlen, running the for loop, += (pts)
+            i < strlen; i++
+            {
+                > depending on what char pos you're evaluating for, return the pts value
+                sum += 0
+            }
+
+*/
+```
+
 ## Notes
 
 ### Compiling
