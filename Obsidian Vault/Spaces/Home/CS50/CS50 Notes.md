@@ -998,7 +998,7 @@ int main(void)
 	printf("Average: %f\n", (scores[0] + scores[1] + scores[2]) / 3.0);
 }
 ```
-
+- notice how we can index into `scores` by using `scores[i]` where `i` is supplied by the `for` loop
 
 
 # Week 1
