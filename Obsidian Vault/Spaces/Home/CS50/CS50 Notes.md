@@ -6,8 +6,6 @@
 #cs50/week/2/arrays
 #cs50/week/2
 
-
-
 # Week 2
 ## PSET 2
 ### INFO
@@ -23,6 +21,16 @@ If you submit both Caesar and Substitution, we'll record the higher of your two 
 
 When to do it?
 Tuesday, December 31, 2024 at 11:59 PM EST.
+
+### PSET 2 - Readability
+
+#### Problem to solve
+According to Scholastic, E.B.White's *Charlotte's Web* is between a second and fourth grade reading level.
+- Lowis Lowry's *The Giver* is between an eighth- and twelfth-grade reading level. 
+- What does it mean though for a book to be at a particular reading level?
+
+- In many cases, a human expert might read a book and make a decision on the grade (i.e., year in school) for which they think the book is most appropriate.
+	- an algorithm could likely figure that out too!
 
 ### PSET 2 - SCRABBLE
 #cs50/pset/2/scrabble
@@ -203,7 +211,6 @@ int scrabble(string word)
 ```
 
 ## Notes
-
 ### Compiling
 #cs50/week/2/compiling
 - compilers have acted as an abstraction
@@ -1065,14 +1072,14 @@ int main(void)
 - 4. *linking*: code from your included libraries are converted also into machine code and combined with your code
 	- the final executable file is then outputted
 		- ![[CleanShot 2024-01-19 at 23.35.56.png]]
-## Debugging
+### Debugging
 - everyone will make mistakes while coding
 - basically
 	- rubber duck
 	- break points
 	- debug50, win the game.
 
-## Arrays
+### Arrays
 - in week 0, we talked about *data types* such as `bool`, `int`, `char`, `string`, etc.
 - each data type requires a certain amount of system resources:
 	- `bool` 1 byte
@@ -1189,7 +1196,7 @@ float average(int length, int array[])
 	- further, notice a `const` or constant value of `N` is declared
 	- most importantly, notice how the `average` function takes `int array[]`, which means that the compiler passes an array to the function
 - not only can arrays be containers: they can be passed between functions
-## Strings
+### Strings
 - a `string` is simply an array of variables of type `char`: an array of characters
 - considering the following image, you can see how a string is an array of characters that begins with the first character
 	- it also ends with a special character called a `NUL character:`
@@ -1288,7 +1295,7 @@ int main(void)
 
 - notice that both strings are stored within a single array of type `string`.
 
-### String Length
+#### String Length
 - a common problem within programming, and perhaps C more specifically
 	- & discovering the length of an array
 - how could we implement this in code?

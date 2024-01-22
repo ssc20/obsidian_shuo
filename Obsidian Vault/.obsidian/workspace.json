@@ -90,12 +90,11 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "095fbd95bebd42a5",
@@ -156,19 +155,19 @@
             }
           },
           {
-            "id": "c9f43c291d6a6a5d",
+            "id": "4caab605f3316c3d",
             "type": "leaf",
             "state": {
               "type": "timeline",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,8 +184,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f358563627da0082",
+  "active": "3e64269a98f0fcad",
   "lastOpenFiles": [
+    "Vault.md",
     "CleanShot 2024-01-21 at 17.48.51@2x.png",
     "CleanShot 2024-01-21 at 17.05.21@2x.png",
     "CleanShot 2024-01-21 at 16.59.06@2x.png",
