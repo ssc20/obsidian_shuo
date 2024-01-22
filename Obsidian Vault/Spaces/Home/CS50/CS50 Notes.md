@@ -83,12 +83,42 @@ Then, depending on which player scores the most points your program should eithe
 
 
 
-Advice
+#### Advice
 - try out any of David's programs from class via Week 2's examples
 - To see the manual pages for C functions, visit manual.cs50.io
 - If you see any errors when compiling your code with `make` , focus first on fixing the very first error you see, scrolling up as needed. 
 - If unsure what it means, try asking `help50` for help. 
 - For instance, if trying to compile `readability` and `make readability` is yielding errors, try running `help50 make readability` instead!
+
+#####
+```c
+/* If unsure how to solve the problem itself, break it down into smaller problems that you can probably solve first. For instance, this problem is really only a handful of problems:
+
+Prompt for the user for two words
+Compute the score of each word
+Print the winner
+Let’s write some pseudcode as comments to remind you to do just that */
+
+#include <ctype.h>
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    // Prompt the user for two words
+
+    // Compute the score of each word
+
+    // Print the winner
+}
+
+/*
+
+Some problems in problem sets, like this one, might contain spoilers (like the next one) that ultimately walk you through the entire solution. While you are permitted to use this code, we really do strongly encourage you to try things out yourself first! The other problems in the problem set won’t have this sort of walkthrough, and typically the problem that contains the “full spoiler” is a warm-up version of the bigger problem you’ll later need to tackle. 
+
+*/
+```
 
 #### Code Journal
 my initial entry before chat'gpt lol.

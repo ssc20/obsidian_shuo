@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "2024-01-21.md",
                 "mode": "source",
                 "source": true
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "2024-01-21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "2024-01-21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md"
+                "file": "2024-01-21.md"
               }
             }
           },
@@ -184,15 +184,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3e64269a98f0fcad",
+  "active": "f358563627da0082",
   "lastOpenFiles": [
+    "Spaces/Home/CS50/CS50 Notes.md",
+    "2024-01-21.md",
     "Vault.md",
     "CleanShot 2024-01-21 at 17.48.51@2x.png",
     "CleanShot 2024-01-21 at 17.05.21@2x.png",
     "CleanShot 2024-01-21 at 16.59.06@2x.png",
     "CleanShot 2024-01-21 at 16.52.04@2x.png",
     "CleanShot 2024-01-21 at 16.51.41@2x.png",
-    "Spaces/Home/CS50/CS50 Notes.md",
     "Spaces/Home/CS50/CS50 - Credit.md",
     "Spaces/Home/CS50/CS50 Sections.md",
     "Spaces/Home/Other/Interlude.md",
