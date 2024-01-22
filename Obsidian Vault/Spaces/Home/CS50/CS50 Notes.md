@@ -213,6 +213,7 @@ int compute_score(string word)
 - Now recall that computers represent characters using 'ASCII', a standard that represents each character as a number
 - Recall too that the 0th index of `POINTS`, `POINTS[0]`, gives you the point value of 'A'
 	- Think about how you could transform the numeric
+- 
 
 #### Code Journal
 my initial entry before chat'gpt lol.
