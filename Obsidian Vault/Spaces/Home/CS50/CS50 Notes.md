@@ -51,6 +51,9 @@ According to Scholastic, E.B.White's *Charlotte's Web* is between a second and f
 #### Code journal
 - Need to take a line of input (text)
 - Need to make an index output in int
+	- compute number of words
+	- compute number of letters
+	- compute number of sentences
 
 
 ### PSET 2 - SCRABBLE
