@@ -713,7 +713,7 @@ int main(void)
 	printf("%i\n", length);
 }
 ```
-- within cs50.h one line of code thta defines return value, the function name and the arguments for get_string
+- within cs50.h one line of code that defines return value, the function name and the arguments for get_string
 #cs50/week/2/libraries
 
 ### Command-line Arguments (argc, argv[])
@@ -725,6 +725,42 @@ int main(int argc, string argv[])
 }
 ```
 - the above code is an example of an alternative to `int main(void)`
+
+- `command-line arguments` are those arguments that are passed to your program at the command line;
+	- all those statements you typed after `clang` are considered command line arguments
+	- you can use these arguments in your own programs
+- in your terminal window, type `code greet.c` and write code as follows:
+```c
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+	string answer = get_string("What's your name? ");
+	printf("hello, %s\n", answer);
+}
+```
+- notice that this says `hello` to the user
+- still, would it not be nice to be able to take arguments before the program even runs?
+```c
+#include <cs50.h>
+#include <stdio.h>
+
+int main(int argc, string argv[])
+{
+	if (argc == 2)
+	{
+		printf("hello, %s\n", argv[1]);
+	}
+	else
+	{
+		printf("hello, world\n");
+	}
+}
+```
+- notice that this program knows both `argc`, the number of command line arguments
+	- and `argv` which is an array of the characters passed as arguments at the command line
+- therefore, using the syntax of this program, executing `./greet David` would result in the program saying `hello, David`.
 #cs50/week/2/command-line-arguments/argc #cs50/week/2/command-line-arguments/argv 
 
 ### Exit status
