@@ -48,6 +48,9 @@ According to Scholastic, E.B.White's *Charlotte's Web* is between a second and f
 		- `index = 0.0588 * L - 0.296 * S - 15.8`
 			- where `L` is the average number of letters per 100 words in the text
 			- `S` is the average number of sentences per 100 words in the text
+#### Code journal
+- Need to take a line of input (text)
+- Need to make an index output in int
 
 
 ### PSET 2 - SCRABBLE
