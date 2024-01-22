@@ -32,6 +32,23 @@ According to Scholastic, E.B.White's *Charlotte's Web* is between a second and f
 - In many cases, a human expert might read a book and make a decision on the grade (i.e., year in school) for which they think the book is most appropriate.
 	- an algorithm could likely figure that out too!
 
+- implement a program that calculates the approximate grade level needed to comprehend some text
+	- your program should output `Grade X` where `X` is there grade level computed, rounded to the nearest integer
+	- if the `grade level` is `16` or higher (equivalent to or greater than a senior undergraduate reading level), your program should output `Grade 16+` instead of giving the exact index number
+	- if the grade level is less than 1, your program should output `Before Grade 1`
+
+#### Background
+- so what sorts of traits are characteristic of higher reading levels? 
+	- longer words probably correlate with higher reading levels
+	- likewise, longer sentences probably correlates with higher reading levels, too
+- a number of "readability tests" have been developed over the years that define formulas for computing the reading level of a text
+	- one such readability test is the *Coleman-Liau index*
+		- this index is designed to output that (U.S) grade level that is needed to understand some text.
+		- the formula is as follows:
+		- `index = 0.0588 * L - 0.296 * S - 15.8`
+			- where `L` is the average number of letters per 100 words in the text
+			- `S` is the average number of sentences per 100 words in the text
+
 ### PSET 2 - SCRABBLE
 #cs50/pset/2/scrabble
 
