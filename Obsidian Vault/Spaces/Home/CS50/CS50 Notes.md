@@ -49,6 +49,7 @@ According to Scholastic, E.B.White's *Charlotte's Web* is between a second and f
 			- where `L` is the average number of letters per 100 words in the text
 			- `S` is the average number of sentences per 100 words in the text
 
+
 ### PSET 2 - SCRABBLE
 #cs50/pset/2/scrabble
 
@@ -91,6 +92,7 @@ Then, depending on which player scores the most points your program should eithe
 - For instance, if trying to compile `readability` and `make readability` is yielding errors, try running `help50 make readability` instead!
 
 #####
+WALKTHROUGH:
 ```c
 /* If unsure how to solve the problem itself, break it down into smaller problems that you can probably solve first. For instance, this problem is really only a handful of problems:
 
@@ -119,6 +121,98 @@ Some problems in problem sets, like this one, might contain spoilers (like the n
 
 */
 ```
+
+- First, consider how you might prompt the user for two words; recall that `get_string` a function in the CS50 library, can prompt the user for a string.
+
+```c
+#include <ctype.h>
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	// Prompt the user for two words
+	string word1 = get_string("Player 1: ");
+	string word2 = get_string("Player 2: ");
+
+	// Compute the score of each word
+
+	// Print the winner
+}
+```
+
+- Next consider how to compute the score of each word; since the same scoring algorithm applies to both words, you have a good opportunity for *abstraction*
+	- here we'll define a function called `compute_score` that takes a string, called `word` as in put, and then returns `word`'s score as an `int`.
+
+```c
+#include <cstype.h>
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int compute_score(string word);
+
+int main(void)
+{
+	// Prmopt the user for 2 words
+	string word1 = get_string("Player 1: ");
+	string word2 = get_string("Player 2: ");
+
+	// Compute the score of each word
+	int score1 = compute_score(word1);
+	int score2 = compute_score(word2);
+
+	// Print the winner
+}
+
+int compute_score(string word)
+{
+	// Compute and return score for word
+}
+```
+
+- now turn to implementing `compute_score`;
+	- to compute the score of a word, you need to know the point value of each letter in the word
+	- you can associate letters and their point values with an *array*
+	- imagine an array of 26 `int`s, called `POINTS`, in which the 1st number is the point value for 'A', the second number is the point value for 'B', and so on
+	- by declaring and initializing such an array outside of any single function, you can ensure this array is accessible to any function, including `compute_score`
+```c
+#include <ctype.h>
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+// Points assigned to each letter of the alphabet
+int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+
+int compute_score(string word);
+
+int main(void)
+{
+    // Prompt the user for two words
+    string word1 = get_string("Player 1: ");
+    string word2 = get_string("Player 2: ");
+
+    // Compute the score of each word
+    int score1 = compute_score(word1);
+    int score2 = compute_score(word2);
+
+    // Print the winner   
+}
+
+int compute_score(string word)
+{
+    // Compute and return score for word
+}
+
+```
+- To implement `compute_score`, first try to find the point value of a single letter in `word`
+	- recall that to find the character at the nth index of a string, `s`, you can write `s[n]`
+	- `word[0]` for example will give you the first character of `word`
+- Now recall that computers represent characters using 'ASCII', a standard that represents each character as a number
+- Recall too that the 0th index of `POINTS`, `POINTS[0]`, gives you the point value of 'A'
+	- Think about how you could transform the numeric
 
 #### Code Journal
 my initial entry before chat'gpt lol.
