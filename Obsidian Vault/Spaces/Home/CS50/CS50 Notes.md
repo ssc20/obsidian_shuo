@@ -6,8 +6,6 @@
 #cs50/week/2/arrays
 #cs50/week/2
 
-
-
 # Week 2
 ## PSET 2
 ### INFO
@@ -23,6 +21,40 @@ If you submit both Caesar and Substitution, we'll record the higher of your two 
 
 When to do it?
 Tuesday, December 31, 2024 at 11:59 PM EST.
+
+### PSET 2 - Readability
+
+#### Problem to solve
+According to Scholastic, E.B.White's *Charlotte's Web* is between a second and fourth grade reading level.
+- Lowis Lowry's *The Giver* is between an eighth- and twelfth-grade reading level. 
+- What does it mean though for a book to be at a particular reading level?
+
+- In many cases, a human expert might read a book and make a decision on the grade (i.e., year in school) for which they think the book is most appropriate.
+	- an algorithm could likely figure that out too!
+
+- implement a program that calculates the approximate grade level needed to comprehend some text
+	- your program should output `Grade X` where `X` is there grade level computed, rounded to the nearest integer
+	- if the `grade level` is `16` or higher (equivalent to or greater than a senior undergraduate reading level), your program should output `Grade 16+` instead of giving the exact index number
+	- if the grade level is less than 1, your program should output `Before Grade 1`
+
+#### Background
+- so what sorts of traits are characteristic of higher reading levels? 
+	- longer words probably correlate with higher reading levels
+	- likewise, longer sentences probably correlates with higher reading levels, too
+- a number of "readability tests" have been developed over the years that define formulas for computing the reading level of a text
+	- one such readability test is the *Coleman-Liau index*
+		- this index is designed to output that (U.S) grade level that is needed to understand some text.
+		- the formula is as follows:
+		- `index = 0.0588 * L - 0.296 * S - 15.8`
+			- where `L` is the average number of letters per 100 words in the text
+			- `S` is the average number of sentences per 100 words in the text
+#### Code journal
+- Need to take a line of input (text)
+- Need to make an index output in int
+	- compute number of words
+	- compute number of letters
+	- compute number of sentences
+
 
 ### PSET 2 - SCRABBLE
 #cs50/pset/2/scrabble
@@ -58,12 +90,244 @@ Then, depending on which player scores the most points your program should eithe
 
 
 
-Advice
+#### Advice
 - try out any of David's programs from class via Week 2's examples
 - To see the manual pages for C functions, visit manual.cs50.io
 - If you see any errors when compiling your code with `make` , focus first on fixing the very first error you see, scrolling up as needed. 
 - If unsure what it means, try asking `help50` for help. 
 - For instance, if trying to compile `readability` and `make readability` is yielding errors, try running `help50 make readability` instead!
+
+#####
+WALKTHROUGH:
+```c
+/* If unsure how to solve the problem itself, break it down into smaller problems that you can probably solve first. For instance, this problem is really only a handful of problems:
+
+Prompt for the user for two words
+Compute the score of each word
+Print the winner
+Let’s write some pseudcode as comments to remind you to do just that */
+
+#include <ctype.h>
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    // Prompt the user for two words
+
+    // Compute the score of each word
+
+    // Print the winner
+}
+
+/*
+
+Some problems in problem sets, like this one, might contain spoilers (like the next one) that ultimately walk you through the entire solution. While you are permitted to use this code, we really do strongly encourage you to try things out yourself first! The other problems in the problem set won’t have this sort of walkthrough, and typically the problem that contains the “full spoiler” is a warm-up version of the bigger problem you’ll later need to tackle. 
+
+*/
+```
+
+- First, consider how you might prompt the user for two words; recall that `get_string` a function in the CS50 library, can prompt the user for a string.
+
+```c
+#include <ctype.h>
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	// Prompt the user for two words
+	string word1 = get_string("Player 1: ");
+	string word2 = get_string("Player 2: ");
+
+	// Compute the score of each word
+
+	// Print the winner
+}
+```
+
+- Next consider how to compute the score of each word; since the same scoring algorithm applies to both words, you have a good opportunity for *abstraction*
+	- here we'll define a function called `compute_score` that takes a string, called `word` as in put, and then returns `word`'s score as an `int`.
+
+```c
+#include <cstype.h>
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int compute_score(string word);
+
+int main(void)
+{
+	// Prmopt the user for 2 words
+	string word1 = get_string("Player 1: ");
+	string word2 = get_string("Player 2: ");
+
+	// Compute the score of each word
+	int score1 = compute_score(word1);
+	int score2 = compute_score(word2);
+
+	// Print the winner
+}
+
+int compute_score(string word)
+{
+	// Compute and return score for word
+}
+```
+
+- now turn to implementing `compute_score`;
+	- to compute the score of a word, you need to know the point value of each letter in the word
+	- you can associate letters and their point values with an *array*
+	- imagine an array of 26 `int`s, called `POINTS`, in which the 1st number is the point value for 'A', the second number is the point value for 'B', and so on
+	- by declaring and initializing such an array outside of any single function, you can ensure this array is accessible to any function, including `compute_score`
+```c
+#include <ctype.h>
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+// Points assigned to each letter of the alphabet
+int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+
+int compute_score(string word);
+
+int main(void)
+{
+    // Prompt the user for two words
+    string word1 = get_string("Player 1: ");
+    string word2 = get_string("Player 2: ");
+
+    // Compute the score of each word
+    int score1 = compute_score(word1);
+    int score2 = compute_score(word2);
+
+    // Print the winner   
+}
+
+int compute_score(string word)
+{
+    // Compute and return score for word
+}
+
+```
+- To implement `compute_score`, first try to find the point value of a single letter in `word`
+	- recall that to find the character at the nth index of a string, `s`, you can write `s[n]`
+	- `word[0]` for example will give you the first character of `word`
+- Now recall that computers represent characters using 'ASCII', a standard that represents each character as a number
+- Recall too that the 0th index of `POINTS`, `POINTS[0]`, gives you the point value of 'A'
+	- Think about how you could transform the numeric representation of 'A' into the index of its point value
+	- what about 'a'? You'll need to apply different transformations to upper-and lower-case letters, so you may find the functions `isupper` and `islower` to be helpful to you
+	- keep in mind that characters that are not letters should be given zero points
+		- for example, `!` is worth 0 points
+- if you can properly calculate the value of *one* character in `words`, odds are you can use a loop to sum the points for the rest of the characters
+	- once you've tried the above on your own, consider this (quite revealing!) hint below:
+```c
+#include <ctype.h>
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+// Points assigned to each letter of the alphabet
+int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+
+int compute_score(string word);
+
+int main(void)
+{
+    // Prompt the user for two words
+    string word1 = get_string("Player 1: ");
+    string word2 = get_string("Player 2: ");
+
+    // Compute the score of each word
+    int score1 = compute_score(word1);
+    int score2 = compute_score(word2);
+
+    // Print the winner   
+}
+
+int compute_score(string word)
+{
+    // Keep track of score
+    int score = 0;
+
+    // Compute score for each character
+    for (int i = 0, len = strlen(word); i < len; i++)
+    {
+        if (isupper(word[i]))
+        {
+            score += POINTS[word[i] - 'A'];
+        }
+        else if (islower(word[i]))
+        {
+            score += POINTS[word[i] - 'a'];
+        }
+    }
+
+    return score;
+}
+```
+- finally, finish your pseudocode's last step: printing the winner
+	- recall that an `if` statement can be used to check if a condition is true and that the additional usages of `else if` or `else` can check for other (exclusive) conditions
+```c
+#include <ctype.h>
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+// Points assigned to each letter of the alphabet
+int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+
+int compute_score(string word);
+
+int main(void)
+{
+    // Prompt the user for two words
+    string word1 = get_string("Player 1: ");
+    string word2 = get_string("Player 2: ");
+
+    // Compute the score of each word
+    int score1 = compute_score(word1);
+    int score2 = compute_score(word2);
+
+    // Print the winner   
+    if (score1 > score2)
+    {
+        printf("Player 1 wins!\n");
+    }
+    else if (score1 < score2)
+    {
+        printf("Player 2 wins!\n");
+    }
+    else
+    {
+        printf("Tie!\n");
+    }
+}
+
+int compute_score(string word)
+{
+    // Keep track of score
+    int score = 0;
+
+    // Compute score for each character
+    for (int i = 0, len = strlen(word); i < len; i++)
+    {
+        if (isupper(word[i]))
+        {
+            score += POINTS[word[i] - 'A'];
+        }
+        else if (islower(word[i]))
+        {
+            score += POINTS[word[i] - 'a'];
+        }
+    }
+
+    return score;
+}
+```
 
 #### Code Journal
 my initial entry before chat'gpt lol.
@@ -201,9 +465,77 @@ int scrabble(string word)
 
 */
 ```
+final code:
+```c
+#include <cs50.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
 
+// Setting constants.
+
+// Number of players
+const int N = 2;
+// Scrabble letter scores
+const int SCORES[26] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+
+// Protoyping
+int scrabble(string word);
+
+// Main function (query players, initialize 'scrabble')
+int main(void)
+{
+    string words[N];
+    int scores[N] = {0};
+
+    // based on N players, run the below 'for' loop 'N' (2) many times.
+    for (int i = 0; i < N; i++)
+    {
+        words[i] = get_string("Player %i: ", i + 1);
+        scores[i] = scrabble(words[i]);
+    }
+
+    // determining who wins:
+    if (scores[0] > scores[1])
+    {
+        printf("Player 1 wins!\n");
+    }
+
+    else if (scores[1] > scores[0])
+    {
+        printf("Player 2 wins!\n");
+    }
+
+    else
+    {
+        printf("Tie!\n");
+    }
+}
+
+int scrabble(string word)
+{
+    // initializing 'score' variable
+    int score = 0;
+
+    // iterate through word length, based on strlen as a limit
+    for (int i = 0, n = strlen(word); i < n; i++)
+    {
+        // check if character is an alphabetical character (no numbers or symbols)
+        if (isalpha(word[i]))
+        {
+            // if alphabetical character, convert to uppercase (if needed) and add to 'score' variable using SCORES as an index.
+            // note the 'A' is using the int value of "A" as a character (65)
+
+            int letterIndex = toupper(word[i]) - 'A';
+            score += SCORES[letterIndex];
+        }
+    }
+
+    return score;
+}
+
+```
 ## Notes
-
 ### Compiling
 #cs50/week/2/compiling
 - compilers have acted as an abstraction
@@ -1065,14 +1397,14 @@ int main(void)
 - 4. *linking*: code from your included libraries are converted also into machine code and combined with your code
 	- the final executable file is then outputted
 		- ![[CleanShot 2024-01-19 at 23.35.56.png]]
-## Debugging
+### Debugging
 - everyone will make mistakes while coding
 - basically
 	- rubber duck
 	- break points
 	- debug50, win the game.
 
-## Arrays
+### Arrays
 - in week 0, we talked about *data types* such as `bool`, `int`, `char`, `string`, etc.
 - each data type requires a certain amount of system resources:
 	- `bool` 1 byte
@@ -1189,7 +1521,7 @@ float average(int length, int array[])
 	- further, notice a `const` or constant value of `N` is declared
 	- most importantly, notice how the `average` function takes `int array[]`, which means that the compiler passes an array to the function
 - not only can arrays be containers: they can be passed between functions
-## Strings
+### Strings
 - a `string` is simply an array of variables of type `char`: an array of characters
 - considering the following image, you can see how a string is an array of characters that begins with the first character
 	- it also ends with a special character called a `NUL character:`
@@ -1288,7 +1620,7 @@ int main(void)
 
 - notice that both strings are stored within a single array of type `string`.
 
-### String Length
+#### String Length
 - a common problem within programming, and perhaps C more specifically
 	- & discovering the length of an array
 - how could we implement this in code?
