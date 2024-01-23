@@ -8,6 +8,9 @@
 
 # Week 2
 ## PSET 2
+
+
+
 ### INFO
 #cs50/pset/2
 1. Log into cs50.dev using your GitHub account
@@ -21,6 +24,17 @@ If you submit both Caesar and Substitution, we'll record the higher of your two 
 
 When to do it?
 Tuesday, December 31, 2024 at 11:59 PM EST.
+
+
+### PSET 2 - SUBSTITUTION
+#### Problem to solve
+- in a substitution cipher, we "encrypt" (i.e., conceal in a reversible way) a message by replacing every letter with another letter
+	- to do we, we use a *key*
+	- in this case, a mapping of each of the letters of the alphabet to the letter it should correspond to when we encrypt it
+	- to "decrypt" the message:
+		- the receiver of the message would need to know the key, so that they can reverse the processs: translating the encrypt text (generally called *ciphertest*) back into the original message (generally called *plaintext*)
+- a key, for example, might be the string `NQXPOMAFTRHLZGECYJIUWSKDVB 
+	- this 26-char key means that `A` (the first letter of the alphabet) should be converted into `N` ( the first character of the key), `B~ (`
 
 ### PSET 2 - Readability
 
