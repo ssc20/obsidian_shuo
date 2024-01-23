@@ -34,7 +34,7 @@ Tuesday, December 31, 2024 at 11:59 PM EST.
 	- to "decrypt" the message:
 		- the receiver of the message would need to know the key, so that they can reverse the processs: translating the encrypt text (generally called *ciphertest*) back into the original message (generally called *plaintext*)
 - a key, for example, might be the string `NQXPOMAFTRHLZGECYJIUWSKDVB 
-	- this 26-char key means that `A` (the first letter of the alphabet) should be converted into `N` ( the first character of the key), `B~ (`
+	- this 26-char key means that `A` (the first letter of the alphabet) should be converted into `N` ( the first character of the key), `B` (the second letter of the alphabet) should be converted 
 
 ### PSET 2 - Readability
 
