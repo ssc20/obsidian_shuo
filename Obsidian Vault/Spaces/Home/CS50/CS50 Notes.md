@@ -314,8 +314,42 @@ Else if 50 > doors[middle]
 				- not comparing in the way you might have thought..
 			- == does something different in python or java
 		- let's put this into play with some actual additional code
-
-
+- implemented this idea of the phonebook...
+	- ![[CleanShot 2024-01-24 at 21.48.01.png]]
+	- does any aspect of this phonebook rub you the wrongway?
+		- it's too much! but why?
+		- separating the names and the numbers
+			- it looks a little bit weird
+			- technical term: code smell (already know this)
+		- if i add fourth name, fifth name... number.. it's probably going to go out of sync?
+			- i shouldn't decouple names from numbers in this instance
+		- when you perceive this, there's a chance to improve!
+		- we need another tool:
+- Data structures
+	- arrays are our first example of data structures
+	- little bit of new syntax:
+		- will allows us to create own data structures, own types of variables
+		- largely using syntax we've used thus far
+- to represent a person in our phonebook
+	- wouldn't it be nice if C had a datatype called person?
+	- i could create an array containing people in my phone book
+	- maybe people have a name and an umber
+		- `person people[]`
+		- `string name; string number;`
+We can do this
+```c
+typedef struct
+{
+	string name;
+	string number;
+}
+person;
+```
+put all of the variables you want to associate with this datatype
+- create a new data type called person
+	- when C was created alongside the ints and the floats and so forth
+how can i actuallly use this?
+	- you can go back into your code
 
 
     
