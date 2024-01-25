@@ -245,23 +245,40 @@ Else if 50 > doors[middle]
 		- will always take me n steps, going 1 by 1 from the start
 	- we use this to consider the "worst case"
 - O(log n) - logarithmic
+	- this is our example of binary search
+	- takes fewer and fewer steps to run even in the worst case
 - O(1) - constant
 	- this doesn't actually mean 1 step
 		- but it does refer to a constant number of steps taken total
 		- when everyone stood up
 			- it always is "everyone" stands up, so 1 step taken total
-			- 
+- we have this capital Greek $\Omega$ 
+	- exact same idea of best case
+	- ![[CleanShot 2024-01-24 at 21.21.03.png]]
+	- this will take as few as...
+	- how many steps might it take in the best case? (guessing lockers)
+		- linear search: just 1 step
+		- binary search: 1 step
+		- $\Omega$ 1
+		- $\Omega$ 1
+		- what about attendance?
+			- i have to point at eeryone...
+			- the best and worst case is that it takes n steps
+- these cases where best = worst
+	- Theta notation
+	- $\theta$ 
+		- same number of steps as Big O and Omega analysis
+- you'll go more into these ideas with computer science
+	- Big O: upper bound
+	- omega: lower bound
+- with thtat being said, let's see how we might translate this to actual code
+	- something that makes sense
+	- not just new syntax, but applications of these concepts
+- lets go make search.c
 - -   
-    It’s the shape of the curve that shows the efficiency of an algorithm. Some common running times we may see are:
+
     
-    - �(�2)
-    - �(�log⁡�)
-    - �(�)
-    - �(log⁡�)
-    - �(1)
-- Of the running times above, �(�2) is considered the worst running time, �(1) is the fastest.
-- Linear search was of order �(�) because it could take _n_ steps in the worst case to run.
-- Binary search was of order �(log⁡�) because it would take fewer and fewer steps to run even in the worst case.
+  
 #cs50/week/2/arrays
 #cs50/week/2
 

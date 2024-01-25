@@ -162,13 +162,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -188,6 +186,7 @@
   },
   "active": "9f5c24cdb1e07355",
   "lastOpenFiles": [
+    "CleanShot 2024-01-24 at 21.21.03.png",
     "CleanShot 2024-01-24 at 21.10.51.png",
     "CleanShot 2024-01-24 at 20.49.00.png",
     "CleanShot 2024-01-24 at 20.48.31.png",
