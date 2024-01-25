@@ -287,8 +287,16 @@ Else if 50 > doors[middle]
 		- intro'ing the idea of returning 0, i should also introduce the idea of introducing a return value to indicate failure
 	- testing, students might appreciate this more so that ppl understand what's better under the hood
 - for strings though....
-- 
-- -   
+	- ![[CleanShot 2024-01-24 at 21.38.42.png]]
+	- -   this doesn't seem to work
+	- if you want to compare strings in C, you don't do it like you did integers
+	- you actually need another technique altogether
+	- `string.h` is needed
+		- library that includes:
+			- `strlen`
+			- `strcmp` - string compare
+				- will tell us if 2 strings are the same or not
+	- let me go back to my code now and see what I'll do differently
 
     
   
