@@ -36,6 +36,143 @@ Tuesday, December 31, 2024 at 11:59 PM EST.
 - a key, for example, might be the string `NQXPOMAFTRHLZGECYJIUWSKDVB 
 	- this 26-char key means that `A` (the first letter of the alphabet) should be converted into `N` ( the first character of the key), `B` (the second letter of the alphabet) should be converted 
 
+#### submission
+```c
+#include <cs50.h>
+#include <ctype.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
+
+const int ALPHABET_SIZE = 26;
+
+string crypto(string key, string input);
+
+int main(int argc, string argv[])
+{
+    // If command line input is [place: 2]
+    if (argc == 2)
+    {
+        string key = argv[1];
+
+        // Check if key length is ALPHABET_SIZE
+        if (strlen(key) == ALPHABET_SIZE)
+        {
+            // Array to keep track of which characters have been seen
+            bool seen[ALPHABET_SIZE] = {false};
+
+            // flag to check validity
+            int isValid = 1;
+
+            // Check each character
+            for (int i = 0; i < ALPHABET_SIZE; i++)
+            {
+                if (!isalpha(key[i]))
+                {
+                    // not an alphabetical character
+                    isValid = 0;
+                    printf("Key must only contain alphabetic characters.\n");
+                    return 1;
+                    break;
+                }
+                else
+                {
+                    int c = toupper(key[i]) - 'A'; // Normalize character index to 0-25
+                    if (seen[c])                   // if this evaluates true, which it does by default, then:
+                    {
+                        // character has been seen before
+                        isValid = 0;
+                        printf("Key must not contain repeated characters.\n");
+                        return 1;
+                        break;
+                    }
+                    else
+                    {
+                        seen[c] = true; // Mark this character as seen
+                    }
+                }
+            }
+
+            // provided the key evaluates as valid, run crypto
+            if (isValid)
+            {
+                printf("Valid key.\n");
+
+                string userinput = get_string("plaintext: ");
+
+                string testphrase = crypto(key, userinput);
+
+                printf("ciphertext: %s\n", testphrase);
+            }
+            else
+            {
+                printf("Invalid key. Ensure the key contains each letter exactly once.\n");
+                return 1;
+            }
+        }
+        else
+        {
+            printf("Invalid key length. Ensure the key is ALPHABET_SIZE characters long.\n");
+            return 1;
+        }
+    }
+    else
+    {
+        printf("Incorrect number of arguments. Please provide a single key.\n");
+        return 1;
+    }
+
+    return 0;
+}
+
+// function to convert input string using provided key, to testphrase
+string crypto(string key, string input)
+{
+    // initalize variables; create an array to base an index off of (alphaLower, alphaUpper)
+    char keyC[ALPHABET_SIZE + 1] = {0};
+    int inputLength = strlen(input);
+    string user = input;
+    int alphaLower[ALPHABET_SIZE];
+    int alphaUpper[ALPHABET_SIZE];
+
+    for (int i = 0; i < ALPHABET_SIZE; i++)
+    {
+        alphaLower[i] = 'a' + i;
+        alphaUpper[i] = 'A' + i;
+    }
+
+    for (int i = 0; i < ALPHABET_SIZE; i++)
+    {
+        keyC[i] = toupper(key[i]);
+    }
+
+    for (int i = 0; i < inputLength; i++)
+    {
+        if (isalpha(user[i]))
+        {
+
+            if (isupper(user[i]))
+            {
+                // create "index" number to reference the letter's numerical position in the alphabet
+                int index = user[i] - 'A';
+                user[i] = toupper(keyC[index]);
+            }
+
+            if (islower(user[i]))
+            {
+
+                int index = user[i] - 'a';      // Get the index in the alphabet
+                user[i] = tolower(keyC[index]); // Replace with the corresponding character from the key
+            }
+        }
+    }
+
+    return user;
+}
+
+// NQXPOMAFTRHLZGECYJIUWSKDVB
+```
+
 ### PSET 2 - Readability
 
 #### Problem to solve
