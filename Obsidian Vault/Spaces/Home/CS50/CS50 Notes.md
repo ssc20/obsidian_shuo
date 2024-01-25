@@ -297,6 +297,26 @@ Else if 50 > doors[middle]
 			- `strcmp` - string compare
 				- will tell us if 2 strings are the same or not
 	- let me go back to my code now and see what I'll do differently
+		- ![[CleanShot 2024-01-24 at 21.40.56.png]]
+		- now it works correctly!
+		- why might it be valuable for `strcmp` to return 0
+			- when comparing 2 strings...
+				- it's not just that they're equal...
+				- like us sorting information, it's usually useful to know if this string equals another
+					- but also alphabetically, if it comes before or after?
+				- == can only give a true or a false
+					- so this might not be that helpful
+				- strings are compared based on ASCII-betical order
+					- comparing (65) against another letter's integer value
+			- not doing any sorting, it's immaterial
+				- but strcmp again returns 0
+			- using == to compare strings[i] and s
+				- not comparing in the way you might have thought..
+			- == does something different in python or java
+		- let's put this into play with some actual additional code
+
+
+
 
     
   
