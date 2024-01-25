@@ -1,6 +1,35 @@
 
 ---
 
+# Week 3
+## Notes
+### Algorithms
+- taking a break from syntax
+- we have a lot of vocabulary now!
+	- might not grasp functionality
+- but instead, let's think about how to think 'algorithimically'
+	- quantize real world problems so we can map puzzle pieces from week 0, with this new syntax to solve those problems
+- recall the time to solve v. size of problem chart
+	- how many units of measure -- whatever you're using
+	- the first algorithm: going 1 page at a time
+		- 1:1 slope!
+	- the second algorithm, we started doing two pages at a time
+		- might skip a page;
+			- faster, but not yet 2/1
+	- the third algorithm; logirithimc curve
+		- even if you doubled the size of the phone book
+			- it was just one more page turn
+			- not another 500 or 1000
+- think back to how we want to divide and conquer the problem
+	- if i were to take attendence on stage, we could do it old school... one step at a time
+		- or double by counting 2 at a time
+- everyone stand up and think of the number 1
+	- second step, ultimate theorohetically: pair off with someone standing
+		- add their number to yours
+		- remember the sum
+	- most likely, everyone is thinking of the number two
+		- unless you're an odd one out
+	- next step is that one of you in the pairs should sit down
 
 
 #cs50/week/2/arrays
