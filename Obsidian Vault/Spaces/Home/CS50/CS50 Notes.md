@@ -34,8 +34,234 @@
 		- if still standing, go back to step 2
 		- keep going if still standing!
 	- theoretically, there's only 1 person standing left
+		- asking each other their number
+		- 46
+		- 16
+		- 48
+		- (sitting down)
+		- 32
+		- 43
+		- 22
+		- 16
+	- if there were 1000, then 500, then 250...
+		- why? 
+		- each step of the algorithm, half was sitting down each time
+	- the total count is 231
+	- everyone paired off!
+	- click enter, do all of the remaining addition, should have the total count of people in the room
+	- unlike 1st or 2nd algo, the 3rd, should've been fundamentally faster
+		- no matter how many people
+		- 
+- as a backup, the actual number. of people in the room
+	- (i have no idea, but apparently it was really off)
+- same idea of "dividing and conquering"
+- halving, halving, and that's called logarithms
+- doing something n times, or even n / 2 times, where n is the number of ppl in the room
+- in contact books like on iOS/Android
+	- the divide/conquer, logarithimc search, is what is being used
+	- these ideas are everywhere, and hopefully you find the one person you're looking for
+		- the person who should have the count of "everyone"
+		- should 'coalesce' in the figure of the last person standing
+- the idea of data structures, arrays
+	- key definition: a collection
+	- strings are just an example of char char char
+		- not necessarily 
+	- list in concept
+	- consecutive aka contiguous
+		- an array is important in C, is because it's contiguous
+		- the bytes are back to back to back somewhere in the computer's memory
+	- we can actually start to problem solve
+		- pair this down to just an abstract size of 7
+- suppose there are these numbers
+	- {1, 5, 10 , 20, 100, 500}
+		- the catch with C: find the number 50....
+			- every number found it obviously, since we have a "birds-eye" view of the memory 
+			- the computer does NOT; it can only look at each value 1 at a time
+			- you have to shield your eye and look at 1 number at a time L-R in order to find if the 50 is actually there
+		- analogous to a set of gym lockers
+		- ![[CleanShot 2024-01-24 at 20.48.31.png]]
+	- so we have some terminology, I've labelled the locker doors like so:
+		- ![[CleanShot 2024-01-24 at 20.49.00.png]]
+	- although there are 7 lockers, I'm only counting to 6...
+		- again, this is equiv to `n-1`
+	- suppose we are to use these lockers, let's find an actual number in these doors
+		- constantly searching for information...
+	- let's abstract this!
+		- the black box model; input > algorithm > output
+	- the input is an array of 7 numbers
+		- the problem, find me the data if it's there....
+		- the algorithm is where we need to do our thinking
+			- you can generalize this to web pages , contacts, or any other type of info that is in a computers database
+- Example going hard
+	- Sam is Applied Math
+	- Louis is doing econ with stats
+	- David was in Matthews too (matthews south)
+	- Behind you are these seven lockers
+		- find us the number 50
+		- like you to then explain how you go about finding it...
+	- *opened the last locker*
+		- $10 bill
+	- *next locker left*
+		- $100 bill
+	- eventually find the $50
+	- if you could explain, what was your algorithm
+		- keep going till you find it...
+	- Carter is going to shuffle the numbers carefully...
+- could Sam have done better?
+	- that took 5 steps to find the $50 bill
+	- if you got lucky, you could've found it on the 1st try
+	- taken out all the dollar bills, sorted them, put them back in, then do the divide and conquer approach
+		- valid algo, but all the work seems to be inefficient
+		- this might be a reasonable solution if she wants to search again and again
+		- assign a cost up front to prevent this.
+	- go from left to right...
+		- show everyone the numbers to prove there's no funny business going on here
+		- {20, 500, 10, 5, 100, 1, 50}
+		- had to literally go into the last locker on the right..
+		- the performance of that algorithm, really depends on where the number ends up being
+		- it really just boils down to luck, unfortunately
+	- (i'm guessing 1 left, 1 right?, or some combination of that?)
+		- Louis has the memory, but let's try and assume no memory
+	- Louis is starting from the middle
+		- since there's 4 numbers, i know some are bigger, i'll go to the right
+		- relative to these three, 
+			- 50 has to be between 20 and 100
+	- Louis' instinct, was remember the numbers and deduce the number...
+		- (trial difficulty)
+		- Louie's instinct, to find it, to index it, is an ctual technique
+		- where you actually take ifnormation and go to where you want
+			- a concept called hashtables
+		- let's try and formalize the algorithms that the volunteers intuitively came up with
+	- 
+- Linear search
+	- #linearsearch #pseudocode
+	- stepping in a line, no matter which direction you're going
+	- let's try and formalize; translate it into pseudo code
+```pseudocode
 
+for each door from left to right
+	if 50 is behind door
+		return true
+return false
 
+// notice that the return value is outside of the 'for' loop
+
+// we want to avoid concluding within the first iteration, that the 50 behind the door is not present at all (returning false prematurely)
+
+```
+- notice that only towards the bottom of the algorithm, 
+	- if she opened the door, found it to be the wrong door...
+	- if you don't previously return true, make sure you try again until you do
+
+```c
+For i from 0 n-1 // say n is 7, through 6 doors
+	if 50 is behind doors[i] // if door is the i'th door, and it has the 50, it's true
+		Return true
+Return false // otherwise, after options exhausted, where door is the i'th door, and doesn't have the 50, return false entirely
+// notice that this psuedo code borrows from C
+```
+
+- Binary Search
+	- #binarysearch
+
+```
+If no doors left
+	Return false
+If 50 is behind middle door
+	Return true
+Else if 50 < middle door
+	Search left half
+Else if 50 > middle door
+	search right half
+// note the 4 possibilities, this should be the question you ask first, since there *could* be no doors left
+```
+- we can make this more technical
+```
+If no doors left
+	Return false
+If 50 is behind doors[middle]
+	Return true
+Else if 50 < doors[middle]
+	Search doors[0] through doors[middle - 1]
+// don't waste time serching the middle door we already looked at
+Else if 50 > doors[middle]
+	Search doors[middle + 1] through doors[n - 1]
+// not n because we start counting from 0
+```
+- we can try the more technical pseudocode, since it could be translated verbatim to C code
+- only headache is rounding issues, 
+	- because if you divide int by fraction, you work through what's going to be truncated when rounded down or up as a solution
+- let's consider bit more formally a question that we'll come back to the future
+	- what is the running time of these algorithms = measuring efficiency of these algorithms
+- going back to the picture, where representitive of the phone book
+	- bug aside, the attendence counting algorithm,
+		- this green line theoretically represents the time for us to calculate that
+	- describe things mathematically at a time
+		- 2 people or 2 pages at a time
+- n = 1 page a ta time
+	- n / 2 = 2 pages at a time
+- log2n
+	- log base 2 of n
+	- what is the valuetaking n and dividing it by 2 again and again and again and again
+		- until left with 1 person/value standing
+- being this precise, it's not that intelectually interesting
+- generally a computer scientist is asked the efficiency of your algorithm
+	- how good or bad?
+		- will talk about it being on some order of steps
+		- just wave your hand at it
+		- broad strokes: all we care about is certain numbers
+	- when computer scientists, they thowr away efifcineceis
+		- throw away constant factors
+		- that might be dividing here or a base here
+	- BIG O NOTATION
+		- #big_o_notation
+		- O(n)
+		- O(n)
+		- O(log2n)
+			- this actually becomes O(logn)
+	- doesn't matter again, fundamentally what the base/factors are
+- zoom out,
+	- ![[CleanShot 2024-01-24 at 21.10.51.png]]
+	- the algorithms become closer and closer
+	- once n is large enough, they are practically the same algorithm
+	- the fundamentally different shape of log though, is very appealing
+- this is why constant terms are thrown away (don't change the picture much)
+- algorithms can be described in the order of these running times
+	- n is just the number of values (what you're doing in code)
+	- (n times n - 1)
+		- say everybody wants to shake everybody's hand, that's how you calculate it
+		- toss away the 1
+- O(n^2) - quadratic
+	- this means N people doing N things
+	- if we were to ask you to shake everyone's hand in the room
+	- how many handshakes?
+		- n of you, and you've got to shake everyone n's hand...
+		- 
+- O(n log n) (other fancier terms but not for now)
+- O(n) - linear
+	- this will take linear time
+	- left to right: {1, 2, 3, 4}
+	- n pages, it'll take me n steps
+		- will always take me n steps, going 1 by 1 from the start
+	- we use this to consider the "worst case"
+- O(log n) - logarithmic
+- O(1) - constant
+	- this doesn't actually mean 1 step
+		- but it does refer to a constant number of steps taken total
+		- when everyone stood up
+			- it always is "everyone" stands up, so 1 step taken total
+			- 
+- -   
+    It’s the shape of the curve that shows the efficiency of an algorithm. Some common running times we may see are:
+    
+    - �(�2)
+    - �(�log⁡�)
+    - �(�)
+    - �(log⁡�)
+    - �(1)
+- Of the running times above, �(�2) is considered the worst running time, �(1) is the fastest.
+- Linear search was of order �(�) because it could take _n_ steps in the worst case to run.
+- Binary search was of order �(log⁡�) because it would take fewer and fewer steps to run even in the worst case.
 #cs50/week/2/arrays
 #cs50/week/2
 

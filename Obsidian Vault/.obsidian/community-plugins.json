@@ -21,5 +21,6 @@
   "templater-obsidian",
   "obsidian-kanban",
   "obsidian-outliner",
-  "obsidian-list-callouts"
+  "obsidian-list-callouts",
+  "quick-latex"
 ]
