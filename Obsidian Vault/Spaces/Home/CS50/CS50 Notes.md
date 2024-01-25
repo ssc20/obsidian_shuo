@@ -275,6 +275,19 @@ Else if 50 > doors[middle]
 	- something that makes sense
 	- not just new syntax, but applications of these concepts
 - lets go make search.c
+	- ![[CleanShot 2024-01-24 at 21.32.54.png]]
+	- "correct" implementation of the linear search
+	- `return 0` for main indicates success
+		- 0 is false, 1 is true, so it's counter-intuitive
+		- the program works, 1 possiblity: 0
+			- it doesn't, and there's an infinite number of that.. so
+		- when you return 0, the program will effectively terminate
+	- `return 1` is pedantic
+		- don't care what the exit status of this in the program
+		- intro'ing the idea of returning 0, i should also introduce the idea of introducing a return value to indicate failure
+	- testing, students might appreciate this more so that ppl understand what's better under the hood
+- for strings though....
+- 
 - -   
 
     
