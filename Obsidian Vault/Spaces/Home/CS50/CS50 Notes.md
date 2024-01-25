@@ -21,15 +21,18 @@
 			- it was just one more page turn
 			- not another 500 or 1000
 - think back to how we want to divide and conquer the problem
-	- if i were to take attendence on stage, we could do it old school... one step at a time
+	- if i were to take attendance on stage, we could do it old school... one step at a time
 		- or double by counting 2 at a time
 - everyone stand up and think of the number 1
-	- second step, ultimate theorohetically: pair off with someone standing
+	- second step, ultimate theoretically: pair off with someone standing
 		- add their number to yours
 		- remember the sum
 	- most likely, everyone is thinking of the number two
 		- unless you're an odd one out
 	- next step is that one of you in the pairs should sit down
+	- notice we're about to induce a loop so the rest is on you!
+		- if still standing, go back to step 2
+		- keep going if still standing!
 
 
 #cs50/week/2/arrays
