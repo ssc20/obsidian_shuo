@@ -33,6 +33,7 @@
 	- notice we're about to induce a loop so the rest is on you!
 		- if still standing, go back to step 2
 		- keep going if still standing!
+	- theoretically, there's only 1 person standing left
 
 
 #cs50/week/2/arrays
