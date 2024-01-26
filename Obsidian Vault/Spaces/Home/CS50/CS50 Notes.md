@@ -342,7 +342,7 @@ typedef struct
 {
 	string name;
 	string number;
-}
+} 
 person;
 ```
 put all of the variables you want to associate with this datatype
@@ -356,12 +356,29 @@ how can i actually use this?
 Can improve it as follows
 - it's going to look a little bit complicated at fist
 - but will scale better over time
+![[CleanShot 2024-01-25 at 21.03.50.png]]
 
-
+- we can fulfill the phone book format later with a loop
+	- but for now this fulfills our purpose
+- we've solved this problem with a brand new data type
+	- represents this custom data, where struct clusters all these keywords together
+- when it comes to styling your code, style50 will put the name of the datatype on the other side of the closing brace
+	- this is fine; this is the "right" way of styling it
+```c
+typedef struct
+{
+	string name;
+	string number;
+} person;
+```
+Do you have to assing both name and number
+- can you get away with one of the name only?
+  - will result in bogus data
+  - run the risk of crashing your code, even though you never initialized it
 
 
     
-  
+    
 #cs50/week/2/arrays
 #cs50/week/2
 
