@@ -373,8 +373,28 @@ typedef struct
 ```
 Do you have to assing both name and number
 - can you get away with one of the name only?
-  - will result in bogus data
-  - run the risk of crashing your code, even though you never initialized it
+- will result in bogus data
+- run the risk of crashing your code, even though you never initialized it
+
+now we have the ability to represent more interesting structures...
+- sorting
+
+we assumed someonene had sorted the data for us..
+- what if we sort info first, then go find the 50
+- how expensive is it to sort?
+- how much do microsoft and google spend to keep data sorted?
+
+unsorted > blackbox/algo > output
+
+- everything is arguably unsorted by default, but we want to get it sorted
+- somewhere in this blackbox we have to sort this information
+	- if we have these integers unsorted
+- ![[CleanShot 2024-01-25 at 21.11.37.png]]
+- maybe it's time for some brownies?
+
+- could we get 8 more volunteers?
+
+
 
 
     
