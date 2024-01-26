@@ -474,7 +474,64 @@ Now the example is finished...
 	- this assumes i don't have an infinite amount of memory
 		- propose only keeping track of one number at a time
 		- smallest element seen thus far
-		- if i used more memory, i coud
+		- if i used more memory, i could remember from the first pass, where 2 is , where 3 is
+			- different algo.. more space... more memory
+```c
+For i from 0 to n-1
+	Find smallest number between numbers[i] and numbers[n-1]
+	Swap smallest number with numbers[i]
+```
+- when the loop starts at 0,
+	- from the far left to the far right...
+	- swap the smallest number with the far left
+	- evicting people from the left, then the next, then the next
+- this is an algorithm having us go back and forth iteratively selecting the smallest elements
+	- think of them representing an array...
+	- doors like this where the leftmost = 0
+		- rightmost is n - 1
+- how many total steps does selection sort perhaps take?
+	- let's do a quick visualization
+	- ![[CleanShot 2024-01-25 at 21.53.57.png]]
+	- tall purple represent large numbers, short represent smaller numbers
+		- in pink again and again... equivalent me walking through the volunteers
+		- as soon as I have found the smallest element, evict whoever was originally there
+			- it holds briefly. in pink what it thinks the smallest number is
+		- this algorithm feels kind of slow...
+			- doing a lot of work?
+			- where is the work coming in?
+				- keeps going back and forth and back and forth
+				- shaving a little bit of time... doesn't have to go ALL the way back..
+				- but cyclicity
+					- comparisons again and again
+					- I can't remember...
+			- efficient or inefficient is something like selection sort?
+			- if we have n numbers...
+				- `n-1`  first pass
+					- that put the smallest number
+					- don't need to walk in front of all 8
+					- (n - 1), + (n - 2) + (n - 3) ... + 1
+					- this series here...
+						- n(n - 1)/2
+							- no matter what n is, this formula captures the sum of the series
+							- that is how many steps taken again and again when implementing for 8 people
+						- = n^2/2 - n/2
+							- n^2 seems like the biggest term, the *dominant term*
+							- dividing this quadratic formula by 2 is big... but as n gets larger and larger...
+					- selection sort is on the order of *O(n^2)*
+					- kind of a slow one, again
+					- can we do actually better?
+					- if selection sort is in the order of n^2?
+						- best case...
+						- no special conditional, if sorted already, exit early
+				- this line of pseudocode tells us what...
+					- not precise, but on the order of n^2
+					- any number of doors, it's going to end up being omega of n^2
+					- even in the best case where numbers are already sorted, there is nothing in the algo that says I'm done and exit prematurely
+					- big o of n^2, and omega of n^2
+						- by coincidence, because these boundaries are the same:
+							- $\theta$ n^2
+	- bubble 
+		
 
 
 
