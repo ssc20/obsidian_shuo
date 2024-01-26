@@ -423,9 +423,58 @@ unsorted > blackbox/algo > output
 			- ![[CleanShot 2024-01-25 at 21.39.52.png]]
 			- there's a lot of looping and conditionals in how we were doing this example
 			- if you guys could reset yourselves to the same ordering...
+- #algorithm
 - I liked the intuition where they organically looked to the person, on the left and the right
 	- ![[CleanShot 2024-01-25 at 21.41.01.png]]
 	- these 2 will swap
+		- 7, 5 swap
+		- 7, 4 swap
+		- 7, 1 swap
+		- 7 6 swap
+		- 7 0 swap
+		- 7 3 swap
+		- not done yet... but who is definitely in the right place?
+			- Eli (7) is!
+			- I can skip him moving forward, taking one byte out
+		- 2 5 ok
+		- 5 4 swap
+		- 5 1 swap
+		- 5 6 ok
+		- 6 0 swap
+		- 6 3 swap
+		- don't have to worry about Eli 7
+		- or Haron 6
+	- even though i'm going back and forth, the problem is getting easier each time
+	- 2 4 good
+	- 4 1 swap
+	- 4 5 ok
+	- 5 0 swap
+	- 5 3 swap
+	- 5 6 7 good
+	- 2 1 swap
+	- 2 4 ok
+	- 4 0 swap
+	- 4 3 swap
+	- 3 4 5 6 7 ok
+	- 2 0 swap 
+	- 2 3 ok
+	- 1 0 swap
+	- 1 2 swap
+	- 0 1 ok
+	- 1 2 3 4 5 6 7 ok
+	- 
+Now the example is finished...
+- showcased 2 approaches
+	- 1. selected the element again and again, looking for the smallest
+	- 2. fixing local problems, doing it again and again until all the minor problems
+		- this is closer to the organic example
+- 1 = "selection sort"
+	- deliberately selecting the smallest element again and again
+	- don't know a priori, until going through the system at least once
+	- this assumes i don't have an infinite amount of memory
+		- propose only keeping track of one number at a time
+		- smallest element seen thus far
+		- if i used more memory, i coud
 
 
 
