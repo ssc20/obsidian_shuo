@@ -418,7 +418,14 @@ unsorted > blackbox/algo > output
 	- let's swap everybody
 		- if mariella, the 0, smaller, i can start taking fewer bytes
 			- 2 was the smallest... now 1 is the smallest
-			- 
+		- 5, 4, let's take 2 where you belong
+			- it's like -1 each time, as we verify how this works
+			- ![[CleanShot 2024-01-25 at 21.39.52.png]]
+			- there's a lot of looping and conditionals in how we were doing this example
+			- if you guys could reset yourselves to the same ordering...
+- I liked the intuition where they organically looked to the person, on the left and the right
+	- ![[CleanShot 2024-01-25 at 21.41.01.png]]
+	- these 2 will swap
 
 
 
