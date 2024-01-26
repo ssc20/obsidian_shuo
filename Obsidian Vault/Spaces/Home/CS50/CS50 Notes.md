@@ -414,6 +414,11 @@ unsorted > blackbox/algo > output
 		- i can forget about the 7...,
 		- 1 is clearly smaller, but not even smallest, my smallest element so far is 1
 		- mariana, where should we put you clearly
+		- if this is an array, contiguous, cancan't have the luxury...
+	- let's swap everybody
+		- if mariella, the 0, smaller, i can start taking fewer bytes
+			- 2 was the smallest... now 1 is the smallest
+			- 
 
 
 
