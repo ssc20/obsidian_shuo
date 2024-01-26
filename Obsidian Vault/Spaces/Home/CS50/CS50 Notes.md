@@ -395,7 +395,25 @@ unsorted > blackbox/algo > output
 - could we get 8 more volunteers?
 	- if everyone grab a number
 	- ![[CleanShot 2024-01-25 at 21.18.50.png]]
-- 
+- notice this array of volunteers is entirely unsorted
+- sort yourselves from smallest to largest
+	- looked for the number that was lower. and higher, then found the middle
+- what you guys did was a little hard to translate into code
+	- let's try taking 2 passes in this
+	- start from the same point each time
+- we can approach sorting in a couple of different ways
+	- needs to be methodical
+		- pseudocode > code
+		- quantize everything step by step
+		- espeically not 8 people, 80 people, 800 people
+	- probably would have taken forever
+		- no doors in front of volunteers
+	- find the smallest number and put i on the left, can't just take a step back...
+		- let's find it more methodically
+		- this is actually the smallest number i've ever seen
+		- i can forget about the 7...,
+		- 1 is clearly smaller, but not even smallest, my smallest element so far is 1
+		- mariana, where should we put you clearly
 
 
 
