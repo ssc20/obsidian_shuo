@@ -393,6 +393,9 @@ unsorted > blackbox/algo > output
 - maybe it's time for some brownies?
 
 - could we get 8 more volunteers?
+	- if everyone grab a number
+	- ![[CleanShot 2024-01-25 at 21.18.50.png]]
+- 
 
 
 
