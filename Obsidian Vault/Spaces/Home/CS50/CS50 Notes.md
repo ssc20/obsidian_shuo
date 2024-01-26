@@ -348,8 +348,16 @@ person;
 put all of the variables you want to associate with this datatype
 - create a new data type called person
 	- when C was created alongside the ints and the floats and so forth
-how can i actuallly use this?
+how can i actually use this?
 	- you can go back into your code
+- a structure can be a vairable of toehr variabels
+- typedata means define the following type, invent the type for me
+- new datatype despite not being implemented decades ago, natively in C
+Can improve it as follows
+- it's going to look a little bit complicated at fist
+- but will scale better over time
+
+
 
 
     
