@@ -25,9 +25,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Google IT Operating Systems.md",
+                "file": "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Google IT Operating Systems.md",
+                "file": "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Google IT Operating Systems.md",
+                "file": "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Google IT Operating Systems.md"
+                "file": "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md"
               }
             }
           },
@@ -197,26 +197,29 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "de92d5b4a57b07c8",
+  "active": "5579791afde64774",
   "lastOpenFiles": [
-    "CleanShot 2024-01-26 at 21.20.50.png",
-    "Spaces/Home/CS50/CS50 Notes.md",
-    "Google IT Operating Systems.md",
-    "Coursera/Google IT",
-    "Coursera",
-    "CleanShot 2024-01-25 at 21.53.57.png",
-    "CleanShot 2024-01-25 at 21.41.01.png",
-    "CleanShot 2024-01-25 at 21.39.52.png",
-    "CleanShot 2024-01-25 at 21.18.50.png",
-    "CleanShot 2024-01-25 at 21.11.37.png",
-    "CleanShot 2024-01-25 at 21.03.50.png",
-    "CleanShot 2024-01-24 at 21.48.01.png",
-    "CleanShot 2024-01-24 at 21.40.56.png",
-    "CleanShot 2024-01-24 at 21.38.42.png",
-    "CleanShot 2024-01-24 at 21.32.54.png",
-    "Untitled.md",
-    "conflict-files-obsidian-git.md",
+    "Dr. K",
+    "Cloud Resume Challenge/Files",
     "Vault.md",
+    "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
+    "Cloud Resume Challenge",
+    "Untitled.md",
+    "Spaces/Home/Coursera/Google IT/Google IT Operating Systems.md",
+    "Spaces/Home/attachments/CleanShot 2024-01-24 at 20.48.31.png",
+    "Spaces/Home/attachments/CleanShot 2024-01-26 at 21.20.50.png",
+    "Spaces/Home/CS50/CS50 Notes.md",
+    "Spaces/Home/Coursera/Google IT",
+    "Spaces/Home/Coursera",
+    "Spaces/Home/attachments/CleanShot 2024-01-25 at 21.53.57.png",
+    "Spaces/Home/attachments/CleanShot 2024-01-25 at 21.41.01.png",
+    "Spaces/Home/attachments/CleanShot 2024-01-25 at 21.39.52.png",
+    "Spaces/Home/attachments/CleanShot 2024-01-25 at 21.18.50.png",
+    "Spaces/Home/attachments/CleanShot 2024-01-25 at 21.11.37.png",
+    "Spaces/Home/attachments/CleanShot 2024-01-25 at 21.03.50.png",
+    "Spaces/Home/attachments/CleanShot 2024-01-24 at 21.48.01.png",
+    "Spaces/Home/attachments/CleanShot 2024-01-24 at 21.40.56.png",
+    "conflict-files-obsidian-git.md",
     "2024-01-21.md",
     "Spaces/Home/CS50/CS50 - Credit.md",
     "Spaces/Home/CS50/CS50 Sections.md",
