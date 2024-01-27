@@ -109,7 +109,45 @@ new folder on Windows, wow.
 
 ` mkdir my_cool_folder`
 
+can either do
 
+`mkdir 'my cool folder`
+or escape characters
+```
+mkdir my` `cool` `folder`
+```
 
-/etc 
+bash new directory command is the same as windows
+
+the escape character in Bash is `\`
+
+`mkdir my\ cool\ folder`
+`mkdir 'my cool folder'`
+
+COMMAND HISTORY IS SICKO
+
+`history` will show you history in powershell
+
+- there is a better use
+- i can cycle up and then just do some shit i already know how to do
+`ctrl+R` will allow you to search through your history
+
+you can try `# (oldcommand)` which should do the same
+let's clean up our shell with the `clean` command
+
+the same `history` command is used in Linux
+clear
+
+## Copying files & directories
+- copy = `cp`
+- `cp mycoolfile.txt C:\Users\Cindy\Desktop``
+
+wildcard 
+- character used to select based on a specific type of pattern
+- you can select everything with the same file extension, for example
+`cp *.jpg C:\Users\Cindy\Desktop`
+
+copy a colder called bird pictures (now we need some recursion up in this bitch)
+- again, only copies the directory, but not the files
+- need a `-Recurse` parameter with copy to copy everything
 
