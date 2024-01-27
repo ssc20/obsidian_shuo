@@ -151,3 +151,13 @@ copy a colder called bird pictures (now we need some recursion up in this bitch)
 - again, only copies the directory, but not the files
 - need a `-Recurse` parameter with copy to copy everything
 
+`cp -r 'Cat Pictures' ~/Desktop`
+
+what if we wanted to rename something we created
+- we can use the `mv` item command
+- you can move multiple files by using wild cards
+`rm` is only usable by users with permissions to use it
+
+`-Force` 
+
+
