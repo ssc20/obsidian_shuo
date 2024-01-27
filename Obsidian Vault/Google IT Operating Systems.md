@@ -44,7 +44,72 @@ var = logs and files that constantly changed
 similar to windows, Linux uses flags, instead of parameters
 
 `ls --help`
-th
+we can also try `man` for manual page
+
+do `man ls`, it's like the other, but more detailed
+
+`ls -l/`
+similar to windows show properties, `ls -l` will tell us more granular information
+
+1. file permissions
+2. links the file has
+3. file owner, the group the file belongs to
+	1. groups are another way to specify access
+4. file size
+5. date last modified + time
+6. the file or directory name
+
+`ls - a` shows us all files including the hidden ones
+order of the flag doesn't matter
+
+you can hide a file or directory by prepending a dot to it
+
+absolute path starts from the main directory
+relative path starts from the current directory
+
+powershell usually starts in the home directory
+`pwd` print current working directory
+
+cd c:\users\cindy\Documents
+	changes to the documents directory...
+
+just go up one folder?
+
+shortcut to the directory above = `..`
+
+`cd ..`
+let's go to the desktop folder....
+
+`cd ..\desktop`
+
+pwd - desktop folder
+
+`cd ~` is the shortcut for our home directory
+`cd ~\Desktop`
+
+done quite a bit of typing so far
+shell has a built in feature called tab completion omfg
+
+`.` just means current directory
+
+USE BASH
+
+very similar/identical commands
+
+`cd /home/cindy/Documents`
+
+or `cd ../Documents`
+
+`cd ~/Desktop` ~ takes us back to the home directory
+
+instead of cycling through options... tab will show us all possible choices
+
+how to add directories 
+new folder on Windows, wow.
+
+` mkdir my_cool_folder`
+
+
 
 /etc 
 
