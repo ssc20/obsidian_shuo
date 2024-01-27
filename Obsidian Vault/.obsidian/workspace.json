@@ -25,9 +25,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
+                "file": "Spaces/Home/Other/Ramen.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Spaces/Home/Other/Ramen.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Spaces/Home/Other/Ramen.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md"
+                "file": "Spaces/Home/Other/Ramen.md"
               }
             }
           },
@@ -198,8 +198,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "5579791afde64774",
+  "active": "de92d5b4a57b07c8",
   "lastOpenFiles": [
+    "The Book of Ramen.pdf",
+    "Spaces/Home/Other/Ramen.md",
+    "Spaces/Home/CS50/CS50 Notes.md",
     "Dr. K",
     "Cloud Resume Challenge/Files",
     "Vault.md",
@@ -209,7 +212,6 @@
     "Spaces/Home/Coursera/Google IT/Google IT Operating Systems.md",
     "Spaces/Home/attachments/CleanShot 2024-01-24 at 20.48.31.png",
     "Spaces/Home/attachments/CleanShot 2024-01-26 at 21.20.50.png",
-    "Spaces/Home/CS50/CS50 Notes.md",
     "Spaces/Home/Coursera/Google IT",
     "Spaces/Home/Coursera",
     "Spaces/Home/attachments/CleanShot 2024-01-25 at 21.53.57.png",

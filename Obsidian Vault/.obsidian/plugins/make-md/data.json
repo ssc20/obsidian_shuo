@@ -41,7 +41,9 @@
     "spaces://$tags/spaces://#pset",
     "//Spaces",
     "//Spaces/Spaces/Home",
-    "//Spaces/Spaces/Home/Spaces/Home/CS50"
+    "//Spaces/Spaces/Home/Spaces/Home/CS50",
+    "//Spaces/Spaces/Home/Spaces/Home/Other",
+    "//Spaces/Spaces/Home/Spaces/Home/Other"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
@@ -62,9 +64,9 @@
   "dataviewInlineContext": false,
   "inlineContextNameLayout": "vertical",
   "waypoints": [
-    "Spaces/Home",
     "/",
-    "spaces://$tags"
+    "spaces://$tags",
+    "Spaces/Home"
   ],
   "spacesUseAlias": false,
   "fmKeyAlias": "aliases",
