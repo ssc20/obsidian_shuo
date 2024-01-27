@@ -176,5 +176,20 @@ How I would approach the Cloud Resume Challenge
 
 Community resources
 - maybe a bit of a disadvantage? who knows.
-- 
+
+- The Cloud Resume Challenge Discord Server
+	- ask challenge questions
+	- get code review
+	- view cloud job postings
+	- chat about cloud and life?
+- The Cloud Resume Challenge GitHub Repository
+	- open-sourced
+	- repository has become a community destination for additional projects created in the spirit of the original challenge
+	- if you want to give back to the community, this is a great place to do so
+- The Cloud Resume Challenge Video Tutorials
+	- Lou Bichard, founder of "Open Up The Cloud" and tireless friend of the challenge, has put together a comp. video series walking through each step of the original AWS challenge
+	- his associated GitHub repository also curates a nice selection of blogs written by challenge champions
+	- Rishab Kumar has also created a video wlakthrough of the major challenge chunks on AWS
+- More AWS Challenges
+	- 
 - 
