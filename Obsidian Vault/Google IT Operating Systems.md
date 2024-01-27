@@ -160,4 +160,122 @@ what if we wanted to rename something we created
 
 `-Force` 
 
+## THIS IS SO FUCKING BORING
+ sys admin role in linux
+i can view fiel contents using `cat`
+this will dump contents into shell
 
+the `more` command will enter a new program
+enter advances the page
+space advances 1 page
+the q key allows you to leave
+
+`cat fruits.txt -Head 10`
+first 10 lines
+
+`cat fruits.txt -Tail 10` 
+last 10 lines
+
+can use the same commands in Bash
+- the cat key is very similar
+- you can do `less` instead of `more`
+	- less is more lmao
+	- up and down keys
+	- pg up pg down
+	- g = start, G=end
+	- /word_search = search for a word or phrase
+	- q, quit out of less
+	- 
+
+
+`head fruits.txt`
+`tail fruits.txt`
+
+no good default in the terminal, but we can open notepad++ from cli
+
+`start notepad ++ \\ then filename`
+
+linux, many popular text editors 
+- Nano is a very popular text editor
+- type `nano` and we can start editing like any other text editor
+- Caret symbol ^ = ctrl
+
+PowerShell is a complex and powerful command language
+- need some real commands
+- - get-help
+	- can use ls to look at our alises
+`Get-Alias ls`
+
+
+![[CleanShot 2024-01-26 at 21.20.50.png]]
+
+Get-ChildItem C:\
+
+In Windows, we have 3 ways to execute commands
+`cmd.exe` are commands from the old DOS days
+- this is equal to `dir`
+- `/?` for other commands like `dir /?`
+- this is not transferrable
+- we are using Powershell and alias commands
+windows has a service called the Windows Search Service
+- many windows servers, the serach service isn't installed or disabled
+
+let's indexing some shit
+- indexing let's us search
+- change the settings for the user folder, then click "advanced"
+- select file types tab, index properties and file contents
+	- click ok
+- close out of indexing options
+#commandline 
+we can use notepad++ as well to do this
+- ctrl+shift+f = cow
+	- find all, and it returns results
+- can search within command line
+`sls` select-string command
+- matches a pattern that you dreive
+	- this is made using regular expressions, or `regex`
+	- `Select-String cow farm_animals.txt`
+	- `-Filter` lets us search within a directory
+	- `ls C:\Program Files\' -Recurse -Filter *.exe`
+		- filter the results for file names that match a pattern
+bash, we can use the `grep` command
+- `grep cow farm_animals.txt`
+- 
+
+`echo` is an alias for `Write-Output`
+- we use `I/O Streams`
+- stdin, stdout, stderr
+	- at the CLI the input goes to stdin stream
+	- then communicates by putting data in the stdout (where cli outputs)
+	- the `>` is a redirector operator, change where want our output to ag o
+		- stdin can go to a file, where it overwrites, otherwise, it can create
+	- `>>-Append`
+	- `echo woof >> dog.txt`
+		- send the input of one command to another command
+	- `cat words.txt`
+		- list of words...
+		- let's use the pipe line to pass output
+		- `cat words.txt | Select-String st`
+			- list of words with the string st
+		- `cat words.txt | Select-String st > st_words.txt`
+		- `cat st_words.txt`
+			- gives us the same results as above
+			- `street, blast, last`
+	- stderr = standard error
+		- i'm going to remove another protected file
+		- `rm secure_file`
+			- what if we wanted to not see this?
+			- redirection operator can work here..
+		- `rm secure_file 2> errors.txt`
+			- `cat errors.txt`
+				- i can see the error output in the txt file!
+				- 2 means stdout
+					- don't want to put them ina file?
+					- can redir it to `$null`
+						- special variable that contains nothing
+						- specifically for the purposes of nothing
+				- `rm secure_file 2>$Null`
+					- now output is filled with error messages
+				- `Get-help about_redirection`
+			- may take a bit of time to get the hang of it,
+				- but your command-fu skills will level up
