@@ -77,3 +77,11 @@
 - Instead, define them in an AWS Serverless Application Model (SAM) template and deploy them using the AWS SAM CLI
 	- This is called "infrastructure as code" or IaC
 	- it saves you time in the long run.
+
+## 13. Source Control
+- You do not want to be updating either your back-end API or your front-end website by making calls from your laptop, though
+	- You want them to update automatically whenever you make a change to the code (This is called continuous integration and deployment, or CI/CD)
+	- Create a GitHub repository for your backend code
+
+## 14. CI/CD (Back end)
+- Set up GitHub Actions such that when you push an update to your *Serverless Application Model* template or Python code, your Python tests get run
