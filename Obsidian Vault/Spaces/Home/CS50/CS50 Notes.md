@@ -530,7 +530,22 @@ For i from 0 to n-1
 					- big o of n^2, and omega of n^2
 						- by coincidence, because these boundaries are the same:
 							- $\theta$ n^2
-	- bubble 
+- ? Sorry for the repeats!
+- *Sorting* is the act of taking an unsorted list of values and transforming this list into a sorted one
+- when a list sorted, searching that list is far less taxing on the computer;
+	- recall that we can use binary search on a sorted list
+	- there are many different types of sorting algorithms
+- *selection sort* is one such search algorithm
+- the algorithm for selection sort in pseudocode is
+```c
+for i from 0 to n-1
+	Find smallest number between numbers[i] and numbers[n-1]
+	Swap smallest number with numbers[i]
+```
+
+- can be simplified through `(n - 1) + (n - 2) + (n - 3) + ... + 1`
+	- this could be simplified to n(n-1)/2 or more simply O(n^2)
+	- 
 		
 
 

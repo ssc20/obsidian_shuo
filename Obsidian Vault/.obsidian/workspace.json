@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/Other/Ramen.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "mode": "source",
                 "source": true
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/Other/Ramen.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/Other/Ramen.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/Other/Ramen.md"
+                "file": "Spaces/Home/CS50/CS50 Notes.md"
               }
             }
           },
@@ -200,15 +200,16 @@
   },
   "active": "de92d5b4a57b07c8",
   "lastOpenFiles": [
-    "The Book of Ramen.pdf",
+    "2024-01-21.md",
+    "Untitled.md",
     "Spaces/Home/Other/Ramen.md",
+    "The Book of Ramen.pdf",
     "Spaces/Home/CS50/CS50 Notes.md",
     "Dr. K",
     "Cloud Resume Challenge/Files",
     "Vault.md",
     "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
     "Cloud Resume Challenge",
-    "Untitled.md",
     "Spaces/Home/Coursera/Google IT/Google IT Operating Systems.md",
     "Spaces/Home/attachments/CleanShot 2024-01-24 at 20.48.31.png",
     "Spaces/Home/attachments/CleanShot 2024-01-26 at 21.20.50.png",
@@ -223,7 +224,6 @@
     "Spaces/Home/attachments/CleanShot 2024-01-24 at 21.48.01.png",
     "Spaces/Home/attachments/CleanShot 2024-01-24 at 21.40.56.png",
     "conflict-files-obsidian-git.md",
-    "2024-01-21.md",
     "Spaces/Home/CS50/CS50 - Credit.md",
     "Spaces/Home/CS50/CS50 Sections.md",
     "Spaces/Home/Other/Interlude.md",
