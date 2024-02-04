@@ -544,10 +544,18 @@ for i from 0 to n-1
 ```
 
 - can be simplified through `(n - 1) + (n - 2) + (n - 3) + ... + 1`
-	- this could be simplified to n(n-1)/2 or more simply O(n^2)
-	- 
-		
-
+	- this could be simplified to n(n-1)/2 or more simply $O$ \n$^2$
+- *Bubble sort* is another sorting algorithm that works by repeatedly swapping elements to "bubble" larger elements to the end
+- the pseudocode for bubble sort is
+```c
+Repeat n-1 times
+	For i from 0 to n-2
+		If numbers[i] and numbers[i+1] our of order
+			Swap them
+		If no swaps
+			Quit
+```
+- as we further sort the array, we
 
 
 
