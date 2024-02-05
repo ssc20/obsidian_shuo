@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "202402042330.md",
                 "mode": "source",
                 "source": false
               }
@@ -124,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "202402042330.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "202402042330.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md"
+                "file": "202402042330.md"
               }
             }
           },
@@ -199,13 +199,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3e64269a98f0fcad",
+  "active": "de92d5b4a57b07c8",
   "lastOpenFiles": [
+    "Spaces/Home/CS50/CS50 Notes.md",
+    "202402042330.md",
     "2024-01-21.md",
     "Untitled.md",
     "Spaces/Home/Other/Ramen.md",
     "The Book of Ramen.pdf",
-    "Spaces/Home/CS50/CS50 Notes.md",
     "Dr. K",
     "Cloud Resume Challenge/Files",
     "Vault.md",
