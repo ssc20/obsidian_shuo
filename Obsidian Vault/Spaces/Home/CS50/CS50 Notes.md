@@ -555,8 +555,20 @@ Repeat n-1 times
 		If no swaps
 			Quit
 ```
-- as we further sort the array, we
-
+- as we further sort the array, we know more and more of it becomes sorted, so we need to only look at the pairs that haven't been sorted yet
+- analyzing selection sort, we made only 7 comparisons
+	- representing this mathematically, where $n$ represents number of cases, it could be said that selection sort can be analyzed as:
+	- $(n - 1) + (n-2) + (n - 3) + \dots + 1$
+		- or more simply: 
+		- $n^2-n/2$
+- considering that mathematical analysis, $n^2$ is really the most influential factor determining efficiency of the sorting algo
+	- $\therefore$ selection sort is considered to be of the order of $O(n^2)$ in the worst case where all values are unsorted
+	- even when all values are sorted, it will take the same number of steps
+	- $\therefore$ the best case can be noted as $\Omega(n^2)$ 
+		- since both the upper and lower bound cases are the same, the efficiency of this algo as a whole can be regarded as $\Theta$ $(n^2)$ 
+	- analyzing bubble sort, the worst case is $O(n^2)$ 
+	- the best case is $\Omega (n)$ 
+	- You can visualize a comparison of these algorithms
 
 
     

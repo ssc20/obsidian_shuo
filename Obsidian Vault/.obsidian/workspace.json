@@ -107,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "095fbd95bebd42a5",
@@ -198,7 +199,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "de92d5b4a57b07c8",
+  "active": "3e64269a98f0fcad",
   "lastOpenFiles": [
     "2024-01-21.md",
     "Untitled.md",
