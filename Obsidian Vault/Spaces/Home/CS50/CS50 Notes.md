@@ -509,27 +509,27 @@ For i from 0 to n-1
 				- `n-1`  first pass
 					- that put the smallest number
 					- don't need to walk in front of all 8
-					- (n - 1), + (n - 2) + (n - 3) ... + 1
+					- $(n - 1), + (n - 2) + (n - 3) ... + 1$
 					- this series here...
-						- n(n - 1)/2
+						- $n(n - 1)/2$
 							- no matter what n is, this formula captures the sum of the series
 							- that is how many steps taken again and again when implementing for 8 people
-						- = n^2/2 - n/2
+						- = $n^2/2 - n/2$
 							- n^2 seems like the biggest term, the *dominant term*
 							- dividing this quadratic formula by 2 is big... but as n gets larger and larger...
-					- selection sort is on the order of *O(n^2)*
+					- selection sort is on the order of $O(n^2)$
 					- kind of a slow one, again
 					- can we do actually better?
-					- if selection sort is in the order of n^2?
+					- if selection sort is in the order of $n^2$?
 						- best case...
 						- no special conditional, if sorted already, exit early
 				- this line of pseudocode tells us what...
-					- not precise, but on the order of n^2
-					- any number of doors, it's going to end up being omega of n^2
+					- not precise, but on the order of $n^2$
+					- any number of doors, it's going to end up being omega of $n^2$
 					- even in the best case where numbers are already sorted, there is nothing in the algo that says I'm done and exit prematurely
-					- big o of n^2, and omega of n^2
+					- $O n^2$,  $Omega n^2$
 						- by coincidence, because these boundaries are the same:
-							- $\theta$ n^2
+							- $\theta$ $n^2$
 - ? Sorry for the repeats!
 - *Sorting* is the act of taking an unsorted list of values and transforming this list into a sorted one
 - when a list sorted, searching that list is far less taxing on the computer;
@@ -544,7 +544,7 @@ for i from 0 to n-1
 ```
 
 - can be simplified through `(n - 1) + (n - 2) + (n - 3) + ... + 1`
-	- this could be simplified to n(n-1)/2 or more simply $O$ \n$^2$
+	- this could be simplified to $n(n-1)/2$ or more simply $O * n^2$
 - *Bubble sort* is another sorting algorithm that works by repeatedly swapping elements to "bubble" larger elements to the end
 - the pseudocode for bubble sort is
 ```c
@@ -586,6 +586,39 @@ Else
 	- suppose this is where I am halfway through merge sort
 	- now I need to merge the sorted halves
 	- point at your left hand at the left half, then your right hand at the right half
+	- in order to merge, slot in an empty array up:
+		- which is smaller ( on the left)? 0
+		- right hand to the number to the right half to the left half,
+			- 1 < 2
+		- end up with: `0 1 2`
+		- 3 < 5
+			- `0 1 2 3`
+		- 4 < 5
+			- ` 0 1 2 3 4`
+		- 6 > 5
+			- ` 0 1 2 3 4 5`
+		- 6 < 7
+			- `0 1 2 3 4 5 6 7`
+	- can represent it with the above array, but with the other racks
+- selection sort and buble sort
+	- only allowed certain amount of memory, just 1 variable to track
+	- selection sort
+		- keep track of who was the smallest element
+	- bubblke sort
+		- `i, i + 1`
+- in CS, you can trade off 1 resource for another
+	- you have to spend more "space", or money
+	- conversely, if fine with time, you can get away with lower space
+	- deciding what is more 'expensive' for you
+- suppose these are the numbers in question:
+`6 3 4 1 5 2 7 0`
+- selection sort
+	-  $O(n^2)$
+	- $\Omega(n^2)$
+- bubble sort
+	- $Omega(n^2)$
+	- $O(n^2)$
+- 
 
 
     
