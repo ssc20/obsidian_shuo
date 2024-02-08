@@ -546,13 +546,13 @@ for i from 0 to n-1
 ```
 
 - can be simplified through `(n - 1) + (n - 2) + (n - 3) + ... + 1`
-	- this could be simplified to $n(n-1)/2$ or more simply $O * n^2$
+	- this could be simplified to $n(n-1)/2$ or more simply $O ( n^2)$
 - *Bubble sort* is another sorting algorithm that works by repeatedly swapping elements to "bubble" larger elements to the end
 - the pseudocode for bubble sort is
 ```c
 Repeat n-1 times
 	For i from 0 to n-2
-		If numbers[i] and numbers[i+1] our of order
+		If numbers[i] and numbers[i+1] out of order
 			Swap them
 		If no swaps
 			Quit
@@ -666,7 +666,86 @@ Else
 		- merge the 2 arrays of size 2: `2 5 0 7`
 			- sort: `0 2 5 7`
 - we are at the part of the story where we're on the 2nd shelf
-	- 
+	- ![[CleanShot 2024-02-07 at 21.56.16.gif]]
+	- seems that we are comparing 2 values, starting from the left half, to its equivalent on the right;
+		- but I suppose this could change depending on what is regarded as higher or lower, and on the criteria of the sort
+- seems we kind of cheated
+	- the leaves we just said: "SORTED"
+		- the "MERGE" is doing the magic of sorting
+		- recursion is the thing that bends your brain a bit
+	- not a lot of "again & again & again & again"
+		- do things once, then move on
+	- if it helps you to see in another way...
+	- (running Comparison of Sorting Algorithms Site)
+		- was using 3 shelves/arrays
+		- can be slightly more intelligent and just back and forth between 2 spaces
+		- you'll notice that merge sort is working on varying sizes of "halves" and things seem to happen very quickly
+		- same number of bars but it happened *way* faster
+	- why is that?
+		- back to the diagram in question:
+$O(n^2),\  O(n log_{n}), \  O(n), \  O(log_{n}), \  O(1)$
+- let's see how much better it is:
+	- ![[CleanShot 2024-02-07 at 22.01.58.png]]
+	- these are remnants or "states" leaving breadcrumbs
+	- how many pieces of work...
+		- counting 1x1, it seems I moved around things 24 times
+		- how do I actually reason about that;
+			- my arrays are my temporary shelves
+		- $log_{2}{n}$
+			- this is because we are doing in half each time
+				- dividing, dividing, dividing
+				- it's like an inverse exponential function...
+			- took a list of size 8
+				- 2 lists of size 4
+				- 4 lists of size 2
+				- 8 lists of size 1
+				- 
+			- how many times can you do this, starting with 8 numbers? (n = 8)
+				-  $log_2(8)$
+				- $log_2(2^3)$
+					- base and the number can cancel out
+					- $log_2(2^3) = 8$
+						- which means that's how many times you can divide a problem of size 8 in half, in half, in half
+		- each time, in this chart, we had to keep merging them 
+			- laterally in this chart, there are $n$ steps
+				- I had to merge all of those things back together
+			- what is the height of all these remnants?
+				- ![[CleanShot 2024-02-07 at 22.06.40.png]]
+				- it's 3 as in $log_2(2^3)$
+					- this is technically $3 * 8 = 24$ steps
+					- more generally, this is $log n = height, \ n width$
+		- the total running time of this merge sort:
+			- $n\ log_2\ n$
+				- and we can throw away the base because that's just a constant factor, resulting in:
+			- $n\ log\ n$
+				- when we talk about $O$ notation, we have $O(n\ log\ n)$
+				- conversely, it is also $Omega(n\ log\ n)$
+					- which means that bubble sort might still outperform it
+						- at least when inputs are already sorted or certainly relatively small
+					- but that's probably ok: the data we're sorting probably isn't sorted
+						- we could even half merge sort to do 1 pass to check initially to see if it's already sorted
+							- could massage the algo as a result to make it smarter
+					- fundamentally, merge sort is 'in theta of' or : $\Theta \ n(log\ n)$
+					- it's on the order of $n (log n)$ steps
+		- in terms of our chart:
+			- merge sort:
+				- strictly higher than linear
+				- strictly lower than quadratic:
+					- $n, \ n^2$
+				- it clearly seems to be faster
+					- not as good as linear search
+					- definitely not as as good as binary sort
+					- but better than selection sort and bubble sort
+		- final film, minute long that compares of all these algorithms
+		- **Visualization and Comparison of Sorting Algorithms - Random**
+			- top: selection sort
+			- bottom: bubble sort
+			- middle: se and hear appreciation of $n(log\ n)$
+			- this is *$n(log\ n)$ vis a vis $n^2$*
+				- 10 seconds for merge sort to finish
+
+
+
 
 
 
