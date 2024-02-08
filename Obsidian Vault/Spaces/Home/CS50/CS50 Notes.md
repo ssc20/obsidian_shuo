@@ -200,17 +200,17 @@ Else if 50 > doors[middle]
 		- 2 people or 2 pages at a time
 - n = 1 page a ta time
 	- n / 2 = 2 pages at a time
-- log2n
+- $log_{2} n$
 	- log base 2 of n
 	- what is the valuetaking n and dividing it by 2 again and again and again and again
 		- until left with 1 person/value standing
-- being this precise, it's not that intelectually interesting
+- being this precise, it's not that intellectually interesting
 - generally a computer scientist is asked the efficiency of your algorithm
 	- how good or bad?
 		- will talk about it being on some order of steps
 		- just wave your hand at it
 		- broad strokes: all we care about is certain numbers
-	- when computer scientists, they thowr away efifcineceis
+	- when computer scientists, they thowr away efficiencies
 		- throw away constant factors
 		- that might be dividing here or a base here
 	- BIG O NOTATION
@@ -265,13 +265,15 @@ Else if 50 > doors[middle]
 			- i have to point at eeryone...
 			- the best and worst case is that it takes n steps
 - these cases where best = worst
+	- #theta
 	- Theta notation
 	- $\theta$ 
 		- same number of steps as Big O and Omega analysis
 - you'll go more into these ideas with computer science
-	- Big O: upper bound
-	- omega: lower bound
-- with thtat being said, let's see how we might translate this to actual code
+	- #algorithmefficiency
+	- $O$ upper bound
+	- $Omega$: lower bound
+- with that being said, let's see how we might translate this to actual code
 	- something that makes sense
 	- not just new syntax, but applications of these concepts
 - lets go make search.c
@@ -613,12 +615,59 @@ Else
 - suppose these are the numbers in question:
 `6 3 4 1 5 2 7 0`
 - selection sort
-	-  $O(n^2)$
+	- best case $O(n^2)$
 	- $\Omega(n^2)$
+	- damned if you do, damned if you don't
 - bubble sort
 	- $Omega(n^2)$
 	- $O(n^2)$
-- 
+	- sometimes can get lucky and shave time off... resulting in the better $O$ case
+- merge sort
+	- no more looping back and forth!
+	- inspired by recursion: "divide and conquer"
+- #mergesort 
+- Left half:
+	- `6 3 4 1`
+	- do so by stealing more memory, (second shelf to work on this)
+	- array\[4]
+		- let's recursively use the same algorithm, by sorting the left half of this left half...
+		- array of size 4, only 3 steps to solve it
+		- `6 3`
+			- how do we solve and sort an array of size\[2]?
+			- sort the left and the right....
+				- `6`
+				- what is our special base case?
+					- quit or return; we're already done
+					- list of size\[1] is already done...
+				- `3`
+					- 🤔
+				- well: let's merge them!
+		- "left hand right hand"
+			- 6 > 3
+			- `3 6`, this is sorted! 
+	- moving on the right half: `4 1`
+		- we apply algorithm again, but we run into the base case
+			- quit or return
+		- merge: 4 > 1
+		- `1 4`
+	- now we're at the point in the story where left-left is sorted, left-right is sorted
+		- merge and sort!
+		- `6 3 4 1` --> `1 3 4 6`
+- Right half:
+	- sort array of size 4: `5 2 7 0`
+		- sort array(s) of size 2: `5 2`
+			- sort left then right
+			- 5 < 2
+			- merge: `2 5`
+		- sort array(s) of size 2: `7 0`
+			- sort left then right
+			- 7 > 0
+			- merge: `0 7`
+		- merge the 2 arrays of size 2: `2 5 0 7`
+			- sort: `0 2 5 7`
+- we are at the part of the story where we're on the 2nd shelf
+	- 
+
 
 
     
