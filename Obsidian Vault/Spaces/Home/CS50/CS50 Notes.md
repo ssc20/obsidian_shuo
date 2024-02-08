@@ -569,6 +569,7 @@ Repeat n-1 times
 	- analyzing bubble sort, the worst case is $O(n^2)$ 
 	- the best case is $\Omega (n)$ 
 	- You can visualize a comparison of these algorithms
+- 
 
 
     

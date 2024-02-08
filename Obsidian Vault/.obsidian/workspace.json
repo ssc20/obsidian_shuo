@@ -18,21 +18,8 @@
                 "source": true
               }
             }
-          },
-          {
-            "id": "de92d5b4a57b07c8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cognitive Canine Dysfunction.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -124,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cognitive Canine Dysfunction.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cognitive Canine Dysfunction.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cognitive Canine Dysfunction.md"
+                "file": "Spaces/Home/CS50/CS50 Notes.md"
               }
             }
           },
@@ -199,10 +186,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "de92d5b4a57b07c8",
+  "active": "9f5c24cdb1e07355",
   "lastOpenFiles": [
-    "202402042330.md",
     "Cognitive Canine Dysfunction.md",
+    "202402042330.md",
     "Spaces/Home/CS50/CS50 Notes.md",
     "2024-01-21.md",
     "Untitled.md",
