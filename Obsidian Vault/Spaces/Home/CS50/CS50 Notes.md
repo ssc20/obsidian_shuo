@@ -982,7 +982,20 @@ $O(n^2),\  O(n log_{n}), \  O(n), \  O(log_{n}), \  O(1)$
 	- in the plurality vote, every voter gets to vote for one candidate
 	- at the end of the election, whichever candidate has the greatest number of votes is declared the winner of the election
 - for this problem: you'll implement a program that runs a plurality election per the below:
-- 
+
+#### Distribution Code
+- for this problem, you'll extend the functionality of "distribution code" provided to you by CS50 staff
+	- log into **cs50.dev**, click on your terminal window, and execute `cd` by itself, you should find that your terminal window prompt resembles below:
+		- `$`
+- Next, execute
+	- `wget https://cdn.cs50.net/2023/fall/psets/3/plurality.zip`
+	- this will download a .ZIP called `plurality` into your codespace
+- Then execute `unzip plurality.zip` to create a folder called `plurality`; you no longer need the ZIP, so you can execute: `rm plurality.zip`
+	- respond with `y` followed by Enter at the prompt to remove the ZIP file you downloaded
+- Now type: `cd plurality` followed by Enter to move yourself into that directory.
+- Execute `ls` and you should see a file named `plurality.c`
+	- executing `code plurality.c` should open the file where you will type your code for this problem set;
+		- if not, retrace your steps and see if you can determien where you went wrong
 
 
 
