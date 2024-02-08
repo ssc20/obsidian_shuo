@@ -744,6 +744,252 @@ $O(n^2),\  O(n log_{n}), \  O(n), \  O(log_{n}), \  O(1)$
 			- this is *$n(log\ n)$ vis a vis $n^2$*
 				- 10 seconds for merge sort to finish
 
+## Shorts: 
+
+### Linear Search
+- linear search algo we can use to find an element in an array
+- algo = step by step instructions for completing a task
+- linear search: the idea of the algorithm is to iterate across the array from left to right searching for a specified element
+	- in pseudocode:
+		- Repeat, starting at the first element:
+			- if the first element is what you're looking for (the target), stop
+			- otherwise, move to the next element
+- ![[CleanShot 2024-02-07 at 22.21.33.png]]
+	- start with 11, it's not 9, go to the next one, again and again
+		- once we find $9$, we can stop
+			- the linear search has completed, succesfully
+		- what if we're looking for an element that's not in our array
+			- we can keep repeating this process again and again
+			- won't know if we've found it until we complete our sequence of the array
+	- the algorithm "failed", in that it couldn't find $50$
+		- while we didn't find anything, it still succeeds even if not in the array
+- **Worst-case scenario**: we have to look through the entire array of $n$ elements, either because the target element is the last element of the array or doesn't exist in the array at all
+- **Best-case scenario**: the target element is the first element of the array, and so we can stop looking immediately after we start
+- what does this say about the complexity of the search?
+	- $O(n)$
+		- worst-case
+	- $Omega(1)$
+		- best-case
+### Binary search
+- binary search another algo we can use to find element in an array
+- requires special condition, but if met, much quicker
+- Binary search: the idea of the algorithm is to divide and conquer, reducing the search area by half each time, trying to find a target number
+	- in order to leverage this power, however, our array must first be sorted, else we cannot make assumptions about the array's contents
+	- *Pseudocode:*
+		- Repeat until the (sub)array is of size\[0]
+			- calculate the middle point of the current (sub)array
+			- if the target is in the middle:
+				- stop
+			- otherwise:
+				- if the target is less than what's at the middle
+					- repeat, changing the end point to be just to the left of the middle
+				- if the target is greater than what's at the middle
+					- repeat, changing the start point to be just to the right of the middle
+- ![[CleanShot 2024-02-07 at 22.28.01.png]]
+- array of size\[15]
+	- where we're starting to look? where we're stopping to look? what's our middle point?
+	- let's first define a set of indices
+		- ![[CleanShot 2024-02-07 at 22.28.50.png]]
+		- compared to linear search, we need to know how many elements we're iterating over, but we don't actually care about what element;
+		- in binary search... we do
+	- for binary search, we can't start yet
+		- we must have this sorted first!
+			- especially if we just discard half of the array
+	- you can use any sorting algorithm to fulfill this requirement
+	- ![[CleanShot 2024-02-07 at 22.30.08.png]]\
+	- calculate the midpoint of this array, targeting 19
+		- the first element is index \[0]
+		- the last element is index\[14]
+		- start and end
+		- calculate the midpoint
+			- $(0 + 14)/2$
+			- midpoint = 7
+			- 15 is not what we're looking for
+			- however, we know 19 > 15 (what we found at the middle)
+				- new start point, is to be just to the right, 
+					- then repeat the process again
+	- our new array start is index\[8]
+	- we've effectively now ignored everything to the left of 15
+		- instead of having to search 15 elements, we only have to search 7
+- ![[CleanShot 2024-02-07 at 22.33.55.png]]
+- let's calculate the new midpoint
+	- $((8)+(14)) / 2 = 11$
+		- this midpoint value is *less* than what we're looking for
+		- repeat the process again, changing the *end* point to be just to the left of the midpoint, new endpoint of $10$
+- ![[CleanShot 2024-02-07 at 22.36.11.png]]
+- now this is the only part of the array that we have to search through
+	- now, finding the new midpoint
+		- $((8) + (10)) / 2 = 10$
+			- now, our target is in the middle!
+			- we have found exactly what we're looking for and can stop
+- we know this works if it's in the array... **what if it's not**
+- ![[CleanShot 2024-02-07 at 22.37.26.png]]
+- let's go through the process again, same size\[15]
+	- $((14)+(0)) / 2 = 7$
+	- the target > midpoint, repeat, while changing start to be just to the right of the middle
+	- ![[CleanShot 2024-02-07 at 22.38.24.png]]
+	- ignore the entire left half of the array
+	- $((8) + (14)) / 2 = 11$
+		- target < midpoint; end point to be just to the left of the middle
+	- ![[CleanShot 2024-02-07 at 22.39.29.png]]
+		- $((8) + (10)) / 2 = 9$
+			- the target < middle; change end point to be just to the left of the midpoint
+		- ![[CleanShot 2024-02-07 at 22.40.26.png]]
+		- midpoint, starts at 8, ends at 8, that means it's 8
+			- $((8) + (8)) / 2 = 8$
+			- Are we looking for size\[8] = 17? Nope.
+				- we were looking for 16
+			- if it does exist... than we'll set the end point to be to the left of our current midpoint
+				- change the end point to 7
+				- ![[CleanShot 2024-02-07 at 22.42.12.png]]
+	- look at how $start > end$, that doesn't make any sense
+		- we have a subarray of size\[0]
+		- gotten to this point we can guarantee that $16$ does not exist
+			- start and end points have crossed
+		- slightly different to start = end
+			- if we were looking for 17, at the points before those starts and ends cross, it would've been fine, finding 17
+			- only when they cross, we can guarantee that it doesn't exist
+- **Worst-case scenario:** $O(log_n)$ 
+	- We have to divide a list of $n$ elements in half repeatedly ($log_n$) to find the target element, either because the target will be found at the end of the last division or doesn't exist in the array at all
+		- we have to cut the problem a certain number of times
+			- the certain number of times: $log_n$ 
+		- still substantially better than linear search in the worst case
+- **Best-case scenario:** $Omega\(1)$ The target element is at the midpoint of the full array, and so we can stop looking immediately after we start
+	- 
+- binary search is better than linear search
+	- but you still have to be able to leverage the power of binary search, by sorting your array first.
+
+### Bubble Sort
+- Bubble sort: to move higher valued elements generally towards the right and lower value elements generally towards the left
+	- *Pseudocode*
+		- Set swap counter to a non-zero value
+		- Repeat until the swap counter is 0:
+			- Reset swap counter to 0
+			- Look at each adjacent pair
+				- if 2 adjacent elements are not in order, swap them and add 1 to the swap counter
+- If thinking before visualizing, it moves lower valued elements to the left, and higher valued elements to the right
+	- accomplishing what we want to do
+- ![[CleanShot 2024-02-07 at 22.49.11 1.png]]
+	- arbitrarily chose $-1$, set swap counter to a nonzero value
+		- repeat this process until $Swap Counter = 0$
+			- if $swap counter = 0$ we wouldn't even start the process
+		- set $Swap Counter = 0$ then look at every adjacent pair, if out of order, swap them and +1 to swap counter
+	- look at each adjacent pair, 5 and 2
+	- swap: ![[CleanShot 2024-02-07 at 22.51.15.png]]
+	- look at the next adjacent pair, 5 and 1, swap, then add 1
+		- ![[CleanShot 2024-02-07 at 22.51.43.png]]
+		- 5 and 6 are in order, no need to swap:
+		- ![[CleanShot 2024-02-07 at 22.51.52.png]]
+			- then 6 and 4, out of order, swap, add +1
+			- ![[CleanShot 2024-02-07 at 22.52.14.png]]
+- 6 is now at the end!
+- in selection sort, we ended up moving smallest elements in the sorted array from left to right, smallest to largest
+- in bubble sort, in this algorithm, we're building a sorted array right to left, largest to smallest
+	- we have effectively bubbled the greatest value $6$ to the end
+	- in future iterations, we don't have to consider 6 anymore
+- let's go back to the algo, resetting the swap counter to $0$
+	- now look at each adjacent pair
+	- ![[CleanShot 2024-02-07 at 22.53.53.png]]
+	- 1 and 2 swapped, +1
+	- ![[CleanShot 2024-02-07 at 22.54.06.png]]
+	- now we've moved 5, the 2nd largest number, to the end
+	- we now know that the number is sorted
+		- but we need to prove this! need to guarantee that this is sorted
+	- the swap counter is 2.
+	- reset it to 0; look at each adjacent pair
+		- 1 and 2 in order
+		- 2 and 3 in order
+		- 3 and 4 in order
+		- 5 and 6 in order
+		- the swap counter is still 0; if we don't need to swap anything, then we don't need to swap anything
+			- we can now declare that the entire array must be sorted, because we didn't have to sort it
+- **Worst-case scenario:** $O(n^2)$ The array is in reverse order; we have to "bubble" each of the $n$ elements all the way across the array, and since we can only fully bubble 1 element into position per pass, we must do this $n$ times
+	- actually
+- **Best-case scenario**: $Omega \ (1)$ The array is perfectly sorted, and we make no swaps on the first pass
+	- best case: better than selection sort!
+
+### Selection Sort
+- Selection sort: find the smallest unsorted element and add it to the end of the sorted list.
+	- *Pseudocode:*
+		- repeat until no unsorted elements remain
+			- search the unsorted part of the data to find the smallest value
+			- swap the smallest found value with the first element of the unsorted part
+	- ![[CleanShot 2024-02-07 at 22.59.04.png]]
+
+- the entire array is the unsorted part
+	- search through and find the smallest value = 1
+	- part 2: swap that value with the 1st element of the unsorted part = 5
+	- 1 and 5 are swapped
+		- ![[CleanShot 2024-02-07 at 23.00.12.png]]
+	- we can visually see we moved the smallest value in the array to the beginning, effectively sorting it
+		- ![[CleanShot 2024-02-07 at 23.00.34.png]]
+		- repeat the process again through the unsorted array
+			- 2 is the smallest, the smallest value in the unsorted array is $2$
+			- it's sorted
+		- find the smallest in the unsorted = $3$ then swap it with the 1st value
+			- $3$ is the smallest, $5$ is the first
+			- ![[CleanShot 2024-02-07 at 23.01.50.png]]
+		- find the smallest in the unsorted, = $4$, first element is $5$
+			- 4 is sorted
+		- find smallest =$5$ then first element is $6$
+		- the only element is $6$, and confirm it is sorted. 
+			- 6 is the smallest, and only element, no actions left to take.
+- **Worst-case scenario**: $O(n^2)$ We have to iterate over each of the $n$ elements of the array (to find the smallest unsorted element ) and we must repeat this process $n$ times, since only 1 element gets sorted on each pass
+- **Best-case scenario:** $Omega(n^2)$Exactly the same, there's no way to guarantee the array is sorted, until we go through this process for all the elements
+- $\Theta n^2$
+	
+
+## PSET 3
+### Sort
+#### Problem to solve
+- recall from lecture that we saw a few algo's for sorting a sequence of numbers:
+	- selection sort
+		- iterates through the unsorted portions of a list, selecting the smallest element each time and moving it to its correct location
+	- bubble sort
+		- compares pairs of adjacent values one at a time and swaps them if they are in the incorrect order
+		- this continues until the list is sorted
+	- merge sort
+		- recursively divides the list into 2 repeatedly and then merges the smaller lists back into a larger one in the correct order
+		- 
+- In this problem:
+	- you'll analyze 3 (compiled!) sorting programs to determine which algorithms they use
+	- in a file called `answers.txt` in a folder called `sort`:
+		- record your answers
+			- an explanation for each program by filling in the blanks marked `TODO`
+
+#### Distribution Code
+- for this problem, you'll need some "distribution" code
+	- that is, code written by CS50 staff.
+	- provided to you are 3 already compiled C programs
+		- `sort1, sort 2, sort3`
+		- several `.txt` files for input 
+		- `answers.txt` in which to write your answers
+- each of the `sort` files implements a different sorting algorithm:
+	- selection sort
+	- bubble sort
+	- merge sort
+	- (not necessarily in that order)
+- ! Your task is to determine which sorting algorithm is used by each files; start by downloading these files
+
+
+
+### Plurality
+#### Problem to solve
+- elections come in all shapes and sizes
+	- in the UK, the Prime Minister is officially appointed by the monarch, who generally chooses the leader of the political party that wins the most seats in the House of Commons
+	- the US uses a multi-step Electoral College process where citizens vote on how each state should allocate Electors who then elect the President
+- Perhaps the simplest way to hold an election though is via method commonly known as the *plurality vote* (known as: *first-past-the-post* or *winner take all*)
+	- in the plurality vote, every voter gets to vote for one candidate
+	- at the end of the election, whichever candidate has the greatest number of votes is declared the winner of the election
+- for this problem: you'll implement a program that runs a plurality election per the below:
+- 
+
+
+
+
+
+
+
 
 
 
