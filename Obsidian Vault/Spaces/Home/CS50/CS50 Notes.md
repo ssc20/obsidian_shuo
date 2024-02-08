@@ -569,7 +569,23 @@ Repeat n-1 times
 	- analyzing bubble sort, the worst case is $O(n^2)$ 
 	- the best case is $\Omega (n)$ 
 	- You can visualize a comparison of these algorithms
-- 
+
+#mergesort
+- better than selection sort and bubble sort
+
+```c 
+If only one number
+	Quit
+Else
+	Sort left half of numbers
+	Sort right half of numbers
+	Merge of numbers
+```
+- `1346 0257`
+	- split into 2 halves
+	- suppose this is where I am halfway through merge sort
+	- now I need to merge the sorted halves
+	- point at your left hand at the left half, then your right hand at the right half
 
 
     
