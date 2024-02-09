@@ -937,6 +937,8 @@ $O(n^2),\  O(n log_{n}), \  O(n), \  O(log_{n}), \  O(1)$
 - **Worst-case scenario**: $O(n^2)$ We have to iterate over each of the $n$ elements of the array (to find the smallest unsorted element ) and we must repeat this process $n$ times, since only 1 element gets sorted on each pass
 - **Best-case scenario:** $Omega(n^2)$Exactly the same, there's no way to guarantee the array is sorted, until we go through this process for all the elements
 - $\Theta n^2$
+
+-
 	
 
 ## PSET 3
