@@ -1048,9 +1048,9 @@ int collatz(int n)
 	if (n == 1)
 		return 0;
 	else (n % 2 == 0)
-		return n / 2;
+		return collatz / 2
 	else
-		return (3n + 1);
+		return 3 * collatz + 1
 
 
 	
