@@ -1032,6 +1032,31 @@ int fact2(int n)
 			- Otherwise, if $n$ is even, repeat this process on $n/2$
 			- Otherwise, if $n$ is odd, repeat this process on $3n + 1$
 		- Write a recursive function `collatz(n)` that calculates how many steps it takes to get to 1 if you start from n and recurse as indicated above
+		- ![[CleanShot 2024-02-08 at 21.34.23 1.png]]
+		- above is various Collatz numbers
+		- if n = 1 ; collatz(n) = 0 (no need for steps)
+			- n = 2; it's going to be 1 step + however many steps it takes for 1 (0)
+			- n = 3;
+				- 3, 10, 5, 16, 8, 4, 2, 1
+		- how can you define collatz(n) so that it calculates how many steps it takes to get to 1
+```c
+int collatz(int n)
+{
+	
+	// base case
+	
+	if (n == 1)
+		return 0;
+	else (n % 2 == 0)
+		return n / 2;
+	else
+		return (3n + 1);
+
+
+	
+}
+```
+- 
 ## PSET 3
 ### Sort
 #### Problem to solve
