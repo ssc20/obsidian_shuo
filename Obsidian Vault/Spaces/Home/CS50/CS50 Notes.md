@@ -938,9 +938,100 @@ $O(n^2),\  O(n log_{n}), \  O(n), \  O(log_{n}), \  O(1)$
 - **Best-case scenario:** $Omega(n^2)$Exactly the same, there's no way to guarantee the array is sorted, until we go through this process for all the elements
 - $\Theta n^2$
 
--
-	
+### Recursion
+- if you code for a long time, you might come to see it as beautiful
+	- it's a very neat way that it looks
+	- Recursion is one way of getting beautiful/elegant looking code
+	- surprisingly short
+- Recursion: We might describe an implementation of an algorithm as being particularly "elegant" if it solves a problem in a way that is both interesting and easy to visualize
+	- the technique of **recursion** is a very common way to implement such an "elegant" solution
+	- the definition of a recursive function is one that, as part of its execution, invokes itself
+	- the factorial function ($n!$) is defined over all positive integers
+	- $n!$ equals all of the positive integers less than or equal to $n$, multiplied together
+	- Thinking in terms of programming, we'll define the mathematical function $n!$ as `fact(n)`
+	- ![[CleanShot 2024-02-08 at 21.16.27.png]]
+	- the factorial of 1 = 1
+		- factorial 2 is 2 x1
+		- factorial 3 is 3 x 2 x 1
+	- ![[CleanShot 2024-02-08 at 21.17.28.png]]
+	- fact 4 = 4 * fact 3*
+	- $n! = n * !(n-1)$
+		- `fact(n) = n * fact(n-1)`
+			- n times the product of all numbers less than me
+			- lets us recursively define the factorial function
+- this forms the basis for a **recursive definition** of the factorial function
+- every recursive function has 2 cases that could apply, given any input:
+	- the *base case*, which when triggered will terminate the recursive process
+	- the *recursive case*, which is where the recursion will actually occur
+		- where it calls itself; slight variation that makes it a teensy bit smaller
+		- passing it down to a diff call down the line
+	- which is the base case in the factorial function?
+		- ![[CleanShot 2024-02-08 at 21.20.48.png]]
+		- the Factorial of 1 is just 1; no multiplication is necessary
+			- we need to stop the factorial somewhere, maybe when we get to 1?
+```c
+int fact(int n)
+{
+	if (n == 1)
+		return 1;
+	else
+		return n * fact(n-1);
+//recursive case
+}
+```
+- the base case is where
+	- you can get rid of curly braces if only 2 branches
+	- we're making the problem smaller
+	- if n = 5, n times fact 4
+		- call stacking: we will learn exactly why this process works
+		- as we approach 1, all of the previous functions have the answer they are looking for
+		- fact 2 = 2 x fact 1
+		- fact 1 returns 1
+		- call for fact 2 gives it back to fact 3, 3 x 2 = 6, then give it back to fact 4
+		- this alone is the solution to calculating the fractorial of a number
+- in general, but not always, recursive functions replace loops in non-recursive functions
+- 
+```c
+int fact(int n)
+{
+	if (n == 1)
+		return 1;
+	else
+		return n * fact(n-1);
+}
 
+// top is recursive; bottom is iterative
+
+int fact2(int n)
+{
+	int product = 1;
+	while(n > 0)
+	{
+		product *= n;
+		n--;
+	}
+	return product;
+}
+```
+- notice we have to declare an integer product
+	- keep multiplying by n and decrementing n until we calculate the product
+	- these do the same thing but don't do it in the same way
+- it is possible to have > 1 base or recursive case, depending on what your function is looking to do
+	- the fibonacci sequence is an example of this
+	- **Multiple base cases**: the Fibonacci number sequence is defined as follows:
+		- base case: n = 1; the first element is 0
+		- base case: n = 2; the second element is 1
+		- the $n^th$ element is the sum of the $(n-1)^th and (n-2)^th$ elements
+		- every other element is defined as the sum of n-1 and n-2
+		- third element is 0 + 1 = 1
+		- 4th element is 1 + 1 (3rd) = 2
+		- 
+	- **Multiple recursive cases**: The Collatz conjecture.
+		- The Collatz conjecture is applied to positive integers and speculates that it is always possible to get "back to 1" if you follow these steps:
+			- if $n$ is 1, stop
+			- Otherwise, if $n$ is even, repeat this process on $n/2$
+			- Otherwise, if $n$ is odd, repeat this process on $3n + 1$
+		- Write a recursive function `collatz(n)` that calculates how many steps it takes to get to 1 if you start from n and recurse as indicated above
 ## PSET 3
 ### Sort
 #### Problem to solve
