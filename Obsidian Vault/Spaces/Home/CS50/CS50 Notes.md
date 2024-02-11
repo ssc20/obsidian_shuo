@@ -1056,7 +1056,24 @@ int collatz(int n)
 	
 }
 ```
-- 
+- ![[CleanShot 2024-02-11 at 00.41.00@2x.png]]
+- n = 3
+	- 3; return base case value count of 1 (+1)
+		- return 1 (+1 = 2) + collatz(3 * 3 + 1) = collatz(10)
+			- 2 + collatz(10)
+			- 2 + 1 + collatz(5)
+				- 3 + collatz(5)
+					- 3 + collatz(3 * n + 1)
+						- 3 + collatz(16)
+							- 3 + 1 + collatz(8)
+							- 4 + collatz (8/2)
+							- 4 + collatz (4)
+								- 4 + 1 + collatz(4/2)
+								- 5 + collatz(2)
+								- 5 + 1 + collatz(2/2)
+								- 6 + collatz(1)
+								- 6 + 1
+								- 7
 ## PSET 3
 ### Sort
 #### Problem to solve
