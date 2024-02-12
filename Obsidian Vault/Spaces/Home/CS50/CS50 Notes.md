@@ -768,7 +768,7 @@ $O(n^2),\  O(n log_{n}), \  O(n), \  O(log_{n}), \  O(1)$
 - what does this say about the complexity of the search?
 	- $O(n)$
 		- worst-case
-	- $Omega(1)$
+	- $\Omega(1)$
 		- best-case
 ### Binary search
 - binary search another algo we can use to find element in an array
@@ -854,7 +854,7 @@ $O(n^2),\  O(n log_{n}), \  O(n), \  O(log_{n}), \  O(1)$
 		- we have to cut the problem a certain number of times
 			- the certain number of times: $log_n$ 
 		- still substantially better than linear search in the worst case
-- **Best-case scenario:** $Omega\(1)$ The target element is at the midpoint of the full array, and so we can stop looking immediately after we start
+- **Best-case scenario:** $\Omega(1)$ The target element is at the midpoint of the full array, and so we can stop looking immediately after we start
 	- 
 - binary search is better than linear search
 	- but you still have to be able to leverage the power of binary search, by sorting your array first.
