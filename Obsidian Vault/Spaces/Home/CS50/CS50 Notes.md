@@ -1111,7 +1111,7 @@ int collatz(int n)
 	- (not necessarily in that order)
 - ! Your task is to determine which sorting algorithm is used by each files; start by downloading these files
 
-
+![![Spaces/Home/CS50/#^Table1]]
 
 ### Plurality
 #### Problem to solve
