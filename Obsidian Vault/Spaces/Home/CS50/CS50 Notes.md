@@ -940,6 +940,9 @@ $O(n^2),\  O(n log_{n}), \  O(n), \  O(log_{n}), \  O(1)$
 - **Best-case scenario:** $\Omega(n^2)$Exactly the same, there's no way to guarantee the array is sorted, until we go through this process for all the elements
 - $\Theta n^2$
 
+- note that the representations are based in "scale"
+	- $n^2$ is not the exact same thing as say, where $n = 5$, that the value is $25$
+		- instead, it refers to the scale of $n^2$ over $n$, $n\ log(n)$ , $log \ n$, $1$. 
 ## Algorithm Breakdown (O, Big O, Theta)
 ![![Spaces/Home/CS50/#^Table]]
 
