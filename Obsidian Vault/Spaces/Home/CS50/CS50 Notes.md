@@ -743,6 +743,8 @@ $O(n^2),\  O(n log_{n}), \  O(n), \  O(log_{n}), \  O(1)$
 			- middle: se and hear appreciation of $n(log\ n)$
 			- this is *$n(log\ n)$ vis a vis $n^2$*
 				- 10 seconds for merge sort to finish
+			- Merge sort > selection sort > bubble sort
+				- fastest to slowest
 
 ## Shorts: 
 
