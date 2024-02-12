@@ -905,7 +905,7 @@ $O(n^2),\  O(n log_{n}), \  O(n), \  O(log_{n}), \  O(1)$
 			- we can now declare that the entire array must be sorted, because we didn't have to sort it
 - **Worst-case scenario:** $O(n^2)$ The array is in reverse order; we have to "bubble" each of the $n$ elements all the way across the array, and since we can only fully bubble 1 element into position per pass, we must do this $n$ times
 	- actually
-- **Best-case scenario**: $Omega \ (1)$ The array is perfectly sorted, and we make no swaps on the first pass
+- **Best-case scenario**: $\Omega \ (1)$ The array is perfectly sorted, and we make no swaps on the first pass
 	- best case: better than selection sort!
 
 ### Selection Sort
@@ -935,7 +935,7 @@ $O(n^2),\  O(n log_{n}), \  O(n), \  O(log_{n}), \  O(1)$
 		- the only element is $6$, and confirm it is sorted. 
 			- 6 is the smallest, and only element, no actions left to take.
 - **Worst-case scenario**: $O(n^2)$ We have to iterate over each of the $n$ elements of the array (to find the smallest unsorted element ) and we must repeat this process $n$ times, since only 1 element gets sorted on each pass
-- **Best-case scenario:** $Omega(n^2)$Exactly the same, there's no way to guarantee the array is sorted, until we go through this process for all the elements
+- **Best-case scenario:** $\Omega(n^2)$Exactly the same, there's no way to guarantee the array is sorted, until we go through this process for all the elements
 - $\Theta n^2$
 
 ### Recursion
