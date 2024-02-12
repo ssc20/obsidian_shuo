@@ -938,6 +938,11 @@ $O(n^2),\  O(n log_{n}), \  O(n), \  O(log_{n}), \  O(1)$
 - **Best-case scenario:** $\Omega(n^2)$Exactly the same, there's no way to guarantee the array is sorted, until we go through this process for all the elements
 - $\Theta n^2$
 
+## Algorithm Breakdown (O, Big O, Theta)
+![![Spaces/Home/CS50/#^Table]]
+
+
+
 ### Recursion
 - if you code for a long time, you might come to see it as beautiful
 	- it's a very neat way that it looks
