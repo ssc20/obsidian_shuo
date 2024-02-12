@@ -1067,6 +1067,22 @@ int collatz(int n)
 }
 ```
 - ![[CleanShot 2024-02-11 at 00.41.00@2x.png]]
+
+```c
+int collatz(int n)
+{
+	// base case
+	if (n == 1)
+		return 0;
+	// even numbers
+	else if ((n % 2) == 0)
+		return 1 + collatz(n / 2);
+	// odd numbers
+	else
+		return 1 + collatz(3 * n + 1);
+}
+```
+- 
 - n = 3
 	- 3; return base case value count of 1 (+1)
 		- return 1 (+1 = 2) + collatz(3 * 3 + 1) = collatz(10)
@@ -1084,6 +1100,34 @@ int collatz(int n)
 								- 6 + collatz(1)
 								- 6 + 1
 								- 7
+### Merge Sort
+- all other sorting algos have an $O(n^2)$ 
+- in merge sort, the idea of the algorithm is to sort smaller arrays and then combine those arrays together (merge them) in sorted order
+	- merge sort leverages something called **recursion** (already covered)
+
+- Pseudocode:
+	- sort the left half of the array (assuming n > 1)
+	- sort the right half of the array (assuming n > 1)
+	- merge the 2 halves together
+- instead of one six-element array...
+	- let's imagine six one-element arrays, and then merge them together!
+- recursion-wise, this will talk about recursion quite a bit
+- this is the most complicated of the 4 other types of algorithms
+![[CleanShot 2024-02-12 at 12.51.18@2x.png]]
+- algorithm doesn't yet 'know' how to solve this
+	- split this again, considering that we must be consistent in whichever side is larger or smaller for "left" or "right"
+	- ![[CleanShot 2024-02-12 at 12.52.06@2x.png]]
+		- a single element array must necessarily be sorted, so we can mark this as sorted!
+		- go back to the right half of the purple part:
+			- ![[CleanShot 2024-02-12 at 12.52.46@2x.png]]
+			- recursively speaking, we drill down and find 2 > 1, so it is sorted
+			- ![[CleanShot 2024-02-12 at 12.53.50@2x.png]]
+			- which one has the lower element? 1 does; we insert 1 into a new hypothetical array, and then 2 afterwards
+			- we're still looking into the left half of the red array
+				- now we're finished with the halves of the purple array, let's look at the entire purple array
+				- 5, 1 , 2
+					- ![[CleanShot 2024-02-12 at 12.54.57@2x.png]]
+			- compare the first element of the right part, and the first element of the left part
 ## PSET 3
 ### Sort
 #### Problem to solve
