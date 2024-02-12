@@ -272,7 +272,7 @@ Else if 50 > doors[middle]
 - you'll go more into these ideas with computer science
 	- #algorithmefficiency
 	- $O$ upper bound
-	- $Omega$: lower bound
+	- $\Omega$: lower bound
 - with that being said, let's see how we might translate this to actual code
 	- something that makes sense
 	- not just new syntax, but applications of these concepts
@@ -529,7 +529,7 @@ For i from 0 to n-1
 					- not precise, but on the order of $n^2$
 					- any number of doors, it's going to end up being omega of $n^2$
 					- even in the best case where numbers are already sorted, there is nothing in the algo that says I'm done and exit prematurely
-					- $O n^2$,  $Omega n^2$
+					- $O n^2$,  $\Omega n^2$
 						- by coincidence, because these boundaries are the same:
 							- $\theta$ $n^2$
 - ? Sorry for the repeats!
