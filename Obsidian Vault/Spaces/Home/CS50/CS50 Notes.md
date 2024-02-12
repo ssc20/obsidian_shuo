@@ -619,7 +619,7 @@ Else
 	- $\Omega(n^2)$
 	- damned if you do, damned if you don't
 - bubble sort
-	- $Omega(n^2)$
+	- $\Omega(n^2)$
 	- $O(n^2)$
 	- sometimes can get lucky and shave time off... resulting in the better $O$ case
 - merge sort
