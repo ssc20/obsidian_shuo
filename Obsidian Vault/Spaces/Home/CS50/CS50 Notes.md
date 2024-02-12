@@ -1128,6 +1128,66 @@ int collatz(int n)
 				- 5, 1 , 2
 					- ![[CleanShot 2024-02-12 at 12.54.57@2x.png]]
 			- compare the first element of the right part, and the first element of the left part
+				- 5 compare 1, 5 > 1
+				- 1 becomes the new first element in a new array
+					- 2 < 5, 2 becomes the next element
+					- 5 or null lower? well, the real option is 5, so 5.
+				- ![[CleanShot 2024-02-12 at 12.58.13@2x.png]]
+- recursively thinking, we have sorted the left half of the overall red array
+	- let's put this aside now, and do the right half
+	- 'arbitrarily' divide it, 3 is the single element. 
+	- ![[CleanShot 2024-02-12 at 12.59.14@2x.png]]
+	- now for the right half, with > 1 element, sort the left half and the right half:
+		- ![[CleanShot 2024-02-12 at 12.59.36@2x.png]]
+		- ![[CleanShot 2024-02-12 at 12.59.45@2x.png]]
+		- now again, do the side by side comparison for this array level: 6 and 4
+		- 4 < 6; 1st element in the sub array, 6 = 2nd element in the sub array
+		- now sorted left and right halves of the right half
+	- with the exact same process, we compare:
+		- Lower: 3 or 4? 3.
+			- 3
+			- Lower: 4 or NULL? 4.
+				- since nothing is left on the left side, then everything on the right has to be bigger than what's in the merged array.
+				- the only thing left is on 1 side, therefore, everything (can) must go
+				- ![[CleanShot 2024-02-12 at 13.02.48@2x.png]]
+- we have gone through 2/3 of the pseudocode steps
+- final thing we have to do is merge the 2 halves together
+- ![[CleanShot 2024-02-12 at 13.03.20@2x.png]]
+	- which is lower, 1 or 3?
+		- ![[CleanShot 2024-02-12 at 13.03.51@2x.png]]
+		- 1.
+	- Lower: 2 OR 3?
+		- 2.
+		- ![[CleanShot 2024-02-12 at 13.04.03@2x.png]]
+	- Lower: 5 or 3?
+		- 3.
+		- ![[CleanShot 2024-02-12 at 13.04.13@2x.png]]
+	- Lower: 5 or 4?
+		- 4.
+		- ![[CleanShot 2024-02-12 at 13.04.29@2x.png]]
+	- Lower: 5 or 6?
+		- 5.
+		- ![[CleanShot 2024-02-12 at 13.04.47@2x.png]]
+	- Lower: 6 or Null?
+		- 6.
+	- going through this process recursively, smaller and smaller sub-arrays
+		- everything is now in order, in dark-blue
+		- not as necessarily straight forward as selection sort or bubble sort...
+			- but:
+			- **Worst-case scenario:** We have to split $n$ elements up and then recombine them
+				- effectively doubling the sorted subarrays as we build them up (combining sorted 1-element arrays into 2-element arrays, combining sorted 2-element arrays into 4-element arrays...)
+				- $n\ log n$ 
+					- since we have $n$ elements, and then combine if doubling $n$ times...
+					- this in general is faster than $n^2$ 
+					- it can be slower than bubble sort $\O (n)$ 
+				- in an average case though, merge sort is faster, at the cost of taking up more memory
+				- very powerful! can make speed of sorting an array that much faster.
+			- **Best-case scenario:** The scenario is already perfectly sorted, but we still have to split and recombine it back together with this algorithm
+				- $n\ log n$
+
+
+
+
 ## PSET 3
 ### Sort
 #### Problem to solve
