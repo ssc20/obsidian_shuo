@@ -1184,6 +1184,7 @@ int collatz(int n)
 				- very powerful! can make speed of sorting an array that much faster.
 			- **Best-case scenario:** The scenario is already perfectly sorted, but we still have to split and recombine it back together with this algorithm
 				- $n\ log n$
+- 
 
 
 
