@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "023083c5f6da206d",
+        "id": "3b2e233a9d8a28a4",
         "type": "tabs",
         "children": [
           {
-            "id": "f358563627da0082",
+            "id": "3e791aadfcf99ffa",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -80,17 +80,9 @@
               "type": "mk-path-view",
               "state": {}
             }
-          },
-          {
-            "id": "2f3e7198d703d65b",
-            "type": "leaf",
-            "state": {
-              "type": "mk-path-view",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -122,18 +114,6 @@
             }
           },
           {
-            "id": "6ce7aa48459d4f08",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
             "id": "b5a8f20e69892e09",
             "type": "leaf",
             "state": {
@@ -153,17 +133,9 @@
                 "file": "Spaces/Home/CS50/CS50 Notes.md"
               }
             }
-          },
-          {
-            "id": "4caab605f3316c3d",
-            "type": "leaf",
-            "state": {
-              "type": "timeline",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -185,10 +157,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f961b4aef42f4e13",
+  "active": "3e791aadfcf99ffa",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "2024-02-13.md",
     "Spaces/Home/CS50/CS50 Notes.md",
+    "conflict-files-obsidian-git.md",
     "Untitled.md",
     "The Book of Ramen.pdf",
     "Spaces/Home/attachments/CleanShot 2024-01-26 at 21.20.50.png",
