@@ -18,7 +18,7 @@
   "saveAllContextToFrontmatter": true,
   "editorFlowStyle": "seamless",
   "autoOpenFileContext": false,
-  "activeView": "/",
+  "activeView": "Spaces/Home",
   "hideFrontmatter": true,
   "activeSpace": "",
   "defaultDateFormat": "MMM dd yyyy",
@@ -38,14 +38,7 @@
     "spaces://$tags/spaces://#pset",
     "spaces://$tags/spaces://#pset",
     "Spaces/Home/Spaces/Home/CS50",
-    "spaces://$tags/spaces://#pset",
-    "//Spaces",
-    "//Spaces/Spaces/Home",
-    "//Spaces/Spaces/Home/Spaces/Home/CS50",
-    "//Spaces/Spaces/Home/Spaces/Home/Other",
-    "//Spaces/Spaces/Home/Spaces/Home/Other",
-    "//Dr. K",
-    "//Dr. K"
+    "spaces://$tags/spaces://#pset"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
@@ -66,9 +59,9 @@
   "dataviewInlineContext": false,
   "inlineContextNameLayout": "vertical",
   "waypoints": [
+    "Spaces/Home",
     "/",
-    "spaces://$tags",
-    "Spaces/Home"
+    "spaces://$tags"
   ],
   "spacesUseAlias": false,
   "fmKeyAlias": "aliases",
