@@ -1192,6 +1192,10 @@ int collatz(int n)
 	- not necessarily sorted by name
 		- {Matthew, Samia, Alyssa, Douglas, Cecelia, Lucas, Ramya}
 	- spotting Alyssa out of these people is quite easy
+	- what algorithm to use to search, if the list isn't sorted?
+		- we could use linear search or binary search
+		- linear search: start at one side, then look at 1 person then the other person
+
 
 
 ## PSET 3
