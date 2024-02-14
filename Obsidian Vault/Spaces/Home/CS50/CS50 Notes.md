@@ -1,13 +1,1273 @@
 
 ---
 
+# Week 3
+## Notes
+### Algorithms
+- taking a break from syntax
+- we have a lot of vocabulary now!
+	- might not grasp functionality
+- but instead, let's think about how to think 'algorithimically'
+	- quantize real world problems so we can map puzzle pieces from week 0, with this new syntax to solve those problems
+- recall the time to solve v. size of problem chart
+	- how many units of measure -- whatever you're using
+	- the first algorithm: going 1 page at a time
+		- 1:1 slope!
+	- the second algorithm, we started doing two pages at a time
+		- might skip a page;
+			- faster, but not yet 2/1
+	- the third algorithm; logirithimc curve
+		- even if you doubled the size of the phone book
+			- it was just one more page turn
+			- not another 500 or 1000
+- think back to how we want to divide and conquer the problem
+	- if i were to take attendance on stage, we could do it old school... one step at a time
+		- or double by counting 2 at a time
+- everyone stand up and think of the number 1
+	- second step, ultimate theoretically: pair off with someone standing
+		- add their number to yours
+		- remember the sum
+	- most likely, everyone is thinking of the number two
+		- unless you're an odd one out
+	- next step is that one of you in the pairs should sit down
+	- notice we're about to induce a loop so the rest is on you!
+		- if still standing, go back to step 2
+		- keep going if still standing!
+	- theoretically, there's only 1 person standing left
+		- asking each other their number
+		- 46
+		- 16
+		- 48
+		- (sitting down)
+		- 32
+		- 43
+		- 22
+		- 16
+	- if there were 1000, then 500, then 250...
+		- why? 
+		- each step of the algorithm, half was sitting down each time
+	- the total count is 231
+	- everyone paired off!
+	- click enter, do all of the remaining addition, should have the total count of people in the room
+	- unlike 1st or 2nd algo, the 3rd, should've been fundamentally faster
+		- no matter how many people
+		- 
+- as a backup, the actual number. of people in the room
+	- (i have no idea, but apparently it was really off)
+- same idea of "dividing and conquering"
+- halving, halving, and that's called logarithms
+- doing something n times, or even n / 2 times, where n is the number of ppl in the room
+- in contact books like on iOS/Android
+	- the divide/conquer, logarithimc search, is what is being used
+	- these ideas are everywhere, and hopefully you find the one person you're looking for
+		- the person who should have the count of "everyone"
+		- should 'coalesce' in the figure of the last person standing
+- the idea of data structures, arrays
+	- key definition: a collection
+	- strings are just an example of char char char
+		- not necessarily 
+	- list in concept
+	- consecutive aka contiguous
+		- an array is important in C, is because it's contiguous
+		- the bytes are back to back to back somewhere in the computer's memory
+	- we can actually start to problem solve
+		- pair this down to just an abstract size of 7
+- suppose there are these numbers
+	- {1, 5, 10 , 20, 100, 500}
+		- the catch with C: find the number 50....
+			- every number found it obviously, since we have a "birds-eye" view of the memory 
+			- the computer does NOT; it can only look at each value 1 at a time
+			- you have to shield your eye and look at 1 number at a time L-R in order to find if the 50 is actually there
+		- analogous to a set of gym lockers
+		- ![[CleanShot 2024-01-24 at 20.48.31.png]]
+	- so we have some terminology, I've labelled the locker doors like so:
+		- ![[CleanShot 2024-01-24 at 20.49.00.png]]
+	- although there are 7 lockers, I'm only counting to 6...
+		- again, this is equiv to `n-1`
+	- suppose we are to use these lockers, let's find an actual number in these doors
+		- constantly searching for information...
+	- let's abstract this!
+		- the black box model; input > algorithm > output
+	- the input is an array of 7 numbers
+		- the problem, find me the data if it's there....
+		- the algorithm is where we need to do our thinking
+			- you can generalize this to web pages , contacts, or any other type of info that is in a computers database
+- Example going hard
+	- Sam is Applied Math
+	- Louis is doing econ with stats
+	- David was in Matthews too (matthews south)
+	- Behind you are these seven lockers
+		- find us the number 50
+		- like you to then explain how you go about finding it...
+	- *opened the last locker*
+		- $10 bill
+	- *next locker left*
+		- $100 bill
+	- eventually find the $50
+	- if you could explain, what was your algorithm
+		- keep going till you find it...
+	- Carter is going to shuffle the numbers carefully...
+- could Sam have done better?
+	- that took 5 steps to find the $50 bill
+	- if you got lucky, you could've found it on the 1st try
+	- taken out all the dollar bills, sorted them, put them back in, then do the divide and conquer approach
+		- valid algo, but all the work seems to be inefficient
+		- this might be a reasonable solution if she wants to search again and again
+		- assign a cost up front to prevent this.
+	- go from left to right...
+		- show everyone the numbers to prove there's no funny business going on here
+		- {20, 500, 10, 5, 100, 1, 50}
+		- had to literally go into the last locker on the right..
+		- the performance of that algorithm, really depends on where the number ends up being
+		- it really just boils down to luck, unfortunately
+	- (i'm guessing 1 left, 1 right?, or some combination of that?)
+		- Louis has the memory, but let's try and assume no memory
+	- Louis is starting from the middle
+		- since there's 4 numbers, i know some are bigger, i'll go to the right
+		- relative to these three, 
+			- 50 has to be between 20 and 100
+	- Louis' instinct, was remember the numbers and deduce the number...
+		- (trial difficulty)
+		- Louie's instinct, to find it, to index it, is an ctual technique
+		- where you actually take ifnormation and go to where you want
+			- a concept called hashtables
+		- let's try and formalize the algorithms that the volunteers intuitively came up with
+	- 
+- Linear search
+	- #linearsearch #pseudocode
+	- stepping in a line, no matter which direction you're going
+	- let's try and formalize; translate it into pseudo code
+```pseudocode
+
+for each door from left to right
+	if 50 is behind door
+		return true
+return false
+
+// notice that the return value is outside of the 'for' loop
+
+// we want to avoid concluding within the first iteration, that the 50 behind the door is not present at all (returning false prematurely)
+
+```
+- notice that only towards the bottom of the algorithm, 
+	- if she opened the door, found it to be the wrong door...
+	- if you don't previously return true, make sure you try again until you do
+
+```c
+For i from 0 n-1 // say n is 7, through 6 doors
+	if 50 is behind doors[i] // if door is the i'th door, and it has the 50, it's true
+		Return true
+Return false // otherwise, after options exhausted, where door is the i'th door, and doesn't have the 50, return false entirely
+// notice that this psuedo code borrows from C
+```
+
+- Binary Search
+	- #binarysearch
+
+```
+If no doors left
+	Return false
+If 50 is behind middle door
+	Return true
+Else if 50 < middle door
+	Search left half
+Else if 50 > middle door
+	search right half
+// note the 4 possibilities, this should be the question you ask first, since there *could* be no doors left
+```
+- we can make this more technical
+```
+If no doors left
+	Return false
+If 50 is behind doors[middle]
+	Return true
+Else if 50 < doors[middle]
+	Search doors[0] through doors[middle - 1]
+// don't waste time serching the middle door we already looked at
+Else if 50 > doors[middle]
+	Search doors[middle + 1] through doors[n - 1]
+// not n because we start counting from 0
+```
+- we can try the more technical pseudocode, since it could be translated verbatim to C code
+- only headache is rounding issues, 
+	- because if you divide int by fraction, you work through what's going to be truncated when rounded down or up as a solution
+- let's consider bit more formally a question that we'll come back to the future
+	- what is the running time of these algorithms = measuring efficiency of these algorithms
+- going back to the picture, where representitive of the phone book
+	- bug aside, the attendence counting algorithm,
+		- this green line theoretically represents the time for us to calculate that
+	- describe things mathematically at a time
+		- 2 people or 2 pages at a time
+- n = 1 page a ta time
+	- n / 2 = 2 pages at a time
+- $log_{2} n$
+	- log base 2 of n
+	- what is the valuetaking n and dividing it by 2 again and again and again and again
+		- until left with 1 person/value standing
+- being this precise, it's not that intellectually interesting
+- generally a computer scientist is asked the efficiency of your algorithm
+	- how good or bad?
+		- will talk about it being on some order of steps
+		- just wave your hand at it
+		- broad strokes: all we care about is certain numbers
+	- when computer scientists, they thowr away efficiencies
+		- throw away constant factors
+		- that might be dividing here or a base here
+	- BIG O NOTATION
+		- #big_o_notation
+		- O(n)
+		- O(n)
+		- O(log2n)
+			- this actually becomes O(logn)
+	- doesn't matter again, fundamentally what the base/factors are
+- zoom out,
+	- ![[CleanShot 2024-01-24 at 21.10.51.png]]
+	- the algorithms become closer and closer
+	- once n is large enough, they are practically the same algorithm
+	- the fundamentally different shape of log though, is very appealing
+- this is why constant terms are thrown away (don't change the picture much)
+- algorithms can be described in the order of these running times
+	- n is just the number of values (what you're doing in code)
+	- (n times n - 1)
+		- say everybody wants to shake everybody's hand, that's how you calculate it
+		- toss away the 1
+- O(n^2) - quadratic
+	- this means N people doing N things
+	- if we were to ask you to shake everyone's hand in the room
+	- how many handshakes?
+		- n of you, and you've got to shake everyone n's hand...
+		- 
+- O(n log n) (other fancier terms but not for now)
+- O(n) - linear
+	- this will take linear time
+	- left to right: {1, 2, 3, 4}
+	- n pages, it'll take me n steps
+		- will always take me n steps, going 1 by 1 from the start
+	- we use this to consider the "worst case"
+- O(log n) - logarithmic
+	- this is our example of binary search
+	- takes fewer and fewer steps to run even in the worst case
+- O(1) - constant
+	- this doesn't actually mean 1 step
+		- but it does refer to a constant number of steps taken total
+		- when everyone stood up
+			- it always is "everyone" stands up, so 1 step taken total
+- we have this capital Greek $\Omega$ 
+	- exact same idea of best case
+	- ![[CleanShot 2024-01-24 at 21.21.03.png]]
+	- this will take as few as...
+	- how many steps might it take in the best case? (guessing lockers)
+		- linear search: just 1 step
+		- binary search: 1 step
+		- $\Omega$ 1
+		- $\Omega$ 1
+		- what about attendance?
+			- i have to point at eeryone...
+			- the best and worst case is that it takes n steps
+- these cases where best = worst
+	- #theta
+	- Theta notation
+	- $\theta$ 
+		- same number of steps as Big O and Omega analysis
+- you'll go more into these ideas with computer science
+	- #algorithmefficiency
+	- $O$ upper bound
+	- $\Omega$: lower bound
+- with that being said, let's see how we might translate this to actual code
+	- something that makes sense
+	- not just new syntax, but applications of these concepts
+- lets go make search.c
+	- ![[CleanShot 2024-01-24 at 21.32.54.png]]
+	- "correct" implementation of the linear search
+	- `return 0` for main indicates success
+		- 0 is false, 1 is true, so it's counter-intuitive
+		- the program works, 1 possiblity: 0
+			- it doesn't, and there's an infinite number of that.. so
+		- when you return 0, the program will effectively terminate
+	- `return 1` is pedantic
+		- don't care what the exit status of this in the program
+		- intro'ing the idea of returning 0, i should also introduce the idea of introducing a return value to indicate failure
+	- testing, students might appreciate this more so that ppl understand what's better under the hood
+- for strings though....
+	- ![[CleanShot 2024-01-24 at 21.38.42.png]]
+	- -   this doesn't seem to work
+	- if you want to compare strings in C, you don't do it like you did integers
+	- you actually need another technique altogether
+	- `string.h` is needed
+		- library that includes:
+			- `strlen`
+			- `strcmp` - string compare
+				- will tell us if 2 strings are the same or not
+	- let me go back to my code now and see what I'll do differently
+		- ![[CleanShot 2024-01-24 at 21.40.56.png]]
+		- now it works correctly!
+		- why might it be valuable for `strcmp` to return 0
+			- when comparing 2 strings...
+				- it's not just that they're equal...
+				- like us sorting information, it's usually useful to know if this string equals another
+					- but also alphabetically, if it comes before or after?
+				- == can only give a true or a false
+					- so this might not be that helpful
+				- strings are compared based on ASCII-betical order
+					- comparing (65) against another letter's integer value
+			- not doing any sorting, it's immaterial
+				- but strcmp again returns 0
+			- using == to compare strings[i] and s
+				- not comparing in the way you might have thought..
+			- == does something different in python or java
+		- let's put this into play with some actual additional code
+- implemented this idea of the phonebook...
+	- ![[CleanShot 2024-01-24 at 21.48.01.png]]
+	- does any aspect of this phonebook rub you the wrongway?
+		- it's too much! but why?
+		- separating the names and the numbers
+			- it looks a little bit weird
+			- technical term: code smell (already know this)
+		- if i add fourth name, fifth name... number.. it's probably going to go out of sync?
+			- i shouldn't decouple names from numbers in this instance
+		- when you perceive this, there's a chance to improve!
+		- we need another tool:
+- Data structures
+	- arrays are our first example of data structures
+	- little bit of new syntax:
+		- will allows us to create own data structures, own types of variables
+		- largely using syntax we've used thus far
+- to represent a person in our phonebook
+	- wouldn't it be nice if C had a datatype called person?
+	- i could create an array containing people in my phone book
+	- maybe people have a name and an umber
+		- `person people[]`
+		- `string name; string number;`
+We can do this
+```c
+typedef struct
+{
+	string name;
+	string number;
+} 
+person;
+```
+put all of the variables you want to associate with this datatype
+- create a new data type called person
+	- when C was created alongside the ints and the floats and so forth
+how can i actually use this?
+	- you can go back into your code
+- a structure can be a vairable of toehr variabels
+- typedata means define the following type, invent the type for me
+- new datatype despite not being implemented decades ago, natively in C
+Can improve it as follows
+- it's going to look a little bit complicated at fist
+- but will scale better over time
+![[CleanShot 2024-01-25 at 21.03.50.png]]
+
+- we can fulfill the phone book format later with a loop
+	- but for now this fulfills our purpose
+- we've solved this problem with a brand new data type
+	- represents this custom data, where struct clusters all these keywords together
+- when it comes to styling your code, style50 will put the name of the datatype on the other side of the closing brace
+	- this is fine; this is the "right" way of styling it
+```c
+typedef struct
+{
+	string name;
+	string number;
+} person;
+```
+Do you have to assing both name and number
+- can you get away with one of the name only?
+- will result in bogus data
+- run the risk of crashing your code, even though you never initialized it
+
+now we have the ability to represent more interesting structures...
+- sorting
+
+we assumed someonene had sorted the data for us..
+- what if we sort info first, then go find the 50
+- how expensive is it to sort?
+- how much do microsoft and google spend to keep data sorted?
+
+unsorted > blackbox/algo > output
+
+- everything is arguably unsorted by default, but we want to get it sorted
+- somewhere in this blackbox we have to sort this information
+	- if we have these integers unsorted
+- ![[CleanShot 2024-01-25 at 21.11.37.png]]
+- maybe it's time for some brownies?
+
+- could we get 8 more volunteers?
+	- if everyone grab a number
+	- ![[CleanShot 2024-01-25 at 21.18.50.png]]
+- notice this array of volunteers is entirely unsorted
+- sort yourselves from smallest to largest
+	- looked for the number that was lower. and higher, then found the middle
+- what you guys did was a little hard to translate into code
+	- let's try taking 2 passes in this
+	- start from the same point each time
+- we can approach sorting in a couple of different ways
+	- needs to be methodical
+		- pseudocode > code
+		- quantize everything step by step
+		- espeically not 8 people, 80 people, 800 people
+	- probably would have taken forever
+		- no doors in front of volunteers
+	- find the smallest number and put i on the left, can't just take a step back...
+		- let's find it more methodically
+		- this is actually the smallest number i've ever seen
+		- i can forget about the 7...,
+		- 1 is clearly smaller, but not even smallest, my smallest element so far is 1
+		- mariana, where should we put you clearly
+		- if this is an array, contiguous, cancan't have the luxury...
+	- let's swap everybody
+		- if mariella, the 0, smaller, i can start taking fewer bytes
+			- 2 was the smallest... now 1 is the smallest
+		- 5, 4, let's take 2 where you belong
+			- it's like -1 each time, as we verify how this works
+			- ![[CleanShot 2024-01-25 at 21.39.52.png]]
+			- there's a lot of looping and conditionals in how we were doing this example
+			- if you guys could reset yourselves to the same ordering...
+- #algorithm
+- I liked the intuition where they organically looked to the person, on the left and the right
+	- ![[CleanShot 2024-01-25 at 21.41.01.png]]
+	- these 2 will swap
+		- 7, 5 swap
+		- 7, 4 swap
+		- 7, 1 swap
+		- 7 6 swap
+		- 7 0 swap
+		- 7 3 swap
+		- not done yet... but who is definitely in the right place?
+			- Eli (7) is!
+			- I can skip him moving forward, taking one byte out
+		- 2 5 ok
+		- 5 4 swap
+		- 5 1 swap
+		- 5 6 ok
+		- 6 0 swap
+		- 6 3 swap
+		- don't have to worry about Eli 7
+		- or Haron 6
+	- even though i'm going back and forth, the problem is getting easier each time
+	- 2 4 good
+	- 4 1 swap
+	- 4 5 ok
+	- 5 0 swap
+	- 5 3 swap
+	- 5 6 7 good
+	- 2 1 swap
+	- 2 4 ok
+	- 4 0 swap
+	- 4 3 swap
+	- 3 4 5 6 7 ok
+	- 2 0 swap 
+	- 2 3 ok
+	- 1 0 swap
+	- 1 2 swap
+	- 0 1 ok
+	- 1 2 3 4 5 6 7 ok
+	- 
+Now the example is finished...
+- showcased 2 approaches
+	- 1. selected the element again and again, looking for the smallest
+	- 2. fixing local problems, doing it again and again until all the minor problems
+		- this is closer to the organic example
+- 1 = "selection sort"
+	- deliberately selecting the smallest element again and again
+	- don't know a priori, until going through the system at least once
+	- this assumes i don't have an infinite amount of memory
+		- propose only keeping track of one number at a time
+		- smallest element seen thus far
+		- if i used more memory, i could remember from the first pass, where 2 is , where 3 is
+			- different algo.. more space... more memory
+```c
+For i from 0 to n-1
+	Find smallest number between numbers[i] and numbers[n-1]
+	Swap smallest number with numbers[i]
+```
+- when the loop starts at 0,
+	- from the far left to the far right...
+	- swap the smallest number with the far left
+	- evicting people from the left, then the next, then the next
+- this is an algorithm having us go back and forth iteratively selecting the smallest elements
+	- think of them representing an array...
+	- doors like this where the leftmost = 0
+		- rightmost is n - 1
+- how many total steps does selection sort perhaps take?
+	- let's do a quick visualization
+	- ![[CleanShot 2024-01-25 at 21.53.57.png]]
+	- tall purple represent large numbers, short represent smaller numbers
+		- in pink again and again... equivalent me walking through the volunteers
+		- as soon as I have found the smallest element, evict whoever was originally there
+			- it holds briefly. in pink what it thinks the smallest number is
+		- this algorithm feels kind of slow...
+			- doing a lot of work?
+			- where is the work coming in?
+				- keeps going back and forth and back and forth
+				- shaving a little bit of time... doesn't have to go ALL the way back..
+				- but cyclicity
+					- comparisons again and again
+					- I can't remember...
+			- efficient or inefficient is something like selection sort?
+			- if we have n numbers...
+				- `n-1`  first pass
+					- that put the smallest number
+					- don't need to walk in front of all 8
+					- $(n - 1), + (n - 2) + (n - 3) ... + 1$
+					- this series here...
+						- $n(n - 1)/2$
+							- no matter what n is, this formula captures the sum of the series
+							- that is how many steps taken again and again when implementing for 8 people
+						- = $n^2/2 - n/2$
+							- n^2 seems like the biggest term, the *dominant term*
+							- dividing this quadratic formula by 2 is big... but as n gets larger and larger...
+					- selection sort is on the order of $O(n^2)$
+					- kind of a slow one, again
+					- can we do actually better?
+					- if selection sort is in the order of $n^2$?
+						- best case...
+						- no special conditional, if sorted already, exit early
+				- this line of pseudocode tells us what...
+					- not precise, but on the order of $n^2$
+					- any number of doors, it's going to end up being omega of $n^2$
+					- even in the best case where numbers are already sorted, there is nothing in the algo that says I'm done and exit prematurely
+					- $O n^2$,  $\Omega n^2$
+						- by coincidence, because these boundaries are the same:
+							- $\theta$ $n^2$
+- ? Sorry for the repeats!
+- *Sorting* is the act of taking an unsorted list of values and transforming this list into a sorted one
+- when a list sorted, searching that list is far less taxing on the computer;
+	- recall that we can use binary search on a sorted list
+	- there are many different types of sorting algorithms
+- *selection sort* is one such search algorithm
+- the algorithm for selection sort in pseudocode is
+```c
+for i from 0 to n-1
+	Find smallest number between numbers[i] and numbers[n-1]
+	Swap smallest number with numbers[i]
+```
+
+- can be simplified through `(n - 1) + (n - 2) + (n - 3) + ... + 1`
+	- this could be simplified to $n(n-1)/2$ or more simply $O ( n^2)$
+- *Bubble sort* is another sorting algorithm that works by repeatedly swapping elements to "bubble" larger elements to the end
+- the pseudocode for bubble sort is
+```c
+Repeat n-1 times
+	For i from 0 to n-2
+		If numbers[i] and numbers[i+1] out of order
+			Swap them
+		If no swaps
+			Quit
+```
+- as we further sort the array, we know more and more of it becomes sorted, so we need to only look at the pairs that haven't been sorted yet
+- analyzing selection sort, we made only 7 comparisons
+	- representing this mathematically, where $n$ represents number of cases, it could be said that selection sort can be analyzed as:
+	- $(n - 1) + (n-2) + (n - 3) + \dots + 1$
+		- or more simply: 
+		- $n^2-n/2$
+- considering that mathematical analysis, $n^2$ is really the most influential factor determining efficiency of the sorting algo
+	- $\therefore$ selection sort is considered to be of the order of $O(n^2)$ in the worst case where all values are unsorted
+	- even when all values are sorted, it will take the same number of steps
+	- $\therefore$ the best case can be noted as $\Omega(n^2)$ 
+		- since both the upper and lower bound cases are the same, the efficiency of this algo as a whole can be regarded as $\Theta$ $(n^2)$ 
+	- analyzing bubble sort, the worst case is $O(n^2)$ 
+	- the best case is $\Omega (n)$ 
+	- You can visualize a comparison of these algorithms
+
+#mergesort
+- better than selection sort and bubble sort
+
+```c 
+If only one number
+	Quit
+Else
+	Sort left half of numbers
+	Sort right half of numbers
+	Merge of numbers
+```
+- `1346 0257`
+	- split into 2 halves
+	- suppose this is where I am halfway through merge sort
+	- now I need to merge the sorted halves
+	- point at your left hand at the left half, then your right hand at the right half
+	- in order to merge, slot in an empty array up:
+		- which is smaller ( on the left)? 0
+		- right hand to the number to the right half to the left half,
+			- 1 < 2
+		- end up with: `0 1 2`
+		- 3 < 5
+			- `0 1 2 3`
+		- 4 < 5
+			- ` 0 1 2 3 4`
+		- 6 > 5
+			- ` 0 1 2 3 4 5`
+		- 6 < 7
+			- `0 1 2 3 4 5 6 7`
+	- can represent it with the above array, but with the other racks
+- selection sort and buble sort
+	- only allowed certain amount of memory, just 1 variable to track
+	- selection sort
+		- keep track of who was the smallest element
+	- bubblke sort
+		- `i, i + 1`
+- in CS, you can trade off 1 resource for another
+	- you have to spend more "space", or money
+	- conversely, if fine with time, you can get away with lower space
+	- deciding what is more 'expensive' for you
+- suppose these are the numbers in question:
+`6 3 4 1 5 2 7 0`
+- selection sort
+	- best case $O(n^2)$
+	- $\Omega(n^2)$
+	- damned if you do, damned if you don't
+- bubble sort
+	- $\Omega(n^2)$
+	- $O(n^2)$
+	- sometimes can get lucky and shave time off... resulting in the better $O$ case
+- merge sort
+	- no more looping back and forth!
+	- inspired by recursion: "divide and conquer"
+- #mergesort 
+- Left half:
+	- `6 3 4 1`
+	- do so by stealing more memory, (second shelf to work on this)
+	- array\[4]
+		- let's recursively use the same algorithm, by sorting the left half of this left half...
+		- array of size 4, only 3 steps to solve it
+		- `6 3`
+			- how do we solve and sort an array of size\[2]?
+			- sort the left and the right....
+				- `6`
+				- what is our special base case?
+					- quit or return; we're already done
+					- list of size\[1] is already done...
+				- `3`
+					- 🤔
+				- well: let's merge them!
+		- "left hand right hand"
+			- 6 > 3
+			- `3 6`, this is sorted! 
+	- moving on the right half: `4 1`
+		- we apply algorithm again, but we run into the base case
+			- quit or return
+		- merge: 4 > 1
+		- `1 4`
+	- now we're at the point in the story where left-left is sorted, left-right is sorted
+		- merge and sort!
+		- `6 3 4 1` --> `1 3 4 6`
+- Right half:
+	- sort array of size 4: `5 2 7 0`
+		- sort array(s) of size 2: `5 2`
+			- sort left then right
+			- 5 < 2
+			- merge: `2 5`
+		- sort array(s) of size 2: `7 0`
+			- sort left then right
+			- 7 > 0
+			- merge: `0 7`
+		- merge the 2 arrays of size 2: `2 5 0 7`
+			- sort: `0 2 5 7`
+- we are at the part of the story where we're on the 2nd shelf
+	- ![[CleanShot 2024-02-07 at 21.56.16.gif]]
+	- seems that we are comparing 2 values, starting from the left half, to its equivalent on the right;
+		- but I suppose this could change depending on what is regarded as higher or lower, and on the criteria of the sort
+- seems we kind of cheated
+	- the leaves we just said: "SORTED"
+		- the "MERGE" is doing the magic of sorting
+		- recursion is the thing that bends your brain a bit
+	- not a lot of "again & again & again & again"
+		- do things once, then move on
+	- if it helps you to see in another way...
+	- (running Comparison of Sorting Algorithms Site)
+		- was using 3 shelves/arrays
+		- can be slightly more intelligent and just back and forth between 2 spaces
+		- you'll notice that merge sort is working on varying sizes of "halves" and things seem to happen very quickly
+		- same number of bars but it happened *way* faster
+	- why is that?
+		- back to the diagram in question:
+$O(n^2),\  O(n log_{n}), \  O(n), \  O(log_{n}), \  O(1)$
+- let's see how much better it is:
+	- ![[CleanShot 2024-02-07 at 22.01.58.png]]
+	- these are remnants or "states" leaving breadcrumbs
+	- how many pieces of work...
+		- counting 1x1, it seems I moved around things 24 times
+		- how do I actually reason about that;
+			- my arrays are my temporary shelves
+		- $log_{2}{n}$
+			- this is because we are doing in half each time
+				- dividing, dividing, dividing
+				- it's like an inverse exponential function...
+			- took a list of size 8
+				- 2 lists of size 4
+				- 4 lists of size 2
+				- 8 lists of size 1
+				- 
+			- how many times can you do this, starting with 8 numbers? (n = 8)
+				-  $log_2(8)$
+				- $log_2(2^3)$
+					- base and the number can cancel out
+					- $log_2(2^3) = 8$
+						- which means that's how many times you can divide a problem of size 8 in half, in half, in half
+		- each time, in this chart, we had to keep merging them 
+			- laterally in this chart, there are $n$ steps
+				- I had to merge all of those things back together
+			- what is the height of all these remnants?
+				- ![[CleanShot 2024-02-07 at 22.06.40.png]]
+				- it's 3 as in $log_2(2^3)$
+					- this is technically $3 * 8 = 24$ steps
+					- more generally, this is $log n = height, \ n width$
+		- the total running time of this merge sort:
+			- $n\ log_2\ n$
+				- and we can throw away the base because that's just a constant factor, resulting in:
+			- $n\ log\ n$
+				- when we talk about $O$ notation, we have $O(n\ log\ n)$
+				- conversely, it is also $Omega(n\ log\ n)$
+					- which means that bubble sort might still outperform it
+						- at least when inputs are already sorted or certainly relatively small
+					- but that's probably ok: the data we're sorting probably isn't sorted
+						- we could even half merge sort to do 1 pass to check initially to see if it's already sorted
+							- could massage the algo as a result to make it smarter
+					- fundamentally, merge sort is 'in theta of' or : $\Theta \ n(log\ n)$
+					- it's on the order of $n (log n)$ steps
+		- in terms of our chart:
+			- merge sort:
+				- strictly higher than linear
+				- strictly lower than quadratic:
+					- $n, \ n^2$
+				- it clearly seems to be faster
+					- not as good as linear search
+					- definitely not as as good as binary sort
+					- but better than selection sort and bubble sort
+		- final film, minute long that compares of all these algorithms
+		- **Visualization and Comparison of Sorting Algorithms - Random**
+			- top: selection sort
+			- bottom: bubble sort
+			- middle: se and hear appreciation of $n(log\ n)$
+			- this is *$n(log\ n)$ vis a vis $n^2$*
+				- 10 seconds for merge sort to finish
+			- Merge sort > selection sort > bubble sort
+				- fastest to slowest
+
+## Shorts: 
+
+### Linear Search
+- linear search algo we can use to find an element in an array
+- algo = step by step instructions for completing a task
+- linear search: the idea of the algorithm is to iterate across the array from left to right searching for a specified element
+	- in pseudocode:
+		- Repeat, starting at the first element:
+			- if the first element is what you're looking for (the target), stop
+			- otherwise, move to the next element
+- ![[CleanShot 2024-02-07 at 22.21.33.png]]
+	- start with 11, it's not 9, go to the next one, again and again
+		- once we find $9$, we can stop
+			- the linear search has completed, succesfully
+		- what if we're looking for an element that's not in our array
+			- we can keep repeating this process again and again
+			- won't know if we've found it until we complete our sequence of the array
+	- the algorithm "failed", in that it couldn't find $50$
+		- while we didn't find anything, it still succeeds even if not in the array
+- **Worst-case scenario**: we have to look through the entire array of $n$ elements, either because the target element is the last element of the array or doesn't exist in the array at all
+- **Best-case scenario**: the target element is the first element of the array, and so we can stop looking immediately after we start
+- what does this say about the complexity of the search?
+	- $O(n)$
+		- worst-case
+	- $\Omega(1)$
+		- best-case
+### Binary search
+- binary search another algo we can use to find element in an array
+- requires special condition, but if met, much quicker
+- Binary search: the idea of the algorithm is to divide and conquer, reducing the search area by half each time, trying to find a target number
+	- in order to leverage this power, however, our array must first be sorted, else we cannot make assumptions about the array's contents
+	- *Pseudocode:*
+		- Repeat until the (sub)array is of size\[0]
+			- calculate the middle point of the current (sub)array
+			- if the target is in the middle:
+				- stop
+			- otherwise:
+				- if the target is less than what's at the middle
+					- repeat, changing the end point to be just to the left of the middle
+				- if the target is greater than what's at the middle
+					- repeat, changing the start point to be just to the right of the middle
+- ![[CleanShot 2024-02-07 at 22.28.01.png]]
+- array of size\[15]
+	- where we're starting to look? where we're stopping to look? what's our middle point?
+	- let's first define a set of indices
+		- ![[CleanShot 2024-02-07 at 22.28.50.png]]
+		- compared to linear search, we need to know how many elements we're iterating over, but we don't actually care about what element;
+		- in binary search... we do
+	- for binary search, we can't start yet
+		- we must have this sorted first!
+			- especially if we just discard half of the array
+	- you can use any sorting algorithm to fulfill this requirement
+	- ![[CleanShot 2024-02-07 at 22.30.08.png]]\
+	- calculate the midpoint of this array, targeting 19
+		- the first element is index \[0]
+		- the last element is index\[14]
+		- start and end
+		- calculate the midpoint
+			- $(0 + 14)/2$
+			- midpoint = 7
+			- 15 is not what we're looking for
+			- however, we know 19 > 15 (what we found at the middle)
+				- new start point, is to be just to the right, 
+					- then repeat the process again
+	- our new array start is index\[8]
+	- we've effectively now ignored everything to the left of 15
+		- instead of having to search 15 elements, we only have to search 7
+- ![[CleanShot 2024-02-07 at 22.33.55.png]]
+- let's calculate the new midpoint
+	- $((8)+(14)) / 2 = 11$
+		- this midpoint value is *less* than what we're looking for
+		- repeat the process again, changing the *end* point to be just to the left of the midpoint, new endpoint of $10$
+- ![[CleanShot 2024-02-07 at 22.36.11.png]]
+- now this is the only part of the array that we have to search through
+	- now, finding the new midpoint
+		- $((8) + (10)) / 2 = 10$
+			- now, our target is in the middle!
+			- we have found exactly what we're looking for and can stop
+- we know this works if it's in the array... **what if it's not**
+- ![[CleanShot 2024-02-07 at 22.37.26.png]]
+- let's go through the process again, same size\[15]
+	- $((14)+(0)) / 2 = 7$
+	- the target > midpoint, repeat, while changing start to be just to the right of the middle
+	- ![[CleanShot 2024-02-07 at 22.38.24.png]]
+	- ignore the entire left half of the array
+	- $((8) + (14)) / 2 = 11$
+		- target < midpoint; end point to be just to the left of the middle
+	- ![[CleanShot 2024-02-07 at 22.39.29.png]]
+		- $((8) + (10)) / 2 = 9$
+			- the target < middle; change end point to be just to the left of the midpoint
+		- ![[CleanShot 2024-02-07 at 22.40.26.png]]
+		- midpoint, starts at 8, ends at 8, that means it's 8
+			- $((8) + (8)) / 2 = 8$
+			- Are we looking for size\[8] = 17? Nope.
+				- we were looking for 16
+			- if it does exist... than we'll set the end point to be to the left of our current midpoint
+				- change the end point to 7
+				- ![[CleanShot 2024-02-07 at 22.42.12.png]]
+	- look at how $start > end$, that doesn't make any sense
+		- we have a subarray of size\[0]
+		- gotten to this point we can guarantee that $16$ does not exist
+			- start and end points have crossed
+		- slightly different to start = end
+			- if we were looking for 17, at the points before those starts and ends cross, it would've been fine, finding 17
+			- only when they cross, we can guarantee that it doesn't exist
+- **Worst-case scenario:** $O(log_n)$ 
+	- We have to divide a list of $n$ elements in half repeatedly ($log_n$) to find the target element, either because the target will be found at the end of the last division or doesn't exist in the array at all
+		- we have to cut the problem a certain number of times
+			- the certain number of times: $log_n$ 
+		- still substantially better than linear search in the worst case
+- **Best-case scenario:** $\Omega(1)$ The target element is at the midpoint of the full array, and so we can stop looking immediately after we start
+	- 
+- binary search is better than linear search
+	- but you still have to be able to leverage the power of binary search, by sorting your array first.
+
+### Bubble Sort
+- Bubble sort: to move higher valued elements generally towards the right and lower value elements generally towards the left
+	- *Pseudocode*
+		- Set swap counter to a non-zero value
+		- Repeat until the swap counter is 0:
+			- Reset swap counter to 0
+			- Look at each adjacent pair
+				- if 2 adjacent elements are not in order, swap them and add 1 to the swap counter
+- If thinking before visualizing, it moves lower valued elements to the left, and higher valued elements to the right
+	- accomplishing what we want to do
+- ![[CleanShot 2024-02-07 at 22.49.11 1.png]]
+	- arbitrarily chose $-1$, set swap counter to a nonzero value
+		- repeat this process until $Swap Counter = 0$
+			- if $swap counter = 0$ we wouldn't even start the process
+		- set $Swap Counter = 0$ then look at every adjacent pair, if out of order, swap them and +1 to swap counter
+	- look at each adjacent pair, 5 and 2
+	- swap: ![[CleanShot 2024-02-07 at 22.51.15.png]]
+	- look at the next adjacent pair, 5 and 1, swap, then add 1
+		- ![[CleanShot 2024-02-07 at 22.51.43.png]]
+		- 5 and 6 are in order, no need to swap:
+		- ![[CleanShot 2024-02-07 at 22.51.52.png]]
+			- then 6 and 4, out of order, swap, add +1
+			- ![[CleanShot 2024-02-07 at 22.52.14.png]]
+- 6 is now at the end!
+- in selection sort, we ended up moving smallest elements in the sorted array from left to right, smallest to largest
+- in bubble sort, in this algorithm, we're building a sorted array right to left, largest to smallest
+	- we have effectively bubbled the greatest value $6$ to the end
+	- in future iterations, we don't have to consider 6 anymore
+- let's go back to the algo, resetting the swap counter to $0$
+	- now look at each adjacent pair
+	- ![[CleanShot 2024-02-07 at 22.53.53.png]]
+	- 1 and 2 swapped, +1
+	- ![[CleanShot 2024-02-07 at 22.54.06.png]]
+	- now we've moved 5, the 2nd largest number, to the end
+	- we now know that the number is sorted
+		- but we need to prove this! need to guarantee that this is sorted
+	- the swap counter is 2.
+	- reset it to 0; look at each adjacent pair
+		- 1 and 2 in order
+		- 2 and 3 in order
+		- 3 and 4 in order
+		- 5 and 6 in order
+		- the swap counter is still 0; if we don't need to swap anything, then we don't need to swap anything
+			- we can now declare that the entire array must be sorted, because we didn't have to sort it
+- **Worst-case scenario:** $O(n^2)$ The array is in reverse order; we have to "bubble" each of the $n$ elements all the way across the array, and since we can only fully bubble 1 element into position per pass, we must do this $n$ times
+	- actually
+- **Best-case scenario**: $\Omega \ (1)$ The array is perfectly sorted, and we make no swaps on the first pass
+	- best case: better than selection sort!
+
+### Selection Sort
+- Selection sort: find the smallest unsorted element and add it to the end of the sorted list.
+	- *Pseudocode:*
+		- repeat until no unsorted elements remain
+			- search the unsorted part of the data to find the smallest value
+			- swap the smallest found value with the first element of the unsorted part
+	- ![[CleanShot 2024-02-07 at 22.59.04.png]]
+
+- the entire array is the unsorted part
+	- search through and find the smallest value = 1
+	- part 2: swap that value with the 1st element of the unsorted part = 5
+	- 1 and 5 are swapped
+		- ![[CleanShot 2024-02-07 at 23.00.12.png]]
+	- we can visually see we moved the smallest value in the array to the beginning, effectively sorting it
+		- ![[CleanShot 2024-02-07 at 23.00.34.png]]
+		- repeat the process again through the unsorted array
+			- 2 is the smallest, the smallest value in the unsorted array is $2$
+			- it's sorted
+		- find the smallest in the unsorted = $3$ then swap it with the 1st value
+			- $3$ is the smallest, $5$ is the first
+			- ![[CleanShot 2024-02-07 at 23.01.50.png]]
+		- find the smallest in the unsorted, = $4$, first element is $5$
+			- 4 is sorted
+		- find smallest =$5$ then first element is $6$
+		- the only element is $6$, and confirm it is sorted. 
+			- 6 is the smallest, and only element, no actions left to take.
+- **Worst-case scenario**: $O(n^2)$ We have to iterate over each of the $n$ elements of the array (to find the smallest unsorted element ) and we must repeat this process $n$ times, since only 1 element gets sorted on each pass
+- **Best-case scenario:** $\Omega(n^2)$Exactly the same, there's no way to guarantee the array is sorted, until we go through this process for all the elements
+- $\Theta n^2$
+
+- note that the representations are based in "scale"
+	- $n^2$ is not the exact same thing as say, where $n = 5$, that the value is $25$
+		- instead, it refers to the scale of $n^2$ over $n$, $n\ log(n)$ , $log \ n$, $1$. 
+## Algorithm Breakdown (O, Big O, Theta)
+![![Spaces/Home/CS50/#^Table]]
 
 
+
+### Recursion
+- if you code for a long time, you might come to see it as beautiful
+	- it's a very neat way that it looks
+	- Recursion is one way of getting beautiful/elegant looking code
+	- surprisingly short
+- Recursion: We might describe an implementation of an algorithm as being particularly "elegant" if it solves a problem in a way that is both interesting and easy to visualize
+	- the technique of **recursion** is a very common way to implement such an "elegant" solution
+	- the definition of a recursive function is one that, as part of its execution, invokes itself
+	- the factorial function ($n!$) is defined over all positive integers
+	- $n!$ equals all of the positive integers less than or equal to $n$, multiplied together
+	- Thinking in terms of programming, we'll define the mathematical function $n!$ as `fact(n)`
+	- ![[CleanShot 2024-02-08 at 21.16.27.png]]
+	- the factorial of 1 = 1
+		- factorial 2 is 2 x1
+		- factorial 3 is 3 x 2 x 1
+	- ![[CleanShot 2024-02-08 at 21.17.28.png]]
+	- fact 4 = 4 * fact 3*
+	- $n! = n * !(n-1)$
+		- `fact(n) = n * fact(n-1)`
+			- n times the product of all numbers less than me
+			- lets us recursively define the factorial function
+- this forms the basis for a **recursive definition** of the factorial function
+- every recursive function has 2 cases that could apply, given any input:
+	- the *base case*, which when triggered will terminate the recursive process
+	- the *recursive case*, which is where the recursion will actually occur
+		- where it calls itself; slight variation that makes it a teensy bit smaller
+		- passing it down to a diff call down the line
+	- which is the base case in the factorial function?
+		- ![[CleanShot 2024-02-08 at 21.20.48.png]]
+		- the Factorial of 1 is just 1; no multiplication is necessary
+			- we need to stop the factorial somewhere, maybe when we get to 1?
+```c
+int fact(int n)
+{
+	if (n == 1)
+		return 1;
+	else
+		return n * fact(n-1);
+//recursive case
+}
+```
+- the base case is where
+	- you can get rid of curly braces if only 2 branches
+	- we're making the problem smaller
+	- if n = 5, n times fact 4
+		- call stacking: we will learn exactly why this process works
+		- as we approach 1, all of the previous functions have the answer they are looking for
+		- fact 2 = 2 x fact 1
+		- fact 1 returns 1
+		- call for fact 2 gives it back to fact 3, 3 x 2 = 6, then give it back to fact 4
+		- this alone is the solution to calculating the fractorial of a number
+- in general, but not always, recursive functions replace loops in non-recursive functions
+- 
+```c
+int fact(int n)
+{
+	if (n == 1)
+		return 1;
+	else
+		return n * fact(n-1);
+}
+
+// top is recursive; bottom is iterative
+
+int fact2(int n)
+{
+	int product = 1;
+	while(n > 0)
+	{
+		product *= n;
+		n--;
+	}
+	return product;
+}
+```
+- notice we have to declare an integer product
+	- keep multiplying by n and decrementing n until we calculate the product
+	- these do the same thing but don't do it in the same way
+- it is possible to have > 1 base or recursive case, depending on what your function is looking to do
+	- the fibonacci sequence is an example of this
+	- **Multiple base cases**: the Fibonacci number sequence is defined as follows:
+		- base case: n = 1; the first element is 0
+		- base case: n = 2; the second element is 1
+		- the $n^th$ element is the sum of the $(n-1)^th and (n-2)^th$ elements
+		- every other element is defined as the sum of n-1 and n-2
+		- third element is 0 + 1 = 1
+		- 4th element is 1 + 1 (3rd) = 2
+		- 
+	- **Multiple recursive cases**: The Collatz conjecture.
+		- The Collatz conjecture is applied to positive integers and speculates that it is always possible to get "back to 1" if you follow these steps:
+			- if $n$ is 1, stop
+			- Otherwise, if $n$ is even, repeat this process on $n/2$
+			- Otherwise, if $n$ is odd, repeat this process on $3n + 1$
+		- Write a recursive function `collatz(n)` that calculates how many steps it takes to get to 1 if you start from n and recurse as indicated above
+		- ![[CleanShot 2024-02-08 at 21.34.23 1.png]]
+		- above is various Collatz numbers
+		- if n = 1 ; collatz(n) = 0 (no need for steps)
+			- n = 2; it's going to be 1 step + however many steps it takes for 1 (0)
+			- n = 3;
+				- 3, 10, 5, 16, 8, 4, 2, 1
+		- how can you define collatz(n) so that it calculates how many steps it takes to get to 1
+```c
+int collatz(int n)
+{
+	
+	// base case
+	
+	if (n == 1)
+		return 0;
+	else (n % 2 == 0)
+		return collatz / 2
+	else
+		return 3 * collatz + 1
+
+
+	
+}
+```
+- ![[CleanShot 2024-02-11 at 00.41.00@2x.png]]
+
+```c
+int collatz(int n)
+{
+	// base case
+	if (n == 1)
+		return 0;
+	// even numbers
+	else if ((n % 2) == 0)
+		return 1 + collatz(n / 2);
+	// odd numbers
+	else
+		return 1 + collatz(3 * n + 1);
+}
+```
+- 
+- n = 3
+	- 3; return base case value count of 1 (+1)
+		- return 1 (+1 = 2) + collatz(3 * 3 + 1) = collatz(10)
+			- 2 + collatz(10)
+			- 2 + 1 + collatz(5)
+				- 3 + collatz(5)
+					- 3 + collatz(3 * n + 1)
+						- 3 + collatz(16)
+							- 3 + 1 + collatz(8)
+							- 4 + collatz (8/2)
+							- 4 + collatz (4)
+								- 4 + 1 + collatz(4/2)
+								- 5 + collatz(2)
+								- 5 + 1 + collatz(2/2)
+								- 6 + collatz(1)
+								- 6 + 1
+								- 7
+### Merge Sort
+- all other sorting algos have an $O(n^2)$ 
+- in merge sort, the idea of the algorithm is to sort smaller arrays and then combine those arrays together (merge them) in sorted order
+	- merge sort leverages something called **recursion** (already covered)
+
+- Pseudocode:
+	- sort the left half of the array (assuming n > 1)
+	- sort the right half of the array (assuming n > 1)
+	- merge the 2 halves together
+- instead of one six-element array...
+	- let's imagine six one-element arrays, and then merge them together!
+- recursion-wise, this will talk about recursion quite a bit
+- this is the most complicated of the 4 other types of algorithms
+![[CleanShot 2024-02-12 at 12.51.18@2x.png]]
+- algorithm doesn't yet 'know' how to solve this
+	- split this again, considering that we must be consistent in whichever side is larger or smaller for "left" or "right"
+	- ![[CleanShot 2024-02-12 at 12.52.06@2x.png]]
+		- a single element array must necessarily be sorted, so we can mark this as sorted!
+		- go back to the right half of the purple part:
+			- ![[CleanShot 2024-02-12 at 12.52.46@2x.png]]
+			- recursively speaking, we drill down and find 2 > 1, so it is sorted
+			- ![[CleanShot 2024-02-12 at 12.53.50@2x.png]]
+			- which one has the lower element? 1 does; we insert 1 into a new hypothetical array, and then 2 afterwards
+			- we're still looking into the left half of the red array
+				- now we're finished with the halves of the purple array, let's look at the entire purple array
+				- 5, 1 , 2
+					- ![[CleanShot 2024-02-12 at 12.54.57@2x.png]]
+			- compare the first element of the right part, and the first element of the left part
+				- 5 compare 1, 5 > 1
+				- 1 becomes the new first element in a new array
+					- 2 < 5, 2 becomes the next element
+					- 5 or null lower? well, the real option is 5, so 5.
+				- ![[CleanShot 2024-02-12 at 12.58.13@2x.png]]
+- recursively thinking, we have sorted the left half of the overall red array
+	- let's put this aside now, and do the right half
+	- 'arbitrarily' divide it, 3 is the single element. 
+	- ![[CleanShot 2024-02-12 at 12.59.14@2x.png]]
+	- now for the right half, with > 1 element, sort the left half and the right half:
+		- ![[CleanShot 2024-02-12 at 12.59.36@2x.png]]
+		- ![[CleanShot 2024-02-12 at 12.59.45@2x.png]]
+		- now again, do the side by side comparison for this array level: 6 and 4
+		- 4 < 6; 1st element in the sub array, 6 = 2nd element in the sub array
+		- now sorted left and right halves of the right half
+	- with the exact same process, we compare:
+		- Lower: 3 or 4? 3.
+			- 3
+			- Lower: 4 or NULL? 4.
+				- since nothing is left on the left side, then everything on the right has to be bigger than what's in the merged array.
+				- the only thing left is on 1 side, therefore, everything (can) must go
+				- ![[CleanShot 2024-02-12 at 13.02.48@2x.png]]
+- we have gone through 2/3 of the pseudocode steps
+- final thing we have to do is merge the 2 halves together
+- ![[CleanShot 2024-02-12 at 13.03.20@2x.png]]
+	- which is lower, 1 or 3?
+		- ![[CleanShot 2024-02-12 at 13.03.51@2x.png]]
+		- 1.
+	- Lower: 2 OR 3?
+		- 2.
+		- ![[CleanShot 2024-02-12 at 13.04.03@2x.png]]
+	- Lower: 5 or 3?
+		- 3.
+		- ![[CleanShot 2024-02-12 at 13.04.13@2x.png]]
+	- Lower: 5 or 4?
+		- 4.
+		- ![[CleanShot 2024-02-12 at 13.04.29@2x.png]]
+	- Lower: 5 or 6?
+		- 5.
+		- ![[CleanShot 2024-02-12 at 13.04.47@2x.png]]
+	- Lower: 6 or Null?
+		- 6.
+	- going through this process recursively, smaller and smaller sub-arrays
+		- everything is now in order, in dark-blue
+		- not as necessarily straight forward as selection sort or bubble sort...
+			- but:
+			- **Worst-case scenario:** We have to split $n$ elements up and then recombine them
+				- effectively doubling the sorted subarrays as we build them up (combining sorted 1-element arrays into 2-element arrays, combining sorted 2-element arrays into 4-element arrays...)
+				- $n\ log n$ 
+					- since we have $n$ elements, and then combine if doubling $n$ times...
+					- this in general is faster than $n^2$ 
+					- it can be slower than bubble sort $\O (n)$ 
+				- in an average case though, merge sort is faster, at the cost of taking up more memory
+				- very powerful! can make speed of sorting an array that much faster.
+			- **Best-case scenario:** The scenario is already perfectly sorted, but we still have to split and recombine it back together with this algorithm
+				- $n\ log n$
+- 
+
+
+
+
+## PSET 3
+### Sort
+#### Problem to solve
+- recall from lecture that we saw a few algo's for sorting a sequence of numbers:
+	- selection sort
+		- iterates through the unsorted portions of a list, selecting the smallest element each time and moving it to its correct location
+	- bubble sort
+		- compares pairs of adjacent values one at a time and swaps them if they are in the incorrect order
+		- this continues until the list is sorted
+	- merge sort
+		- recursively divides the list into 2 repeatedly and then merges the smaller lists back into a larger one in the correct order
+		- 
+- In this problem:
+	- you'll analyze 3 (compiled!) sorting programs to determine which algorithms they use
+	- in a file called `answers.txt` in a folder called `sort`:
+		- record your answers
+			- an explanation for each program by filling in the blanks marked `TODO`
+
+#### Distribution Code
+- for this problem, you'll need some "distribution" code
+	- that is, code written by CS50 staff.
+	- provided to you are 3 already compiled C programs
+		- `sort1, sort 2, sort3`
+		- several `.txt` files for input 
+		- `answers.txt` in which to write your answers
+- each of the `sort` files implements a different sorting algorithm:
+	- selection sort
+	- bubble sort
+	- merge sort
+	- (not necessarily in that order)
+- ! Your task is to determine which sorting algorithm is used by each files; start by downloading these files
+
+![![Spaces/Home/CS50/#^Table1]]
+
+### Plurality
+#### Problem to solve
+- elections come in all shapes and sizes
+	- in the UK, the Prime Minister is officially appointed by the monarch, who generally chooses the leader of the political party that wins the most seats in the House of Commons
+	- the US uses a multi-step Electoral College process where citizens vote on how each state should allocate Electors who then elect the President
+- Perhaps the simplest way to hold an election though is via method commonly known as the *plurality vote* (known as: *first-past-the-post* or *winner take all*)
+	- in the plurality vote, every voter gets to vote for one candidate
+	- at the end of the election, whichever candidate has the greatest number of votes is declared the winner of the election
+- for this problem: you'll implement a program that runs a plurality election per the below:
+
+#### Distribution Code
+- for this problem, you'll extend the functionality of "distribution code" provided to you by CS50 staff
+	- log into **cs50.dev**, click on your terminal window, and execute `cd` by itself, you should find that your terminal window prompt resembles below:
+		- `$`
+- Next, execute
+	- `wget https://cdn.cs50.net/2023/fall/psets/3/plurality.zip`
+	- this will download a .ZIP called `plurality` into your codespace
+- Then execute `unzip plurality.zip` to create a folder called `plurality`; you no longer need the ZIP, so you can execute: `rm plurality.zip`
+	- respond with `y` followed by Enter at the prompt to remove the ZIP file you downloaded
+- Now type: `cd plurality` followed by Enter to move yourself into that directory.
+- Execute `ls` and you should see a file named `plurality.c`
+	- executing `code plurality.c` should open the file where you will type your code for this problem set;
+		- if not, retrace your steps and see if you can determien where you went wrong
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
 #cs50/week/2/arrays
 #cs50/week/2
 
 # Week 2
 ## PSET 2
+
+
+
 ### INFO
 #cs50/pset/2
 1. Log into cs50.dev using your GitHub account
@@ -21,6 +1281,154 @@ If you submit both Caesar and Substitution, we'll record the higher of your two 
 
 When to do it?
 Tuesday, December 31, 2024 at 11:59 PM EST.
+
+
+### PSET 2 - SUBSTITUTION
+#### Problem to solve
+- in a substitution cipher, we "encrypt" (i.e., conceal in a reversible way) a message by replacing every letter with another letter
+	- to do we, we use a *key*
+	- in this case, a mapping of each of the letters of the alphabet to the letter it should correspond to when we encrypt it
+	- to "decrypt" the message:
+		- the receiver of the message would need to know the key, so that they can reverse the processs: translating the encrypt text (generally called *ciphertest*) back into the original message (generally called *plaintext*)
+- a key, for example, might be the string `NQXPOMAFTRHLZGECYJIUWSKDVB 
+	- this 26-char key means that `A` (the first letter of the alphabet) should be converted into `N` ( the first character of the key), `B` (the second letter of the alphabet) should be converted 
+
+#### submission
+```c
+#include <cs50.h>
+#include <ctype.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
+
+const int ALPHABET_SIZE = 26;
+
+string crypto(string key, string input);
+
+int main(int argc, string argv[])
+{
+    // If command line input is [place: 2]
+    if (argc == 2)
+    {
+        string key = argv[1];
+
+        // Check if key length is ALPHABET_SIZE
+        if (strlen(key) == ALPHABET_SIZE)
+        {
+            // Array to keep track of which characters have been seen
+            bool seen[ALPHABET_SIZE] = {false};
+
+            // flag to check validity
+            int isValid = 1;
+
+            // Check each character
+            for (int i = 0; i < ALPHABET_SIZE; i++)
+            {
+                if (!isalpha(key[i]))
+                {
+                    // not an alphabetical character
+                    isValid = 0;
+                    printf("Key must only contain alphabetic characters.\n");
+                    return 1;
+                    break;
+                }
+                else
+                {
+                    int c = toupper(key[i]) - 'A'; // Normalize character index to 0-25
+                    if (seen[c])                   // if this evaluates true, which it does by default, then:
+                    {
+                        // character has been seen before
+                        isValid = 0;
+                        printf("Key must not contain repeated characters.\n");
+                        return 1;
+                        break;
+                    }
+                    else
+                    {
+                        seen[c] = true; // Mark this character as seen
+                    }
+                }
+            }
+
+            // provided the key evaluates as valid, run crypto
+            if (isValid)
+            {
+                printf("Valid key.\n");
+
+                string userinput = get_string("plaintext: ");
+
+                string testphrase = crypto(key, userinput);
+
+                printf("ciphertext: %s\n", testphrase);
+            }
+            else
+            {
+                printf("Invalid key. Ensure the key contains each letter exactly once.\n");
+                return 1;
+            }
+        }
+        else
+        {
+            printf("Invalid key length. Ensure the key is ALPHABET_SIZE characters long.\n");
+            return 1;
+        }
+    }
+    else
+    {
+        printf("Incorrect number of arguments. Please provide a single key.\n");
+        return 1;
+    }
+
+    return 0;
+}
+
+// function to convert input string using provided key, to testphrase
+string crypto(string key, string input)
+{
+    // initalize variables; create an array to base an index off of (alphaLower, alphaUpper)
+    char keyC[ALPHABET_SIZE + 1] = {0};
+    int inputLength = strlen(input);
+    string user = input;
+    int alphaLower[ALPHABET_SIZE];
+    int alphaUpper[ALPHABET_SIZE];
+
+    for (int i = 0; i < ALPHABET_SIZE; i++)
+    {
+        alphaLower[i] = 'a' + i;
+        alphaUpper[i] = 'A' + i;
+    }
+
+    for (int i = 0; i < ALPHABET_SIZE; i++)
+    {
+        keyC[i] = toupper(key[i]);
+    }
+
+    for (int i = 0; i < inputLength; i++)
+    {
+        if (isalpha(user[i]))
+        {
+
+            if (isupper(user[i]))
+            {
+                // create "index" number to reference the letter's numerical position in the alphabet
+                int index = user[i] - 'A';
+                user[i] = toupper(keyC[index]);
+            }
+
+            if (islower(user[i]))
+            {
+
+                int index = user[i] - 'a';      // Get the index in the alphabet
+                user[i] = tolower(keyC[index]); // Replace with the corresponding character from the key
+            }
+        }
+    }
+
+    return user;
+}
+
+// NQXPOMAFTRHLZGECYJIUWSKDVB
+```
 
 ### PSET 2 - Readability
 
@@ -713,7 +2121,7 @@ int main(void)
 	printf("%i\n", length);
 }
 ```
-- within cs50.h one line of code thta defines return value, the function name and the arguments for get_string
+- within cs50.h one line of code that defines return value, the function name and the arguments for get_string
 #cs50/week/2/libraries
 
 ### Command-line Arguments (argc, argv[])
@@ -725,6 +2133,42 @@ int main(int argc, string argv[])
 }
 ```
 - the above code is an example of an alternative to `int main(void)`
+
+- `command-line arguments` are those arguments that are passed to your program at the command line;
+	- all those statements you typed after `clang` are considered command line arguments
+	- you can use these arguments in your own programs
+- in your terminal window, type `code greet.c` and write code as follows:
+```c
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+	string answer = get_string("What's your name? ");
+	printf("hello, %s\n", answer);
+}
+```
+- notice that this says `hello` to the user
+- still, would it not be nice to be able to take arguments before the program even runs?
+```c
+#include <cs50.h>
+#include <stdio.h>
+
+int main(int argc, string argv[])
+{
+	if (argc == 2)
+	{
+		printf("hello, %s\n", argv[1]);
+	}
+	else
+	{
+		printf("hello, world\n");
+	}
+}
+```
+- notice that this program knows both `argc`, the number of command line arguments
+	- and `argv` which is an array of the characters passed as arguments at the command line
+- therefore, using the syntax of this program, executing `./greet David` would result in the program saying `hello, David`.
 #cs50/week/2/command-line-arguments/argc #cs50/week/2/command-line-arguments/argv 
 
 ### Exit status
