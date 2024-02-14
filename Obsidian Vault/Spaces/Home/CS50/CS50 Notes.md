@@ -1187,7 +1187,10 @@ int collatz(int n)
 - 
 
 ## Section
-
+### Searching and Sorting
+- list of people on the screen,
+	- not necessarily sorted by name
+		- {Matthew, Samia, Alyssa, Douglas, Cecelia, Lucas, Ramya}
 
 
 ## PSET 3
