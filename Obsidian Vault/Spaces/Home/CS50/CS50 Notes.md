@@ -1191,6 +1191,7 @@ int collatz(int n)
 - list of people on the screen,
 	- not necessarily sorted by name
 		- {Matthew, Samia, Alyssa, Douglas, Cecelia, Lucas, Ramya}
+	- spotting Alyssa out of these people is quite easy
 
 
 ## PSET 3
