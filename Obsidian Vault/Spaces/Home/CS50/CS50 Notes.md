@@ -1288,7 +1288,10 @@ typedef struct
 candidate;
 ```
 - we can break down the syntax here;
-
+	- create a new "type" that can be re-used in the rest of the file
+	- known as a structure's **members**
+		- one is a string we'll call "name"
+		- one is an integer we'll call "votes"
 
 			 
 
