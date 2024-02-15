@@ -1216,8 +1216,21 @@ int collatz(int n)
 	- linear search: 7
 	- binary search: $log_{2} (7)$, about 3 steps
 	- think about the number of steps in a general case, with $n$
-	- 
- 
+	- $linear search = \O (N)$
+	- $binary search = \O(log(N))$
+	- the *upperbounds*
+	- you can find different algorithms; researches are finding faster ways than even binary search
+- case where we're tying to find Alyssa with Linear Search
+	- Binary Search, let's say it's a bit shuffled, and still looking for Alyssa
+		- Alyssa, luckily, is in the middle
+- What's the fewest number of steps that an algorithm could take? (Omega notation)
+	- $linear search: (1)$
+	- $binary search: (1)$ 
+	- computer scientists think about 1 input, they think about general inputs
+		- best case scenario is for both, it's a minimum of 1 step for each algorithm
+	- even if it took a fixed number of steps, 
+
+	 
 
 
 
