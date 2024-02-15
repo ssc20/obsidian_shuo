@@ -1215,7 +1215,7 @@ int collatz(int n)
 	- (sounds like big O)
 	- linear search: 7
 	- binary search: $log_{2} (7)$, about 3 steps
-	- 
+	- think about the number of steps in a general case, with $n$
  
 
 
