@@ -1276,7 +1276,18 @@ BUBBLE SORT: $\O(N^2), \Omega(N)$
 - We have 2 candidates for the US government
 	- in an election, what would you store?
 	- (probably: name, number of votes)
+- up until now we could create indep variable
+	- struct lets us combine pieces into a single 1, and 
 
+```c
+typedef struct
+{
+	string name;
+	int votes;
+}
+candidate;
+```
+- we can break down the syntax here;
 
 
 			 
