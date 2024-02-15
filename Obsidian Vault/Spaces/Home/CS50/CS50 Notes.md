@@ -1195,6 +1195,26 @@ int collatz(int n)
 	- what algorithm to use to search, if the list isn't sorted?
 		- we could use linear search or binary search
 		- linear search: start at one side, then look at 1 person then the other person
+	- imagine if we were on a stage, and a light illuminates only 1 person
+		- see: matthew, then samia, then *alyssa*, 
+		- this is an example of linear search
+	- let's imagine us rearranging the entire list...
+- *binary search*
+	- phonebook: opened to the middle, too far, or not far enough, then tear off the half
+	- binary search: look in the middle: then have we gone too far or not far enough?
+		- if this is alphabetical.... then we've gone too far since Lucas (who is in the middle) is too far
+	- cecelia! still too far, let's tear it off,
+		- we land on Alyssa (we win!)
+- How many steps did each algorithm take?
+	- Linear Search: 3 steps
+	- Binary Search: 3 steps
+	- it seems like both searches performed the same way; they *seem* equivalent
+		- the choice depends on the problem size, and the input, and al ittle bit of luck
+	- the preferred idea is that it is dependent on the size of the data set
+- what's the greatest number of steps that these algorithms will take?
+- 
+
+
 
 
 
