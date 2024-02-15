@@ -1272,7 +1272,10 @@ BUBBLE SORT: $\O(N^2), \Omega(N)$
 	- runtime factors; algorithms aren't assessed on runtime length, but the number of time (given how many other processes could compound the runtime)
 
 ### Struct
-
+- we want to create our own data type to use; it's not a full data type, but a way to encapsulate information so we can refer to it with only 1 name
+- We have 2 candidates for the US government
+	- in an election, what would you store?
+	- (probably: name, number of votes)
 
 
 
