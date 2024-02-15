@@ -1267,7 +1267,11 @@ BUBBLE SORT: $\O(N^2), \Omega(N)$
 - random = the "average" case
 ![[CleanShot 2024-02-14 at 21.28.07.png]]
 
+- Why is the reversed list faster than sorting the sorted list for Merge sort?
+	- since we've assigned best case or worst case
+	- runtime factors; algorithms aren't assessed on runtime length, but the number of time (given how many other processes could compound the runtime)
 
+### Struct
 
 
 
