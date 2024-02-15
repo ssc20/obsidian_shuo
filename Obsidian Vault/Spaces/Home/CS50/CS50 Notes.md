@@ -1212,8 +1212,11 @@ int collatz(int n)
 		- the choice depends on the problem size, and the input, and al ittle bit of luck
 	- the preferred idea is that it is dependent on the size of the data set
 - what's the greatest number of steps that these algorithms will take?
-- 
-
+	- (sounds like big O)
+	- linear search: 7
+	- binary search: $log_{2} (7)$, about 3 steps
+	- 
+ 
 
 
 
