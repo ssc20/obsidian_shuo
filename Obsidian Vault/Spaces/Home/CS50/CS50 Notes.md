@@ -1228,9 +1228,51 @@ int collatz(int n)
 	- $binary search: (1)$ 
 	- computer scientists think about 1 input, they think about general inputs
 		- best case scenario is for both, it's a minimum of 1 step for each algorithm
-	- even if it took a fixed number of steps, 
+	- even if it took a fixed number of steps, it would still be called (1)
+		- again, this is the COUNT OF STEPS, not the count of inputs or values
 
-	 
+- ? An algorithm is a set of clearly defined steps to accomplish a task
+- & **Thought Question**
+	- Suppose that you create a new algorithm and assess its runtime
+	- the *fewest* steps this algorithm will ever take is 2, and only 2
+	- what is the $\Omega$ notation for this algorithm
+		- the best case will take 2 steps, it might make sense to say $\Omega 2$, but it's still on the order of $\Omega(1)$
+
+$\O (1), \O(log(N)), \O(N), \O(N^2), \Omega(1), \Omega(log(N)), \Omega(N), \Omega(N^2)$
+
+- let's say the algo takes 100 steps in the worst case, well... it kind of depends now
+	- don't ask how many steps the algo took, but how does the algo scale?
+		- if it's a fixed count of steps, it's $\O (1)$
+		- however if I added one more elemnt for 101 or 102 steps,
+			- that would be $\O(n)$
+- there's this idea that we can take any algorithm and translate it into any language we want
+
+### Sort
+- Sort problem in PSET, let's tackle this...
+
+MERGE SORT: $\O(N log(N)), \Omega(Nlog(N))$
+SELECTION SORT: $\O(N^2), \Omega(N^2)$
+BUBBLE SORT: $\O(N^2), \Omega(N)$
+
+- ! While merge sort is faster, there are scenarios where bubble sort is faster
+	- in the best cases, bubble sort will be faster
+		- if data is closer to being sorted, then bubble sort will actually be faster
+		- for every steps we do, we have to add in another $log N$ steps in merge sort
+			- for bubble sort, we don't have to do that...
+- Sorting problem asks you to determine the identities of 3 different undefined sorting algorithms
+	- give them those inputs, and ask them, then characterize the algorithms based on what you're doing
+
+- reversed = the worst case
+- sorted = the best case
+- random = the "average" case
+![[CleanShot 2024-02-14 at 21.28.07.png]]
+
+
+
+
+
+
+			 
 
 
 
