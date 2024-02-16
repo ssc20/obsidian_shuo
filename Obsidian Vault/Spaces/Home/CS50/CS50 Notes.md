@@ -1388,15 +1388,15 @@ but the plurality vote does have some disadvantages; what happens in an election
 - A plurality vote would here declare a tie between Alice & Bob, since each have 2 votes
 	- but is that the *right* outcome?
 
-There's another kind of voting system known as a ranked-choice voting system
-- in a ranked-choice system, voters can vote for >1 candidate
+**There's another kind of voting system known as a ranked-choice voting system**
+- in a ranked-choice system, **voters can vote for >1 candidate**
 	- instead of just voting for their top choice, they can rank the candidates in order of preference
 ![[CleanShot 2024-02-16 at 00.09.45@2x.png]]
 
 - Here, each voter, in addition to specifying their 1st preference candidate, has also indicated their 2nd and 3rd choices
 	- now, what was previously a tied election could now have a winner
 - the race was originally tied between Alice and Bob, so Charlie was out of the running
-- But the voter who chose Charlie preferred Alice over Bob, so Alice could here be declared the winner
+- **But the voter who chose Charlie preferred Alice over Bob, so Alice could here be declared the winner**
 
 Ranked choice voting can also solve yet another potential drawback of plurality voting:
 ![[CleanShot 2024-02-16 at 00.11.10@2x.png]]
