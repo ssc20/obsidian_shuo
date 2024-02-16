@@ -1407,15 +1407,16 @@ Ranked choice voting can also solve yet another potential drawback of plurality 
 	- A majority of the voters (5 out of the 9) would be happier with either Alice or Bob instead of Charlie
 - By considering ranked preferences, a voting system may be able to choose a winner that better reflects the preferences of the voters
 - one such ranked choice voting system is the instant runoff system
-	- instant runoff: voters can rank as many candidates as they wish
-	- if any candidate has a majority (>50%) of the 1st preference votes, that candidate is declared the winner of the election
-	- if not candidate has >50% of the vote, then an "instant runoff" occurs
-		- the candidate who received the fewest number of votes is eliminated from the election]
-		- anyone who originally chose that candidate as their 1st preference now has their 2nd preference considered
+	- **instant runoff: voters can rank as many candidates as they wish**
+	- if any ***candidate has a majority (>50%) of the 1st preference votes, that candidate is declared the winner of the election***
+	- **if no candidate has >50% of the vote, then an "instant runoff" occurs**
+		- *the candidate who received the fewest number of votes is eliminated from the election*
+		- *anyone who originally chose that candidate as their 1st preference now has their 2nd preference considered*
 		- why do it this way?
 			- effectively, this stimulates what would have happened if the least popular candidate had not been in the election to begin with
-		- this process repeats: if no candidate has majority of the votes, the last place candidate is eliminated, and anyone who voted for them will instead for their next preference (who isn't already been eliminated)
-			- once a candidate has a majority, that candidate is declared the winner
+		- **this process repeats: if no candidate has majority of the votes, the last place candidate is eliminated**
+		- *once a candidate has a majority, that candidate is declared the winner*
+		- *and anyone who voted for them will instead for their next preference (who isn't already been eliminated)*
 Sounds a bit more complicated than a plurality vote, doesn't it?
 - it arguably has the benefit of being an election system where the winner of the election more accurately represents the preferences of the voters
 - in a file called `runoff.c` in a folder called `runoff`, create a program to simulate a **runoff election**
