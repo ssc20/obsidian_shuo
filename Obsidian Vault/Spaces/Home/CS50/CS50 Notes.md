@@ -1325,6 +1325,13 @@ candidate candidates[4];
 - Print out that candidate's name
 - goal: get practice using syntax of strucs
 
+![[CleanShot 2024-02-15 at 21.18.15.png]]
+i would argue that there's no way to avoid repeating code here
+- Carter's votes are greater than 0, but this is still invalid
+- should I print it despite it being the greatest?
+	- need to confirm this is a certainty...
+
+### Recursion
 
 
 			 
