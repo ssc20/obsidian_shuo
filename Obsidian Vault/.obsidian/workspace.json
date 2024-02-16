@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3b2e233a9d8a28a4",
+        "id": "ba2a43ca0e4c5f31",
         "type": "tabs",
         "children": [
           {
-            "id": "3e791aadfcf99ffa",
+            "id": "9f5c24cdb1e07355",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "surprisngly",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,6 +66,14 @@
             }
           },
           {
+            "id": "a65498c68a0f34e0",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {}
+            }
+          },
+          {
             "id": "f961b4aef42f4e13",
             "type": "leaf",
             "state": {
@@ -74,7 +82,7 @@
             }
           },
           {
-            "id": "31d38239adfd7e86",
+            "id": "3e64269a98f0fcad",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -82,7 +90,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -115,6 +123,18 @@
             }
           },
           {
+            "id": "6ce7aa48459d4f08",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
             "id": "b5a8f20e69892e09",
             "type": "leaf",
             "state": {
@@ -134,9 +154,17 @@
                 "file": "Spaces/Home/CS50/CS50 Notes.md"
               }
             }
+          },
+          {
+            "id": "4494edbc22a43d34",
+            "type": "leaf",
+            "state": {
+              "type": "timeline",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -151,33 +179,43 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "notion-like-tables:Create loom": false,
       "obsidian-day-planner:Timeline": false,
       "obsidian-statusbar-pomo:Start pomodoro": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3e791aadfcf99ffa",
+  "active": "9f5c24cdb1e07355",
   "lastOpenFiles": [
+    "CleanShot 2024-02-15 at 21.58.14.png",
     "CleanShot 2024-02-15 at 21.18.15.png",
+    "conflict-files-obsidian-git.md",
+    "Spaces/Home/CS50/CS50 Notes.md",
     "CleanShot 2024-02-14 at 21.28.07.png",
     "2024-02-13.md",
-    "Spaces/Home/CS50/CS50 Notes.md",
-    "conflict-files-obsidian-git.md",
-    "Untitled.md",
-    "The Book of Ramen.pdf",
-    "Spaces/Home/attachments/CleanShot 2024-01-26 at 21.20.50.png",
-    "Spaces/Home/attachments/CleanShot 2024-01-25 at 21.53.57.png",
-    "Spaces/Home/attachments/CleanShot 2024-01-25 at 21.41.01.png",
-    "Spaces/Home/attachments/CleanShot 2024-01-25 at 21.39.52.png",
-    "Spaces/Home/attachments/CleanShot 2024-01-25 at 21.18.50.png",
-    "Spaces/Home/attachments/CleanShot 2024-01-25 at 21.11.37.png",
-    "Spaces/Home/attachments/CleanShot 2024-01-25 at 21.03.50.png",
-    "Spaces/Home/attachments/CleanShot 2024-01-24 at 21.48.01.png",
-    "Spaces/Home/attachments/CleanShot 2024-01-24 at 21.40.56.png",
+    "CleanShot 2024-02-12 at 13.04.47@2x.png",
+    "CleanShot 2024-02-12 at 13.04.29@2x.png",
+    "CleanShot 2024-02-12 at 13.04.13@2x.png",
+    "CleanShot 2024-02-12 at 13.04.03@2x.png",
+    "CleanShot 2024-02-12 at 13.03.51@2x.png",
+    "CleanShot 2024-02-12 at 13.03.20@2x.png",
+    "CleanShot 2024-02-12 at 13.02.48@2x.png",
+    "CleanShot 2024-02-12 at 12.59.45@2x.png",
+    "Cognitive Canine Dysfunction.md",
+    "202402042330.md",
     "2024-01-21.md",
+    "Untitled.md",
+    "Spaces/Home/Other/Ramen.md",
+    "The Book of Ramen.pdf",
+    "Dr. K",
+    "Cloud Resume Challenge/Files",
     "Vault.md",
+    "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
+    "Cloud Resume Challenge",
+    "Spaces/Home/Coursera/Google IT/Google IT Operating Systems.md",
+    "Spaces/Home/Coursera/Google IT",
+    "Spaces/Home/Coursera",
     "Spaces/Home/CS50/CS50 - Credit.md",
     "Spaces/Home/CS50/CS50 Sections.md",
     "Spaces/Home/Other/Interlude.md",

@@ -1360,6 +1360,13 @@ let's take the same idea and translate it into code
 - Carter showing how this all interacts with `debug50`
 - as things come into picture here....
 	- you will see variables portion and call stack
+![[CleanShot 2024-02-15 at 21.58.14.png]]
+
+in a call stack, what order do calls execute?
+	- this is called a stack
+	- the last function added was factorial
+	- the 1st function....
+	- resolve the very 1st base-case
 
 			 
 
