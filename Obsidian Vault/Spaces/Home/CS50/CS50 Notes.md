@@ -1421,7 +1421,31 @@ Sounds a bit more complicated than a plurality vote, doesn't it?
 - it arguably has the benefit of being an election system where the winner of the election more accurately represents the preferences of the voters
 - in a file called `runoff.c` in a folder called `runoff`, create a program to simulate a **runoff election**
 
+#### Understand the code in `runoff.c`
+- whenever you'll extend the functionality of existing code, it's best to be sure you first understand it in its present state
+- Look at the top of `runoff.c` first
+	- 2 constants are defined:
+	- `MAX_CANDIDATES` for the max. number of candidates in the election
+	- `MAX_VOTERS` for max. number of voters in the election
+```c 
+// Max voters and candidates
 
+\# define MAX_VOTERS 100
+\# define MAX_CANDIDATES 9
+```
+
+- notice that `MAX_CANDIDATES` is used to size an array `candidates`
+
+```c
+// Array of candidates
+candidate candidates[MAX_CANDIDATES];
+```
+- `candidates` is an array of `candidate`
+	- in `runoff.c`, a candidate is a 'struct'
+		- every candidate has a `string` field for their `name`
+			- also, an int representing the number of `votes` they currently have
+			- `bool` value called `eliminated` that indicates whether the candidate has been eliminated from the election
+			- the array `candidates` will keep track of all of the candidates in the election
 ### Sort
 #### Problem to solve
 - recall from lecture that we saw a few algo's for sorting a sequence of numbers:
