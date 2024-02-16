@@ -18,17 +18,8 @@
                 "source": true
               }
             }
-          },
-          {
-            "id": "ae0e424027ecda83",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -120,6 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,6 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +150,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md"
+              }
             }
           },
           {
@@ -191,7 +186,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ae0e424027ecda83",
+  "active": "9f5c24cdb1e07355",
   "lastOpenFiles": [
     "Spaces/Home/CS50/CS50 Notes.md",
     "CleanShot 2024-02-15 at 21.58.14.png",
