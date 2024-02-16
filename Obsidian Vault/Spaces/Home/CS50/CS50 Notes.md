@@ -1321,7 +1321,11 @@ candidate candidates[4];
 ### Most Votes
 - Create an array of candidates
 - Search the array to find the most votes awarded to any single candidate
+	- maybe using linear search?
 - Print out that candidate's name
+- goal: get practice using syntax of strucs
+
+
 
 			 
 
