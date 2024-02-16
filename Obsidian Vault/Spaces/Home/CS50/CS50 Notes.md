@@ -1334,6 +1334,28 @@ i would argue that there's no way to avoid repeating code here
 ### Recursion
 - often, recursion tends to be a very elegant solution to some problems
 - it's not always the best way to do things
+- 1 problem like this is the idea of a factorial
+	- (take the last number, apply current int x value of last output)
+- Factorial: multiply number by n -1, n - 2, n - (n - 1)
+	- 1! = 1; 2! = 2 * 1; 3! = 3 * 2 * 1
+	- 4! = 4 * 3 * 2 * 1
+- base cases, 
+	- compute 2 factorial for 3 factorial
+	- to figure out 4 factorial, find 3 factorial, find 2 factorial, find 1 factorial = 1
+		- since factorial definition aside from base case is n x factorial(n - 1)
+$4! = 4 * 3!$ call stack
+$3! = 3 * 2!$ call stack
+$2! = 2 * 1!$ call stack
+$1! = 1$ base case 
+
+go down the call stack, then up the call stack after establishing the base case
+
+- recursion faster than regular loops?
+	- recursion is great, but it isn't always necessarily faster
+- solve the problem by first solving smaller version of that problem
+
+let's take the same idea and translate it into code
+
 
 			 
 
