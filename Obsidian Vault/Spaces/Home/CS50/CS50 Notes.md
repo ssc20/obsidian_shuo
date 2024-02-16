@@ -1286,12 +1286,38 @@ typedef struct
 	int votes;
 }
 candidate;
+
+// 1st
+candidate president;
+president.name = "Samia";
+president.votes = 10;
+
+
+// or
+
+candidate candidates[4];
 ```
 - we can break down the syntax here;
 	- create a new "type" that can be re-used in the rest of the file
 	- known as a structure's **members**
 		- one is a string we'll call "name"
 		- one is an integer we'll call "votes"
+	- we can reuse that type throughout the program
+- let's create a candidate called president
+	- notice the line where we have the datatype "candidate" named "president"
+	- i could access them using the member's name
+	- could you have a struc of other strucs?
+		- yeah probably lmao
+- can we change the data in there if needed during runtime?
+	- could assign diff values to this candidate's members
+		- (name/votesa)
+		- shouldn't be able to store new values while running the program
+- could we just use candidate.name instead?
+	- candidate is not a variable, but a template for one...
+		- every new candidate we created needs its own name
+		- candidate.president, candidate.vicepresident, candidate.candidate
+			- do have to substantiate type name then the variable name
+
 
 			 
 
