@@ -1376,6 +1376,51 @@ in a call stack, what order do calls execute?
 
 
 ## PSET 3
+
+### Runoff
+#### Problem to solve
+You already know about plurality elections, which follow a very simple algo for determining the winner of an election;
+- every voter gets 1 vote
+- the candidate with most votes wins.
+
+but the plurality vote does have some disadvantages; what happens in an election with 3 candidates, and the ballots below are cast?
+![[CleanShot 2024-02-16 at 00.08.43@2x.png]]
+- A plurality vote would here declare a tie between Alice & Bob, since each have 2 votes
+	- but is that the *right* outcome?
+
+There's another kind of voting system known as a ranked-choice voting system
+- in a ranked-choice system, voters can vote for >1 candidate
+	- instead of just voting for their top choice, they can rank the candidates in order of preference
+![[CleanShot 2024-02-16 at 00.09.45@2x.png]]
+
+- Here, each voter, in addition to specifying their 1st preference candidate, has also indicated their 2nd and 3rd choices
+	- now, what was previously a tied election could now have a winner
+- the race was originally tied between Alice and Bob, so Charlie was out of the running
+- But the voter who chose Charlie preferred Alice over Bob, so Alice could here be declared the winner
+
+Ranked choice voting can also solve yet another potential drawback of plurality voting:
+![[CleanShot 2024-02-16 at 00.11.10@2x.png]]
+- Who should win this election?
+	- in a plurality vote: Charlie wins the election with 4 votes
+	- Bob has only 3.
+	- Alice only has 2.
+	- A majority of the voters (5 out of the 9) would be happier with either Alice or Bob instead of Charlie
+- By considering ranked preferences, a voting system may be able to choose a winner that better reflects the preferences of the voters
+- one such ranked choice voting system is the instant runoff system
+	- instant runoff: voters can rank as many candidates as they wish
+	- if any candidate has a majority (>50%) of the 1st preference votes, that candidate is declared the winner of the election
+	- if not candidate has >50% of the vote, then an "instant runoff" occurs
+		- the candidate who received the fewest number of votes is eliminated from the election]
+		- anyone who originally chose that candidate as their 1st preference now has their 2nd preference considered
+		- why do it this way?
+			- effectively, this stimulates what would have happened if the least popular candidate had not been in the election to begin with
+		- this process repeats: if no candidate has majority of the votes, the last place candidate is eliminated, and anyone who voted for them will instead for their next preference (who isn't already been eliminated)
+			- once a candidate has a majority, that candidate is declared the winner
+Sounds a bit more complicated than a plurality vote, doesn't it?
+- it arguably has the benefit of being an election system where the winner of the election more accurately represents the preferences of the voters
+- in a file called `runoff.c` in a folder called `runoff`, create a program to simulate a **runoff election**
+
+
 ### Sort
 #### Problem to solve
 - recall from lecture that we saw a few algo's for sorting a sequence of numbers:

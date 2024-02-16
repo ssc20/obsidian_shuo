@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -124,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "Spaces/Home/CS50/CS50 Notes.md"
               }
             }
           },
@@ -181,7 +180,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,10 +199,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4e84c79ee9f0e859",
+  "active": "9f5c24cdb1e07355",
   "lastOpenFiles": [
-    "Spaces/Home/CS50/CS50 Notes.md",
+    "CleanShot 2024-02-16 at 00.11.10@2x.png",
+    "CleanShot 2024-02-16 at 00.09.45@2x.png",
+    "CleanShot 2024-02-16 at 00.08.43@2x.png",
     "conflict-files-obsidian-git.md",
+    "Spaces/Home/CS50/CS50 Notes.md",
     "CleanShot 2024-02-15 at 21.58.14.png",
     "CleanShot 2024-02-15 at 21.18.15.png",
     "CleanShot 2024-02-14 at 21.28.07.png",
@@ -212,8 +215,6 @@
     "CleanShot 2024-02-12 at 13.04.13@2x.png",
     "CleanShot 2024-02-12 at 13.04.03@2x.png",
     "CleanShot 2024-02-12 at 13.03.51@2x.png",
-    "CleanShot 2024-02-12 at 13.03.20@2x.png",
-    "CleanShot 2024-02-12 at 13.02.48@2x.png",
     "Cognitive Canine Dysfunction.md",
     "202402042330.md",
     "2024-01-21.md",
