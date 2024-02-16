@@ -1357,7 +1357,9 @@ go down the call stack, then up the call stack after establishing the base case
 
 
 let's take the same idea and translate it into code
-
+- Carter showing how this all interacts with `debug50`
+- as things come into picture here....
+	- you will see variables portion and call stack
 
 			 
 
