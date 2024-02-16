@@ -1318,6 +1318,10 @@ candidate candidates[4];
 		- candidate.president, candidate.vicepresident, candidate.candidate
 			- do have to substantiate type name then the variable name
 
+### Most Votes
+- Create an array of candidates
+- Search the array to find the most votes awarded to any single candidate
+- Print out that candidate's name
 
 			 
 
