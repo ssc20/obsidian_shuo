@@ -1446,6 +1446,56 @@ candidate candidates[MAX_CANDIDATES];
 			- also, an int representing the number of `votes` they currently have
 			- `bool` value called `eliminated` that indicates whether the candidate has been eliminated from the election
 			- the array `candidates` will keep track of all of the candidates in the election
+```c
+// Candidates have name, vote count, eliminated status
+typedef struct
+{
+	string name;
+	int votes;
+	bool eliminated;
+}
+candidate;
+```
+- Now you can better understand `preferences`, the two-dimensional array
+	- the array `preferences[i]` will represent all of the preferences for voter number `i`
+	- the integer, `preferences[i][j]` will store the index of the candidate, from the `candidates` array, who is the `j`th preference for voter `i`
+```c
+// preferences[i][j] is jth preference for voter i
+
+int preferences[MAX_VOTERS][MAX_CANDIDATES];
+```
+- **the program also has 2 global variables: `voter_count` and `candidate_count`**
+
+```c
+// Number of voters and candidates
+int voter_count;
+int candidate_count;
+```
+
+##### Main
+Notice that after determining the number of candidates & number of voters, *the main voting loop begins **giving ever voter a chance to vote**
+- as the voter enters their preferences, the `vote` function is called to keep track of all of the preferences
+- if at any point the ballot is deemed to be invalid, **the program exits**
+
+- Once all of the voters are in, another loop begins:
+	- this one is going to keep looping through the runoff process of checking for a winner and eliminating the last place candidate until there is a winner
+
+- the first call here is to a function called `tabulate` which should look at all of the voters' preferences and compute the current vote totals
+	- this is done by looking at each voter's top choice candidate who hasn't yet been eliminated
+- next, the function `print_winner` should print out the winner if there is one
+	- **if there is  the program is over**
+	- otherwise, the program needs to determine the fewest number of votes anyone still in the election received 
+		- via a call to `find_min`
+	- if it turns out that everyone in the election is tied with the same number of votes (as determined by the `is_tie` function):
+		- the election is declared a tie
+	- otherwise, the last-place candidate (or candidates) is eliminated from the election via a call to the `eliminate` function
+- if you look a bit further down in the file, you'll see that the rest of the functions - `vote`, `tabulate`, `print_winner`, `find_min`, `is_tie`, and `eliminate` - are all left up to you to compute
+
+- you should not modify anything else in `runoff.c` (and the inclusion of additional header files if you'd like)
+
+
+
+
 ### Sort
 #### Problem to solve
 - recall from lecture that we saw a few algo's for sorting a sequence of numbers:
