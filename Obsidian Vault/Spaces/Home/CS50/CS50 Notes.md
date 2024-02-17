@@ -1474,7 +1474,7 @@ int candidate_count;
 ```
 
 ##### Main
-Notice that after determining the number of candidates & number of voters, *the main voting loop begins **giving ever voter a chance to vote**
+Notice that after determining the number of candidates & number of voters, *the main voting loop begins **giving every voter a chance to vote**
 - as the voter enters their preferences, the `vote` function is called to keep track of all of the preferences
 - if at any point the ballot is deemed to be invalid, **the program exits**
 
@@ -1484,7 +1484,7 @@ Notice that after determining the number of candidates & number of voters, *the 
 - the first call here is to a function called `tabulate` which should look at all of the voters' preferences and compute the current vote totals
 	- this is done by looking at each voter's top choice candidate who hasn't yet been eliminated
 - next, the function `print_winner` should print out the winner if there is one
-	- **if there is  the program is over**
+	- **if there is,  the program is over**
 	- otherwise, the program needs to determine the fewest number of votes anyone still in the election received 
 		- via a call to `find_min`
 	- if it turns out that everyone in the election is tied with the same number of votes (as determined by the `is_tie` function):
