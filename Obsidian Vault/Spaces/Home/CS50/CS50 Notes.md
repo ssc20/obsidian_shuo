@@ -1423,6 +1423,7 @@ Sounds a bit more complicated than a plurality vote, doesn't it?
 
 #### Understand the code in `runoff.c`
 - whenever you'll extend the functionality of existing code, it's best to be sure you first understand it in its present state
+
 - Look at the top of `runoff.c` first
 	- 2 constants are defined:
 	- `MAX_CANDIDATES` for the max. number of candidates in the election
