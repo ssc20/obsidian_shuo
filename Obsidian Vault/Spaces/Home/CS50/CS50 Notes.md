@@ -1460,6 +1460,7 @@ candidate;
 - Now you can better understand `preferences`, the two-dimensional array
 	- the array `preferences[i]` will represent all of the preferences for voter number `i`
 	- the integer, `preferences[i][j]` will store the index of the candidate, from the `candidates` array, who is the `j`th preference for voter `i`
+
 ```c
 // preferences[i][j] is jth preference for voter i
 
