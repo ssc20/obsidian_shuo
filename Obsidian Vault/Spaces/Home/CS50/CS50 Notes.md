@@ -1519,8 +1519,30 @@ The following functions need to be completed or defined:
 - Otherwise.... the last-place candidate or candidates eliminated from the election via a call here
 
 
-
-
+- ! Preferences are stored in the array `preferences[i][j]
+	- i = the voter i
+	- j = the preference # j
+- 
+  1. the program first validates whether the given parameters for candidates are valid or not
+    1. there must be at least 2 candidates, otherwise it exits and lets the user know
+  2. the program populates the array of candidates given the arguments (argc)
+    1. the program then iterates through the given arguments, assigning them:
+      1. the name through argv
+      2. a `0` vote value
+      3. a `false` flag for whether they are considered `eliminated`
+  3. the program evaluates the number of voters as well
+  4. the program queries the user for votes based on how many voters there are, and how many candidates there are
+    1. main calls the `vote` function, which returns a boolean value
+      1. provided the boolean expression results in `true` proceed onwards
+      2. otherwise: report that it is an invalid vote and exit the program
+  5. If a winner cannot be declared, proceed with runoffs (not a function)
+  6. calculate the number of votes in a while loop (true)
+    1. if an election has been won (checked through calling print_winner), exit the loop
+    2. find the minimum value of votes that a candidate has received; assign them the `min` boo flag for the election
+      1. done through `find_min()` and `is_tie`
+  7. if this is a tie, everyone is regarded as a winner and break the loop
+  8. if a loser is found with a minimum number of votes, `eliminate(min)` shall be called and the minimum vote count candidate is eliminated
+  9. the vote counts are reset to 0
 
 
 
