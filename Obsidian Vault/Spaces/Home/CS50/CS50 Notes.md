@@ -1428,6 +1428,7 @@ Sounds a bit more complicated than a plurality vote, doesn't it?
 	- 2 constants are defined:
 	- `MAX_CANDIDATES` for the max. number of candidates in the election
 	- `MAX_VOTERS` for max. number of voters in the election
+
 ```c 
 // Max voters and candidates
 
