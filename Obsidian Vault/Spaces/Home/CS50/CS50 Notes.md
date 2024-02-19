@@ -1496,6 +1496,31 @@ Notice that after determining the number of candidates & number of voters, *the 
 
 - you should not modify anything else in `runoff.c` (and the inclusion of additional header files if you'd like)
 
+#### Personal Thoughts
+The following functions need to be completed or defined:
+- `vote`
+	- used to keep track of all of the preferences
+	- if at any point the ballot is deemed to be invalid, the program exits
+- `tabulate`
+	- looks at all voters' preferences and computes the current vote totals
+		- by looking at each voter's top choice candidate who hasn't yet been eliminated
+- `print_winner`
+	- this should print out the winner if there is one
+		- if there is, the program is over
+		- otherwise, the program needs to determine the fewest number of votes anyone still in the election received (via a call to find_min)
+			- int, then comparison in if statement
+			- this seems like we'll need some kind of search/sorting function?
+- `find_min`
+	- this is the actually sort or search function
+- `is_tie`
+	- if it turns out that everyone in the election is tied with the same number of votes here,
+		- declare the election a tie
+- `eliminate`
+- Otherwise.... the last-place candidate or candidates eliminated from the election via a call here
+
+
+
+
 
 
 
