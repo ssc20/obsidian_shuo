@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9f5c24cdb1e07355",
+            "id": "ec6c3694e1849d39",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "conflict-files-obsidian-git.md",
                 "mode": "source",
                 "source": true
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "surprisngly",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,12 +90,11 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "095fbd95bebd42a5",
@@ -111,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,21 +145,21 @@
             }
           },
           {
-            "id": "4919a4604de97f99",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md"
-              }
-            }
-          },
-          {
-            "id": "4494edbc22a43d34",
+            "id": "34919e56106e9dd9",
             "type": "leaf",
             "state": {
               "type": "timeline",
               "state": {}
+            }
+          },
+          {
+            "id": "0cdc29b18d703d59",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "conflict-files-obsidian-git.md"
+              }
             }
           }
         ],
@@ -187,30 +186,32 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9f5c24cdb1e07355",
+  "active": "34919e56106e9dd9",
   "lastOpenFiles": [
+    "gitignore.txt",
     "conflict-files-obsidian-git.md",
+    "2024-02-12.md",
+    "The Book of Ramen.pdf",
+    "Vault.md",
     "Spaces/Home/CS50/CS50 Notes.md",
-    "CleanShot 2024-02-16 at 00.11.10@2x.png",
-    "CleanShot 2024-02-16 at 00.09.45@2x.png",
-    "CleanShot 2024-02-16 at 00.08.43@2x.png",
-    "CleanShot 2024-02-15 at 21.58.14.png",
-    "CleanShot 2024-02-15 at 21.18.15.png",
-    "CleanShot 2024-02-14 at 21.28.07.png",
     "2024-02-13.md",
-    "CleanShot 2024-02-12 at 13.04.47@2x.png",
-    "CleanShot 2024-02-12 at 13.04.29@2x.png",
-    "CleanShot 2024-02-12 at 13.04.13@2x.png",
-    "CleanShot 2024-02-12 at 13.04.03@2x.png",
-    "Cognitive Canine Dysfunction.md",
     "202402042330.md",
     "2024-01-21.md",
     "Untitled.md",
+    "Spaces/Home/attachments/CleanShot 2024-02-07 at 21.56.16.gif",
+    "Cognitive Canine Dysfunction.md",
+    "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.11.10@2x.png",
+    "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.09.45@2x.png",
+    "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.08.43@2x.png",
+    "Spaces/Home/attachments/CleanShot 2024-02-15 at 21.58.14.png",
+    "Spaces/Home/attachments/CleanShot 2024-02-15 at 21.18.15.png",
+    "Spaces/Home/attachments/CleanShot 2024-02-14 at 21.28.07.png",
+    "Spaces/Home/attachments/CleanShot 2024-02-12 at 13.04.47@2x.png",
+    "Spaces/Home/attachments/CleanShot 2024-02-12 at 13.04.29@2x.png",
+    "Spaces/Home/attachments/CleanShot 2024-02-12 at 13.04.13@2x.png",
     "Spaces/Home/Other/Ramen.md",
-    "The Book of Ramen.pdf",
     "Dr. K",
     "Cloud Resume Challenge/Files",
-    "Vault.md",
     "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
     "Cloud Resume Challenge",
     "Spaces/Home/Coursera/Google IT/Google IT Operating Systems.md",
@@ -229,7 +230,6 @@
     "Spaces/Home/daily/2024-01-12.md",
     "Spaces/Home/daily/2024-01-13.md",
     "Spaces/Home/daily/2024-01-16.md",
-    "Spaces/Home/attachments/mac_obsidian.md",
     "Spaces/Home/Other",
     "Spaces/Home/CS50",
     "Spaces/Home",
