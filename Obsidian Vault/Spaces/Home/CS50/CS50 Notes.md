@@ -1553,6 +1553,11 @@ candidates[i].eliminated = false;
   9. the vote counts are reset to 0
 
 
+3 candidates, 10 voters
+7 vote for 1
+1 votes for 2
+2 vote for 3
+
 
 ### Sort
 #### Problem to solve
