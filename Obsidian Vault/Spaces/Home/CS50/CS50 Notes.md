@@ -1400,7 +1400,7 @@ but the plurality vote does have some disadvantages; what happens in an election
 
 Ranked choice voting can also solve yet another potential drawback of plurality voting:
 ![[CleanShot 2024-02-16 at 00.11.10@2x.png]]
-- Who should win this election?
+- **Who should win this election?**
 	- in a plurality vote: Charlie wins the election with 4 votes
 	- Bob has only 3.
 	- Alice only has 2.
