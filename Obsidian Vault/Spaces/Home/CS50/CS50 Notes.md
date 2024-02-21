@@ -1519,6 +1519,14 @@ The following functions need to be completed or defined:
 - Otherwise.... the last-place candidate or candidates eliminated from the election via a call here
 
 
+```c
+candidates[i].name = argv[i + 1];
+
+candidates[i].votes = 0;
+
+candidates[i].eliminated = false;
+```
+
 - ! Preferences are stored in the array `preferences[i][j]
 	- i = the voter i
 	- j = the preference # j
