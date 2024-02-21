@@ -1511,7 +1511,7 @@ The following functions need to be completed or defined:
 			- int, then comparison in if statement
 			- this seems like we'll need some kind of search/sorting function?
 - `find_min`
-	- this is the actually sort or search function
+	- this is the actually sort or search function? idk.
 - `is_tie`
 	- if it turns out that everyone in the election is tied with the same number of votes here,
 		- declare the election a tie
