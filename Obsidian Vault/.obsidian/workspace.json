@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ba2a43ca0e4c5f31",
+        "id": "4769c4148d9b4790",
         "type": "tabs",
         "children": [
           {
-            "id": "9f5c24cdb1e07355",
+            "id": "63ab06764c1fc565",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "202402222204.md",
                 "mode": "source",
                 "source": true
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "surprisngly",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +90,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -111,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "202402222204.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "202402222204.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,21 +146,13 @@
             }
           },
           {
-            "id": "4919a4604de97f99",
+            "id": "0cdc29b18d703d59",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md"
+                "file": "202402222204.md"
               }
-            }
-          },
-          {
-            "id": "4494edbc22a43d34",
-            "type": "leaf",
-            "state": {
-              "type": "timeline",
-              "state": {}
             }
           }
         ],
@@ -168,8 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,9 +178,25 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9f5c24cdb1e07355",
+  "active": "3e64269a98f0fcad",
   "lastOpenFiles": [
+    "Spaces/Home/CS50/CS50 Notes.md",
+    "202402222204.md",
+    "Spaces/Home/Other/Untitled.md",
+    "Spaces/Home/Other/Tahjay.md",
+    "Spaces/Home/Other/Ramen.md",
+    "Spaces/Home/Other/Interlude.md",
+    "The Book of Ramen.pdf",
+    "conflict-files-obsidian-git.md",
     "gitignore.txt",
+    "2024-02-12.md",
+    "Vault.md",
+    "2024-02-13.md",
+    "202402042330.md",
+    "2024-01-21.md",
+    "Untitled.md",
+    "Spaces/Home/attachments/CleanShot 2024-02-07 at 21.56.16.gif",
+    "Cognitive Canine Dysfunction.md",
     "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.11.10@2x.png",
     "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.09.45@2x.png",
     "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.08.43@2x.png",
@@ -199,19 +206,8 @@
     "Spaces/Home/attachments/CleanShot 2024-02-12 at 13.04.47@2x.png",
     "Spaces/Home/attachments/CleanShot 2024-02-12 at 13.04.29@2x.png",
     "Spaces/Home/attachments/CleanShot 2024-02-12 at 13.04.13@2x.png",
-    "Spaces/Home/attachments/CleanShot 2024-02-12 at 13.04.03@2x.png",
-    "conflict-files-obsidian-git.md",
-    "Spaces/Home/CS50/CS50 Notes.md",
-    "2024-02-13.md",
-    "Cognitive Canine Dysfunction.md",
-    "202402042330.md",
-    "2024-01-21.md",
-    "Untitled.md",
-    "Spaces/Home/Other/Ramen.md",
-    "The Book of Ramen.pdf",
     "Dr. K",
     "Cloud Resume Challenge/Files",
-    "Vault.md",
     "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
     "Cloud Resume Challenge",
     "Spaces/Home/Coursera/Google IT/Google IT Operating Systems.md",
@@ -219,21 +215,16 @@
     "Spaces/Home/Coursera",
     "Spaces/Home/CS50/CS50 - Credit.md",
     "Spaces/Home/CS50/CS50 Sections.md",
-    "Spaces/Home/Other/Interlude.md",
     "Spaces/Home/CS50/CS50 - Mario (More).md",
     "Spaces/Home/CS50/CS50 Coding.md",
-    "Spaces/Home/Other/Untitled.md",
     "Spaces/Home/Other/Making a test File.md",
-    "Spaces/Home/Other/Tahjay.md",
     "Spaces/Home/daily/2023-08-12.md",
     "Spaces/Home/daily/2024-01-06.md",
     "Spaces/Home/daily/2024-01-12.md",
     "Spaces/Home/daily/2024-01-13.md",
     "Spaces/Home/daily/2024-01-16.md",
-    "Spaces/Home/attachments/mac_obsidian.md",
     "Spaces/Home/Other",
     "Spaces/Home/CS50",
-    "Spaces/Home",
-    "Spaces"
+    "Spaces/Home"
   ]
 }
