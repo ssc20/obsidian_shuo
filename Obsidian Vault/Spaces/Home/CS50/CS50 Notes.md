@@ -1559,6 +1559,9 @@ candidates[i].eliminated = false;
 2 vote for 3
 
 
+
+
+
 ### Sort
 #### Problem to solve
 - recall from lecture that we saw a few algo's for sorting a sequence of numbers:
