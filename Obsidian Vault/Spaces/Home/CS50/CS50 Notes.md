@@ -1552,6 +1552,16 @@ candidates[i].eliminated = false;
   8. if a loser is found with a minimum number of votes, `eliminate(min)` shall be called and the minimum vote count candidate is eliminated
   9. the vote counts are reset to 0
 
+### Tideman
+#### Problem to Solve
+You already know about plurality elections, which follow a very simple algo for determining the winner of an election:
+
+But the plurality does have some disadvantages; what happens, for instance, in an election with 3 candidates, and the ballots below are cast?
+
+- plurality would here declare a tie between Alice & Bob, since each has 2 votes; but that is the right outcome?
+- 
+
+
 
 3 candidates, 10 voters
 7 vote for 1
