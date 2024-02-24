@@ -1,0 +1,272 @@
+{
+  "main": {
+    "id": "0032545e0273fe64",
+    "type": "split",
+    "children": [
+      {
+        "id": "ba2a43ca0e4c5f31",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9f5c24cdb1e07355",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "83fcc3e55db45fdf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "5a51e7a1f6c7ffad",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
+              }
+            }
+          },
+          {
+            "id": "352ef12e8ec1a171",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD Map.png"
+              }
+            }
+          },
+          {
+            "id": "2ce4e80f34a02fa4",
+            "type": "leaf",
+            "state": {
+              "type": "make-file-view",
+              "state": {
+                "path": "https://www.make.md/static/latest.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3542783bd14db9a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "c354e61ec2479fb5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5579791afde64774",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0976db8144491e91",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "surprisngly",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f847d35018446e70",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "f961b4aef42f4e13",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "15c6a1f2ec13d5ed",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "095fbd95bebd42a5",
+    "type": "split",
+    "children": [
+      {
+        "id": "bcd9d2bd93e5d54d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bf3ee34e3d765d81",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6ce7aa48459d4f08",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b5a8f20e69892e09",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "4919a4604de97f99",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md"
+              }
+            }
+          },
+          {
+            "id": "fe1ccba3d5bead18",
+            "type": "leaf",
+            "state": {
+              "type": "timeline",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "zk-prefixer:Create new unique note": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-statusbar-pomo:Start pomodoro": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-day-planner:Timeline": false,
+      "notion-like-tables:Create loom": false
+    }
+  },
+  "active": "2ce4e80f34a02fa4",
+  "lastOpenFiles": [
+    "Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD Map.png",
+    "Dr. K/Dr K's Guide to Mental Health/[Dr. Alok Kanojia] Руководство Dr. K по психическому здоровью СДВГ и выполнение дел Dr. K's Guide to Mental Health ADHD & Doin [rutracker-6302663].torrent",
+    "Dr. K/Dr K's Guide to Mental Health/3 - Common Videos/G08_Dietary Guidance in Ayurveda.mp4",
+    "Dr. K/Dr K's Guide to Mental Health/3 - Common Videos/G08_Dietary Guidance in Ayurveda - Notes.pdf",
+    "Dr. K/Dr K's Guide to Mental Health/3 - Common Videos/G08_Dietary Guidance in Ayurveda - Description.pdf",
+    "Dr. K/Dr K's Guide to Mental Health/3 - Common Videos/G07_Coaching vs Therapy.pdf",
+    "Dr. K/Dr K's Guide to Mental Health/3 - Common Videos/G07_Coaching vs Therapy.mp4",
+    "Dr. K/Dr K's Guide to Mental Health/3 - Common Videos/G06_Intro to Aryurveda.mp4",
+    "Dr. K/Dr K's Guide to Mental Health/3 - Common Videos/G06_Intro to Aryurveda - Notes.pdf",
+    "Dr. K/Dr K's Guide to Mental Health/3 - Common Videos/G06_Intro to Aryurveda - Description.pdf",
+    "Dr. K/Dr K's Guide to Mental Health/3 - Common Videos/G05_Vedic Psychology.mp4",
+    "Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - VIDEO TITLES.png",
+    "Dr. K/Dr K's Guide to Mental Health/Mapping paths to files.jpg",
+    "Dr. K/Dr K's Guide to Mental Health/ADHD Map.png",
+    "Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - FILE NUMBERS.png",
+    "Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Spirituality of Thoughts/2. Sri_Yantra_Correct_Colors_Johari_1974.jpg",
+    "202402222204.md",
+    "conflict-files-obsidian-git.md",
+    "Vault.md",
+    "Spaces/Home/CS50/CS50 Notes.md",
+    "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.11.10@2x.png",
+    "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.09.45@2x.png",
+    "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.08.43@2x.png",
+    "Spaces/Home/attachments/CleanShot 2024-02-15 at 21.58.14.png",
+    "2024-02-13.md",
+    "Cognitive Canine Dysfunction.md",
+    "202402042330.md",
+    "2024-01-21.md",
+    "Untitled.md",
+    "Spaces/Home/Other/Ramen.md",
+    "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
+    "Spaces/Home/Coursera/Google IT/Google IT Operating Systems.md",
+    "Spaces/Home/CS50/CS50 - Credit.md",
+    "Spaces/Home/CS50/CS50 Sections.md",
+    "Spaces/Home/Other/Interlude.md",
+    "Spaces/Home/CS50/CS50 - Mario (More).md",
+    "Spaces/Home/CS50/CS50 Coding.md",
+    "Spaces/Home/Other/Untitled.md",
+    "Spaces/Home/Other/Making a test File.md",
+    "Spaces/Home/Other/Tahjay.md",
+    "Spaces/Home/daily/2023-08-12.md",
+    "Spaces/Home/daily/2024-01-06.md",
+    "Spaces/Home/daily/2024-01-12.md",
+    "Spaces/Home/daily/2024-01-13.md",
+    "Spaces/Home/daily/2024-01-16.md"
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "main": {
+    "id": "6ad1a0805789e69f",
+    "type": "split",
+    "children": [
+      {
+        "id": "f5468517eb5175cf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ddfbe5df375b6531",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6262378404479d43",
+    "type": "split",
+    "children": [
+      {
+        "id": "cbe0011c6f693145",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b0c70a861a703301",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cfc2c1106c03f9a3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "14caf825addcc8a5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "206b299aa88b8afa",
+    "type": "split",
+    "children": [
+      {
+        "id": "5c9ec515ee5f5dff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "86862319ecdc0361",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ee8d3b43fab88a90",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "95e4dc81f2fb15a0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ce6ce5b55726b39c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "b0c70a861a703301",
+  "lastOpenFiles": [
+    "Obsidian Vault/Spaces/Home/Other/Tahjay.md",
+    "Obsidian Vault/Spaces/Home/Other/Interlude.md",
+    "Obsidian Vault/Spaces/Home/Other",
+    "Obsidian Vault/Spaces/Home/Untitled",
+    "Obsidian Vault/Spaces/Home/CS50/CS50 Sections.md",
+    "Obsidian Vault/Spaces/Home/CS50",
+    "Obsidian Vault/Spaces/Tahjay.md",
+    "Obsidian Vault/Spaces/Interlude.md",
+    "Obsidian Vault/Spaces/CS50 Sections.md"
+  ]
+}
