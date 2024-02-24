@@ -15,7 +15,8 @@ In defense of zjoel
 ## Themes
 ### Grief
 ### Metamorphosis
-### 
+### Fatalism & Determinism
+### The Prism (Prison?) of Perception
 Joel never desires revenge throughout TLOU; even with Sarah. Even when Ellie is kidnapped, it can be argued that he pursues Ellie out of pragmatism or devotion to their bond.
 
 ### Abby Sex Scene Meme
