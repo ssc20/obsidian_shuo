@@ -55,9 +55,11 @@
             "id": "2ce4e80f34a02fa4",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Spaces/Home/attachments/Pasted image 20240223211714.png"
+                "file": "Spaces/Writing/TLOU2.md",
+                "mode": "source",
+                "source": true
               }
             }
           }
@@ -144,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/attachments/Pasted image 20240223211714.png",
+                "file": "Spaces/Writing/TLOU2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/attachments/Pasted image 20240223211714.png",
+                "file": "Spaces/Writing/TLOU2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -184,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/attachments/Pasted image 20240223211714.png"
+                "file": "Spaces/Writing/TLOU2.md"
               }
             }
           },
@@ -201,7 +203,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -220,8 +223,9 @@
       "notion-like-tables:Create loom": false
     }
   },
-  "active": "004c65e805d27e92",
+  "active": "2ce4e80f34a02fa4",
   "lastOpenFiles": [
+    "Spaces/Home/attachments/Pasted image 20240223211714.png",
     "Spaces/Home/attachments/2.png",
     "Spaces/Home/CS50/CS50 Notes.md",
     "Spaces/Home/daily/2024-01-16.md",
@@ -229,7 +233,6 @@
     "Spaces/Home/Other/Untitled.md",
     "Spaces/Home/Other/Ramen.md",
     "Spaces/Writing/TLOU2.md",
-    "Spaces/Home/attachments/Pasted image 20240223211714.png",
     "Spaces/Writing",
     "Spaces/Home/daily/2023-08-12.md",
     "Spaces/Home/daily/2024-01-06.md",
