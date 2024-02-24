@@ -107,7 +107,11 @@ Ellie continuously endangers her friends out of her selfish and suicidal inabili
 			- (developed by Ayn Rand, the #1 retard:
 			- *"the concept of man as a heroic being, with his own happiness as the moral purpose of his life with productive achievement as his noblest activity and reason as his only absolute"*
 				- reality exists independently of consciousness
-				- human beings have direct contact with reality
+				- human beings have direct contact with reality through sense perception (direct & indirect realism)
+				- one can attain objective knowledge from perception through the process of concept formation & inductive logic
+				- the proper moral purpose of one's life is the pursuit of one's own happiness (rational egoism)
+				- the only social system consistent with this morality os one that displays full respect for individual rights embodied in *laissez-faire* capitalism (no economic interventionism)
+				- the role of art in human life is to transform humans' metaphysical ideas by selective reproduction of reality into a physical form (a work of art) that one can comprehend and to which one can respond emotionally
 		- 
 
 - 
