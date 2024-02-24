@@ -106,6 +106,8 @@ Ellie continuously endangers her friends out of her selfish and suicidal inabili
 		- Hocking says *Bioshock* is written around principles of **Objectivism**
 			- (developed by Ayn Rand, the #1 retard:
 			- *"the concept of man as a heroic being, with his own happiness as the moral purpose of his life with productive achievement as his noblest activity and reason as his only absolute"*
+				- reality exists independently of consciousness
+				- human beings have direct contact with reality
 		- 
 
 - 
