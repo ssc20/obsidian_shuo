@@ -29,7 +29,7 @@
   "revealActiveFile": false,
   "spacesStickers": true,
   "spaceRowHeight": 29,
-  "spacesDisablePatch": true,
+  "spacesDisablePatch": false,
   "folderNoteInsideFolder": true,
   "sidebarTabs": true,
   "showRibbon": true,

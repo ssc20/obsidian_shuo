@@ -1559,7 +1559,12 @@ You already know about plurality elections, which follow a very simple algo for 
 But the plurality does have some disadvantages; what happens, for instance, in an election with 3 candidates, and the ballots below are cast?
 
 - plurality would here declare a tie between Alice & Bob, since each has 2 votes; but that is the right outcome?
-- 
+- there's another kind of voting system known as a ranked-choice voting system; in a ranked-choice, voters can vote for more than 1 candidate
+	- instead of just voting for their top choice, they can rank the candidates in order of preference
+	- the resulting ballots might therefore look like the below:
+- Here, each voter, in addition to specifying their 1st pref candidate, has also indicated their 2nd & 3rd choices
+	- and now what was previously a tied election could now have a winner
+	- the race was originally tied between Alice and Bob
 
 
 

@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "conflict-files-obsidian-git",
+      "path": "conflict-files-obsidian-git.md"
+    },
+    {
+      "basename": "Vault",
+      "path": "Vault.md"
+    },
+    {
       "basename": "CS50 Notes",
       "path": "Spaces/Home/CS50/CS50 Notes.md"
     },
@@ -11,10 +19,6 @@
     {
       "basename": "Cloud Resume Challenge Guidebook",
       "path": "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md"
-    },
-    {
-      "basename": "Vault",
-      "path": "Vault.md"
     },
     {
       "basename": "Google IT Operating Systems",
