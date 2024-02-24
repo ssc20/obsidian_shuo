@@ -1551,6 +1551,323 @@ candidates[i].eliminated = false;
   7. if this is a tie, everyone is regarded as a winner and break the loop
   8. if a loser is found with a minimum number of votes, `eliminate(min)` shall be called and the minimum vote count candidate is eliminated
   9. the vote counts are reset to 0
+1. 
+#### Completed Code
+```c 
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+// Max voters and candidates
+#define MAX_VOTERS 100
+#define MAX_CANDIDATES 9
+
+// preferences[i][j] is jth preference for voter i
+int preferences[MAX_VOTERS][MAX_CANDIDATES];
+
+// Candidates have name, vote count, eliminated status
+typedef struct
+{
+    string name;
+    int votes;
+    bool eliminated;
+} candidate;
+
+// Array of candidates
+candidate candidates[MAX_CANDIDATES];
+
+// Numbers of voters and candidates
+int voter_count;
+int candidate_count;
+
+// Function prototypes
+bool vote(int voter, int rank, string name);
+void tabulate(void);
+bool print_winner(void);
+int find_min(void);
+bool is_tie(int min);
+void eliminate(int min);
+
+int main(int argc, string argv[])
+{
+    // Check for invalid usage
+    if (argc < 2)
+    {
+        printf("Usage: runoff [candidate ...]\n");
+        return 1;
+    }
+
+    // Populate array of candidates
+    candidate_count = argc - 1;
+    if (candidate_count > MAX_CANDIDATES)
+    {
+        printf("Maximum number of candidates is %i\n", MAX_CANDIDATES);
+        return 2;
+    }
+    for (int i = 0; i < candidate_count; i++)
+    {
+        candidates[i].name = argv[i + 1];
+        candidates[i].votes = 0;
+        candidates[i].eliminated = false;
+    }
+
+    voter_count = get_int("Number of voters: ");
+    if (voter_count > MAX_VOTERS)
+    {
+        printf("Maximum number of voters is %i\n", MAX_VOTERS);
+        return 3;
+    }
+
+    // Keep querying for votes
+    for (int i = 0; i < voter_count; i++)
+    {
+
+        // Query for each rank
+        for (int j = 0; j < candidate_count; j++)
+        {
+            string name = get_string("Rank %i: ", j + 1);
+
+            // Record vote, unless it's invalid
+            if (!vote(i, j, name))
+            {
+                printf("Invalid vote.\n");
+                return 4;
+            }
+        }
+
+        printf("\n");
+    }
+
+    // Keep holding runoffs until winner exists
+    while (true)
+    {
+        // Calculate votes given remaining candidates
+        tabulate();
+
+        // Check if election has been won
+        bool won = print_winner();
+        if (won)
+        {
+            break;
+        }
+
+        // Eliminate last-place candidates
+        int min = find_min();
+        bool tie = is_tie(min);
+
+        // If tie, everyone wins
+        if (tie)
+        {
+            for (int i = 0; i < candidate_count; i++)
+            {
+                if (!candidates[i].eliminated)
+                {
+                    printf("%s\n", candidates[i].name);
+                }
+            }
+            break;
+        }
+
+        // Eliminate anyone with minimum number of votes
+        eliminate(min);
+
+        // Reset vote counts back to zero
+        for (int i = 0; i < candidate_count; i++)
+        {
+            candidates[i].votes = 0;
+        }
+    }
+    return 0;
+}
+
+// Record preference if vote is valid
+bool vote(int voter, int rank, string name)
+{
+    // Iterate through each indivudal candidate
+    for (int k = 0; k < candidate_count; k++)
+    {
+        // Check if a match is found:
+        if (strcmp(candidates[k].name, name) == 0)
+        {
+            // Creating and setting index; preferences[0][0] is the 1st voters 1st choice, which will be candidate [k].
+            preferences[voter][rank] = k;
+            // Debugging, checking if correct candidate is returned/set
+            printf("Candidate name: %s\n", candidates[preferences[voter][rank]].name);
+
+            // Affirming that the function has run (vote valid, preference noted)
+            return true;
+        }
+    }
+    // Affirming that the function has not run correctly (vote invalid, preference not noted)
+    return false;
+}
+
+// Tabulate votes for non-eliminated candidates
+void tabulate(void)
+{
+    // Iterate through each voter
+    for (int i = 0; i < voter_count; i++)
+    {
+        // Iterate through each candidate
+        for (int j = 0; j < candidate_count; j++)
+        {
+            // Check whether the voter's first preferred candidate is NOT eliminated ("false")
+            if (candidates[preferences[i][j]].eliminated == false)
+            {
+                // Increment vote count for candidate by 1.
+                candidates[preferences[i][j]].votes++;
+                break;
+            }
+        }
+    }
+    return;
+}
+
+// Print the winner of the election, if there is one
+bool print_winner(void)
+{
+    // To help identify the winner provided criterion are met.
+    int vote_max = 0;
+
+    // Calculate the number of winners (checking if there is a singular winner or no)
+    int winners = 0;
+
+    // Iterate through all candidates
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (!candidates[i].eliminated && candidates[i].votes > vote_max)
+        {
+            vote_max = candidates[i].votes;
+        }
+    }
+
+    // Count how many candidates have the maximum number of votes
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (!candidates[i].eliminated && candidates[i].votes == vote_max)
+        {
+            winners++;
+        }
+    }
+
+    // Here, create float variable to determine percentage:
+    // Calculate if majority has been reached (> 0.50); type-cast variables in expression to ensure intended results
+    float proportion = ((float) vote_max / voter_count);
+
+    // If only 1 winner, find and print the winner's name
+    if (winners == 1 && (proportion > 0.50))
+    {
+        for (int i = 0; i < candidate_count; i++)
+        {
+            if (!candidates[i].eliminated && candidates[i].votes == vote_max)
+            {
+                printf("Winner: %s\n", candidates[i].name);
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+// Return the minimum number of votes any remaining candidate has
+int find_min(void)
+{
+    // Use -1 as an initial value to indicate it's not set
+    int vote_min = -1;
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        // If this is the first non-eliminated candidate, or if this candidate's votes are fewer than current vote_min
+        if (!candidates[i].eliminated && (vote_min == -1 || candidates[i].votes < vote_min))
+        {
+            vote_min = candidates[i].votes;
+        }
+    }
+
+    return vote_min;
+}
+
+// Return true if the election is tied between all candidates, false otherwise
+bool is_tie(int min)
+{
+    // To satisfy "return true if the election is tied between all candidates"
+    int ties = 0;
+
+    // Function only looks at non-eliminated candidates
+    int non_eliminated_count = 0;
+
+    // Iterate through all candidates
+    for (int i = 0; i < candidate_count; i++)
+    {
+        // Evaluate if the candidate is eliminated; if not, do not do anything
+        if (!candidates[i].eliminated)
+        {
+            // Increment non eliminated candidate count by 1
+            non_eliminated_count++;
+
+            // If the candidates votes are equal to the minimum vote total
+            if (candidates[i].votes == min)
+            {
+                // Increment 'ties'
+                ties++;
+            }
+        }
+    }
+
+    // This function returns true if the election is tied between all active candidates, and false otherwise
+    return ties == non_eliminated_count;
+}
+
+// Eliminate the candidate (or candidates) in last place
+void eliminate(int min)
+{
+    int non_eliminated_count = 0;
+    int to_eliminate = 0;
+
+    // 1st Iterationto count non-eliminated candidates and those with minimum votes
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (!candidates[i].eliminated)
+        {
+            non_eliminated_count++;
+            if (candidates[i].votes == min)
+            {
+                to_eliminate++;
+            }
+        }
+    }
+
+    // Proceed with elimination only if NOT all active candidates are at the minimum
+    if (to_eliminate < non_eliminated_count)
+    {
+        for (int i = 0; i < candidate_count; i++)
+        {
+            if (!candidates[i].eliminated && candidates[i].votes == min)
+            {
+                // Eliminate the candidate
+                candidates[i].eliminated = true;
+            }
+        }
+    }
+
+    // No further action necessary
+    return;
+}
+```
+### Tideman
+#### Problem to Solve
+You already know about plurality elections, which follow a very simple algo for determining the winner of an election:
+
+But the plurality does have some disadvantages; what happens, for instance, in an election with 3 candidates, and the ballots below are cast?
+
+- plurality would here declare a tie between Alice & Bob, since each has 2 votes; but that is the right outcome?
+- there's another kind of voting system known as a ranked-choice voting system; in a ranked-choice, voters can vote for more than 1 candidate
+	- instead of just voting for their top choice, they can rank the candidates in order of preference
+	- the resulting ballots might therefore look like the below:
+- Here, each voter, in addition to specifying their 1st pref candidate, has also indicated their 2nd & 3rd choices
+	- and now what was previously a tied election could now have a winner
+	- the race was originally tied between Alice and Bob
+
 
 
 3 candidates, 10 voters

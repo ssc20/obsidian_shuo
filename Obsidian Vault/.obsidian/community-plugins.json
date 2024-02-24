@@ -7,7 +7,6 @@
   "find-unlinked-files",
   "highlightr-plugin",
   "obsidian-icon-folder",
-  "make-md",
   "note-refactor-obsidian",
   "obsidian-git",
   "oz-image-plugin",
@@ -23,5 +22,8 @@
   "obsidian-list-callouts",
   "obsidian-linter",
   "obsidian-latex-suite",
-  "quick-latex"
+  "quick-latex",
+  "make-md",
+  "mousewheel-image-zoom",
+  "omnisearch"
 ]

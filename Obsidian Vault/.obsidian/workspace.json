@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "202402222204.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "mode": "source",
                 "source": true
               }
@@ -111,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "202402222204.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "202402222204.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "202402222204.md"
+                "file": "Spaces/Home/CS50/CS50 Notes.md"
               }
             }
           }
@@ -178,17 +178,35 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3e64269a98f0fcad",
+  "active": "63ab06764c1fc565",
   "lastOpenFiles": [
-    "Spaces/Home/CS50/CS50 Notes.md",
+    "Spaces/Writing/TLOU2.md",
+    "Spaces/Writing",
+    "Spaces/Home/attachments/Pasted image 20240223211714.png",
+    "Spaces/Home/attachments/2.png",
+    "Spaces/Edu/Ramen/The Book of Ramen.pdf",
+    "Spaces/Edu/Ramen",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/Mapping paths to files.jpg",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/MEDITATION INDEX.xlsx",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/MEDITATION INDEX.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - VIDEO TITLES.png",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - FILE NUMBERS.png",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/GLOSSARY.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/ADHD Map.png",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/5 - Meditations/P27_Replace 'I am' with 'my mind says' - Worksheet.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/5 - Meditations/P27_Replace 'I am' with 'my mind says' - Description.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/5 - Meditations/P26_Uijayi Pranayama - Notes.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/5 - Meditations/P26_Uijayi Pranayama - Description.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Spirituality of Thoughts/2. Sri_Yantra_Correct_Colors_Johari_1974.jpg",
     "202402222204.md",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD Map.png",
+    "Spaces/Edu/Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
+    "Spaces/Home/CS50/CS50 Notes.md",
     "Spaces/Home/Other/Untitled.md",
     "Spaces/Home/Other/Tahjay.md",
     "Spaces/Home/Other/Ramen.md",
     "Spaces/Home/Other/Interlude.md",
-    "The Book of Ramen.pdf",
     "conflict-files-obsidian-git.md",
-    "gitignore.txt",
     "2024-02-12.md",
     "Vault.md",
     "2024-02-13.md",
@@ -198,21 +216,8 @@
     "Spaces/Home/attachments/CleanShot 2024-02-07 at 21.56.16.gif",
     "Cognitive Canine Dysfunction.md",
     "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.11.10@2x.png",
-    "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.09.45@2x.png",
-    "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.08.43@2x.png",
-    "Spaces/Home/attachments/CleanShot 2024-02-15 at 21.58.14.png",
-    "Spaces/Home/attachments/CleanShot 2024-02-15 at 21.18.15.png",
-    "Spaces/Home/attachments/CleanShot 2024-02-14 at 21.28.07.png",
-    "Spaces/Home/attachments/CleanShot 2024-02-12 at 13.04.47@2x.png",
-    "Spaces/Home/attachments/CleanShot 2024-02-12 at 13.04.29@2x.png",
-    "Spaces/Home/attachments/CleanShot 2024-02-12 at 13.04.13@2x.png",
-    "Dr. K",
-    "Cloud Resume Challenge/Files",
     "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
-    "Cloud Resume Challenge",
     "Spaces/Home/Coursera/Google IT/Google IT Operating Systems.md",
-    "Spaces/Home/Coursera/Google IT",
-    "Spaces/Home/Coursera",
     "Spaces/Home/CS50/CS50 - Credit.md",
     "Spaces/Home/CS50/CS50 Sections.md",
     "Spaces/Home/CS50/CS50 - Mario (More).md",
@@ -220,11 +225,6 @@
     "Spaces/Home/Other/Making a test File.md",
     "Spaces/Home/daily/2023-08-12.md",
     "Spaces/Home/daily/2024-01-06.md",
-    "Spaces/Home/daily/2024-01-12.md",
-    "Spaces/Home/daily/2024-01-13.md",
-    "Spaces/Home/daily/2024-01-16.md",
-    "Spaces/Home/Other",
-    "Spaces/Home/CS50",
-    "Spaces/Home"
+    "Spaces/Home/daily/2024-01-12.md"
   ]
 }
