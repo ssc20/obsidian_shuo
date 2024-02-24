@@ -112,7 +112,12 @@ Ellie continuously endangers her friends out of her selfish and suicidal inabili
 				- the proper moral purpose of one's life is the pursuit of one's own happiness (rational egoism)
 				- the only social system consistent with this morality os one that displays full respect for individual rights embodied in *laissez-faire* capitalism (no economic interventionism)
 				- the role of art in human life is to transform humans' metaphysical ideas by selective reproduction of reality into a physical form (a work of art) that one can comprehend and to which one can respond emotionally
-		- 
+			- the *is-ought* problem
+				- David Hume (Scottish Philosopher, historian): when one makes claims about what *ought* to be that are based solely on statements about what *is*
+				- significant difference between positive (or descriptive) statements (about what is) and prescriptive/normative statements (about what ought to be)
+					- and that it is not obvious how one can coherently transition from descriptive statements to prescriptive ones
+				- Hume's law is the thesis that an ethical orjudgemental conclusion cannot be inferred from purely descriptive factual statements
+			- closely related to the *fact-value* distinction in epistemology
 
 - 
 - 
