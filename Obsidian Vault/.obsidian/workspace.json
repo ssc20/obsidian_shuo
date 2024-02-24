@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
+                "file": "Spaces/Edu/Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
                 "mode": "source",
                 "source": true
               }
@@ -47,7 +47,7 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD Map.png"
+                "file": "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD Map.png"
               }
             }
           },
@@ -55,11 +55,9 @@
             "id": "2ce4e80f34a02fa4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Spaces/Home/Other/Ramen.md",
-                "mode": "source",
-                "source": true
+                "file": "Spaces/Home/attachments/Pasted image 20240223211714.png"
               }
             }
           }
@@ -146,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/Other/Ramen.md",
+                "file": "Spaces/Home/attachments/Pasted image 20240223211714.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/Other/Ramen.md",
+                "file": "Spaces/Home/attachments/Pasted image 20240223211714.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,12 +184,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/Other/Ramen.md"
+                "file": "Spaces/Home/attachments/Pasted image 20240223211714.png"
               }
             }
           },
           {
-            "id": "fe1ccba3d5bead18",
+            "id": "004c65e805d27e92",
             "type": "leaf",
             "state": {
               "type": "timeline",
@@ -199,7 +197,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -207,6 +205,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "omnisearch:Omnisearch": false,
       "zk-prefixer:Create new unique note": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -218,57 +217,55 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
       "obsidian-day-planner:Timeline": false,
-      "notion-like-tables:Create loom": false,
-      "omnisearch:Omnisearch": false
+      "notion-like-tables:Create loom": false
     }
   },
-  "active": "5579791afde64774",
+  "active": "004c65e805d27e92",
   "lastOpenFiles": [
-    "Edu",
-    "Untitled.md",
-    "Spaces/Home/Other/Ramen.md",
-    "Ed.md",
-    "Spaces/Home/Other/Untitled.md",
+    "Spaces/Home/attachments/2.png",
     "Spaces/Home/CS50/CS50 Notes.md",
-    "Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Resistance/3. Worksheet - Procrastination.pdf",
-    "Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Resistance/2. Notes - Ego Meditation.pdf",
-    "Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Resistance/1. Worksheet - Resistance Emotions.pdf",
-    "Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Organization/2. Worksheet - Permissive Influences on Motivation.pdf",
-    "Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/1. Worksheet - Hunters vs. Farmers.pdf",
-    "Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Organization/1. Worksheet - Environment Organization.pdf",
-    "Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Organization/4. Worksheet - Technology Habits.pdf",
-    "Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD Map.png",
-    "Dr. K/Dr K's Guide to Mental Health/[Dr. Alok Kanojia] Руководство Dr. K по психическому здоровью СДВГ и выполнение дел Dr. K's Guide to Mental Health ADHD & Doin [rutracker-6302663].torrent",
-    "Dr. K/Dr K's Guide to Mental Health/3 - Common Videos/G08_Dietary Guidance in Ayurveda.mp4",
-    "Dr. K/Dr K's Guide to Mental Health/3 - Common Videos/G08_Dietary Guidance in Ayurveda - Notes.pdf",
-    "Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - VIDEO TITLES.png",
-    "Dr. K/Dr K's Guide to Mental Health/Mapping paths to files.jpg",
-    "Dr. K/Dr K's Guide to Mental Health/ADHD Map.png",
-    "Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - FILE NUMBERS.png",
-    "Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Spirituality of Thoughts/2. Sri_Yantra_Correct_Colors_Johari_1974.jpg",
-    "202402222204.md",
-    "conflict-files-obsidian-git.md",
+    "Spaces/Home/daily/2024-01-16.md",
+    "Spaces/Home/Other/Interlude.md",
+    "Spaces/Home/Other/Untitled.md",
+    "Spaces/Home/Other/Ramen.md",
+    "Spaces/Writing/TLOU2.md",
+    "Spaces/Home/attachments/Pasted image 20240223211714.png",
+    "Spaces/Writing",
+    "Spaces/Home/daily/2023-08-12.md",
+    "Spaces/Home/daily/2024-01-06.md",
+    "Spaces/Home/daily/2024-01-12.md",
+    "Spaces/Home/daily/2024-01-13.md",
+    "Spaces/Edu/Ramen/The Book of Ramen.pdf",
     "Vault.md",
+    "Spaces/Edu/Ramen",
+    "Spaces/Edu",
+    "Untitled.md",
+    "Ed.md",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Resistance/3. Worksheet - Procrastination.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Resistance/2. Notes - Ego Meditation.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Resistance/1. Worksheet - Resistance Emotions.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Organization/2. Worksheet - Permissive Influences on Motivation.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/1. Worksheet - Hunters vs. Farmers.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Organization/1. Worksheet - Environment Organization.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD Map.png",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - VIDEO TITLES.png",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/Mapping paths to files.jpg",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/ADHD Map.png",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - FILE NUMBERS.png",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Spirituality of Thoughts/2. Sri_Yantra_Correct_Colors_Johari_1974.jpg",
+    "conflict-files-obsidian-git.md",
     "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.11.10@2x.png",
     "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.09.45@2x.png",
-    "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.08.43@2x.png",
-    "Spaces/Home/attachments/CleanShot 2024-02-15 at 21.58.14.png",
     "2024-02-13.md",
     "Cognitive Canine Dysfunction.md",
     "202402042330.md",
     "2024-01-21.md",
-    "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
+    "Spaces/Edu/Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
     "Spaces/Home/Coursera/Google IT/Google IT Operating Systems.md",
     "Spaces/Home/CS50/CS50 - Credit.md",
     "Spaces/Home/CS50/CS50 Sections.md",
-    "Spaces/Home/Other/Interlude.md",
     "Spaces/Home/CS50/CS50 - Mario (More).md",
     "Spaces/Home/CS50/CS50 Coding.md",
-    "Spaces/Home/Other/Making a test File.md",
-    "Spaces/Home/Other/Tahjay.md",
-    "Spaces/Home/daily/2023-08-12.md",
-    "Spaces/Home/daily/2024-01-06.md",
-    "Spaces/Home/daily/2024-01-12.md",
-    "Spaces/Home/daily/2024-01-13.md"
+    "Spaces/Home/Other/Making a test File.md"
   ]
 }
