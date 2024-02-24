@@ -23,5 +23,7 @@
   "obsidian-linter",
   "obsidian-latex-suite",
   "quick-latex",
-  "make-md"
+  "make-md",
+  "mousewheel-image-zoom",
+  "omnisearch"
 ]
