@@ -3,15 +3,9 @@ Remember to check notion
 
 # TLOU2 Essay
 
-Ideas
 
-Pewdiepie played this game
 
-TLOU probably has the most proportion of playthrough-only’s
 
-Ellie only has a bastardized image of Joel
-
-In defense of zjoel
 ## Themes
 ### Grief
 ### Metamorphosis
@@ -35,7 +29,7 @@ Tommy: “what a joke”
 
 ellie sacrifices so much, just like TLOU
 
-Dunkey felt robbed, didn’t want ot kill Abby, but logical conclusion
+Dunkey felt robbed, didn’t want to kill Abby, but its seemingly the only *"logical conclusion"*
 
 Lev saves ellie
 
@@ -66,3 +60,33 @@ Ellie continuously endangers her friends out of her selfish and suicidal inabili
 	- that game and gore is amazing
 	- shotguns and mines
 - this person... random npcs
+
+
+# To sort out later
+## Playthrough-only
+TLOU probably has the most proportion of playthrough-only's
+## In defence of Joel
+Ellie only has a bastardized image of Joel
+
+
+
+
+
+# Other Video Essays on TLOU2
+
+*(note2self: divide this into positive and negative opinions?)*
+
+[Comporio - 4 Years Later I Now Understand The Last of Us Part 2](https://www.youtube.com/watch?v=tCVT2JyNl60&t=660s)
+
+[Dunkey - The Last of Us Part II (dunkview)](https://www.youtube.com/watch?v=I7OcL8j6rhk)
+
+[Dunkey - Discussing Last of Us 2 with Youtube Comments](https://www.youtube.com/watch?v=dVQcZa4O01A)
+
+[Naughty Dog -  Grounded II: Making The Last of Us Part II](https://www.youtube.com/watch?v=SC3C7GMMfDU)
+
+[Luke Stephens - In Defense of 'The Last of Us: Part II'...](https://www.youtube.com/watch?v=Ls_UjrDrSD0&t=2065s)
+
+[Cr1tikal - Moist Meter | The Last of Us 2](https://www.youtube.com/watch?v=MfJABAlky1s)
+
+[Revisiting The Last of Us](https://www.youtube.com/watch?v=z3DTWBVJBpo)
+
