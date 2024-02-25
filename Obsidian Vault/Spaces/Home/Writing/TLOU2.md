@@ -154,7 +154,16 @@ Ellie only has a bastardized image of Joel
 [Dunkey - Revisiting The Last of Us](https://www.youtube.com/watch?v=z3DTWBVJBpo)
 
 ## Negative
-[A Response to Dunkey's Response to the Response to His The Last of Us Part II Response: A Response](https://www.youtube.com/watch?v=dx5sw6vEzBM&t=5s)
+- [Macabre Storytelling: The Last of Us Part II | An Incoherent Disaster - YouTube](https://www.youtube.com/watch?v=BIgThCYaWIk) 
+	- [Macabre Storytelling: A Response to Dunkey's Response to the Response to His The Last of Us Part II Response: A Response](https://www.youtube.com/watch?v=dx5sw6vEzBM&t=5s)
+>- Original concept for Abby: [https://www.inverse.com/gaming/last-o...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFg5OGZweUU2bl9nc1BXX2YxQlRrc0RfaFhCZ3xBQ3Jtc0ttMElkRkY2Y1VpZ1FjNnJMTUpKQ3Jmd19NRXlSVXlrc0dWMTBnT3Rjc2JKWUxleGFoeDFzY0pUUHFYU0thcWJFbG9sTjJWU1BnNlQybXpzRmxYVWFhYkkwaHBTUmdNU2VBMHRuR3JOQmlOSEtSQnJDdw&q=https%3A%2F%2Fwww.inverse.com%2Fgaming%2Flast-of-us-2-abby-spoilers-introduction-neil-druckmann&v=BIgThCYaWIk) 
+>- Lev being dead-named: [https://www.inverse.com/gaming/last-o...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa1BhcjFaWld2ZXVzNUdHLTRoc0RhYzFHVWZzd3xBQ3Jtc0trTXVzNUJXTS1LS1p1cTR3akxjaHk3dDFlZVBLY1FPQVJIM3IwbV9GdzVpazdobm5haHBtM2lhOFNpU2xjeWJjYnoySVU2NDJrS0EySS1Qa3hsazNwVnBnTUo1WEpfX3BiXzFQTFhUMGtzUUh6OEJJWQ&q=https%3A%2F%2Fwww.inverse.com%2Fgaming%2Flast-of-us-2-deadname-lev-controversy-explained&v=BIgThCYaWIk) 
+>- Neil Druckmann on "thirst for revenge": [https://www.gq-magazine.co.uk/culture...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbjZPSnE2b01QdURKSUV3YnEtQzl6a1JPa0FlQXxBQ3Jtc0tsc2w4dHY1V0lhcXBIaXVLNWgyT3NaWXpuaW5vVmU5T0VFeDRFVzRIbUc0NHN0QWFhUTJKQzRYeG52cW9iQ084UUoxZGZJNjRmQ1kxa2lVSE1GcnNNQUlHOG1xQ041MjZwYWhSOGRrM1ZiWnhGLTNOTQ&q=https%3A%2F%2Fwww.gq-magazine.co.uk%2Fculture%2Farticle%2Fthe-last-of-us-part-ii-neil-druckmann-interview&v=BIgThCYaWIk) -
+>- Halley Gross on "empathizing with Abby": [https://www.indiewire.com/2020/06/the...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHNnSHZkdGhHREMxbTRDYWZCSjJSbk0wQjhQQXxBQ3Jtc0tsS3FFdVVsWjRwWTY1WUxrc0RLeDMxYlVrNlJEYW5JOVo0cEhrSm45UnVRYXE1SEhyZ0pieWNBdmF3UjRvTHlDaThYZnU4Zl9nWS0yMS1INGFNeDA5eXo3c0xnYlpRWjJMN2FhY3hxRnk1U2I3Zmwzcw&q=https%3A%2F%2Fwww.indiewire.com%2F2020%2F06%2Fthe-last-of-us-part-ii-interview-neil-druckmann-halley-gross-spoilers-1234568597%2F&v=BIgThCYaWIk) 
+>- Neil Druckmann on ending of Part 1: [https://o.canada.com/technology/gamin...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa1dZOTcxZFlaUkZWd2xXTzlRYWlUV2l2QnIxUXxBQ3Jtc0tsNmFCRmtNTWdrRXduOUdrck5QQ3FhUmFvTllNaDJvWVR1djRqOFdSdUVpdHplT1hPdGZYS3pFdDAwQUlPUTZqOHF5ZFNPMFpncTJFcU9sbk8xNEdyYkFUd0R6aXlIcmJKQWk4Z0g2UHZRVnNOVWQ4MA&q=https%3A%2F%2Fo.canada.com%2Ftechnology%2Fgaming%2Fthe-last-of-us-how-the-games-creator-envisions-its-ending&v=BIgThCYaWIk) 
+>- Walt Williams on ludo-narrative dissonance: [https://www.gdcvault.com/play/1017980...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa1I5ejZTUjZyOEEtanhZNndMbW8wemZXblBjd3xBQ3Jtc0trWWhzOW9nN3NYWkI4ekkzMUhMOGUyaFAwbTd6WU5aNG53TjBhV293SVBPaklmc0lkc0cwRGhzZEZTWExXbUpfQVB4cWpXM1J5THlNR2pKM21BUEQzXzgzVllKY0xMd3RtSnJiVDh4YXlJNWN3eUJPVQ&q=https%3A%2F%2Fwww.gdcvault.com%2Fplay%2F1017980%2FWe-Are-Not-Heroes-Contextualizing&v=BIgThCYaWIk) 
+>- Red Dead Redemption 2 Honor System: [https://guides.gamepressure.com/red-d...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbDRRYnV5ejZzMjE3d1pabXowakR1TXJUdFJ1UXxBQ3Jtc0ttTXQtSFVQQ2trczljdnNvRlA2RjZoaVhvdG9zMmMwTzliVUxqelFjLW0zOE10Y29GazlmSmpvV3Npa2Yxd29SR0pwOTNldUFqd09CbHpVQzZ1YTMwMVJ0eXVFQzFWNmc3N3JJWVYteVNPWEhtQmJySQ&q=https%3A%2F%2Fguides.gamepressure.com%2Fred-dead-redemption-2%2Fguide.asp%3FID%3D47052&v=BIgThCYaWIk) 
+>- The Last of Us Part II Leaks: [https://www.inverse.com/gaming/last-o...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFhjTzVPemQ2WWRMZVVWbVFadm56ZktzQWFVUXxBQ3Jtc0tuTGJwOGNKaG1US3pUZi1JSGZUZm1pdE1FeVBaY0tKcGNGWHV0ckV6cVczR3Z5SDhtcW94ZGNlRFIxdUJpU21sWWpQYXZsS3FpeUh5LThqSDFHX3BHb0UxalRrejBFM19hdlNKTl9tWDZGOHk1d3E3bw&q=https%3A%2F%2Fwww.inverse.com%2Fgaming%2Flast-of-us-2-spoilers-reddit-abby-ellie-leaks&v=BIgThCYaWIk)
 
 
 
@@ -182,7 +191,17 @@ Ellie only has a bastardized image of Joel
 				- anecdote with Mikayla, she didn't think Abby was evil
 	- [anything & everything on Tumblr: Ellie’s (lack of a) character arc & why the result is an unsatisfying story](https://www.tumblr.com/yeeyee-alumni/652369946577420288/ellies-lack-of-a-character-arc-why-the-result)
 		- per ChatGPT4 (because holy fuck shit's ugly as all hell to read)
-		- "The Tumblr post critiques Ellie's character arc in "The Last of Us Part 2", arguing that she lacks a gradual transformation. 
-			- it suggests that Ellie's shift from seeking revenge to forgiving her aggressor feels abrupt and unearned, as it does not stem from self-reflection, moral dilemma, or inner conflict
-			- the post argues that Ellie's consistent pursuit of revenge without questioning her motives or methods results in an unsatisfying story arc
+		- The text critiques Ellie's character arc in TLOU2, arguing that **it lacks a genuine transformation** due to several reasons:
+			- the change in Ellie is abrupt rather than gradual
+			- it appears unprovoked
+			- is not informed by the narrative or character development
+		- the writer contents that Ellie's shift from seeking revenge to suddenly deciding to forgive Abby, her antagonist, is unconvincing and poorly executed
+			- the sudden change is criticized as being prompted by a conveniently timed flashback rather than a meaningful, reflective process
+		- the text disputes the plausibility and depth of Ellie's forgiveness, highlighting inconsistencies in her behaviour and the narrative's failure to convincingly portray her internal conflict or growth
+		- it also criticizes the game for making characters act out of character or without sufficient motivation
+			- especially in the climax where Ellie's actions seem contradictory and forced
+		- the writer suggests an alternative ending that would align more consistently with Ellie's established traits and the game's thematic elements
+			- (more thoughtful approach to character development and resolution)
+		- they conclude by addressing criticisms of the game's ending, defending the validity of diverse player reactions and emphasizing the importance of coherent storytelling over contrived narrative twists.
+
 
