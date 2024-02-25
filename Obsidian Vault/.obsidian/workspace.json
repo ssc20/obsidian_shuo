@@ -167,7 +167,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,12 +188,14 @@
   },
   "active": "d03b9972cb88c5cb",
   "lastOpenFiles": [
+    "Pasted image 20240224225234.png",
+    "Spaces/Home/CS50/CS50 Notes.md",
+    "Pasted image 20240224225139.png",
     "Pasted image 20240224224645.png",
     "Pasted image 20240224224626.png",
     "Spaces/Home/CS50/CS50.md",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/MEDITATION INDEX.pdf",
     "202402242224.md",
-    "Spaces/Home/CS50/CS50 Notes.md",
     "Pasted image 20240224221919.png",
     "Pasted image 20240224221411.png",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Science of Thought/5. Worksheet - Action Success Calculation.pdf",
@@ -209,9 +212,6 @@
     "Spaces/Edu/Ramen",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/Mapping paths to files.jpg",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - VIDEO TITLES.png",
-    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - FILE NUMBERS.png",
-    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/ADHD Map.png",
-    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Spirituality of Thoughts/2. Sri_Yantra_Correct_Colors_Johari_1974.jpg",
     "202402222204.md",
     "Spaces/Edu/Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
     "Spaces/Home/Other/Untitled.md",

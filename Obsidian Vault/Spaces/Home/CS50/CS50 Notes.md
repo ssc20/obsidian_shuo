@@ -62,7 +62,7 @@ Questions?
 	- ![[Pasted image 20240224224626.png]]
 - Now, to rewrite this in the hexadecimal equivalent:
 	- ![[Pasted image 20240224224645.png]]
-red yet..
+- we are now introduced to `0x` syntax
 
 # Week 3
 ## Notes
