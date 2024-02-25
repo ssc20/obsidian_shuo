@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/Writing/TLOU2.md",
+                "file": "Spaces/Home/Writing/TLOU/Rebuttals/202402251459.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -86,8 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5c97885c79420b63",
@@ -103,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/Writing/TLOU2.md",
+                "file": "Spaces/Home/Writing/TLOU/Rebuttals/202402251459.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/Writing/TLOU2.md",
+                "file": "Spaces/Home/Writing/TLOU/Rebuttals/202402251459.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/Writing/TLOU2.md"
+                "file": "Spaces/Home/Writing/TLOU/Rebuttals/202402251459.md"
               }
             }
           }
@@ -173,11 +172,14 @@
   },
   "active": "eeed722a1447e26f",
   "lastOpenFiles": [
+    "Spaces/Home/Writing/TLOU",
+    "Spaces/Home/Writing/TLOU/Rebuttals",
     "2024-02-25.md",
+    "Spaces/Home/Writing/TLOU/Rebuttals/202402251459.md",
+    "Spaces/Home/Writing/TLOU/TLOU2.md",
     "Untitled.md",
     "Spaces/Home/Philosophy/Objectivism.md",
     "202402242224.md",
-    "Spaces/Home/Writing/TLOU2.md",
     "Spaces/Home/Untitled.canvas",
     "Spaces/Home/Untitled.md",
     "Spaces/Home/CS50/CS50 Notes.md"

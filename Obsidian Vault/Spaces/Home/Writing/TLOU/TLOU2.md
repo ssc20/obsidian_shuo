@@ -185,7 +185,7 @@ Ellie only has a bastardized image of Joel
 	- [How They Ruined Ellie: An Essay : r/TheLastOfUs2](https://www.reddit.com/r/TheLastOfUs2/comments/jpxgr0/how_they_ruined_ellie_an_essay/)
 		- this essay is horribly written and does nothing to substantiates any of its arguments for why they think Ellie is acting differently
 	- [anything & everything on Tumblr: Joel did not doom humanity (no matter how much the second game wants you to believe that)](https://www.tumblr.com/yeeyee-alumni/652500070792642561/joel-did-not-doom-humanity-no-matter-how-much-the)
-		- the premise of this assumes that TLOU2 is presenting the view that the socio-philosophical implications of Joel's choice at the end of TLOU1 have any actual bearing on TLOU2's plot
+	- the premise of this assumes that TLOU2 is presenting the view that the socio-philosophical implications of Joel's choice at the end of TLOU1 have any actual bearing on TLOU2's plot
 		- it also assumes that various characters are to be portrayed as "evil"
 			- counter, albeit somewhat dependent on your interpretation of TLOU1: there is no evidence that specific characters are supposed to be portrayed as "evil"
 				- anecdote with Mikayla, she didn't think Abby was evil
@@ -203,5 +203,6 @@ Ellie only has a bastardized image of Joel
 		- the writer suggests an alternative ending that would align more consistently with Ellie's established traits and the game's thematic elements
 			- (more thoughtful approach to character development and resolution)
 		- they conclude by addressing criticisms of the game's ending, defending the validity of diverse player reactions and emphasizing the importance of coherent storytelling over contrived narrative twists.
+- 
 
 
