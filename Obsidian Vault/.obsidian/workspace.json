@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/Writing/TLOU/Rebuttals/202402251459.md",
+                "file": "Spaces/Home/Writing/TLOU/TLOU2.md",
                 "mode": "source",
                 "source": true
               }
             }
+          },
+          {
+            "id": "d8656e6cbd574c66",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/Home/Writing/TLOU/Rebuttals/Ellie's (lack of a) character arc & why the result is an unsatisfying story.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -102,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/Writing/TLOU/Rebuttals/202402251459.md",
+                "file": "Spaces/Home/Writing/TLOU/Rebuttals/Ellie's (lack of a) character arc & why the result is an unsatisfying story.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/Writing/TLOU/Rebuttals/202402251459.md",
+                "file": "Spaces/Home/Writing/TLOU/Rebuttals/Ellie's (lack of a) character arc & why the result is an unsatisfying story.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/Writing/TLOU/Rebuttals/202402251459.md"
+                "file": "Spaces/Home/Writing/TLOU/Rebuttals/Ellie's (lack of a) character arc & why the result is an unsatisfying story.md"
               }
             }
           }
@@ -170,13 +183,13 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "eeed722a1447e26f",
+  "active": "d8656e6cbd574c66",
   "lastOpenFiles": [
+    "Spaces/Home/Writing/TLOU/TLOU2.md",
+    "Spaces/Home/Writing/TLOU/Rebuttals/Ellie's (lack of a) character arc & why the result is an unsatisfying story.md",
     "Spaces/Home/Writing/TLOU",
     "Spaces/Home/Writing/TLOU/Rebuttals",
     "2024-02-25.md",
-    "Spaces/Home/Writing/TLOU/Rebuttals/202402251459.md",
-    "Spaces/Home/Writing/TLOU/TLOU2.md",
     "Untitled.md",
     "Spaces/Home/Philosophy/Objectivism.md",
     "202402242224.md",

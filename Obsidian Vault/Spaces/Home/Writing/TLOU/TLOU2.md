@@ -190,7 +190,8 @@ Ellie only has a bastardized image of Joel
 			- counter, albeit somewhat dependent on your interpretation of TLOU1: there is no evidence that specific characters are supposed to be portrayed as "evil"
 				- anecdote with Mikayla, she didn't think Abby was evil
 	- [anything & everything on Tumblr: Ellie’s (lack of a) character arc & why the result is an unsatisfying story](https://www.tumblr.com/yeeyee-alumni/652369946577420288/ellies-lack-of-a-character-arc-why-the-result)
-		- per ChatGPT4 (because holy fuck shit's ugly as all hell to read)
+		- [[202402251459]]		
+		- ***Summary per ChatGPT4 (because holy fuck shit's ugly as all hell to read)***
 		- The text critiques Ellie's character arc in TLOU2, arguing that **it lacks a genuine transformation** due to several reasons:
 			- the change in Ellie is abrupt rather than gradual
 			- it appears unprovoked
