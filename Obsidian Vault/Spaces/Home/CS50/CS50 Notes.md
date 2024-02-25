@@ -51,6 +51,7 @@ RGB: red, green blue, some combinations give you the colors that you want
 		- because hexadecimal is always in units of 4, we can just use $2$; 8 bits = 1 byte, which **is** a common unit of measure!
 		- this is why Photoshop and color programs, web dev, use hexadecimal digits to represent single bytes
 - it's not a big deal per se, but it's just convenience
+- test
 
 Questions?
 - nope
