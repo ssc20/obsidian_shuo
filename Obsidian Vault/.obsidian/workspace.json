@@ -30,9 +30,29 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "91185315205060d7",
+            "type": "leaf",
+            "state": {
+              "type": "make-file-view",
+              "state": {
+                "path": "https://www.make.md/static/latest.md"
+              }
+            }
+          },
+          {
+            "id": "34f8bbce34d6d367",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -93,17 +113,9 @@
               "type": "recent-files",
               "state": {}
             }
-          },
-          {
-            "id": "3e64269a98f0fcad",
-            "type": "leaf",
-            "state": {
-              "type": "mk-path-view",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -185,6 +197,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "omnisearch:Omnisearch": false,
       "zk-prefixer:Create new unique note": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -199,7 +212,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b377055781262278",
+  "active": "34f8bbce34d6d367",
   "lastOpenFiles": [
     "Spaces/Home/CS50/CS50 Notes.md",
     "conflict-files-obsidian-git.md",
