@@ -34,7 +34,7 @@ RGB: red, green blue, some combinations give you the colors that you want
 - how might we represent decimal numbers in hexadecimal?
 	- ![[Pasted image 20240224221919.png]]
 	- if we do the math, we will be given the 1s and 16s place ($16^0$) & ($16^1$) 
-	- $0 \ 0$, for example, would be $(1\times 16 + )$
+	- $0 \ 0$, for example, would be $(0\times 16 + 0 \times1)$
 # Week 3
 ## Notes
 ### Algorithms
