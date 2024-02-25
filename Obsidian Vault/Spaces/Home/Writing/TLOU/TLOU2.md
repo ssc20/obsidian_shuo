@@ -100,6 +100,9 @@ Ellie continuously endangers her friends out of her selfish and suicidal inabili
 	- shotguns and mines
 - this person... random npcs
 
+## Arguments
+### Ludonarrative criticism, or ludonarrative harmony?
+
 ## Article Notes
 [How many do you have to kill in TLOU2 (Medium Article)](#^6d7909)
 - author wrote what was a documented pacifist run for TLOU2
