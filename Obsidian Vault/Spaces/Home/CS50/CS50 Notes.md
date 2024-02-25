@@ -1,13 +1,77 @@
 
 ---
 
+# Week 4
+#cs50/memory
+## Notes
+- Treating cells like squares/pixels instead of the rectangles
+- cs50.ly/art
+- instead of 0s and 1s, let's use colors
+RGB: red, green blue, some combinations give you the colors that you want
+- standard ways of calculating this
+	- ofc it's just bits (and numbers, 72, 73, etc.)
+	- there is a different notation
+![[Pasted image 20240224221411.png]]
+- USING photoshop to demonstrate this new way of describing colors
+- we've picked the color 'black'
+	- 0 red, 0 green, 0 blue
+	- hash symbol, then various digits
+	- if you pick 'white', you'll see a lot of green, red, blue
+		- \#FFFFFF
+		- (groups of 2, `FF` for 255 red, `FF` for 255 green, `FF` for 255 blue)
+		- Red = `FF0000`
+		- Green = `00FF00`
+		- Blue = `0000FF`
+	- `FF` represents 255... seemingly
+	- in the real world, using decimal instead of binary
+		- in the color world, we take to using hexadecimal, where after:
+		- `0 1 2 3 4 5 6 7 8 9 0`
+			- we will go:
+			- `0 1 2 3 4 5 6 7 8 9 0 A B C D E F`
+			- (16 different characters, hence 'hexadecimal') or 'base-16' 
+				- case doesn't matter 
+			- there *are* other systems but this is the last we will discuss in any kind of extensive detail
+- how might we represent decimal numbers in hexadecimal?
+	- ![[Pasted image 20240224221919.png]]
+	- if we do the math, we will be given the 1s and 16s place ($16^0$) & ($16^1$) 
+	- $0 \ 0$, for example, would be $(0\times 16 + 0 \times1)$
+	- the numbers stay the same as decimal all the way to '10'
+		- 10 would be `0A`, 11 would be `0B`, and so on
+		- counting to 16 would entail `10`
+		- the last digit in hexadecimal would be `FF`, and the math gets annoying
+			- $((16 \times 15)  + (1 \times 15)) = 255$
+		- this is not math to do frequently, but just to demonstrate the math in different bases
+-  hexadecimal is just *convenient*:
+	- with 16 different digits in your alphabet, 0 - F, how many different values do we need to represent 16 different values?
+		- 4 different values! -- that's $2^4$ or $2\times 2 \times 2 \times 2 = 16$
+		- 4 bits represented by a single digit, it's convenient in practice for computer scientists & programmers
+		- while `F` might represent `1111` (16), `1111` or 16 is still not a full byte (*there's only 4 bits here*)
+			- (a full byte is 8 bits)
+			- no one counts in units of 4, it's always in units of 16, 32, 64
+		- because hexadecimal is always in units of 4, we can just use $2$; 8 bits = 1 byte, which **is** a common unit of measure!
+		- this is why Photoshop and color programs, web dev, use hexadecimal digits to represent single bytes
+- it's not a big deal per se, but it's just convenience
+- test
+
+Questions?
+- nope
+
+- where else might we see this in the computer world?
+	- when we talk about a computer's memory, we can think of each square as having an individual location
+- we can number all of the bytes in a computer
+- computers use numbers indeed to represent numbers, typically in hexadecimal notation
+	- ![[Pasted image 20240224224626.png]]
+- Now, to rewrite this in the hexadecimal equivalent:
+	- ![[Pasted image 20240224224645.png]]
+- we are now introduced to `0x` syntax
+
 # Week 3
 ## Notes
 ### Algorithms
 - taking a break from syntax
 - we have a lot of vocabulary now!
 	- might not grasp functionality
-- but instead, let's think about how to think 'algorithimically'
+- but instead, let's think about how to think 'algorithmically'
 	- quantize real world problems so we can map puzzle pieces from week 0, with this new syntax to solve those problems
 - recall the time to solve v. size of problem chart
 	- how many units of measure -- whatever you're using
@@ -16,7 +80,7 @@
 	- the second algorithm, we started doing two pages at a time
 		- might skip a page;
 			- faster, but not yet 2/1
-	- the third algorithm; logirithimc curve
+	- the third algorithm; logarithmic curve
 		- even if you doubled the size of the phone book
 			- it was just one more page turn
 			- not another 500 or 1000

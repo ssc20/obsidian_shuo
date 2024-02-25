@@ -3,6 +3,21 @@ Remember to check notion
 
 # TLOU2 Essay
 
+<<<<<<< HEAD
+Ideas
+
+Pewdiepie played this game
+
+TLOU probably has the most proportion of playthrough-only’s
+
+Ellie only has a bastardized image of Joel
+
+In defense of zjoel
+## Themes
+### Grief
+### Metamorphosis
+### 
+=======
 
 
 
@@ -11,6 +26,7 @@ Remember to check notion
 ### Metamorphosis
 ### Fatalism & Determinism
 ### The Prism (Prison?) of Perception
+>>>>>>> origin/main
 Joel never desires revenge throughout TLOU; even with Sarah. Even when Ellie is kidnapped, it can be argued that he pursues Ellie out of pragmatism or devotion to their bond.
 
 ### Abby Sex Scene Meme
@@ -29,8 +45,12 @@ Tommy: “what a joke”
 
 ellie sacrifices so much, just like TLOU
 
+<<<<<<< HEAD
+Dunkey felt robbed, didn’t want ot kill Abby, but logical conclusion
+=======
 ## Dunkey
 felt robbed, didn’t want to kill Abby, but its seemingly the only *"logical conclusion"*
+>>>>>>> origin/main
 
 Lev saves ellie
 
@@ -38,6 +58,11 @@ Ellie spares Abby
 
 ambiguous
 
+<<<<<<< HEAD
+Ellie drifts, becomes unrecognizable, lost her own identty, killing abby no longer means anything
+
+- “maybe the theme is of regret
+=======
 Ellie drifts, becomes unrecognizable, lost her own identity, 
 - willing to accept emotionally that killing abby no longer means anything
 - where it matters most, the potential death that either leads to self-actualization, or completely ruins any potential: 
@@ -65,6 +90,7 @@ JOEL MADE THE DECISION TO SAVE ELLIE BECAUSE HE **CHANGED**
 - 
 
 - maybe the theme is of regret
+>>>>>>> origin/main
     - Regret that you paid for this fucking boring ass game
     - Regret that you gameshared
     - Regret that you watched Pewdiepie play it
@@ -77,13 +103,21 @@ Ellie continuously endangers her friends out of her selfish and suicidal inabili
 
 - at every avenue where she could stop, she refuses to
 
+<<<<<<< HEAD
+## Ludonarrative
+- ellie has changed doesn't killa by because this isn't her
+=======
 ## Ludonarrative Criticisms
 - ellie has changed and she doesn't kill abby because 'this isn't her'
+>>>>>>> origin/main
 - it's not what she wants
 	- lets abby & lav go end cycle of violence
 - main draw of violence is red paste
 	- that game and gore is amazing
 	- shotguns and mines
+<<<<<<< HEAD
+- this person... random npcs
+=======
 - this person... random npcs
 
 ## Article Notes
@@ -157,3 +191,4 @@ Ellie only has a bastardized image of Joel
 
 [/u/Altruistic_Band_2511 - Ludonarrative dissonance is not a valid critique against TLOU2](https://www.reddit.com/r/thelastofus/comments/rx7234/ludonarrative_dissonance_is_not_a_valid_critique/) ^838b59
 
+>>>>>>> origin/main
