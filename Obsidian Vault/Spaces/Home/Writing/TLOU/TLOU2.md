@@ -102,6 +102,16 @@ Ellie continuously endangers her friends out of her selfish and suicidal inabili
 
 ## Arguments
 ### Ludonarrative criticism, or ludonarrative harmony?
+#### Character Motivations Reflected in Gameplay
+- Example: Highlight how Ellie and Abby's physical journeys through the game's world mirror their emotional and moral journeys
+	- (i.e.) the escalating difficulty and brutality of encounters reflect the increasing emotional toll and moral ambiguity of their quest for revenge
+- Analysis: Discuss how gameplay elements like the scarcity of resources, the need for stealth, and the consequences of violence serve to reinforce the narrative's exploration of survival and the cost of vengeance
+
+#### Emotional Impact Through Player Actions
+
+#### Environmental Storytelling and Exploration
+
+#### Integration of Themes in Gameplay Mechanics
 
 ## Article Notes
 [How many do you have to kill in TLOU2 (Medium Article)](#^6d7909)
