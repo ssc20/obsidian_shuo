@@ -1,5 +1,9 @@
 {
   "livePreview": false,
+<<<<<<< HEAD
   "newFileLocation": "folder",
   "newFileFolderPath": "Spaces/Home/attachments"
+=======
+  "alwaysUpdateLinks": true
+>>>>>>> origin/main
 }
