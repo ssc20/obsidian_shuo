@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Philosophy/Objectivism.md",
+                "file": "Spaces/Writing/TLOU2.md",
                 "mode": "source",
                 "source": true
               }
@@ -126,7 +126,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -146,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Philosophy/Objectivism.md",
+                "file": "Spaces/Writing/TLOU2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Philosophy/Objectivism.md",
+                "file": "Spaces/Writing/TLOU2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +187,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Philosophy/Objectivism.md"
+                "file": "Spaces/Writing/TLOU2.md"
               }
             }
           },
@@ -223,11 +224,11 @@
       "notion-like-tables:Create loom": false
     }
   },
-  "active": "5579791afde64774",
+  "active": "2ce4e80f34a02fa4",
   "lastOpenFiles": [
+    "Spaces/Philosophy/Objectivism.md",
     "Spaces/Philosophy",
     "Spaces/Writing/TLOU2.md",
-    "Spaces/Philosophy/Objectivism.md",
     "[[.md",
     "Spaces/Home/attachments/Pasted image 20240223211714.png",
     "Spaces/Home/attachments/2.png",
@@ -251,7 +252,6 @@
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Resistance/1. Worksheet - Resistance Emotions.pdf",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Organization/2. Worksheet - Permissive Influences on Motivation.pdf",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/1. Worksheet - Hunters vs. Farmers.pdf",
-    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Organization/1. Worksheet - Environment Organization.pdf",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD Map.png",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - VIDEO TITLES.png",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/Mapping paths to files.jpg",
