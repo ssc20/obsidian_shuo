@@ -11,9 +11,11 @@
             "id": "d03b9972cb88c5cb",
             "type": "leaf",
             "state": {
-              "type": "mk-space",
+              "type": "markdown",
               "state": {
-                "path": "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Goal Setting & Motivation"
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "mode": "source",
+                "source": true
               }
             }
           }
@@ -108,6 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,6 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,11 +149,13 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md"
+              }
             }
           },
           {
-            "id": "e43eff4b59bdaa50",
+            "id": "3a4ced8406c05c58",
             "type": "leaf",
             "state": {
               "type": "timeline",
@@ -181,6 +187,8 @@
   },
   "active": "d03b9972cb88c5cb",
   "lastOpenFiles": [
+    "Spaces/Home/CS50/CS50.md",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/MEDITATION INDEX.pdf",
     "202402242224.md",
     "Spaces/Home/CS50/CS50 Notes.md",
     "Pasted image 20240224221919.png",
@@ -198,7 +206,6 @@
     "Spaces/Edu/Ramen/The Book of Ramen.pdf",
     "Spaces/Edu/Ramen",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/Mapping paths to files.jpg",
-    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/MEDITATION INDEX.xlsx",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - VIDEO TITLES.png",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - FILE NUMBERS.png",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/ADHD Map.png",
@@ -225,7 +232,6 @@
     "Spaces/Home/CS50/CS50 - Mario (More).md",
     "Spaces/Home/CS50/CS50 Coding.md",
     "Spaces/Home/Other/Making a test File.md",
-    "Spaces/Home/daily/2023-08-12.md",
-    "Spaces/Home/daily/2024-01-06.md"
+    "Spaces/Home/daily/2023-08-12.md"
   ]
 }
