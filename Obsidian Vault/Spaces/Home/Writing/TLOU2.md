@@ -173,4 +173,16 @@ Ellie only has a bastardized image of Joel
 
 ## /r/tlou2 "sources of diverse criticism"
 - [Reddit - Dive into anything](https://www.reddit.com/r/TheLastOfUs2/wiki/sourcesofdiversecriticism/)
+	- [How They Ruined Ellie: An Essay : r/TheLastOfUs2](https://www.reddit.com/r/TheLastOfUs2/comments/jpxgr0/how_they_ruined_ellie_an_essay/)
+		- this essay is horribly written and does nothing to substantiates any of its arguments for why they think Ellie is acting differently
+	- [anything & everything on Tumblr: Joel did not doom humanity (no matter how much the second game wants you to believe that)](https://www.tumblr.com/yeeyee-alumni/652500070792642561/joel-did-not-doom-humanity-no-matter-how-much-the)
+		- the premise of this assumes that TLOU2 is presenting the view that the socio-philosophical implications of Joel's choice at the end of TLOU1 have any actual bearing on TLOU2's plot
+		- it also assumes that various characters are to be portrayed as "evil"
+			- counter, albeit somewhat dependent on your interpretation of TLOU1: there is no evidence that specific characters are supposed to be portrayed as "evil"
+				- anecdote with Mikayla, she didn't think Abby was evil
+	- [anything & everything on Tumblr: Ellie’s (lack of a) character arc & why the result is an unsatisfying story](https://www.tumblr.com/yeeyee-alumni/652369946577420288/ellies-lack-of-a-character-arc-why-the-result)
+		- per ChatGPT4 (because holy fuck shit's ugly as all hell to read)
+		- "The Tumblr post critiques Ellie's character arc in "The Last of Us Part 2", arguing that she lacks a gradual transformation. 
+			- it suggests that Ellie's shift from seeking revenge to forgiving her aggressor feels abrupt and unearned, as it does not stem from self-reflection, moral dilemma, or inner conflict
+			- the post argues that Ellie's consistent pursuit of revenge without questioning her motives or methods results in an unsatisfying story arc
 
