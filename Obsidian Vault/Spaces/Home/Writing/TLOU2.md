@@ -137,6 +137,8 @@ Ellie only has a bastardized image of Joel
 *(note2self: divide this into positive and negative opinions?)*
 *(note2self: maybe format this as a table?)*
 
+## Positive
+
 [Comporio - 4 Years Later I Now Understand The Last of Us Part 2](https://www.youtube.com/watch?v=tCVT2JyNl60&t=660s)
 
 [Dunkey - The Last of Us Part II (dunkview)](https://www.youtube.com/watch?v=I7OcL8j6rhk)
@@ -150,6 +152,9 @@ Ellie only has a bastardized image of Joel
 [Cr1tikal - Moist Meter | The Last of Us 2](https://www.youtube.com/watch?v=MfJABAlky1s)
 
 [Dunkey - Revisiting The Last of Us](https://www.youtube.com/watch?v=z3DTWBVJBpo)
+
+## Negative
+[A Response to Dunkey's Response to the Response to His The Last of Us Part II Response: A Response](https://www.youtube.com/watch?v=dx5sw6vEzBM&t=5s)
 
 
 
