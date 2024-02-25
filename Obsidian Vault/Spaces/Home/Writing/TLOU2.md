@@ -171,4 +171,6 @@ Ellie only has a bastardized image of Joel
 
 [/u/Altruistic_Band_2511 - Ludonarrative dissonance is not a valid critique against TLOU2](https://www.reddit.com/r/thelastofus/comments/rx7234/ludonarrative_dissonance_is_not_a_valid_critique/) ^838b59
 
+## /r/tlou2 "sources of diverse criticism"
+- [Reddit - Dive into anything](https://www.reddit.com/r/TheLastOfUs2/wiki/sourcesofdiversecriticism/)
 
