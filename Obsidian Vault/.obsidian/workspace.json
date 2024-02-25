@@ -154,9 +154,17 @@
                 "file": "Spaces/Home/CS50/CS50 Notes.md"
               }
             }
+          },
+          {
+            "id": "e43eff4b59bdaa50",
+            "type": "leaf",
+            "state": {
+              "type": "timeline",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -178,8 +186,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "63ab06764c1fc565",
+  "active": "e43eff4b59bdaa50",
   "lastOpenFiles": [
+    "Pasted image 20240224221919.png",
+    "Pasted image 20240224221411.png",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Science of Thought/5. Worksheet - Action Success Calculation.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Science of Thought",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Resistance/3. Worksheet - Procrastination.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Resistance/2. Notes - Ego Meditation.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Resistance/1. Worksheet - Resistance Emotions.pdf",
+    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Resistance",
     "Spaces/Writing/TLOU2.md",
     "Spaces/Writing",
     "Spaces/Home/attachments/Pasted image 20240223211714.png",
@@ -188,15 +204,9 @@
     "Spaces/Edu/Ramen",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/Mapping paths to files.jpg",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/MEDITATION INDEX.xlsx",
-    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/MEDITATION INDEX.pdf",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - VIDEO TITLES.png",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - FILE NUMBERS.png",
-    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/GLOSSARY.pdf",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/ADHD Map.png",
-    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/5 - Meditations/P27_Replace 'I am' with 'my mind says' - Worksheet.pdf",
-    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/5 - Meditations/P27_Replace 'I am' with 'my mind says' - Description.pdf",
-    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/5 - Meditations/P26_Uijayi Pranayama - Notes.pdf",
-    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/5 - Meditations/P26_Uijayi Pranayama - Description.pdf",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Spirituality of Thoughts/2. Sri_Yantra_Correct_Colors_Johari_1974.jpg",
     "202402222204.md",
     "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD Map.png",
@@ -215,7 +225,6 @@
     "Untitled.md",
     "Spaces/Home/attachments/CleanShot 2024-02-07 at 21.56.16.gif",
     "Cognitive Canine Dysfunction.md",
-    "Spaces/Home/attachments/CleanShot 2024-02-16 at 00.11.10@2x.png",
     "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
     "Spaces/Home/Coursera/Google IT/Google IT Operating Systems.md",
     "Spaces/Home/CS50/CS50 - Credit.md",
@@ -224,7 +233,6 @@
     "Spaces/Home/CS50/CS50 Coding.md",
     "Spaces/Home/Other/Making a test File.md",
     "Spaces/Home/daily/2023-08-12.md",
-    "Spaces/Home/daily/2024-01-06.md",
-    "Spaces/Home/daily/2024-01-12.md"
+    "Spaces/Home/daily/2024-01-06.md"
   ]
 }

@@ -1,13 +1,47 @@
 
 ---
 
+# Week 4
+#cs50/memory
+## Notes
+- Treating cells like squares/pixels instead of the rectangles
+- cs50.ly/art
+- instead of 0s and 1s, let's use colors
+RGB: red, green blue, some combinations give you the colors that you want
+- standard ways of calculating this
+	- ofc it's just bits (and numbers, 72, 73, etc.)
+	- there is a different notation
+![[Pasted image 20240224221411.png]]
+- USING photoshop to demonstrate this new way of describing colors
+- we've picked the color 'black'
+	- 0 red, 0 green, 0 blue
+	- hash symbol, then various digits
+	- if you pick 'white', you'll see a lot of green, red, blue
+		- \#FFFFFF
+		- (groups of 2, `FF` for 255 red, `FF` for 255 green, `FF` for 255 blue)
+		- Red = `FF0000`
+		- Green = `00FF00`
+		- Blue = `0000FF`
+	- `FF` represents 255... seemingly
+	- in the real world, using decimal instead of binary
+		- in the color world, we take to using hexadecimal, where after:
+		- `0 1 2 3 4 5 6 7 8 9 0`
+			- we will go:
+			- `0 1 2 3 4 5 6 7 8 9 0 A B C D E F`
+			- (16 different characters, hence 'hexadecimal') or 'base-16' 
+				- case doesn't matter 
+			- there *are* other systems but this is the last we will discuss in any kind of extensive detail
+- how might we represent decimal numbers in hexadecimal?
+	- ![[Pasted image 20240224221919.png]]
+	- if we do the math, we will be given the 1s and 16s place ($16^0$) & ($16^1$) 
+	- $0 \ 0$, for example, would be $(1\times 16 + )$
 # Week 3
 ## Notes
 ### Algorithms
 - taking a break from syntax
 - we have a lot of vocabulary now!
 	- might not grasp functionality
-- but instead, let's think about how to think 'algorithimically'
+- but instead, let's think about how to think 'algorithmically'
 	- quantize real world problems so we can map puzzle pieces from week 0, with this new syntax to solve those problems
 - recall the time to solve v. size of problem chart
 	- how many units of measure -- whatever you're using
@@ -16,7 +50,7 @@
 	- the second algorithm, we started doing two pages at a time
 		- might skip a page;
 			- faster, but not yet 2/1
-	- the third algorithm; logirithimc curve
+	- the third algorithm; logarithmic curve
 		- even if you doubled the size of the phone book
 			- it was just one more page turn
 			- not another 500 or 1000
