@@ -35,6 +35,35 @@ RGB: red, green blue, some combinations give you the colors that you want
 	- ![[Pasted image 20240224221919.png]]
 	- if we do the math, we will be given the 1s and 16s place ($16^0$) & ($16^1$) 
 	- $0 \ 0$, for example, would be $(0\times 16 + 0 \times1)$
+	- the numbers stay the same as decimal all the way to '10'
+		- 10 would be `0A`, 11 would be `0B`, and so on
+		- counting to 16 would entail `10`
+		- the last digit in hexadecimal would be `FF`, and the math gets annoying
+			- $((16 \times 15)  + (1 \times 15)) = 255$
+		- this is not math to do frequently, but just to demonstrate the math in different bases
+-  hexadecimal is just *convenient*:
+	- with 16 different digits in your alphabet, 0 - F, how many different values do we need to represent 16 different values?
+		- 4 different values! -- that's $2^4$ or $2\times 2 \times 2 \times 2 = 16$
+		- 4 bits represented by a single digit, it's convenient in practice for computer scientists & programmers
+		- while `F` might represent `1111` (16), `1111` or 16 is still not a full byte (*there's only 4 bits here*)
+			- (a full byte is 8 bits)
+			- no one counts in units of 4, it's always in units of 16, 32, 64
+		- because hexadecimal is always in units of 4, we can just use $2$; 8 bits = 1 byte, which **is** a common unit of measure!
+		- this is why Photoshop and color programs, web dev, use hexadecimal digits to represent single bytes
+- it's not a big deal per se, but it's just convenience
+
+Questions?
+- nope
+
+- where else might we see this in the computer world?
+	- when we talk about a computer's memory, we can think of each square as having an individual location
+- we can number all of the bytes in a computer
+- computers use numbers indeed to represent numbers, typically in hexadecimal notation
+	- ![[Pasted image 20240224224626.png]]
+- Now, to rewrite this in the hexadecimal equivalent:
+	- ![[Pasted image 20240224224645.png]]
+
+
 # Week 3
 ## Notes
 ### Algorithms

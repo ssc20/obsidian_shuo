@@ -1,3 +1,5 @@
 {
-  "livePreview": false
+  "livePreview": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "Spaces/Home/attachments"
 }
