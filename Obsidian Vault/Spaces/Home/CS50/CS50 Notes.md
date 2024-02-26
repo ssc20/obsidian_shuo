@@ -68,7 +68,27 @@ Questions?
 	- this doesn't do anything mathematically
 	- although we don't have room for 255 bytes, we do start to see patterns....
 	- ![[Pasted image 20240225210006.png]]
-	- 
+- make a code file called `addresses.c`
+	- when you write the example code, `int n = 50`, the value of $n$ is stored somewhere in the computer's memory
+		- e.g. `0x123`
+	- the variable $n$ lives at an *address*
+	- something in C gives you access to the location of variables in your computer's memory
+	- at what address is this variable?
+	-  using a single & (what address is this variable) and the `*` is the 'deference operator'
+		- take an address, and go to it....
+	- ![[Pasted image 20240225210736.png]]
+	- instead of printing out a value, let's print an address
+		- use the 2 new capabilities where & gets you the address of `n`
+		- change `printf("%i\n", n)` to `printf("%p\n, &n);`
+			- p = address
+			- notice the added `&` to distinguish that we are providing the address of `n` into the `printf()` function
+			- this is a large result number, but we do get something!
+			- ![[Pasted image 20240225211011.png]]
+		- this `%p` passed into printf as a 'format code' that leverages the fact that C supports what is known as pointers
+		- pointers is really just an address, address of variable that you can store in another variable called a pointer
+
+
+
 
 # Week 3
 ## Notes
