@@ -64,6 +64,7 @@ Questions?
 - Now, to rewrite this in the hexadecimal equivalent:
 	- ![[Pasted image 20240224224645.png]]
 - we are now introduced to `0x` syntax
+- 
 
 # Week 3
 ## Notes

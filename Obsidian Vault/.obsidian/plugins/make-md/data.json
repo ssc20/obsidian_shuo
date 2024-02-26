@@ -36,7 +36,8 @@
   "showRibbon": true,
   "deleteFileOption": "trash",
   "expandedSpaces": [
-    "/"
+    "/",
+    "Spaces/Home/Spaces/Home/CS50"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
