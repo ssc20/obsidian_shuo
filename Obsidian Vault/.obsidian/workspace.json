@@ -67,7 +67,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Spaces/Home/Writing/TLOU/TLOU2.md",
                 "mode": "source",
                 "source": true
               }
@@ -121,23 +121,22 @@
             }
           },
           {
-            "id": "a65498c68a0f34e0",
-            "type": "leaf",
-            "state": {
-              "type": "mk-path-view",
-              "state": {}
-            }
-          },
-          {
             "id": "f961b4aef42f4e13",
             "type": "leaf",
             "state": {
               "type": "recent-files",
               "state": {}
             }
+          },
+          {
+            "id": "dc1744a578c1acfd",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -234,8 +233,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7de308680bf802d3",
+  "active": "5579791afde64774",
   "lastOpenFiles": [
+    "Spaces/Home/CS50/CS50 Notes.md",
     "Pasted image 20240225211011.png",
     "Pasted image 20240225211000.png",
     "Pasted image 20240225210736.png",
@@ -264,10 +264,8 @@
     "2024-02-25.md",
     "Spaces/Writing/TLOU2.md",
     "Spaces/Philosophy/Objectivism.md",
-    "Spaces/Edu/Dr. K/Dr K's Guide to Mental Health/Mapping paths to files.jpg",
     "Spaces/Edu/Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
     "202402242224.md",
-    "Spaces/Home/CS50/CS50 Notes.md",
     "Spaces/Home/CS50/CS50.md",
     "202402222204.md",
     "Spaces/Home/Other/Untitled.md",
