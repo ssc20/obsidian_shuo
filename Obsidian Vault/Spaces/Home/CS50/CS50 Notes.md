@@ -95,6 +95,7 @@ int *p = &n;
 - `int *p = &n;` means "provide me a variable called 'p', inside of which I can store the address of an integer"
 	- what address to put in there? well, we can use `&` to say, give me the address of a variable in itself.
 	- let's play around in vscode with 2 variables:
+
 ```c
 #include <stdio.h>
 {
