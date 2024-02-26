@@ -117,7 +117,7 @@ Ellie continuously endangers her friends out of her selfish and suicidal inabili
 [How many do you have to kill in TLOU2 (Medium Article)](#^6d7909)
 - author wrote what was a documented pacifist run for TLOU2
 - motivation of the article had to do with argument of 2 parts:
-	- @ $ argument: 
+	- @ argument: 
 	- ! the game *forced* you to kill hundreds of enemies
 	- ! the game tried to make you *feel bad* about these killings by having you play as a character affiliated with the same faction as a lot of these enemies
 - 2 days ago (at the time of the article) while browsing /r/thelastofus, he saw the following Reddit post

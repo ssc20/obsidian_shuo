@@ -87,6 +87,7 @@ Questions?
 		- this `%p` passed into printf as a 'format code' that leverages the fact that C supports what is known as pointers
 		- pointers is really just an address, address of variable that you can store in another variable called a pointer
 	- let's still declare a variable `n` but create a pointer!
+	- 
 ```c
 int n = 50;
 int *p = &n;
