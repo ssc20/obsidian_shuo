@@ -22,8 +22,8 @@
   "obsidian-list-callouts",
   "obsidian-linter",
   "obsidian-latex-suite",
-  "quick-latex",
-  "make-md",
   "mousewheel-image-zoom",
-  "omnisearch"
+  "omnisearch",
+  "obsidian-advanced-uri",
+  "obsidian-auto-link-title"
 ]
