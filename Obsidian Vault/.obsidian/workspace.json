@@ -69,7 +69,7 @@
               "state": {
                 "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -234,8 +234,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "a65498c68a0f34e0",
+  "active": "7de308680bf802d3",
   "lastOpenFiles": [
+    "Pasted image 20240225210006.png",
     "conflict-files-obsidian-git.md",
     "Spaces/Home/Writing/TLOU/Rebuttals/Ellie's (lack of a) character arc & why the result is an unsatisfying story.md",
     "Spaces/Home/Writing/TLOU/TLOU2.md",

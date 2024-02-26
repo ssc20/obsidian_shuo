@@ -61,10 +61,14 @@ Questions?
 - we can number all of the bytes in a computer
 - computers use numbers indeed to represent numbers, typically in hexadecimal notation
 	- ![[Pasted image 20240224224626.png]]
+- #cs50/hexadecimal/0x
 - Now, to rewrite this in the hexadecimal equivalent:
 	- ![[Pasted image 20240224224645.png]]
 - we are now introduced to `0x` syntax
-- 
+	- this doesn't do anything mathematically
+	- although we don't have room for 255 bytes, we do start to see patterns....
+	- ![[Pasted image 20240225210006.png]]
+	- 
 
 # Week 3
 ## Notes
