@@ -1,39 +1,60 @@
 {
   "main": {
-    "id": "0032545e0273fe64",
+    "id": "b9cf027c390385a3",
     "type": "split",
     "children": [
       {
-        "id": "72217ced11775bc0",
+        "id": "929a41f7afe26010",
         "type": "tabs",
         "children": [
           {
-            "id": "7de308680bf802d3",
+            "id": "eeed722a1447e26f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Spaces/Home/Writing/TLOU/TLOU2.md",
                 "mode": "source",
                 "source": true
               }
             }
+          },
+          {
+            "id": "d8656e6cbd574c66",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/Home/Writing/TLOU/TLOU2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "3542783bd14db9a6",
+    "id": "2d3baf7e81619fa0",
     "type": "split",
     "children": [
       {
-        "id": "c354e61ec2479fb5",
+        "id": "03bd7e88e64b9f60",
         "type": "tabs",
         "children": [
           {
-            "id": "5579791afde64774",
+            "id": "c8e98c7e44c3ff85",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "dd717881cbb01657",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +64,7 @@
             }
           },
           {
-            "id": "0976db8144491e91",
+            "id": "a1a0666da60c2fff",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +79,7 @@
             }
           },
           {
-            "id": "f847d35018446e70",
+            "id": "6795caafc3258cdd",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -66,42 +87,36 @@
             }
           },
           {
-            "id": "f961b4aef42f4e13",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {}
-            }
-          },
-          {
-            "id": "dc1744a578c1acfd",
+            "id": "5047c6e99d9a7764",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300,
+    "collapsed": true
   },
   "right": {
-    "id": "095fbd95bebd42a5",
+    "id": "5c97885c79420b63",
     "type": "split",
     "children": [
       {
-        "id": "bcd9d2bd93e5d54d",
+        "id": "64047ca20a58d235",
         "type": "tabs",
         "children": [
           {
-            "id": "bf3ee34e3d765d81",
+            "id": "8e784b8f618ebc24",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Spaces/Home/Writing/TLOU/TLOU2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,19 +128,19 @@
             }
           },
           {
-            "id": "6ce7aa48459d4f08",
+            "id": "6741ef7c1fde3aa0",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Spaces/Home/Writing/TLOU/TLOU2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "b5a8f20e69892e09",
+            "id": "382952e5aab1dd3c",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -136,25 +151,16 @@
             }
           },
           {
-            "id": "0cdc29b18d703d59",
+            "id": "21079ebe061dd8f5",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md"
+                "file": "Spaces/Home/Writing/TLOU/TLOU2.md"
               }
             }
-          },
-          {
-            "id": "3a4ced8406c05c58",
-            "type": "leaf",
-            "state": {
-              "type": "timeline",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -163,67 +169,37 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "omnisearch:Omnisearch": false,
-      "zk-prefixer:Create new unique note": false,
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "notion-like-tables:Create loom": false,
       "obsidian-day-planner:Timeline": false,
       "obsidian-statusbar-pomo:Start pomodoro": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "zk-prefixer:Create new unique note": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "7de308680bf802d3",
+  "active": "d8656e6cbd574c66",
   "lastOpenFiles": [
-    "Spaces/Home/Writing/TLOU/TLOU2.md",
-    "Spaces/Home/Writing/TLOU/Rebuttals/Ellie's (lack of a) character arc & why the result is an unsatisfying story.md",
-    "Spaces/Home/CS50/CS50 Notes.md",
     "Pasted image 20240225211011.png",
     "Pasted image 20240225211000.png",
     "Pasted image 20240225210736.png",
     "Pasted image 20240225210006.png",
-    "conflict-files-obsidian-git.md",
-    "Spaces/Home/Writing/TLOU/Rebuttals",
+    "Spaces/Home/Writing/TLOU/Rebuttals/Ellie's (lack of a) character arc & why the result is an unsatisfying story.md",
+    "Spaces/Home/Writing/TLOU/TLOU2.md",
     "Spaces/Home/Writing/TLOU",
-    "Spaces/Home/Writing",
-    "Spaces/Home/Philosophy/Objectivism.md",
-    "Spaces/Home/Philosophy",
-    "Spaces/Home/Edu/Ramen/The Book of Ramen.pdf",
-    "Spaces/Home/Edu/Ramen",
-    "Spaces/Home/Edu/Dr. K/Dr K's Guide to Mental Health/5 - Meditations/P27_Replace 'I am' with 'my mind says' - Worksheet.pdf",
-    "Spaces/Home/Edu/Dr. K/Dr K's Guide to Mental Health/5 - Meditations/P27_Replace 'I am' with 'my mind says' - Description.pdf",
-    "Spaces/Home/Edu/Dr. K/Dr K's Guide to Mental Health/5 - Meditations/P26_Uijayi Pranayama - Notes.pdf",
-    "Spaces/Home/Edu/Dr. K/Dr K's Guide to Mental Health/5 - Meditations/P26_Uijayi Pranayama - Description.pdf",
-    "Spaces/Home/Edu/Dr. K/Dr K's Guide to Mental Health/Mapping paths to files.jpg",
-    "Spaces/Home/Edu/Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - VIDEO TITLES.png",
-    "Spaces/Home/Edu/Dr. K/Dr K's Guide to Mental Health/GUIDE MAP - FILE NUMBERS.png",
-    "Spaces/Home/Edu/Dr. K/Dr K's Guide to Mental Health/ADHD Map.png",
-    "Spaces/Home/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD/Non-Clinical Track/Spirituality of Thoughts/2. Sri_Yantra_Correct_Colors_Johari_1974.jpg",
-    "Spaces/Home/Edu/Dr. K/Dr K's Guide to Mental Health - new ADHD module (HealthyGamerGG)/ADHD Map.png",
-    "Spaces/Home/Edu/Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
+    "Spaces/Home/Writing/TLOU/Rebuttals",
     "2024-02-25.md",
-    "Spaces/Writing/TLOU2.md",
-    "Spaces/Philosophy/Objectivism.md",
-    "Spaces/Edu/Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md",
-    "202402242224.md",
-    "Spaces/Home/CS50/CS50.md",
-    "202402222204.md",
-    "Spaces/Home/Other/Untitled.md",
-    "Spaces/Home/Other/Tahjay.md",
-    "Spaces/Home/Other/Ramen.md",
-    "Spaces/Home/Other/Interlude.md",
-    "2024-02-12.md",
-    "Vault.md",
-    "2024-02-13.md",
-    "202402042330.md",
-    "2024-01-21.md",
     "Untitled.md",
-    "Cognitive Canine Dysfunction.md",
-    "Cloud Resume Challenge/Cloud Resume Challenge Guidebook.md"
+    "Spaces/Home/Philosophy/Objectivism.md",
+    "202402242224.md",
+    "Spaces/Home/Untitled.canvas",
+    "Spaces/Home/Untitled.md",
+    "Spaces/Home/CS50/CS50 Notes.md"
   ]
 }
