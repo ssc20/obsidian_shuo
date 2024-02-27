@@ -41,8 +41,12 @@ Mailbox example
 		- & so no matter what, even if with more memory, you dealt with the restriction of 32 bit architecture
 		- modern systems now support 64 bits, which allow you to count crazy high
 
-let's now translate this to a bit of code now! assho
-
+let's now translate this to a bit of code now! 
+- ![[CleanShot 2024-02-26 at 22.33.43.png]]
+- while not as simple, we can still see the memory reference location
+	- let's try finding the very first character of string "s" 
+	- `printf("%p\n, &s[0];`
+	- remember that & indicates the desire to find the location/address of the variable
 
 
 - Treating cells like squares/pixels instead of the rectangles
