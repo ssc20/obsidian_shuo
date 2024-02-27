@@ -47,6 +47,74 @@ let's now translate this to a bit of code now!
 	- let's try finding the very first character of string "s" 
 	- `printf("%p\n, &s[0];`
 	- remember that & indicates the desire to find the location/address of the variable
+	- ![[CleanShot 2024-02-26 at 22.35.57.png]]
+	- you can see that all the characters are all just 1 byte away
+		- the numbers themselves aren't useful actual information, but it allows us to see what's going on underneath the hood
+- let's revert the code so that it prints out hi again
+- `string s = "HI!";`
+	- let's reveal that all this time...
+	- ! STRING IS ACTUALLY `char *s = "HI!"`
+		- we invented the datatype `string` to help learn
+			- string is an aray of characters
+			- they never thought to structure it like this when developing C
+- what is a string?
+	- it is an address of its 1st character
+	- when I claim that string never really existed, the data of a string is best expressed as `char *s`
+	- * means that s is the address of a char, and the first address of a char in a string
+- let's change `string` to `char *s` and remove our `include <cs50.h>`
+- ![[CleanShot 2024-02-26 at 22.39.34.png]]
+	- this is that raw, native C code without any training wheels/scaffolding
+	- just basic building blocks and primitives
+
+- why don't we use the & symbol?
+	- the & symbol tells you what the address of a variable...
+	- it might be more consistent to do `char *s = &"HI!";
+		- but this looks worse syntactically, but is a reasonable instinct, but the double quotes does that for you
+	- the C compiler, `clang` understands though intuitively to, when seeing double quotes around a sequence of characters:
+		- it wants to put the address of that first char in the variable for you
+- but when had a variable with `n` that we created, we have to distinguish `n` from the address with &, but the `""` takes care of that for you
+
+#### How did we invent 'string'?
+- remember when we tinkered with structures. custom data types, to represent a person?
+- recall we had a structure of a name & a number representing a person
+- we had the keyword "typedef"
+	- we used this to represent a person and a number to represent a person
+- typedef is the tool to do that!
+```c
+typedef struct
+{
+	string name;
+	string number;
+} person;
+```
+- let's say you can't/don't want to keep call integers `int`
+- `typedef int integer;`
+	- read this from right to left,
+	- give me a datatype `integer` of type `int`
+	- more commonly, you might see something like this
+		- C has no data type for a bytte
+		- no built in obvious way to rerpesent 8 bits
+		- you can use `uint8_t` to do this though...
+			- commit this to memory maybe?
+	- `typedef uint8_t BYTE;`
+		- this is an unsigned integer that uses 8 bits
+		- you *will* see this before long
+- what else is in `cs50.h`?
+	- `typedef char *string`
+		- so you never had to think about what a string was up until now!
+- another pair of examples perhaps?
+	- once everything is addressable with pointers, like using numeric addrsess to represent where thigns are in memory
+		- you can actually do something using them called "pointer arithmetic"
+	- we the programmers generally don't care what thes pecific values are, but we do care that they do exist
+	- if they do exist, we can do some arithmetic!
+		- add 1  to go to the next byte
+		- add 2 to go to the next byte
+		- add 3 to go to the next byte
+		- and so forth...
+	- ! pointer arithmetic: doing math on addresses
+- let's head back to VS Code and see some more of this in action:
+```
+
 
 
 - Treating cells like squares/pixels instead of the rectangles
