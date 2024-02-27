@@ -23,16 +23,36 @@
             "id": "d8656e6cbd574c66",
             "type": "leaf",
             "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "87e1d4af8af5459a",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "202402261921.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "24bbf16cc035a151",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -51,16 +71,6 @@
             "state": {
               "type": "recent-files",
               "state": {}
-            }
-          },
-          {
-            "id": "dd717881cbb01657",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical"
-              }
             }
           },
           {
@@ -85,22 +95,13 @@
               "type": "bookmarks",
               "state": {}
             }
-          },
-          {
-            "id": "5047c6e99d9a7764",
-            "type": "leaf",
-            "state": {
-              "type": "mk-path-view",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5c97885c79420b63",
@@ -110,35 +111,6 @@
         "id": "64047ca20a58d235",
         "type": "tabs",
         "children": [
-          {
-            "id": "8e784b8f618ebc24",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "202402261921.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "6741ef7c1fde3aa0",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "202402261921.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
           {
             "id": "382952e5aab1dd3c",
             "type": "leaf",
@@ -156,21 +128,39 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "202402261921.md"
+                "file": "Spaces/Home/CS50/CS50 Notes.md"
+              }
+            }
+          },
+          {
+            "id": "227dff5a76fb0af7",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "dd717881cbb01657",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
+      "homepage:Open homepage": false,
       "daily-notes:Open today's daily note": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "notion-like-tables:Create loom": false,
       "obsidian-day-planner:Timeline": false,
       "obsidian-statusbar-pomo:Start pomodoro": false,
@@ -181,14 +171,22 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "zk-prefixer:Create new unique note": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "d8656e6cbd574c66",
+  "active": "24bbf16cc035a151",
   "lastOpenFiles": [
-    "Pasted image 20240226192247.png",
+    "2024-02-25.md",
     "2024-02-26.md",
     "202402261921.md",
+    "Home.md",
+    "Excalidraw/Drawing 2024-02-26 21.50.55.excalidraw.md",
+    "Spaces/Home/CS50/CS50 Notes.md",
+    "Excalidraw",
+    "Spaces/Home/CS50/CS50.md",
+    "Pasted image 20240226192247.png",
     "Spaces/Home/Writing/TLOU/TLOU2.md",
     "Pasted image 20240225211011.png",
     "Pasted image 20240225211000.png",
@@ -197,12 +195,10 @@
     "Spaces/Home/Writing/TLOU/Rebuttals/Ellie's (lack of a) character arc & why the result is an unsatisfying story.md",
     "Spaces/Home/Writing/TLOU",
     "Spaces/Home/Writing/TLOU/Rebuttals",
-    "2024-02-25.md",
     "Untitled.md",
     "Spaces/Home/Philosophy/Objectivism.md",
     "202402242224.md",
     "Spaces/Home/Untitled.canvas",
-    "Spaces/Home/Untitled.md",
-    "Spaces/Home/CS50/CS50 Notes.md"
+    "Spaces/Home/Untitled.md"
   ]
 }

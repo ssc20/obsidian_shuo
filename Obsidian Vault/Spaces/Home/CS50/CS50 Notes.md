@@ -1,9 +1,18 @@
+---
+tags:
+  - cs50
+  - computerscience
+---
 
 ---
 
 # Week 4
 #cs50/memory
 ## Notes
+
+
+
+
 - Treating cells like squares/pixels instead of the rectangles
 - cs50.ly/art
 - instead of 0s and 1s, let's use colors

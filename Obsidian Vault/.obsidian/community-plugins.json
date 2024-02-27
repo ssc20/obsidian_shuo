@@ -1,5 +1,4 @@
 [
-  "table-editor-obsidian",
   "better-word-count",
   "notion-like-tables",
   "obsidian-day-planner",
@@ -21,6 +20,21 @@
   "obsidian-outliner",
   "obsidian-list-callouts",
   "obsidian-linter",
+  "obsidian-latex-suite",
   "mousewheel-image-zoom",
-  "omnisearch"
+  "omnisearch",
+  "obsidian-advanced-uri",
+  "obsidian-auto-link-title",
+  "obsidian-custom-frames",
+  "calendar",
+  "obsidian-dictionary-plugin",
+  "obsidian-excalidraw-plugin",
+  "google-calendar",
+  "homepage",
+  "obsidian-pandoc",
+  "obsidian-rollover-daily-todos",
+  "obsidian-spaced-repetition",
+  "obsidian-style-settings",
+  "obsidian-tracker",
+  "various-complements"
 ]
