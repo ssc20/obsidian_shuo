@@ -11,7 +11,37 @@ tags:
 ## Notes
 
 Mailbox example 
+- white one is labelled `p`
+- black one is labelled `n` (this is Carter's)
+- metaphorically, these mailboxes are supposed to represent what's going on
+- even though it's very weird syntax with & and \* it's still somewhat simple 
 
+`string s = "HI!"`
+- this is actually $H \ I \ ! \ 0$
+- if `H = 0x123 I = 0x124 ! = 0x125 \0 = 0x126`
+	- whether it's decimal or hexadecimal... all these numbers differ by only 1
+- when I declare `s` to be a string... what's going on in the actual pointer file?
+- ![[CleanShot 2024-02-26 at 22.26.00.png]]
+- so, to guess, intuitively, the array of chars... what should we put in the value of `s`?
+	- I would make a pointer  for `0x123`
+	- ![[CleanShot 2024-02-26 at 22.26.39.png]]
+- if `s` is a pointer to the location of the start of the string, then logically, 
+	- someone needs to keep track of the end of the string 
+	- who keeps track of that? the string itself, stopping at the `null & \0` character
+	- `string` is a pointer to the start of an array!
+	- you can use a `for` or a `while` loop to 
+	- ~ you can treat `s` as an arrow to point to the start of an array
+
+- ? Q:
+	- have pointers gotten larger?
+		- back in my day, it was 2 GB of memory/RAM...
+		- you can count as high as 4 billion values
+			- numbers positive and negative results in 2 billion
+			- the integers & pointers were only 4 bytes long, which is 32 bits long.
+		- & so no matter what, even if with more memory, you dealt with the restriction of 32 bit architecture
+		- modern systems now support 64 bits, which allow you to count crazy high
+
+let's now translate this to a bit of code now! assho
 
 
 
