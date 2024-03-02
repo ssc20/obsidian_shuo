@@ -84,6 +84,8 @@ if (t == NULL)
 - it's actually on me in C to manage memory myself
 	- after calling `malloc`, you better make sure you `free` it after finishing
 	- `free(t)`;
+	- ![[CleanShot 2024-03-01 at 21.04.58@2x.png]]
+	- 
 
 
 Mailbox example 
