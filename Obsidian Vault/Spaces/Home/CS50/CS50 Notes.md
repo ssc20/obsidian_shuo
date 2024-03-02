@@ -10,6 +10,27 @@ tags:
 #cs50/memory
 ## Notes
 
+to solve the issue of indexing a value in an address, and if you want to only change the value of one variable of multiple that may be assigned to that address' value
+(i.e. 0x123 (f[0], t[0]))
+
+- we require 2 functions
+	- `malloc`
+	- `free`
+	- there are more but will be discussed upon learning about data structures
+- these are included in `stdlib.h`
+- previously got in trouble by just copying addresses, let's avoid this!
+- ![[CleanShot 2024-03-01 at 19.05.57@2x.png]]
+- `char *t = malloc()`
+	- whether mac, windows, linux, this is:
+	- Please find me memory in the computer that i can use for my own purposes
+	- let's think of doing `malloc(strlen(s))`, but this might not be the best
+	- `malloc(strlen(s) + 1);` to include the `null` value that might be included
+
+
+
+
+
+
 Mailbox example 
 - white one is labelled `p`
 - black one is labelled `n` (this is Carter's)
