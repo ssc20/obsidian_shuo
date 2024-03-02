@@ -80,7 +80,10 @@ if (t == NULL)
 			- generally really big files consume lots & lots of memory
 - if humans who wrote that software be it Photoshop or something else, wrote *buggy code* and kept using `malloc` asking for more & more function:
 	- they never call the opposite function, `free`
-- 
+- computer might even crash! bad things happen when you run out of memory
+- it's actually on me in C to manage memory myself
+	- after calling `malloc`, you better make sure you `free` it after finishing
+	- `free(t)`;
 
 
 Mailbox example 
