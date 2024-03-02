@@ -74,6 +74,13 @@ if (t == NULL)
 	- Instead of above, we can use a fun function called `strcopy` 
 		- takes the destination as it's first argument, and the source as it's second
 		- `strcpy(t, s);`
+		- `free` is the opposite to `malloc`
+			- when you're done, you're supposed to give it back to windows/mac/linux
+			- have you ever used a computer for days on end, and maybe it's getting slower and slower?
+			- generally really big files consume lots & lots of memory
+- if humans who wrote that software be it Photoshop or something else, wrote *buggy code* and kept using `malloc` asking for more & more function:
+	- they never call the opposite function, `free`
+- 
 
 
 Mailbox example 
