@@ -140,6 +140,11 @@ x[2] = 33;
 ```
 - there's a 2nd more subtle bug:
 	- (it's not that the computer doesn't know where the integers end)
+	- ~ I didn't call `free`!
+		- anytime i call `malloc` , i must call `free`
+		- none of these bugs are obvious, and deploy this, be none the wiser
+- *valgrind* can help us with this!
+	- `valgrind ./memory`
 
 
 Mailbox example 
