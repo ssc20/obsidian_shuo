@@ -145,6 +145,8 @@ x[2] = 33;
 		- none of these bugs are obvious, and deploy this, be none the wiser
 - *valgrind* can help us with this!
 	- `valgrind ./memory`
+	- the output will look crazy, but *this* is *useful*
+		- notice at the top of this, it's indicated what version of *valgrind* you're using and what command we ran
 
 
 Mailbox example 
