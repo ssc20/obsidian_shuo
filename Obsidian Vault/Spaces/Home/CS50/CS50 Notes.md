@@ -147,6 +147,12 @@ x[2] = 33;
 	- `valgrind ./memory`
 	- the output will look crazy, but *this* is *useful*
 		- notice at the top of this, it's indicated what version of *valgrind* you're using and what command we ran
+		- `invalid write of size 4`
+		- ![[CleanShot 2024-03-01 at 21.43.47@2x.png]]
+		- "writing" means changing information, like setting a value or assigning it value
+			- this is useful here `memory.c:9`
+				- colon 9: this means line 
+				- 
 
 
 Mailbox example 
