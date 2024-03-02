@@ -55,7 +55,6 @@ to solve the issue of indexing a value in an address, and if you want to only ch
 		- `malloc` will keep track of how big the chunks of memory are
 		- although it's only returning the address of the first byte of memory, it will know that it used 4 bytes here and 4 bytes there
 			- avoid overlapping addresess to avoid corruption
-			- 
 
 
 
