@@ -39,7 +39,23 @@ to solve the issue of indexing a value in an address, and if you want to only ch
 - we should now see disparate `s` and `t`
 	- ![[CleanShot 2024-03-01 at 19.12.31@2x.png]]
 	- 'disparate'
-		- essentially different in kind; not allowing comparison 
+		> essentially different in kind; not allowing comparison 
+- s is now still lowercase, but T is now capitalized
+	- if what I had before where `s` is pointing at a chunk of memory, let's have `t` point at a different chunk
+	- ![[CleanShot 2024-03-01 at 19.18.13@2x.png]]
+	- allowing us to copy all values, including `\0`
+		- `malloc` takes 1 argument, the number of bytes to find for you
+		- what value is `malloc` returning?
+			- it's returning a chunk of memory conceptually
+			- `malloc` is returning the address of *that* chunk of memory, not the last address
+				- i.e. the new chunk of memory designated by `malloc`
+	- here's a difference of string
+		- the new chunk of memory (without `malloc` ) is not magically terminated with `null` 
+		- this had to be done with the `for` loop
+		- `malloc` will keep track of how big the chunks of memory are
+		- although it's only returning the address of the first byte of memory, it will know that it used 4 bytes here and 4 bytes there
+			- avoid overlapping addresess to avoid corruption
+			- 
 
 
 
