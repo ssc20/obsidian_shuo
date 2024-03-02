@@ -54,10 +54,26 @@ to solve the issue of indexing a value in an address, and if you want to only ch
 		- this had to be done with the `for` loop
 		- `malloc` will keep track of how big the chunks of memory are
 		- although it's only returning the address of the first byte of memory, it will know that it used 4 bytes here and 4 bytes there
-			- avoid overlapping addresess to avoid corruption
-
-
-
+			- avoid overlapping addresses to avoid corruption
+			- you must also remember or figure out how many bytes by putting the `null` character there yourself
+		- let's harden the code a little bit more as follows, we *can* do this a bit better
+	- if something goes wrong and i'm out of memory (old computer, something 3 billion chars long):
+```c
+if (t == NULL)
+{
+	return 1;
+}
+```
+- *if `t` equals a special symbol called `NULL` (2 L's):*
+	- return 1, 2... anything that will abort the program early (any value != 0)
+- all this time, when using `get_string`, if you read the manual, with a crazy long string...
+	- if `get_string == NULL` exit the program immediately 
+- there's 1 other improvement we can make here; (most of prev. work is error checking to not treat `s` as invalid when it isn't)
+- it turns out we don't need to design a loop to copy a string, no need to reinvent the wheel!
+	- ![[CleanShot 2024-03-01 at 19.30.22@2x.png]]
+	- Instead of above, we can use a fun function called `strcopy` 
+		- takes the destination as it's first argument, and the source as it's second
+		- `strcpy(t, s);`
 
 
 Mailbox example 
