@@ -82,10 +82,64 @@ if (t == NULL)
 	- they never call the opposite function, `free`
 - computer might even crash! bad things happen when you run out of memory
 - it's actually on me in C to manage memory myself
-	- after calling `malloc`, you better make sure you `free` it after finishing
+	- after calling `malloc`, you better make sure you `free` it after finishing'
+	- make sure you free *after* finishing your function
 	- `free(t)`;
 	- ![[CleanShot 2024-03-01 at 21.04.58@2x.png]]
-	- 
+	- there is a slight asymmetry that exists:
+		- even through `get_string` is still allocating memory, it still uses `malloc`
+			- you should not and do not free memory that `get_string` returns to you
+			- this is because functions from the `cs50.h` library manage memory for you
+			- this training wheel is over after this week!
+- `NULL`: it is just an address, and it is the address `-`
+	- `NUL` is the terminating character in a string
+	- `NULL` means this is the address `0`
+	- the address `0` is a special sentinel value to signify error
+		- this is 1 byte out of a billion to have a special symbol to indicate something has gone wrong
+- introducing a tool that makes things easier as you make bugs
+	- invariably, without having to raise your hand or using the duck...
+- INTRO
+- 'valgrind' #valgrind #debugging
+
+## valgrind
+- creating a program called `memory.c` that is buggy, but not **obviously** buggy
+- we need `<stdlib.h>` for `malloc`
+- declare main without command line arguments
+- instead of declaring an `int x`, let's make `int *x = malloc(4)`
+	- (give me the address of an integer `x` )
+	- let's be a bit crazy in this by manually allocating memory myself
+	- with `malloc` i can take control of this access
+	- *this is a bit stupid; shouldn't assume an int is always 4 bytes*
+		- we can use `malloc(sizeof(int));`
+		- so you don't need to assume `4`, you will always get the correct number of bytes
+		- we can even try this...
+		- `int x[4]` OR ACTUALLY
+		- `int *x = malloc(3 * sizeof(int));`
+			- this effectively makes `*x` an array; this is kind of deliberate because if an array = contiguous memory, and `malloc` returns to you a chunk of contiguous memory:
+				- you can treat what comes back from `malloc` as an array
+				- we're treating chunks of allocatable memory as arrays of "chars" (like with strings)
+		- let's do something arbitrary here:
+```c
+int main(void)
+{
+	int *x = malloc(3 * size of(int));
+	x[1] = 72;
+	x[2] = 73;
+	x[3] = 33;
+	// this spells out "hi" in ASCII
+}
+```
+- this program actually runs! 
+	- ?  but what is the bug that is preventing any kind of output?
+	- the computer doesn't know when the array technically ends
+	- given that we have told `malloc` to allocate 3 int-sized chunks, we should actually be starting from:
+```c
+x[0] = 72;
+x[1] = 73;
+x[2] = 33;
+```
+- there's a 2nd more subtle bug:
+	- (it's not that the computer doesn't know where the integers end)
 
 
 Mailbox example 
