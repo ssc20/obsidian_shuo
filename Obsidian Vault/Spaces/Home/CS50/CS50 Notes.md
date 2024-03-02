@@ -25,7 +25,21 @@ to solve the issue of indexing a value in an address, and if you want to only ch
 	- Please find me memory in the computer that i can use for my own purposes
 	- let's think of doing `malloc(strlen(s))`, but this might not be the best
 	- `malloc(strlen(s) + 1);` to include the `null` value that might be included
-
+- ![[CleanShot 2024-03-01 at 19.08.20@2x.png]]
+- within the context of design, this seems a bit buggy
+	- it is inefficient to keep asking if `i < strlen(s)
+	- could improve by giving a variable to `n = strlen(s); i < n;`
+		- but *this* is ALSO buggy; this does not fully copy `s` into `t`
+		- we are still forgetting however, about the `\0`
+	- you could do:
+		- `for (int i = 0, n = strlen(s); i <= n; i++`
+	- or (but not recommended because of inefficiencies/stupid)
+		- `t[3] = '\0';
+		- `t[strlen(s)] = '\0';`
+- we should now see disparate `s` and `t`
+	- ![[CleanShot 2024-03-01 at 19.12.31@2x.png]]
+	- 'disparate'
+		- essentially different in kind; not allowing comparison 
 
 
 
