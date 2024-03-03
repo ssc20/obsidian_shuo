@@ -10,6 +10,27 @@ tags:
 #cs50/memory
 ## Notes
 
+### Operators
+#### `*` - the dereference operator
+- when used in a declaration, `*` is used to declare a pointer variable
+	- for example: 
+		- `int *ptr;` declares a variable `ptr` as a pointer to an integer
+	- when used in an expression, it acts as a dereference operator; it is used to access the value stored in the location pointed to by the pointer
+		- for example:
+			- if `ptr` is a pointer to an integer, `*ptr` gives the integer value stored at that location
+#### `&` - The Address-of Operator:
+- used to obtain the address of a variable
+	- for example:
+		- if `var` is an integer variable, `&var` gives the memory address where `var` is stored
+		- this address can be assigned to a pointer variable
+	- essentially: it is used to get the memory address of a variable to be used with pointers
+
+```c
+int value = 5;
+int *ptr = &value; // & is used to get the address of value
+printf("%d\n", *ptr); // * is used to dereference ptr, i.e., access the value at the address stored in ptr
+```
+
 ### scanf
 - in CS50, we have created functions like `get_int` to simplify the act of getting input from the user
 - `scanf` is a built-in function that can get user input
