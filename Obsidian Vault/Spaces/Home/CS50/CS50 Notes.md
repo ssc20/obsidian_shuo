@@ -10,7 +10,103 @@ tags:
 #cs50/memory
 ## Notes
 
-We can modify the previous code as follows:
+### Swap
+- In the real world, a common need in programming is to swap 2 values
+- naturally, it's hard to swap 2 variables without a temporary holding space
+- in practice, you can use this example code and follow to see it in action:
+```c
+#include stdio.h>
+
+void swap(int a, int b);
+
+int main(void)
+{
+	int x = 1;
+	int y = 2;
+
+	printf("x is %i, y is %i\n", x, y);
+	swap(x, y);
+	printf("x is %i, y is %i\n", x, y);
+}
+
+void swap(int a, int b)
+{
+	int tmp = a;
+	a = b;
+	b = tmp;
+}
+```
+- notice that while this code runs -- it does not work! the values, even after being sent to `swap` function, do not swap; why?
+- when you pass values to a function, you are only providing copies
+- in previous weeks, we discussed the concept of *scope*; the values of `x` and `y` created in the curly `{}` braces of the `main` function only have the scope of the `main` function
+- consider the following image:
+	- ![[CleanShot 2024-03-03 at 15.15.33@2x.png]]
+	- notice that *global* variables, which we haven't used in this course frequently, live in one place in memory
+	- various functions are stored in the `stack` in another area of memory
+- now consider the following image:
+	- ![[CleanShot 2024-03-03 at 15.16.15@2x.png]]
+	- notice that `main` and `swap` have two separate *frames* or areas of memory; therefore, we cannot simply pass the values from one function to another to change them
+	- 
+- modify your code as follows to make it work properly:
+```c
+#include <stdio.h>
+
+void swap(int *a, int *b);
+
+int main(void)
+{
+	int x = 1;
+	int y = 2;
+
+	printf("x is %i, y is %i\n", x, y);
+	swap(&x, &y);
+	printf("x is %i, y is %i\n", x, y);
+}
+
+void swap(int *a, int *b)
+{
+	int tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+```
+- notice that variables are not **passed by value** but by ***reference***.
+	- that is: the addresses of `a` and `b` are provided to the function; therefore, the `swap` function can know where to make changes to the actual `a` and `b` from the main function
+	- you can visualize this as follows:
+		- ![[CleanShot 2024-03-03 at 15.19.12@2x.png]]
+### Overflow
+- a *heap overflow* is when you overflow the heap, touching areas of memory you are not supposed to
+- a *stack overflow* is when too many functions are called, overflowing the amount of memory available
+- both of these are considered *buffer overflows*
+
+### Garbage Values
+- when you ask compiler for a block of memory, there is no guarantee that this memory will be empty
+- it's very possible that this memory that you allocated was prev. utilized by the computer
+	- accordingly, you may see *junk* or *garbage values*; this is a result of you getting a block of memory but not initalizing it
+	- for example, consider the following code for `garbage.c`:
+```c
+#include <stdio.h>
+
+int main(void)
+{
+	int scores[1024];
+	for (int i = 0; i < 1024; i++)
+	{
+		printf("%i\n", scores[i]);
+	}
+}
+```
+- notice that running this code will allocate `1024` locations in memory for your array
+	- however, the `for` loop will likely show that not all values therein are `0`
+	- it's always best practice to be aware of the potential for garbage values when you do not initialize blocks of memory to some other value like zero or otherwise
+- Then, we watched a [video from Stanford University](https://www.youtube.com/watch?v=5VnDaHBi8dM) that helped us visualize and understand pointers
+
+
+
+### General
+We can modify the previous code as follows, and note that `valgrind` will result in no memory leaks
+
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
