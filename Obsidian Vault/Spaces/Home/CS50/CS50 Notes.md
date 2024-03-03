@@ -10,6 +10,21 @@ tags:
 #cs50/memory
 ## Notes
 
+We can modify the previous code as follows:
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int *x = malloc(3 * sizeof(int));
+	x[0] = 72;
+	x[1] = 73;
+	x[2] = 33;
+	free(x);
+}
+```
+
 to solve the issue of indexing a value in an address, and if you want to only change the value of one variable of multiple that may be assigned to that address' value
 (i.e. 0x123 (f[0], t[0]))
 

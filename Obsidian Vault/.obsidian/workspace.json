@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Home.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -63,11 +63,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5c97885c79420b63",
@@ -94,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Home.md"
+                "file": "Spaces/Home/CS50/CS50 Notes.md"
               }
             }
           },
@@ -122,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Home.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Home.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,12 +182,12 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "d8656e6cbd574c66",
+  "active": "6795caafc3258cdd",
   "lastOpenFiles": [
+    "Home.md",
     "Spaces/Home/CS50/CS50 Notes.md",
     "2024-02-29.md",
     "Spaces/Home/Writing/TLOU/TLOU2.md",
-    "Home.md",
     "CleanShot 2024-03-01 at 21.43.47@2x.png",
     "CleanShot 2024-03-01 at 21.04.58@2x.png",
     "CleanShot 2024-03-01 at 19.30.22@2x.png",
