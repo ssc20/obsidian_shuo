@@ -27,6 +27,7 @@ int main(void)
 ```
 - notice that the value of `x` is stored at the location of `x` in the line `scanf("%i", &x)`
 - however, attempting to reimplement `get_string` is not easy; consider the following:
+
 ```c
 #include <stdio.h>
 
@@ -34,8 +35,134 @@ int main(void)
 {
 	char *s;
 	printf("s: ");
+	scanf("%s", s);
+	printf("s: %s\n", s);
 }
 ```
+- notice that no `&` is required because *strings are special*
+	- still, this program will not function
+	- nowhere in this program do we allocate the amount of memory required for our string
+	- we do *not* know how long of a string may be inputted to the user
+- Further, your code could be modified as follows: (however, we have to pre-allocate a certain amount of memory for a string)
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	char *s = malloc(4);
+	if (s == NULL)
+	{
+		return 1;
+	}
+	printf("s: ");
+	scanf("%s", s);
+	printf("s: %s\n", s);
+	free(s);
+	return 0;
+}
+```
+- notice that if a string that is 6 bytes is provided you *might* get an error
+- simplifying our code as follows we can further understand this essential problem of pre-allocation:
+```c
+#include <stdio.h>
+
+int main(void)
+{
+	char s[4];
+	printf("s: ");
+	scanf("%s", s);
+	printf("s: %s\n", s);
+}
+```
+notice that if we pre-allocate an array of size `4`, we can type `cat` and the program functions
+- ! however, a string larger than this *could* create an error
+
+- sometimes, the compiler or the system running it may allocate more memory than we indicate
+	- fundamentally, though, the above code is unsafe;
+	- ! We cannot trust that the user will input a string that fits into our pre-allocated memory
+
+### File I/O
+- You can read from and manipulate files; while this topic will be discussed further in a future week, consider the following code for `phonebook.c`:
+```c
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	// Open CSV file
+	FILE *file = fopen("phonebook.csv", "a");
+
+	// Get name and number
+	char *name = get_string("Name: ");
+	char *number = get_string("Number :");
+
+	// Print to file
+	fprintf(file, "%s,%s\n", name, number);
+
+	// Close file
+	fclose(file);
+}
+```
+- notice that this code users *pointers* to access the file
+- you can create a file called `phonebook.csv` in advance of running the above code 
+	- after running this above program and inputting a name & phone number, you will notice that this data persists in your CSV file
+- if we want to ensure that `phonebook.csv` exists prior to running the program, we can modify our code as follows:
+```c
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	// Open CSV file
+	FILE *file = fopen("phonebook.csv", a);
+	if (!file)
+	{
+		return 1;
+	}
+
+	// Get name and number
+	char *name = get_string("Name: ");
+	char *number = get_string("Number: ");
+
+	// Print to file
+	fprintf(file, "%s,%s\n", name, number);
+
+	// Close file
+	fclose(file);
+}
+
+```
+- notice that this program protects against a `NULL` pointer by invoking `return 1`
+- We can also implement our own copy program by typing `code cp.c` and writing code as follows:
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+typedef uint8_t BYTE;
+
+int main(int argc, char *argv[])
+{
+	FILE *src = fopen(argv[1], "rb");
+	FILE *dst = fopen(argv[2], "wb");
+
+	BYTE b;
+
+	while (fread(&b, sizeof(b), 1, src) !=0)
+	{
+		fwrite(&b, sizeof(b), 1, dst);
+	}
+
+	fclose(dst);
+	fclose(src);
+}
+```
+- notice that this file creates our own data type called a `BYTE` that is the size of a `uint8_t`
+	- then, the file reads a `BYTE` and writes it to a file
+- BMPs are also assortments of data that we can examine and manipulate
+- This week, you will be doing just that in your problem sets!
 ### Swap
 - In the real world, a common need in programming is to swap 2 values
 - naturally, it's hard to swap 2 variables without a temporary holding space
