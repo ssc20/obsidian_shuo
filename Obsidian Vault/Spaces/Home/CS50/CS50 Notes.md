@@ -10,6 +10,32 @@ tags:
 #cs50/memory
 ## Notes
 
+### scanf
+- in CS50, we have created functions like `get_int` to simplify the act of getting input from the user
+- `scanf` is a built-in function that can get user input
+- we can reimplement `get_int` rather easily using `scanf` as follows:
+```c
+#include <stdio.h>
+
+int main(void)
+{
+	int x;
+	printf("x: ");
+	scanf("%i", &x);
+	printf("x: %i\n", x);
+}
+```
+- notice that the value of `x` is stored at the location of `x` in the line `scanf("%i", &x)`
+- however, attempting to reimplement `get_string` is not easy; consider the following:
+```c
+#include <stdio.h>
+
+int main(void)
+{
+	char *s;
+	printf("s: ");
+}
+```
 ### Swap
 - In the real world, a common need in programming is to swap 2 values
 - naturally, it's hard to swap 2 variables without a temporary holding space
