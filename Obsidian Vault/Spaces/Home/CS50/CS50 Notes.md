@@ -61,9 +61,9 @@ int main(void)
 }
 ```
 - notice that no `&` is required because *strings are special*
-	- still, this program will not function
+	- ! this program will not function
 	- nowhere in this program do we allocate the amount of memory required for our string
-	- we do *not* know how long of a string may be inputted to the user
+	- we do *not* know how long of a string may be inputted by the user
 - Further, your code could be modified as follows: (however, we have to pre-allocate a certain amount of memory for a string)
 ```c
 #include <stdio.h>
