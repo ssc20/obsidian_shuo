@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-03-03.md",
+                "file": "2024-02-29.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5c97885c79420b63",
@@ -108,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-03-03.md"
+                "file": "2024-02-29.md"
               }
             }
           },
@@ -136,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-03-03.md",
+                "file": "2024-02-29.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-03-03.md",
+                "file": "2024-02-29.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,14 +195,14 @@
   },
   "active": "04b25691034e948b",
   "lastOpenFiles": [
-    "Spaces/Home/CS50/CS50 Notes.md",
     "2024-03-03.md",
+    "Spaces/Home/Writing/TLOU/TLOU2.md",
+    "Spaces/Home/CS50/CS50 Notes.md",
     "CleanShot 2024-03-03 at 15.19.12@2x.png",
     "CleanShot 2024-03-03 at 15.16.15@2x.png",
     "CleanShot 2024-03-03 at 15.15.33@2x.png",
     "Home.md",
     "2024-02-29.md",
-    "Spaces/Home/Writing/TLOU/TLOU2.md",
     "CleanShot 2024-03-01 at 21.43.47@2x.png",
     "CleanShot 2024-03-01 at 21.04.58@2x.png",
     "CleanShot 2024-03-01 at 19.30.22@2x.png",
