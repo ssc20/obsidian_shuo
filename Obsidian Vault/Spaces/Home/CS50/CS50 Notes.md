@@ -12,6 +12,48 @@ tags:
 #cs50/memory
 
 ## Shorts
+
+### Pointers
+- probably the most difficult topic in CS50
+- it's true that pointers let you screw badly with variables and data, causing programs to crash
+- let's you pass data between functions in ways you're usually unable to do
+- train discipline to make your programs that much better
+
+- Pointers provide an alternative way to pass data between functions
+	- recall that up to this point, we have all passed all data **by value**, with one exception
+	- when we pass data by value, we only pass a copy of that data
+- If we use pointers instead, we have the power to pass the actual variable itself
+	- that means that a change that is made in one function *can* impact what happens in a different function
+	- previously, this wasn't possible!
+- if you've ever tried swap the 2 values of a variable, this never really was possible (see `swap` function)
+	- variables not changed in the original function or the *caller*
+	- with pointers, the function can actually *do something* to the data
+- Before we dive into what pointers are and how to work with them, it's worth going back to basics and have a look at our computer's memory
+- Every file on your computer lives on your disk drive, be it a hard disk drive or a solid state drive
+- Disk drives are just storage space; we can't directly work there
+	- manipulation and use of data can only take place in RAM, so we have to move data there
+- Memory. is basically a huge array of 8-bit wide bytes
+	- 512 MB, 1 GB, 2 GB, 4GB....
+	- where all the *volatile* data exists, what can be changed
+	- turn computer off? All RAM is destroyed, necessitating the need for hard disks
+- when we move things into memory, it takes up a certain amount of space
+
+| Data Type | Size (in bytes) |
+| --------- | --------------- |
+| int       | 4               |
+| char      | 1               |
+| float     | 4               |
+| double    | 8               |
+| strings   | ?               |
+- every float gets 4 bytes unless it's a double precision (after the decimal points without losing precision, takes up 8 bytes)
+- *long long*, really big integers, take up 8 bytes of memory
+- strings? who knows
+- back to this idea of memory as a big array of byte-sized cells
+- recall from our discussion of arrays that they not only are useful for storage of info, but also for so-called **random access**
+	- we can access individual elements of the array by indicating which index location we want
+	- similarly, each location in memory has an **address**
+- ![[CleanShot 2024-03-05 at 21.54.26.png]]
+	- this is the first 20 bytes of memory
 ### Hexadecimal 
 - (as if we needed another base number scheme...)
 - most western cultures the decimal system (base-10) to represent numeric data
@@ -28,7 +70,47 @@ tags:
 - as I just said, each hex digit corresponds to a unique arrangement of binary digits.
 	- ![[CleanShot 2024-03-05 at 21.36.39.png]]
 	- if you're looking at this chart, you can already see a small bit of a ambiguity problem
-		- binary column vs hexadecimal, for example, 0
+		- binary column vs hexadecimal, for example, 0 means the same... right? 
+			- other than the fact the columns are differently named
+		- generally when expressing hexadecimal numbers we represent them with `0x`
+			- this just means what we're about to start parsing that it's a hexadecimal base number
+			- ofc letters are a good indicator too
+- just like binary has place values (1, 2, 4, 8...) and decimal does too (1, 10, 100, 1000...), so does hexadecimal 
+	- `3 9 7 != 0x397`
+	- 3 is the 256th place ($16^2$)
+	- 9 is the 16th place ($16^1$)
+	- 7 is the 1th place ($16^0$)
+	- as opposed to the hundreds, tens, and ones, places
+	- `0xADC`
+		- $16^2 = A$
+		- $16^1 = D$
+		- $16^0 = C$
+- to convert a binary number to hexadecimal, group 4 binary digits (bits) together from right to left
+	- pad the leftmost group with extra 0 bits at the front if necessary
+- then use the chart a few slides back or your memory to convert those bits to something a bit more concise
+- say we have a large binary number like so:
+	- ![[CleanShot 2024-03-05 at 21.43.22.png]]
+	- ? we still don't have a good sense of what this corresponds to in decimal, maybe another way?
+		- conversion process:
+			- group these into groups of 4, there are a total of *32 digits*
+			- we can get a clean break here of 8 groups of 4
+			- we'll start building our number from **the right to the left**
+			- `1101` 
+				- $2^3 = 1$
+				- $2^2 = 1$
+				- $2^1 = 0$
+				- $2^0 = 1$
+				- $8 + 4 + 1 = 13$ ; the hex equivalent : $D$
+			- `0011` = 3
+			- `1001` = 9 
+			- `1011` = B
+			- `0010` = 2
+			- `1010` = A
+			- `0110` = 6
+			- `0100` = 4
+			- $\therefore$ the number in hexadecimal is `0x46A2B93D`
+	- and remember this is not necessarily for doing math; just for the sake of easier representation 
+	- useful skill to represent and understand addresses and ways of manipulating data
 
 ## Notes
 
