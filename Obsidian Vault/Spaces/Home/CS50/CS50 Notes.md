@@ -6,8 +6,30 @@ tags:
 
 ---
 
+
+
 # Week 4
 #cs50/memory
+
+## Shorts
+### Hexadecimal 
+- (as if we needed another base number scheme...)
+- most western cultures the decimal system (base-10) to represent numeric data
+- computers use the binary system, *base 2* to represent numeric (and indeed all data)
+	- 0s and 1s motherfucker
+- as computer scientists, it's useful to be able to express data the same way the computer does
+- the problem of course is that trying to parse a huge chain of 0s and 1s can be quite difficult
+
+- the **hexadecimal** system, aka *base-16* is a much more concise way to express the data on a computer's system
+	- `0 1 2 3 4 5 6 7 8 9 A B C D E F`
+- hexadecimal makes this mapping easy because a group of 4 binary digits (*bits*) is able to have 16 different combinations 
+	- each of those combinations maps to a single hexadecimal digit
+	- $2 ^4$
+- as I just said, each hex digit corresponds to a unique arrangement of binary digits.
+	- ![[CleanShot 2024-03-05 at 21.36.39.png]]
+	- if you're looking at this chart, you can already see a small bit of a ambiguity problem
+		- binary column vs hexadecimal, for example, 0
+
 ## Notes
 
 ### Operators
