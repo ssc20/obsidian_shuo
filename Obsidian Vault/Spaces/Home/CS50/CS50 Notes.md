@@ -53,7 +53,129 @@ tags:
 	- we can access individual elements of the array by indicating which index location we want
 	- similarly, each location in memory has an **address**
 - ![[CleanShot 2024-03-05 at 21.54.26.png]]
-	- this is the first 20 bytes of memory
+	- this is the first 20 bytes of memory (counting from 0)
+	- ![[CleanShot 2024-03-05 at 21.58.09.png]]
+	- when I declare variables and when I start to work with them, the system sets aside space in memory for me
+	- `char c = 'H';` chooses byte at address 4
+	- `int speedlimit = 65;` chooses 4 bytes at 8-11
+	- ![[CleanShot 2024-03-05 at 21.59.08.png]]
+	- technically, remember that this is an abstraction; it's actually storing this all in binary
+	- int's even get split into 4 1 byte chunks! and this isn't entirely true because of *endianness*
+		- *little and big endianness*
+		- ![[CleanShot 2024-03-05 at 21.59.57.png]]
+		- this is how numbers are represented on every system (and let's just *believe* this is true xd)
+		- also seems a bit random system didn't give bytes 5, 6, 7, to give the integer
+			- this is probably a good move on the computer's part
+		- though it will do this now if we need this: `string surname = "Lloyd";`
+			- each character needs 1 space in the array
+			- and remember that `\0` character!
+			- ![[CleanShot 2024-03-05 at 22.01.00.png]]
+			- this arrangement might be random, but it is how systems generally do this
+			- these 3 lines of codes will be what my memory might look like
+			- in memory addresses, we generally talk about this in hexadecimal notation
+			- ![[CleanShot 2024-03-05 at 22.01.30.png]]
+	- ! POINTERS ARE JUST ADDRESSES
+		- Pointers are just addresses to locations where values in variables live
+	- another thing I liek to do is diagrams that represent visually wha'ts happening in lines of code
+		- esepcially helpful in dynamic memory allocations
+	- as we start to work with pointers, just keep this image in mind;
+	- ![[CleanShot 2024-03-05 at 22.02.41.png]]
+	- Green box = int (in this diagramming system)
+	- if `k` = 5 || `int k; k = 5;`
+	- however for `int* pk;`
+		- ![[CleanShot 2024-03-05 at 22.03.50.png]]
+		- color the `pk` box *greenish* to dictate that it's related to an integer, but not quite...
+		- it's capable of holding `int *`, whatever that is
+		- `pk = &k;` and this happens:
+		- ![[CleanShot 2024-03-05 at 22.04.39.png]]
+		- all I'm doing is saying with the `&` character, that the address is what I'll be putting in `pk`
+		- `pk` gives us the information to find the value of `k` in memory
+		- ![[CleanShot 2024-03-05 at 22.05.09.png]]
+		- once we know where `k` lives, we can work with the data in *its* location
+- A **pointer**, then, is a data item whose
+	- *value* is a memory address
+	- *type* describes the data located at that memory address
+- as such, pointers allow data structures and/or variables to be shared among functions
+- Pointers make a computer environment more like the real world
+	- analogy: if i have a notebook full of notes, and I want you a function to update these notes
+		- before, you'll take my notebook, you'll xerox copy every page in my notebook, outdate everything wrong, then pass back a replica with the changes made
+		- then i have to take everything and integrate it into my notebook
+		- wouldn't it be easier to just have these changes made directly?
+		- $ that's what **pointers allow us to do!**
+- the simplest pointer available to us in C is the `NULL` pointer
+	- as you might expect, this pointer points to nothing (a fact which can actually come in handy!)
+	- when you create a pointer and you don't set its value immediately, you should **always** set the value of the pointer to NULL
+	- you can check whether a point is *NULL* using the equality operator (`== )
+- Another easy way to create a pointer is to simply **extract** the address of an already existing variable
+	- we can do this with the address extraction operator (`&`)
+- if $x$ is an `int`-type variable, then `&x` is a pointer-to-`int` whose value is the address of `x`
+	- (so `int *a = &x)
+- if `arr` is an array of `doubles`, then `&arr[i]` is a pointer-`double` whose value is the address of the `i`$^(th)$ element of `arr`
+	- an array's name, then, is actually just a pointer to its first element - you've been working with pointers all along!
+- remember the example of variable scope?
+	- there was a function called `set_int` and `set_array`; what are the values printed out at the end of the program?
+	- the call to `set_int` does effectively nothing, while `set_array` actually did make a change
+		- reason being that an array's name is actually just a pointer; while making the concept of pointers less intimidating
+		- when you passed an array as a parameter/argument to a function, the value changed for *callee* and *caller*
+		- pointer = first element of an array
+- The main purpose of a pointer is to allow us to modify or inspect the location to which it points
+	- we do this by **dereferencing** the pointer
+		- this means to go to the reference and change the value there
+- if we have a pointer-to-`char` called `pc` then `*pc` is the data that lives at the memory address stored inside the variable `pc`
+	- e.g. `*pc = D` will change whatever was previously at `pc` to `D`
+- used in this context, `*` is known as the **dereference operator**
+	- `*` was previously used in a different context to represent a data type
+	- now we see it is used to access the data at a location
+	- (why pointers have this mythos, it's a syntax problem)
+	- `*` is used as a type-name and the dereference operator, and 1 other thing
+- it "goes" to the reference and accesses the data at that memory location, allowing you to manipulate it at will
+- This is just like visiting your neighbor; having their address isn't enough. 
+	- you need to **go to** the address and only then can you interact with them
+- Can you guess what might happen if we try to dereference a pointer whose value is `NULL`?
+	- **Segmentation fault**.... probably?
+	- if you don't set a value to something meaningful, like a pointer... didn't I recommend this?
+	- $ Surprisingly, this is actually good behaviour! It defends against accidental dangerous manipulation of unknown pointers
+		- that's why we recommend you set your pointers to `NULL` immediately if you aren't setting them to a known, desired value
+		- probably better for your program to crash, then having other functions/programs run into issues
+- `int* p;`
+	- the value of `p` is an address
+	- we can dereference `p` with the `*` operator
+		- note that the syntax above says that `int*` is the data-type
+		- we *can* dereference 
+	- if we do, what we'll find at that location is an `int` at that memory location
+- one more annoying thing with those `*`s
+	- they're an important part of both the type name **and** the variable name
+	- best illustrated with this example:
+	- `int* px, py, pz;`
+		- get a pointer only for `px`
+- if we want pointers for all:
+	- `int* pa, *pb, *pc;`
+		- you probably will never do this though since you'll omit a star by accident, likely
+		- pointers with `*`s though makes it hard
+		- pretty common to make mistakes here because of the syntax
+- so how large is a string?
+	- there is no data-type called `string`; this is what was created in cs50.h
+	- it's really an alias for `char *`, and the size there is 4 or 8
+	- ![[CleanShot 2024-03-05 at 22.20.42.png]]
+	- what is the size of bytes in a string? 4 or 8
+	- if youare using cs50 IDE, it's 8
+		- every address in memory 64-bit long
+	- if you're using a 32-bit machine, it means every address is 32 bits long
+- really any data type can be 4 or 8 bytes!
+- ![[CleanShot 2024-03-05 at 22.21.34.png]]
+	- what happens now if `*pk = 35;`
+		- the value of whatever is pointed to at `*pk` is changed to 35
+		- `*` is dereference operator here, so this is what effectively happens here
+		- ![[CleanShot 2024-03-05 at 22.22.38.png]]
+		- (I think this makes sense, we probably declared previously that `*pk = 5`)
+		- syntactically equal to `k = 35;`
+	- one more!
+	- `int m;`
+		- ![[CleanShot 2024-03-05 at 22.23.40.png]]
+		- (this probably changes `pk` to **point** to the address, and thus value of `m`, so 4)
+			- `&` is the address of a variable name
+			- `pk` gets the address of m, points to `m` now
+			  
 ### Hexadecimal 
 - (as if we needed another base number scheme...)
 - most western cultures the decimal system (base-10) to represent numeric data
