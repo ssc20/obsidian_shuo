@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b50170702ea5d6f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -107,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           },
@@ -135,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -193,15 +205,16 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "04b25691034e948b",
+  "active": "b50170702ea5d6f7",
   "lastOpenFiles": [
+    "Spaces/Home/CS50/CS50 Notes.md",
+    "conflict-files-obsidian-git.md",
     "CleanShot 2024-03-05 at 21.54.26.png",
     "CleanShot 2024-03-05 at 21.43.22.png",
     "CleanShot 2024-03-05 at 21.36.39.png",
     "2024-02-29.md",
     "2024-03-03.md",
     "Spaces/Home/Writing/TLOU/TLOU2.md",
-    "Spaces/Home/CS50/CS50 Notes.md",
     "CleanShot 2024-03-03 at 15.19.12@2x.png",
     "CleanShot 2024-03-03 at 15.16.15@2x.png",
     "CleanShot 2024-03-03 at 15.15.33@2x.png",
@@ -209,9 +222,7 @@
     "CleanShot 2024-03-01 at 21.43.47@2x.png",
     "CleanShot 2024-03-01 at 21.04.58@2x.png",
     "CleanShot 2024-03-01 at 19.30.22@2x.png",
-    "conflict-files-obsidian-git.md",
     "CleanShot 2024-03-01 at 19.18.13@2x.png",
-    "CleanShot 2024-03-01 at 19.12.31@2x.png",
     "2024-02-25.md",
     "2024-02-26.md",
     "202402261921.md",
