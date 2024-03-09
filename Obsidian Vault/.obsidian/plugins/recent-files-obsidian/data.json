@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Home",
+      "path": "Home.md"
+    },
+    {
       "basename": "CS50 Notes",
       "path": "Spaces/Home/CS50/CS50 Notes.md"
     },
@@ -23,10 +27,6 @@
     {
       "basename": "TLOU2",
       "path": "Spaces/Home/Writing/TLOU/TLOU2.md"
-    },
-    {
-      "basename": "Home",
-      "path": "Home.md"
     },
     {
       "basename": "2024-02-25",

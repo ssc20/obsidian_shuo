@@ -1,9 +1,10 @@
 {
-  "accentColor": "#7c6bff",
+  "accentColor": "",
   "baseFontSize": 15,
-  "cssTheme": "Dracula Official",
+  "cssTheme": "Dracula for Obsidian",
   "interfaceFontFamily": "",
   "textFontFamily": "",
   "monospaceFontFamily": "JetBrains Mono",
-  "translucency": true
+  "translucency": true,
+  "theme": "obsidian"
 }

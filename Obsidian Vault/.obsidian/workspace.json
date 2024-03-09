@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b72e920c4d15fc5a",
+        "id": "6ab2e0523148ebc8",
         "type": "tabs",
         "children": [
           {
-            "id": "33e8136075a72a3e",
+            "id": "6f07b4fb83a234fc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Home.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,8 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5c97885c79420b63",
@@ -95,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md"
+                "file": "Home.md"
               }
             }
           },
@@ -123,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Home.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +179,7 @@
       "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
-  "active": "33e8136075a72a3e",
+  "active": "6f07b4fb83a234fc",
   "lastOpenFiles": [
     "CleanShot 2024-03-09 at 15.00.19@2x.png",
     "2024-03-08.md",
