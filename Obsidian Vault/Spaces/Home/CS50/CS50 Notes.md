@@ -17,9 +17,56 @@ tags:
 - The C keyword `typedef` provides a way to create a shorthand or rewritten name for data types
 - the basic idea is to first define a type in the normal way, then alias it to something else
 	- `typdef <old name> <new name>;`
-<mark style="background: #ADCCFFA6;">	- e.g. `typedef unsigned char byte`;</mark>
-- 
+<mark style="background: #FFF3A3A6;">	- e.g. `typedef unsigned char byte`; </mark>
+- also note how string is also a data type
+	- `typedef char * string`
+- structures have a two-word type name, so it can be annoying to create variables of that type
+	- your lines can get really long!
+	- so use typedef to get it done quicker
+```c
+struct car
+{
+	int year;
+	char model[10];
+	char plate[7];
+	int odometer;
+	double engine_size;
+}:
 
+typdef struct car car_t;
+```
+- here is the much shorter way:
+```c
+typedef struct car
+{
+	int year;
+	char model[10];
+	char plate[7];
+	int odometer;
+	double engine_size;
+}
+car_t;
+```
+- because structures are used so often in the syntax, you can actually define the type in between the start and the end
+```c
+// variable declaration 
+struct car mycar;
+
+// field accesssing
+mycar.year = 2011;
+strcpy(mycar.plate, "CS50");
+mycar.odometer = 50505;
+```
+- but I can actually do this instead now with this knowledge, after using `typedef`
+```c
+// variable declaration 
+car_t mycar;
+
+// field accessing
+mycar.year = 2011;
+strcpy(mycar.plate, "CS50");
+mycar.odometer = 50505;
+```
 ### Pointers
 - probably the most difficult topic in CS50
 - it's true that pointers let you screw badly with variables and data, causing programs to crash
