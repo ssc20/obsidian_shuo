@@ -12,6 +12,7 @@ tags:
 #cs50/memory
 
 ## Shorts
+### Dynamic Memory Allocation
 
 ### Custom Types
 - The C keyword `typedef` provides a way to create a shorthand or rewritten name for data types
