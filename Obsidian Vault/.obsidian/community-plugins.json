@@ -11,7 +11,6 @@
   "oz-image-plugin",
   "quickadd",
   "recent-files-obsidian",
-  "obsidian-statusbar-pomo",
   "obsidian-plugin-toc",
   "tag-wrangler",
   "obsidian-tasks-plugin",
@@ -29,12 +28,11 @@
   "calendar",
   "obsidian-dictionary-plugin",
   "obsidian-excalidraw-plugin",
-  "google-calendar",
   "homepage",
   "obsidian-pandoc",
   "obsidian-rollover-daily-todos",
-  "obsidian-spaced-repetition",
   "obsidian-style-settings",
   "obsidian-tracker",
-  "various-complements"
+  "various-complements",
+  "obsidian-statusbar-pomo"
 ]

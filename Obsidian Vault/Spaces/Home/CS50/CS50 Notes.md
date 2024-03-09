@@ -17,7 +17,8 @@ tags:
 - The C keyword `typedef` provides a way to create a shorthand or rewritten name for data types
 - the basic idea is to first define a type in the normal way, then alias it to something else
 	- `typdef <old name> <new name>;`
-	- 
+<mark style="background: #ADCCFFA6;">	- e.g. `typedef unsigned char byte`;</mark>
+- 
 
 ### Pointers
 - probably the most difficult topic in CS50

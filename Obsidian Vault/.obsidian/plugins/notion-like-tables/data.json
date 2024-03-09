@@ -1,6 +1,6 @@
 {
   "logLevel": "off",
-  "createAtObsidianAttachmentFolder": false,
+  "createAtObsidianAttachmentFolder": true,
   "customFolderForNewFiles": "",
   "removeMarkdownOnExport": true,
   "defaultEmbedWidth": "100%",
