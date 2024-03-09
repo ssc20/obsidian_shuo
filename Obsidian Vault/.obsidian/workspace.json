@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Home.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1d52d072403918bb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Home.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           },
@@ -122,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Home.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Home.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,13 +192,14 @@
       "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
-  "active": "5c55163264f899c5",
+  "active": "1d52d072403918bb",
   "lastOpenFiles": [
+    "Spaces/Home/CS50/CS50 Notes.md",
+    "conflict-files-obsidian-git.md",
     "Home.md",
     "CleanShot 2024-03-09 at 15.00.19@2x.png",
     "2024-03-08.md",
     "2024-03-03.md",
-    "Spaces/Home/CS50/CS50 Notes.md",
     "CleanShot 2024-03-05 at 22.23.40.png",
     "CleanShot 2024-03-05 at 22.23.32.png",
     "CleanShot 2024-03-05 at 22.22.38.png",
@@ -196,7 +210,6 @@
     "CleanShot 2024-03-05 at 22.03.50.png",
     "CleanShot 2024-03-05 at 22.02.41.png",
     "202402261921.md",
-    "conflict-files-obsidian-git.md",
     "2024-02-29.md",
     "Spaces/Home/Writing/TLOU/TLOU2.md",
     "2024-02-25.md",
