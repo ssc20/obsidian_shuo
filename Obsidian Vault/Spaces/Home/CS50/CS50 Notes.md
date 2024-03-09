@@ -13,6 +13,27 @@ tags:
 
 ## Shorts
 ### Dynamic Memory Allocation
+- we've seen 1 way to work with pointers: namely, <mark style="background: #FFF3A3A6;">pointing a pointer variable at another variable that already exists in our system</mark>
+	- this requires us to know exactly how much memory our system will need at the moment our program is compiled
+- what if we **don't** know how much memory we'll need at compile-time
+	- ? how do we get access to new memory while our program is running?
+	- e.g. `int x = 5`
+		- `int *px = &x`
+		- <mark style="background: #ADCCFFA6;">this is an example of static pointer usage</mark>, where we need to know exactly how memory to use at the moment we compile our program
+- not creating any memory on the fly...
+	- $ what if we don't know how much memory we're going to use?
+	- the user could generated an `x` list level object (however many random large number of values)
+- will need to use dynamic memory allocation to get new memory in our program while the program is already running
+
+- we can use pointers to get access to a block of **dynamically-allocated memory** at runtime
+	- dynamically allocated memory comes from a pool of memory known as the *heap*
+	- prior to this point, all memory we've been working with has been coming from a pool of memory known as the *stack*
+- ![[CleanShot 2024-03-09 at 15.00.19@2x.png]]
+	- this diagram shows heap and stack are the same chunk of memory
+		- stack memory will be a bit lower numbers
+		- the heap memory addresses will have higher numbers
+		- it's still one big pool of memory though,
+		- <mark style="background: #FF5582A6;">stack grows up, heap grows 'down'</mark>
 
 ### Custom Types
 - The C keyword `typedef` provides a way to create a shorthand or rewritten name for data types
