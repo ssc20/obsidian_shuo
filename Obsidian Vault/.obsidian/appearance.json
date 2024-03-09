@@ -1,11 +1,11 @@
 {
   "accentColor": "#8c2eff",
   "baseFontSize": 15,
-  "cssTheme": "Things",
+  "cssTheme": "Dracula Official",
   "interfaceFontFamily": "",
   "textFontFamily": "",
   "monospaceFontFamily": "JetBrains Mono",
   "translucency": true,
   "theme": "obsidian",
-  "nativeMenus": false
+  "nativeMenus": true
 }

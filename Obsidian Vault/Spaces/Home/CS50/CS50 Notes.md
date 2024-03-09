@@ -33,13 +33,24 @@ tags:
 		- stack memory will be a bit lower numbers
 		- the heap memory addresses will have higher numbers
 		- it's still one big pool of memory though,
-		- <mark style="background: #FF5582A6;">stack grows up, heap grows 'down'</mark>
+		- <mark class="hltr-yellow">stack grows up, heap grows 'down'</mark>\
+
+- We get this dynamically-allocated memory by making a call to the C standard library function `malloc()`, passing as its parameter <mark class="hltr-yellow">the number of bytes requested</mark> 
+	- @ if you want a `char`:
+		- `malloc(1)`
+	- @ if you want a `double`:
+		- `malloc(8)`
+	- and so on...
+- After obtaining memory for you (if it can), `malloc()` will return a pointer to that memory
+	- what `malloc` will then try and do is
+- what if `malloc()` **can't** give you memory?
+	- it'll hand you back `NULL`
 
 ### Custom Types
 - The C keyword `typedef` provides a way to create a shorthand or rewritten name for data types
 - the basic idea is to first define a type in the normal way, then alias it to something else
 	- `typdef <old name> <new name>;`
-<mark style="background: #FFF3A3A6;">	- e.g. `typedef unsigned char byte`; </mark>
+- @ e.g. `typedef unsigned char byte`; 
 - also note how string is also a data type
 	- `typedef char * string`
 - structures have a two-word type name, so it can be annoying to create variables of that type
