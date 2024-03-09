@@ -1,10 +1,11 @@
 {
-  "accentColor": "",
+  "accentColor": "#8c2eff",
   "baseFontSize": 15,
-  "cssTheme": "Dracula for Obsidian",
+  "cssTheme": "Things",
   "interfaceFontFamily": "",
   "textFontFamily": "",
   "monospaceFontFamily": "JetBrains Mono",
   "translucency": true,
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "nativeMenus": false
 }

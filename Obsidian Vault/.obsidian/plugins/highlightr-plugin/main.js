@@ -3474,7 +3474,7 @@ function createStyles(settings) {
     header.appendChild(styleSheet);
     Object.keys(settings.highlighters).forEach((highlighter) => {
         let colorLowercase = highlighter.toLowerCase();
-        addNewStyle(`.hltr-${colorLowercase},\nmark.hltr-${colorLowercase},\n.markdown-preview-view mark.hltr-${colorLowercase}`, `background: ${settings.highlighters[highlighter]};`, styleSheet);
+        addNewStyle(`.hltr-${colorLowercase},\nmark.hltr-${colorLowercase},\n.markdown-preview-view mark.hltr-${colorLowercase}`, `background: ${settings.highlighters[highlighter]}; color: var(--text-normal);`, styleSheet);
     });
 }
 
