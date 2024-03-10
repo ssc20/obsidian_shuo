@@ -65,6 +65,21 @@ float stack_array[x];
 float * heap_array = malloc(x * size of(float));
 ```
 - Here's the trouble: dynamically-allocated memory is not auto-returned to the system for later use when the function in which it's created finishes execution
+- Failing to return memory back to the system when you're finished with it results in a **memory leak** which can compromise your system's performance 
+- when you finish working with a dynamically-allocated memory, you must `free()` it
+
+```c
+char* word = malloc(50 * sizeof(char));
+
+// do stuff with word
+
+// now we're done working with that block
+free(word);
+```
+- 3 golden rules:
+	- ! Every block of memory that you `malloc()` must subsuquently be `free()`'d
+	- ~ Only memory that you `malloc()` should be `free()`d
+	- $ Do not `free()` a block of memory more than once
 ### Custom Types
 - The C keyword `typedef` provides a way to create a shorthand or rewritten name for data types
 - the basic idea is to first define a type in the normal way, then alias it to something else
