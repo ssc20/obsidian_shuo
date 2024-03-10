@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "dbec25608d8b8a6d",
+        "id": "20f74a9540070459",
         "type": "tabs",
         "children": [
           {
-            "id": "5c55163264f899c5",
+            "id": "c38ef7fb7d73eff5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1d52d072403918bb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Home.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -108,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md"
+                "file": "Home.md"
               }
             }
           },
@@ -136,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Home.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -193,7 +180,7 @@
       "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
-  "active": "1d52d072403918bb",
+  "active": "c38ef7fb7d73eff5",
   "lastOpenFiles": [
     "Home.md",
     "conflict-files-obsidian-git.md",
