@@ -33,7 +33,7 @@ tags:
 		- stack memory will be a bit lower numbers
 		- the heap memory addresses will have higher numbers
 		- it's still one big pool of memory though,
-		- <mark class="hltr-yellow">stack grows up, heap grows 'down'</mark>\
+		- <mark class="hltr-yellow">stack grows up, heap grows 'down'</mark>
 
 - We get this dynamically-allocated memory by making a call to the C standard library function `malloc()`, passing as its parameter <mark class="hltr-yellow">the number of bytes requested</mark> 
 	- @ if you want a `char`:
@@ -46,6 +46,25 @@ tags:
 - what if `malloc()` **can't** give you memory?
 	- it'll hand you back `NULL`
 
+```c
+// statically obtain an integer
+int x;
+
+// dynamically obtain an integer
+int *px = malloc(4);
+// OR
+int *px = malloc(sizeof(int));
+
+// Get an integer from the user
+int x = GetInt();
+
+// array of floats on the stack
+float stack_array[x];
+
+// array of floats on the heap
+float * heap_array = malloc(x * size of(float));
+```
+- Here's the trouble: dynamically-allocated memory is not auto-returned to the system for later use when the function in which it's created finishes execution
 ### Custom Types
 - The C keyword `typedef` provides a way to create a shorthand or rewritten name for data types
 - the basic idea is to first define a type in the normal way, then alias it to something else
