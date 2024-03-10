@@ -80,6 +80,18 @@ free(word);
 	- ! Every block of memory that you `malloc()` must subsuquently be `free()`'d
 	- ~ Only memory that you `malloc()` should be `free()`d
 	- $ Do not `free()` a block of memory more than once
+
+```c
+int m;
+int *a;
+int* b = malloc(sizeof(int));
+a = &m;
+a = b;
+m = 10;
+*b = m + 2;
+free(b);
+*a = 11;
+```
 ### Custom Types
 - The C keyword `typedef` provides a way to create a shorthand or rewritten name for data types
 - the basic idea is to first define a type in the normal way, then alias it to something else
