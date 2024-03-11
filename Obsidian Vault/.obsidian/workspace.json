@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "20f74a9540070459",
+        "id": "c8330eb4d67e8b36",
         "type": "tabs",
         "children": [
           {
-            "id": "c38ef7fb7d73eff5",
+            "id": "1d0691a9b27cbcdc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -180,7 +176,7 @@
       "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
-  "active": "c38ef7fb7d73eff5",
+  "active": "1d0691a9b27cbcdc",
   "lastOpenFiles": [
     "CleanShot 2024-03-10 at 15.46.33.mp4",
     "Home.md",
