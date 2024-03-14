@@ -11,8 +11,12 @@
             "id": "1d0691a9b27cbcdc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -178,8 +182,9 @@
   },
   "active": "1d0691a9b27cbcdc",
   "lastOpenFiles": [
-    "CleanShot 2024-03-10 at 15.46.33.mp4",
+    "Pasted image 20240313223916.png",
     "Home.md",
+    "CleanShot 2024-03-10 at 15.46.33.mp4",
     "2024-03-10.md",
     "conflict-files-obsidian-git.md",
     "Spaces/Home/CS50/CS50 Notes.md",
