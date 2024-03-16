@@ -165,7 +165,7 @@
             }
           },
           {
-            "id": "99d81f49c9b236fb",
+            "id": "86f6d818d29ebee3",
             "type": "leaf",
             "state": {
               "type": "timeline",
@@ -183,7 +183,6 @@
     "hiddenItems": {
       "daily-notes:Open today's daily note": false,
       "notion-like-tables:Create loom": false,
-      "obsidian-day-planner:Timeline": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -194,7 +193,8 @@
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "templater-obsidian:Templater": false,
       "homepage:Open homepage": false,
-      "obsidian-statusbar-pomo:Start pomodoro": false
+      "obsidian-statusbar-pomo:Start pomodoro": false,
+      "obsidian-day-planner:Timeline": false
     }
   },
   "active": "106081a7533cb5d9",

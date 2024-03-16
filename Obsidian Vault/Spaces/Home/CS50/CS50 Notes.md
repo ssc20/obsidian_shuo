@@ -140,8 +140,32 @@ while((ch = fgetc(ptr)) != EOF)
 		- how large each unit of information will be
 		- how many units of information  e want to acquire
 		- from which file we want to get them
-	- 
 
+```c
+int arr[10];
+fread(arr, sizeof(int), 10, ptr);
+```
+- we declared on the stack arbitrarily, `int arr[10]`
+- now what we're doing though is is `fread`:
+	- reading `sizeof(int)`  times `10` bytes of information
+	- *sizeof(int)* being 4 (the size of an integer in C)
+	- we'reading 40 bytes of information from the file `ptr` 
+		- then storing those 40 bytes somewhere where we have set aside 40 bytes of memory
+		- we have done that by declaring the array `arr`
+			- (*we have created an array of integers, size 10, so 4 * 10 = 40*)
+	- recall from the video on pointers that name of an array is really just a pointer to the 1st element
+	- when we pass `arr` there, we are just passing as a pointer
+- similarly, we can also do this -- where don't need to save our buffer on the stack
+- we can dynamically allocate a buffer using `malloc` 
+	- (drawing from the heap though, not the stack)
+	- ! It's still a buffer, btw
+```c
+double* arr2 = malloc(sizeof(double) * 80);
+fread(arr2, sizeof(double), 80, ptr);
+```
+- in this case, the buffer is holding *640 bytes of information*
+	- this is because a `double` takes up 8 bytes
+	- we are asking for 80 of them
 ### Dynamic Memory Allocation
 - we've seen 1 way to work with pointers: namely, <mark style="background: #FFF3A3A6;">pointing a pointer variable at another variable that already exists in our system</mark>
 	- this requires us to know exactly how much memory our system will need at the moment our program is compiled

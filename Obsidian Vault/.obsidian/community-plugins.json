@@ -17,7 +17,6 @@
   "templater-obsidian",
   "obsidian-kanban",
   "obsidian-outliner",
-  "obsidian-list-callouts",
   "obsidian-linter",
   "obsidian-latex-suite",
   "mousewheel-image-zoom",
@@ -34,5 +33,6 @@
   "obsidian-style-settings",
   "obsidian-tracker",
   "various-complements",
-  "obsidian-statusbar-pomo"
+  "obsidian-statusbar-pomo",
+  "obsidian-list-callouts"
 ]
