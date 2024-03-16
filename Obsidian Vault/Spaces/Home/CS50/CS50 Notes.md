@@ -128,9 +128,19 @@ while((ch = fgetc(ptr)) != EOF)
 - We might put this in a file called `cp.c`, after the Linux command "cp" which essentially does just this.
 - `fread()`
 	- Reads `<qty>` units of size `<size>` from the file pointed to and stores them in memory in a buffer (usually in an array) pointed to by `<buffer>`
-	- Note: the operation of the file pointer passed in as a parameter must be "r" for read, or you will suffer an error.
+	- ! Note: the operation of the file pointer passed in as a parameter must be "r" for read, or you will suffer an error.
 		- `fread(<buffer>, <size>, <qty>, <file pointer>);`
 	- function looks a bit scarier, but is really just `fgetc` that lets us get any amount of information 
+	- can be a bit inefficient going one character at a time, why not do 100 or 500 at a time
+	- `fread()` and its companion `fwrite()` can let us do that!
+		- we can read an arbitrary amount of info from a file and we store it somewhere temporarily
+		- instead of being able to just fit it in a single variable, we might need to store it in an array
+	- we pass in 4 arguments, 
+		- a pointer to the location where we are going to store information 
+		- how large each unit of information will be
+		- how many units of information  e want to acquire
+		- from which file we want to get them
+	- 
 
 ### Dynamic Memory Allocation
 - we've seen 1 way to work with pointers: namely, <mark style="background: #FFF3A3A6;">pointing a pointer variable at another variable that already exists in our system</mark>
