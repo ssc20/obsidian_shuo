@@ -213,6 +213,7 @@ fwrite(<buffer>, <size>, <qty>, <file pointer>);
 		- and read and write that to the file
 	- we also have a single variable capable of holding 1 byte of info, such as a character;
 	- again we need to pass it the address of the variable to pass the info at `&c` to file pointer `ptr`
+	- ![[CleanShot 2024-03-16 at 00.03.20@2x.png]]
 - lots of other useful functions abound in `stdio.h` for you to work with.
 - Here are some of the ones you may find useful!
 	- `fgets()`
