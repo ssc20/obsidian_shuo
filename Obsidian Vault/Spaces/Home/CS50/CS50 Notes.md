@@ -150,7 +150,7 @@ while((ch = fgetc(ptr)) != EOF)
 	- we pass in 4 arguments, 
 		- a pointer to the location where we are going to store information 
 		- how large each unit of information will be
-		- how many units of information  e want to acquire
+		- how many units of information  want to acquire
 		- from which file we want to get them
 
 ```c
@@ -161,13 +161,13 @@ fread(arr, sizeof(int), 10, ptr);
 - now what we're doing though is is `fread`:
 	- reading `sizeof(int)`  times `10` bytes of information
 	- *sizeof(int)* being 4 (the size of an integer in C)
-	- we'reading 40 bytes of information from the file `ptr` 
+	- we're adding 40 bytes of information from the file `ptr` 
 		- then storing those 40 bytes somewhere where we have set aside 40 bytes of memory
 		- we have done that by declaring the array `arr`
 			- (*we have created an array of integers, size 10, so 4 * 10 = 40*)
 	- recall from the video on pointers that name of an array is really just a pointer to the 1st element
 	- when we pass `arr` there, we are just passing as a pointer
-- similarly, we can also do this -- where don't need to save our buffer on the stack
+- similarly, we can also do this -- where we don't need to save our buffer on the stack
 - we can dynamically allocate a buffer using `malloc` 
 	- (drawing from the heap though, not the stack)
 	- ! It's still a buffer, btw
