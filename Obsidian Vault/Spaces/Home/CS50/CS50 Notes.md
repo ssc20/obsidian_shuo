@@ -42,6 +42,68 @@ Complete the implementation of `volume.c` such that it changes the volume of a s
 - Your program, if it uses `malloc`, must not leak any memory.
 
 ## Shorts
+### File Pointers
+- programs so far have been ephemeral
+	- printing output, but nothing remains...
+	- if you left your terminal window, it would cease to exist
+- C does provide us with instructions on how to do this with 'files'
+- In C, we generally work with *file pointers*
+
+- the ability to read data from and write data to files is the primary means of storing **persistent data**
+	- data that does not disappear when your program stops running
+	- running a program that's a game, keep track of all the users' moves
+		- so you can review after the program quits
+- the abstraction of files that C provides is implemented in a data structure known as a `FILE`
+	- almost universally when working with files, we will be using pointers to them, `FILE*`
+- The file manipulation functions all live in `stdio.h`
+	- All of them accept `FILE*` as one of their parameters, except the function `fopen()` which is used to get a file pointer in the first place
+- some of the most common file input/output (I/O) functions that we'll be working with are:
+	- `fopen()`
+	- `fclose()`
+	- `fgetc()`
+	- `fputc()`
+	- `fread()`
+	- `fwrite()`
+
+- `fopen()`
+	- opens a file and returns a file pointer to it
+	- always check the return value to make sure you don't get back NULL.
+	- `FILE* ptr = fopen(<filename>, <operation>);`
+	- `FILE* ptr1 = fopen("file1.txt", "r");
+		- r - *read*, so we can get ourselves a file point so we can read from file1.txt
+	- `FILE* ptr2 = fopen("file3.txt", "a");`
+		- w - *write* we could open file2.txt so we can pass ptr2 as an argument to any function that writes to a file
+	- `FILE* ptr3 = fopen("file3.txt", "a");`
+		- a - *appending* will go to the end of the file and begin adding information, rather than overwriting
+- `fclose()`
+	- closes the file pointed to by the given file pointer
+	- `fclose(<file pointer>);`
+	- all you need to do is pass in the name of the file pointer:
+		- `fclose(ptr1);`
+			- so where we `fread` file1.txt, we can close it with the above
+- `fgetc()`
+	- reads and returns the next character from the file pointed to
+		- (or the first character if it's the first call)
+	- ? Note: the operation of the file pointer passed in as a parameter must be "r" for read, or you will suffer an error
+		- `char ch = fgetc(<file pointer>);
+		- the limitation is that, the file pointer must have been opened for *reading*
+		- can't read a character from a file we opened for writing
+		- to read and write at the same time, we have to open 2 separate pointers for the same file
+		- `char ch = fgetc(ptr1);`
+- The ability to get single characters from files, if wrapped in a loop means:
+	-<mark class="hltr-pink">we could read all the characters from a file and print them to the screen 1 by 1, essentially.*</mark>
+
+```c
+char ch;
+while((ch = fgetc(ptr)) != EOF)
+	printf("%c", ch);
+```
+- while `ch = fgetc`, `ptr` is not equal to *EOF*
+	- it's a whole mouthful but...
+	- we are obtaining one character from the file, then comparing it to *EOF*
+		- EOF = end of file, character
+	- this loop will read a character, compare it to EOF, with no match, wei 
+- We might put this in a file called `cat.c`, after the Linux command `cat` which essentially does just this.
 ### Dynamic Memory Allocation
 - we've seen 1 way to work with pointers: namely, <mark style="background: #FFF3A3A6;">pointing a pointer variable at another variable that already exists in our system</mark>
 	- this requires us to know exactly how much memory our system will need at the moment our program is compiled

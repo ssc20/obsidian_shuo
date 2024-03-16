@@ -20,6 +20,24 @@
             }
           }
         ]
+      },
+      {
+        "id": "533b372a50d576b0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "106081a7533cb5d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -155,12 +173,11 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,7 +197,7 @@
       "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
-  "active": "1d0691a9b27cbcdc",
+  "active": "106081a7533cb5d9",
   "lastOpenFiles": [
     "Pasted image 20240313223916.png",
     "Home.md",
