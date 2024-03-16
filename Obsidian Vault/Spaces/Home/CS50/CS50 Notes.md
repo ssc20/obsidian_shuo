@@ -102,8 +102,36 @@ while((ch = fgetc(ptr)) != EOF)
 	- it's a whole mouthful but...
 	- we are obtaining one character from the file, then comparing it to *EOF*
 		- EOF = end of file, character
-	- this loop will read a character, compare it to EOF, with no match, wei 
+	- this loop will read a character, compare it to EOF, with no match, then:
+		- if they don't match, so we haven't reached the end of the file, we'll print that character out
+		- AND THEN, we'll go back to the beginning of the loop again 
+	- *we'll get a character, check against EOF, print it out, and so on, looping through in that way*
 - We might put this in a file called `cat.c`, after the Linux command `cat` which essentially does just this.
+- we've only seen `fopen` `fclose` `fgetc` and already we can duplicate a Linux terminal command
+- `fputc()`
+	- Writes or appends the specified character to the pointed-to-file
+	- Note: the operation of the file pointer passed in as a parameter must be "w" for write or "a" for append, or you will suffer an error
+	- `fputc(<character>, <file pointer>);`
+		- because this is a writing type function, we cannot use it on file that we've opened for *reading*
+	- `fputc('A', ptr2);`
+	- `fputc('!", ptr3);`
+- Now we can read character from files and write characters to them.
+- Let's extend our previous example to copy one file to another, instead of printing to the screen:
+```c
+char ch;
+while((ch = fgetc(ptr)) != EOF)
+	fputc(ch, ptr2);
+```
+- Here, we are reading a character and then writing that character to another file
+	- reading from one file, writing to another, until hitting *EOF* or end of file
+	- then we have finished writing all characters
+- We might put this in a file called `cp.c`, after the Linux command "cp" which essentially does just this.
+- `fread()`
+	- Reads `<qty>` units of size `<size>` from the file pointed to and stores them in memory in a buffer (usually in an array) pointed to by `<buffer>`
+	- Note: the operation of the file pointer passed in as a parameter must be "r" for read, or you will suffer an error.
+		- `fread(<buffer>, <size>, <qty>, <file pointer>);`
+	- function looks a bit scarier, but is really just `fgetc` that lets us get any amount of information 
+
 ### Dynamic Memory Allocation
 - we've seen 1 way to work with pointers: namely, <mark style="background: #FFF3A3A6;">pointing a pointer variable at another variable that already exists in our system</mark>
 	- this requires us to know exactly how much memory our system will need at the moment our program is compiled
