@@ -42,6 +42,18 @@ Complete the implementation of `volume.c` such that it changes the volume of a s
 - Your program, if it uses `malloc`, must not leak any memory.
 
 ## Shorts
+### Call Stacks
+- if you saw our video on recursion, process might have seemed a little bit magical
+- how does a function know when to wait and pass its data to some other thing that's running at the same time?
+	- seems a little magical, huh?
+- if you don't understand how functions are called and operate in C
+- the way they operate though is through the *call stack*
+
+- when you call a function, the system sets aside space in memory for that function to do its necessary work
+	- we frequently call such chunks of memory **stack frames** or **function frames**
+- more than 1 function's stack frame may exist in memory at a given time
+	- if `main()` calls `move()`, which then calls `direction()`, all 3 functions have open frames.
+- 
 ### File Pointers
 - programs so far have been ephemeral
 	- printing output, but nothing remains...
@@ -165,7 +177,60 @@ fread(arr2, sizeof(double), 80, ptr);
 ```
 - in this case, the buffer is holding *640 bytes of information*
 	- this is because a `double` takes up 8 bytes
-	- we are asking for 80 of them
+	- <mark class="hltr-yellow">we are asking for 80 of them</mark>
+	- we need space for 80 doubles...
+		- $80 * 8 = 640 bytes$
+	- the call to `fread` is collecting 640 bytes of information from the file pointed to by `ptr` and storing in `arr2`
+- we can also treat `fread` like a call to `fgetc`
+	- here we're just trying to get 1 character from the file
+	- we don't need an array to hold a character...
+		- the catch though is if we have just a variable, we need to pass in the address of that variable
+			- @ remember how a name of an array is just a pointer?
+			- don't need to do ampersand of an array
+		- but see below:
+```c
+char c;
+fread(&c, sizeof(char), 1, ptr);
+```
+- char is just a variable; need to pass `&c`
+	- to indicate that's the address where we want to store the 1 byte of information, *that character that we're collecting from `ptr`*
+	- 
+- `fwrite()`
+	- equivalent to `fread()`
+	- *get arbitrary amount of information, then write arbitrary amount of information*
+	- writes `<qty>` units of size `<size>` to the file pointed to by reading them from a buffer (usually an array) pointed to by `<buffer>`
+	- Note: the operation of the file pointer passed in as a parameter must be `"w` for write, or `"a"` for append, or you will suffer an error
+```c
+fwrite(<buffer>, <size>, <qty>, <file pointer>);
+```
+- say, just like before, we can have an array of 10 integers where information is already stored
+	- maybe some lines of codes that between these 2 where I fill `arr` with something meaningful
+		- fill it with 10 diff integers
+	- instead, what i'm doing is writing from `arr` and collecting the info from `arr`
+		- taking that information and putting it into the file
+	- instead of file to buffer, *we do buffer to file*
+	- just like before, we can have heap chunk of memory that we have dynamically allocated
+		- and read and write that to the file
+	- we also have a single variable capable of holding 1 byte of info, such as a character;
+	- again we need to pass it the address of the variable to pass the info at `&c` to file pointer `ptr`
+- lots of other useful functions abound in `stdio.h` for you to work with.
+- Here are some of the ones you may find useful!
+	- `fgets()`
+		- reads a full string from a file
+	- `fputs()` 
+		- writes a full string to a file
+	- `fprintf()`
+		- writes a formatted string to a file
+	- `fseek()`
+		- allows you to rewind or fast-forward within a file
+	- `ftell()`
+		- tells you at what (byte) position you are at within a file
+	- `feof()`
+		- tells you whether you've read to the end of a file
+		- diff version of detecting end of file
+	- `ferror()`
+		- indicates whether an error has occurred in working with a file
+- just scratching the surface, plenty more I/O functions in `stdio.h`!
 ### Dynamic Memory Allocation
 - we've seen 1 way to work with pointers: namely, <mark style="background: #FFF3A3A6;">pointing a pointer variable at another variable that already exists in our system</mark>
 	- this requires us to know exactly how much memory our system will need at the moment our program is compiled
