@@ -457,14 +457,56 @@ Questions
 		- `printf("%i\n, buffer[i]);`
 
 - at the very end, i will close our file like this:
-	- `fclose(f);`
+	- `fclose(f);` to free up memory (as-is good practice) to avoid any potential future issues
+
+![[CleanShot 2024-03-17 at 13.20.12@2x.png]]
+
+- this signature of this file telling us what this file might be
+- summary:
+	- first opened our file
+	- created a buffer
+	- used `fread()` to read 4 individual bytes from that file
+		- print those as out as we went
+
+
 
 Questions:
-- what happens if my chunk is bigger than the last bit of a file?
+- ? what happens if my chunk is bigger than the last bit of a file?
 	- let's say you're reading 8 bytes at a time and there are only 4 bytes left to read:
 		- with `fread()` it won't read to the end and will account for this
 		- if you say read me 8 elements of 1 byte size each, it'll return you 8, if it only read 3, it will return 3
 		- it in essence can return whether or not you've reached the end of your file.
+- ? Does this signature thing apply to all file types?
+	- generally, all file types have some type of signature or some metadata that tells you what type of file they're going to be
+- ? What if we used `int` instead of `uint8_t`?
+	- let's actually try this:
+	- ![[CleanShot 2024-03-17 at 13.22.38@2x.png]]
+	- why might this have happened?
+		- the reason we used `uint8_t` is because it was the right size of value to use
+		- the key thing about `uint8_t` is that it is only a single byte big
+			- a regular integer though is 4 bytes big
+		- we're trying to perhaps create an array of up to 16 bytes if an int is 4 bytes long
+		- ! but we're only going to read 4 of them into that particular buffer
+			- if we take 4 bytes and store them inside this buffer, we might not get the values we expect
+	- that's why it's important when you're reading files to make sure you're using appropriate types **AND** getting particular about the kinds of types you're going to use
+	- I revert back to `unit8_t` (an integer is always positive, 8 bits, or 1 byte long) and get what we should received
+- ? This program is decent, but it's not quite all the way safe?
+	- If i leave the argument... we're going to move beyond `argv[]` and try to access some value
+	-  but that's up to you to ensure we have the correct number of arguments and so on
+
+```c
+if (argc != 2)
+
+{
+
+printf("Usage: ./volume input.wav output.wav factor\n");
+
+return 1;
+
+}
+```
+- ? what does `_t` mean?
+	- `_t` basically identifies this as its very own type
 ## Shorts
 ### Call Stacks
 - if you saw our video on recursion, process might have seemed a little bit magical
