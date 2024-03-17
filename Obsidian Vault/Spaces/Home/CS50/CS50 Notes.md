@@ -279,8 +279,133 @@ FILE *f = fopen("hi.txt", "r");
 - **From where** are you reading?
 	- what file am I trying to get data from?
 - **To where** are you reading?
-	- where am I trying to read that dat ainto
+	- where am I trying to read that data into
+- we must answer these questions prior to using 
 
+- `fread()`
+	- `fread(..., ..., ..., ...);`
+		- ! (starting from the last '...')
+			- From **where**:
+				- we need some way of finding the location of our file in the computer's memory
+				- let's say we have a pointer to our file called `f`
+				- we can `fread()` with `fread(..., ...., ..., f);` or `f` as the fourth argument
+				- ![[CleanShot 2024-03-17 at 12.38.38@2x.png]]
+			- **Where is the data doing to go?**
+				- where in my program should I put this temporary piece of data I'm going to get from the file
+				- ![[CleanShot 2024-03-17 at 12.39.36@2x.png]]
+				- this is going to be our *buffer* and the first input for `fread()`
+				- ![[CleanShot 2024-03-17 at 12.39.51@2x.png]]
+				- we could call this variable `buffer`, so now when we call `fread()`:
+					- we will reply, 'we want to read into the buffer'
+					- *that is, the buffer will be a pointer to some place in our computer's memory, an address we want to put the data in*
+- `fread(buffer, ..., ..., f);
+
+Questions
+- ? buffer is variable?
+	- Buffer *is* a variable
+	- in this case, it is the address of some place in memory where we want to store the file's contents
+
+- there are still 2 arguments we haven't defined yet.
+
+- **What size** is each block of data you want to read?
+- **How many** blocks do you want to read?
+
+- files themselves are composed of individual blocks of data 
+	- ![[CleanShot 2024-03-17 at 12.43.10@2x.png]]
+	- what might be the individual chunks of a text file?
+	- if I'm storing some text, what might compose those individual chunks of a file
+		- you *could* break it up into lines or sentences or so on
+		- @ **but it would actually be an individual text or character**
+	- we know that characters are 1 byte long
+		- <mark class="hltr-blue">so breaking a text file into individual pieces, or individual bytes in this case</mark>
+- *other files* are a little bit more complex
+	- while text files might have chunks 1 byte long
+	- you could imagine a file like an image that stores color....
+		- to store individual pixels, it turns out, <mark class="hltr-yellow">each pixel needs about 3 bytes</mark>
+	- we could probably think of an image-file being broken up into *3-byte* chunk files.
+		- ![[CleanShot 2024-03-17 at 12.47.06@2x.png]]
+- ? we should ask ourselves: 
+	- **<mark class="hltr-red"> how big are the individual pieces of data that make up this file? </mark>**
+	- *a la* text files = 1 byte long | images with pixels of up to 3 bytes long
+	- how do we know that?
+		- often from convention: text is character by character
+		- image files, say `.png`, `.bmp` file-types, you'll have to look at the documentation
+			- however, it should tell us those pixels are stored in 3-byte chunks
+	- often, you don't know yourself, but somebody else, the maker of that file, will tell you how their data is stored
+- if we know how to break a file into smaller chunks, these are some questions to ask
+	- ? how big are those chunks?
+	- ? how many do we want to read at once?
+
+- this connects us back to `fread()`
+	- ![[CleanShot 2024-03-17 at 12.50.35@2x.png]]
+	- ? *what size are those chunks?* 
+		- this question is in bytes
+		- if we're working with a file like this:
+			- ![[CleanShot 2024-03-17 at 12.51.20@2x.png]]
+		- ...which is stored in individual characters -- we could say the individual chunks of this file are simply 1 byte long
+		- we could tell `fread()` we are reading chunks that are 1 byte big
+	- ? the next question: *how many should I read all at once?*
+		- we can read 4, 2, 1 at a time, whatever it is:
+		- let's say I want to read in 4 byte sliding windows.
+		- I'm looking at my file, I want to read whatever is in the first 4 chunks.
+			- my pointer `f` points the first one.
+		- I'll take out the first 4 and put them in my buffer
+			- ![[CleanShot 2024-03-17 at 12.53.15@2x.png]]
+		- I've made a copy of them from **my file *into* my program** so, now, my file pointer points at *whatever is still left to read*.
+		- If i have some sentence, i'm reading it 4 characters at a time: 
+			- it reads the first 4 then:
+			- my file pointer gets updated and points to the rest of my file.
+		- *if* I call `fread()` again and again and again, I'll keep moving further and further down my file, 4 bytes at a time
+- <mark class="hltr-yellow">the final call or usage of `fread()`</mark>
+	- ![[CleanShot 2024-03-17 at 12.54.57@2x.png]]
+
+- ? Questions:
+	- <mark class="hltr-blue">how many chunks do we decide to take out?</mark>
+		- it depends on a few things:
+			- how much memory do you want to take out at a time?
+				- if you were to take a big chunk out of your file, *that's a lot of memory to store in your program.*
+				- maybe you care about seeing all that data at once?
+				- if you *don't*, you can do smaller chunks to make sure you're not using up too much memory at any one time
+			- the other reason to make the value smaller/larger is **speed**
+				- it tends to be a bit faster to read things in bigger chunks
+				- 100 individual bytes vs 10 bytes ten times
+				- it's easier to read 10 bytes all at once than to read 10 individual bytes
+				- not as much consideration for the kind of work in CS50
+	- <mark class="hltr-yellow">is `fread()` able to return to the beginning of the file after doing the reading?</mark>
+		- It is!
+		- there is a special function to call to move the file pointer to the top again
+		- as `fread()` you have to rewind it back to the top
+			- like a cassette pointer, starts at the beginning, then all the way to the end, then back to the top.
+	- <mark class="hltr-blue">how do you know how many chunks are in the file?</mark>
+		- arguably, you *can't quite know at the very beginning*
+		- your computer is able to tell you *roughly* how big the file is
+		- if you were to write a program to find the size of a file you didn't know before-hand
+			- logically, the only way you can find the end of that file or how big is by **starting at the beginning**
+			- readying byte by byte until the end...
+	- by the end of the file, you'll see either:
+		- an *EOF* or end-of-file character
+		- a *NULL* character
+	- ...to tell you that there are no more bytes to read
+- but it's a bit like `strlen()`, where you can't quite know how long the string is (or bytes in this case) until seeing the ending character
+
+
+`fread(buffer, 1, 4, f)`
+- let's write a program to check what type of a file it is
+
+#### Practice with Reading
+- create a program, `pdf.c`, that opens a file given as a command-line argument
+- check if that file is a PDF. 
+	- A PDF always begins with a 4-byte sequence, corresponding to these numbers stored integers:
+		- `37, 80, 68, 70`
+	- meaning, *if you see the start of a file* and it has those 4 values as integers, that file turns out, will most likely be a PDF.
+- other files have their own signatures that can tell you what they are the beginning of them.
+
+Questions:
+- what happens if my chunk is bigger than the last bit of a file?
+	- let's say you're reading 8 bytes at a time and there are only 4 bytes left to read:
+		- with `fread()` it won't read to the end and will account for this
+		- if you say read me 8 elements of 1 byte size each, it'll return you 8, if it only read 3, it will return 3
+		- it in essence can return whether or not you've reached the end of your file.
 ## Shorts
 ### Call Stacks
 - if you saw our video on recursion, process might have seemed a little bit magical
