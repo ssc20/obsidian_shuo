@@ -41,6 +41,15 @@ Complete the implementation of `volume.c` such that it changes the volume of a s
 	- You may assume that the WAV file will use 16-bit signed values as samples. In practice, WAV files can have varying numbers of bits per sample, but we'll assume 16-bit samples for this problem.
 - Your program, if it uses `malloc`, must not leak any memory.
 
+## Section 4 - Memory
+- pointers are scary, but they tie into the idea of a *variable*
+- a **variable** is a name for a value that can change.
+	- i.e `calls = 3`, the value that can change
+		- this can build to something like 4 calls
+- what we didn't see in week 1 is that this value has to be stored somewhere in our computer
+	- has to have some actual physical location, or an *address*
+- in lecture, we a grid of addreses of bits and bytes.
+
 ## Shorts
 ### Call Stacks
 - if you saw our video on recursion, process might have seemed a little bit magical
@@ -213,7 +222,7 @@ fwrite(<buffer>, <size>, <qty>, <file pointer>);
 		- and read and write that to the file
 	- we also have a single variable capable of holding 1 byte of info, such as a character;
 	- again we need to pass it the address of the variable to pass the info at `&c` to file pointer `ptr`
-	- ![[CleanShot 2024-03-16 at 00.03.20@2x.png]]
+	- 
 - lots of other useful functions abound in `stdio.h` for you to work with.
 - Here are some of the ones you may find useful!
 	- `fgets()`
