@@ -48,7 +48,101 @@ Complete the implementation of `volume.c` such that it changes the volume of a s
 		- this can build to something like 4 calls
 - what we didn't see in week 1 is that this value has to be stored somewhere in our computer
 	- has to have some actual physical location, or an *address*
-- in lecture, we a grid of addreses of bits and bytes.
+- in lecture, we a grid of addresses of bits and bytes.
+	- ![[CleanShot 2024-03-16 at 23.58.48@2x.png]]
+		- what do you remember `0x` as representing?
+			- this is hexadecimal flag, base-16
+			- ![[CleanShot 2024-03-17 at 00.00.00@2x.png]]
+		- a *pointer* is the exact same idea
+			- but it's not an integer, a character, a string, or anything else...
+			- what will be stored is an address itself!
+		- `0x50000000` is pointing to this address, where the 3 is stored
+			- `0x5000004` points to the previous address where the 3 is stored and is therefore a pointer
+			- ![[CleanShot 2024-03-17 at 00.02.10@2x.png]]
+		- how do we dereference a pointer?
+			- ![[CleanShot 2024-03-17 at 00.02.58@2x.png]]
+			- `int *` means this is no longer an integer...
+				- it will redirect us, to `&calls`
+				- ampersand means we should store the address of whatever `calls` is storing
+			- `p` is a pointer to an integer, not a character
+- like we did for a variable, this `p` should store store a particular address now on the right
+	- ![[CleanShot 2024-03-17 at 00.06.00@2x.png]]
+	- ! Keep in mind that the variable is not `int *p` as in `*p`, it is just `p` 
+		- syntax on the left:
+			- one common point is the name of the pointer (it's not `*p`)
+				- although it is right next to it...
+				- @ it's really just a syntactic trick
+			- when you see `*` you should see what kind of a variable it is
+			- the right side showcases the value of calls using the `&`
+				- this represents the address of the value of calls
+- what if we wanted to store a pointer to a character?
+	- we'd just replace it with `char`
+	- if we can store a pointer to a character, could you make a pointer to a pointer?
+		- yes, but not sure how useful it is
+### Key Syntax
+- `type *` is a pointer the stores the address of a **type**
+- `*x` takes a pointer **x** and gets the value stored at that address
+- `&x` takes **x** and gets its address
+
+- Question:
+	- how do pointers work with arrays?
+		- pointers point at the start of a chunk of memory
+		- a pointer can point to an array of values back to back to back
+		- nothing can stop up using a pointer to a set of arrays
+
+- why ever use pointers?
+	- you can pass variables to functions **by reference** not just **by copy**
+		- you can make actual changes right where the value actually is
+		- can write functions that modify very large data structures without modifying anything else
+		- @ the code you write is cleaner as a result
+	- you can use **dynamic memory** (e.g., )
+		- we have been writing programs that have fixed memory
+		- as the program runs you can ask the program for more and more memory depending on what the user needs
+		- @ your programs can now scale their usage of memory according to user behaviour
+
+### Passing by value vs. Passing by reference
+- ![[CleanShot 2024-03-17 at 00.14.19@2x.png]]
+- (*code on the left, call stack on the right*)
+- $ imagine we have already called *main*, (main function of program) in swap
+	- set 2 variables, a = 10, b = 50
+	- ![[CleanShot 2024-03-17 at 00.16.40@2x.png]]
+	- as soon as I call `swap`, I'll end up **copying** the values of `a` and `b` from `main`
+		- we'll go ahead and *swap* these in `swap`... but not for `main`.
+		- ![[CleanShot 2024-03-17 at 00.17.50@2x.png]]
+- if we call a function without using pointers, let's go ahead copy these values, take them somewhere else and change them
+	- no impact on what's being used in `main`
+- ? How do we fix this?
+	- let's rewrite `swap`:
+
+
+```c
+#include <cs50.h>
+#include <stdio.h>
+
+void swap(int *a, int *b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+```
+- take the address of a and b
+	- then below, use the *dereference* syntax, and put them in place
+- the ultimate result is that we copy in the address, and change the values where they currently are
+	- ![[CleanShot 2024-03-17 at 00.21.24.mp4]]
+	- if we follow the steps, we can swap them all at once!
+	- ![[CleanShot 2024-03-17 at 00.21.59@2x.png]]
+	- ![[CleanShot 2024-03-17 at 00.22.14@2x.png]]
+- instead of just 2 variables, you can do this for data structures 
+	- working up to manipulating data in much more complex situations
+- Question: 
+	- if you wanted to access the addresses of `a` and `b`, wouldn't you use the `&` operator? (`&a, &b`)
+		- we're just defining the definition of swap in `void swap(int *a, int *b)`
+		- we can see that it's defining pointers due to the syntax `(int *a)`
+	- let's peek at this using `debug50`
+	- `swap` will take a pointer `a` and pointer `b`
+		- ![[CleanShot 2024-03-17 at 00.24.22@2x.png]]
+```
 
 ## Shorts
 ### Call Stacks
