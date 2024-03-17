@@ -142,7 +142,11 @@ void swap(int *a, int *b)
 	- let's peek at this using `debug50`
 	- `swap` will take a pointer `a` and pointer `b`
 		- ![[CleanShot 2024-03-17 at 00.24.22@2x.png]]
-```
+		- ![[CleanShot 2024-03-17 at 00.30.19@2x.png]]
+		- ![[CleanShot 2024-03-17 at 00.30.33@2x.png]]
+		- notice that `main` is at the top of the call stack
+		- let's use ``
+
 
 ## Shorts
 ### Call Stacks
