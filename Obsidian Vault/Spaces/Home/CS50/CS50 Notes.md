@@ -156,7 +156,53 @@ void swap(int *a, int *b)
 				- once line 18 is run, it will be set to the result of dereferencing `*a`
 				- what is at the end of the pointer `a?` (`*a`)?
 					- the value 10
-				- at line 18, set `temp` to 10
+				- at line 18, set `temp` to 10 (value i'd get if i dereferenced `a`)
+				- `*a = *b`
+					- `*a` is 10...
+					- put in the value of `*b`
+						- at `b`'s address, follow the pointer, and you get the value `50`
+					- assign that value to the dereferenced part of `a`, which is currently 10
+					- $ re-follow the pointer to location of `a`, and set it equal to `50`
+					- `*b`\ gets the value of temp, which is `10`
+				- ![[CleanShot 2024-03-17 at 00.40.04@2x.png]]
+				- if we finish `swap`, we have indeed swapped them, after following all of this step-by-step
+- question:
+	- why do we define and then call it?
+		- it's because we've only *prototyped* `swap`; we actually define it after `main`
+	- why aren't we returning in this function of `swap`?
+		- typically we want the function to return some value when called in `main`
+		- but the entire purpose is to have the side-effect of changing the values within memory
+		- $ therefore, we don't need to actually *return* anything
+	- would this work without `&a &b` because `swap` is defined above?
+		- it's important we give `swap` the addresses of the values and not the values themselves 
+		- if i didn't do that, i'd be passing by copy in this:
+			- ![[CleanShot 2024-03-17 at 00.43.10@2x.png|450]]
+			- in this case, beyond `swap` expecting a pointer,
+				- if i were to do that, i'm not telling `swap` where my values currently are so it can move them around
+				- i'm just giving a copy so it can do whatever it wants
+				- here though, I should make sure that `swap` is able to take in the addresses of those values, so it can move them around
+- what is more powerful and fun than swap, is actually opening up files!
+### File I/O
+- reading data from (and writing data) to files
+#### Opening and Closing Files
+- when workign with files in C, there's the idea of opening up a file, and closing a file
+	- just like on PC, Word documents!
+	- our programs can open and close fiels like tha ttoo
+
+- **fopen** opens a file for future reading/writing
+- **fclose** closes a file.
+- ! Always **fclose** all files you **fopen**!
+	- we heard this in lecture apparently
+	- ? but why is this improtant?
+		- to free up memory, maybe...
+		- memory isn't wasted...
+		- maybe you won't be able to use if you don't close it...
+		- memory leaks...
+		- you working on your own computer, opening files, opening fiels, never closing them
+		- if you ever want to send it to someone else, you should close it, so no 2 programs are opening a file at the same time
+```c
+FILE *f = fopen("hi.txt", "r");
+```
 
 
 ## Shorts
