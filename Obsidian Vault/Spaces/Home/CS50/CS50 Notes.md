@@ -506,7 +506,27 @@ return 1;
 }
 ```
 - ? what does `_t` mean?
-	- `_t` basically identifies this as its very own type
+	- `_t` basically *identifies this as its very own type*
+	- it's kind of a convention here
+	- `u` stands for *unsigned only positive*
+	- `int` *stands for integer*
+	- `8` stands *for the number of bits used*
+		- (we also have 16 as well)
+	- `_t` groups this all and designates its it own type
+- ? What is the return value of `fread()`
+	- we can try this by trying it out!
+	- ![[CleanShot 2024-03-17 at 13.30.37@2x.png]]
+	- because I know `fread()` returns to me the number of blocks that it did read successfully  
+		- I'll print out the buffer and at the end, I'll also print out "blocks read"
+		- ![[CleanShot 2024-03-17 at 13.32.01@2x.png]]
+		- (it says 'Blocks read: 4')
+	- if I got to the end of my file, I might see fewer, or none at all.
+
+#### On `fwrite()`
+- ![[CleanShot 2024-03-17 at 13.32.51@2x.png]]
+- `fwrite()` basically is the same ordering as `fread()`
+	- we have `buffer`, size of the chunk, number of chunks, and the place to write into
+	- only diff: we're not *just reading* we're copying from our buffer into the file and adding as we go.
 ## Shorts
 ### Call Stacks
 - if you saw our video on recursion, process might have seemed a little bit magical
@@ -519,7 +539,110 @@ return 1;
 	- we frequently call such chunks of memory **stack frames** or **function frames**
 - more than 1 function's stack frame may exist in memory at a given time
 	- if `main()` calls `move()`, which then calls `direction()`, all 3 functions have open frames.
-- 
+	- otherwise, the frames will be waiting to do something.
+
+- these frames are arranged in a **stack**. 
+	- the frames for the most-recently called function is *always on the top of the stack* (this is called the **active frame**)
+	- if `main` calls `move`, and `move` calls `direction`, the stack is as follows:
+		- `main` is at the bottom
+		- `move` is above it
+		- `direction` is at the top and the **active frame**
+	- or
+		- `direction
+		- `move`
+		- `main`
+	- `direction` is the only function that is doing anything at the moment
+	- `move` and `main` are just waiting to become the active frame, to move to the top of the stack
+- when a new function is called, a new frame is **pushed** onto the top of the stack and becomes the active frame
+	- if you call a new function, that function immediately gets space and memory and placed on top of the call stack
+	- it becomes the active frame as a result 
+		- whatever *was* the active frame is placed on hold (waiting there) holding pattern, waiting to become the active frame again
+- when a function finishes its work ,its frame is **popped** off of the stack, and the frame immediately below it becomes the new, active, function on the top of the stack.
+	- this function picks up immediately where it left off.
+	- when a function finishes its work or perhaps readching the end of the line (like in a void function)
+	- the frame in second place becomes the active frame, resumes where it left off
+- this is why recursion works because all these frames are working
+	- only one of them is moving
+	- all of them are running, but are on pause
+- again, if we call another function, the active frame goes on pause again
+- the function that that just called is put on top, until all of the function frames are finished
+
+- viz using the factorial function to make this clearer
+```c
+int fact(int n)
+{
+	if (n == 1)
+		return 1;
+	else
+		return n * fact(n-1);
+}
+
+int main(void)
+{
+	printf("%i\n", fact(5));
+}
+```
+- inside of this factorial file, 2 functions:
+	- `fact()`
+		- recursive implementation of factorial
+	- `main()`
+		- basically just calls or prints out the value of the factorial, in this case, of 5
+- ![[CleanShot 2024-03-17 at 13.42.11@2x.png]]
+- we start at the beginning of `main`, it then calls `printf()`
+	- (*the image doesn't start on main(), but just imagine that printf() isn't there anymore*)
+	- then as soon as it does that, `printf()` is active frame and `main` pauses, waiting for `printf()` to do its work
+	- what does `printf()` have to do?
+		- it has to print out factorial of 5, but it *doesn't know what factorial 5* is!
+		- **it has to make a function call** `"%i\n", fact(5));`
+	- so `printf()` goes on pause, waits for a factorial of 5, which now becomes the new active frame
+- ![[CleanShot 2024-03-17 at 13.44.05@2x.png]]
+	- in the `fact(5)` frame, what's happening?
+		- we're passing the value of `5` into the function
+		- `fact()` will check: 'is `n == 1`?
+			- nope
+				- it will return `n * fact(n-1);`
+			- this means `fact(5)` is calling a **NEW** function
+				- passing in another call to `fact`, with `4` as the parameter instead (`fact(4)`)
+			- THEREFORE: `fact(5)`'s frame goes on pause
+			- `fact(4)` 's frame becomes the new active frame
+				- ![[CleanShot 2024-03-17 at 13.46.58@2x.png]]
+	- then it repeats because we haven't reached end case
+		- `fact(3)` begins, `fact(4)` goes on pause
+		- this process repeats again (then `fact(2)` then `fact(1)`)
+	- at `fact(1)`, at the very beginning, there are 7 function frames in the call stack
+		- ![[CleanShot 2024-03-17 at 13.48.17@2x.png]]
+	- all other frames are on pause, waiting to become the new active frame again
+		- they're not moving from the arrowed indicators
+	- `fact(1)` frame begins
+		- `fact(int n)` 
+			- `if (n == 1)` (which is the case)...
+			- remember what happens when a function returns a value, that frame is done
+				- it goes away...
+				- it gets popped right off the call stack
+		- `fact(1)` returns 1, so `fact(2)` gets unpaused
+		- ![[CleanShot 2024-03-17 at 13.50.08@2x.png]]
+- because `fact(2)` was waiting on `fact(1)`, it can now begin
+	- `fact(2)` returns `return n * fact(n-1)`
+		- so `return 2 * fact(2-1)`
+			- or `return 2 * 1` or `return 2`
+		- when this returns, it pops off, its function frame is destroyed, and now `fact(3)` is able to run.
+	- `fact(3)` returns `return 3 * fact(3 - 1)`
+		- `return 3 * fact(2)`
+		- `return 3 * 2` or `6`
+	- `fact(4)` becomes the new active frame after `fact(3)` is popped off
+		- `fact(4)` was waiting on `fact(3)`
+		- `fact(4)` returns `4 * fact(4 - 1)`
+			- `return 4 * 6`
+			- `return 24`
+	- `fact(4)` is now going to return the value to `fact(5)`
+		- `fact(5)` returns `5 * fact(5-1)`
+			- `5 * fact(4)`
+			- `5 * 24` or `return 120`
+	- when `fact(5)` is finished, it can be popped off and destroyed
+- `printf()` now has what it needs, so it can print out `120`
+	- it doesn't return anything, but it has nothign else to do
+	- it is popped off of the stack and destroyed
+- `main` has nothing to do now, so now it is also popped off and destroyed
 ### File Pointers
 - programs so far have been ephemeral
 	- printing output, but nothing remains...
