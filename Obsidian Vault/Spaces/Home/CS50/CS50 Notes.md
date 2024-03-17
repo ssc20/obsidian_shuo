@@ -400,6 +400,65 @@ Questions
 	- meaning, *if you see the start of a file* and it has those 4 values as integers, that file turns out, will most likely be a PDF.
 - other files have their own signatures that can tell you what they are the beginning of them.
 
+- the goal is to use `pdf.c` like so
+- `./pdf test.pdf` and the program will say `yes this is a PDF` or `no this is not a PDF`
+- how do we get the file name?
+	- this will be the first command-line argument in my program
+		- `./pdf test.pdf`
+		- so it will be `argv[1]` as we learned in the prior week
+- this will be done like so:
+	- `string filename = argv[1];
+- what function could we use to open the file?
+	- `fopen()`
+		- again, allows up to open a file, find where it is, and return a pointer to the file we can use in our program.
+		- `fopen()` takes a file-name as its first input
+	- so...
+		- `fopen(filename, "r");`
+		- means to open the file in mode for reading
+		- I don't want to modify the file
+	-  but now I have to keep track of this file pointer by doing this
+		- `FILE *f = fopen(filename, "r");`
+		- this pointer is the output of `fopen()` being called on some file-name to open up that file and tell me exactly where it is in memory
+- with `f` available, I need to figure out how I can *read* from my file...
+	- `fread()`
+		- we know we need to read from, but *what* do we need to do this?
+		- we need a space to store those values first
+			- we want to read into a certain place, but how many chunks, and how large?
+			- PDFs are full of 1 byte chunks, we need the first 4 bytes
+				- we could read these one at a time
+				- we *could* use an array and store those first 4 bytes back to back to back
+			- often, buffers will be arrays of values, so let's try doing that by making an array of integers
+			- then checking if the first 4 bytes are `37, 80, 68, 70`
+		- 
+		- `int buffer[4];`
+			- this is good, but not quite particular enough...
+			- we might have this idea of an integer being 4 bytes in size
+			- we want to read things in individual bytes
+				- 1 byte at a time, not 4 bytes at a time
+- so in order to accomplish this, we actually need to use a special integer type called `uint8_t`
+	- all this is doing is saying: 
+		- *I don't want any generic integer type*
+		- *I want in particular, an integer that is 8 bits or 1 byte long that is unsigned, that is only positive*
+		- that is its own type as well
+	- ***uint8_t*** comes as part of the `stdint.h` library
+		- *only known because read before*
+- when reading files, you could look up what kind of type is best suited for reading data from that file
+- in CS50, we'll tell you in advance what kind of type you should use when you're reading from a particular kind of file.
+
+- how do I read into the buffer now?
+	- we were answering 4 questions here:
+		- where we're reading from
+		- where we're reading to
+
+![[CleanShot 2024-03-17 at 13.17.36@2x.png]]
+- we now successfully have some data inside of our buffer!
+	- we can prove this:
+	- `for (int i = 0; i < 4; i++)`
+		- `printf("%i\n, buffer[i]);`
+
+- at the very end, i will close our file like this:
+	- `fclose(f);`
+
 Questions:
 - what happens if my chunk is bigger than the last bit of a file?
 	- let's say you're reading 8 bytes at a time and there are only 4 bytes left to read:
