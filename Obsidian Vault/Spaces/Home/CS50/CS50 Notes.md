@@ -871,7 +871,7 @@ int x = GetInt();
 float stack_array[x];
 
 // array of floats on the heap
-float * heap_array = malloc(x * size of(float));
+float * heap_array = malloc(x * sizeof(float));
 ```
 - Here's the trouble: dynamically-allocated memory is not auto-returned to the system for later use when the function in which it's created finishes execution
 - Failing to return memory back to the system when you're finished with it results in a **memory leak** which can compromise your system's performance 
