@@ -1716,9 +1716,6 @@ typedef struct
 		- and so forth...
 	- ! pointer arithmetic: doing math on addresses
 - let's head back to VS Code and see some more of this in action:
-```
-
-
 
 - Treating cells like squares/pixels instead of the rectangles
 - cs50.ly/art
