@@ -145,7 +145,18 @@ void swap(int *a, int *b)
 		- ![[CleanShot 2024-03-17 at 00.30.19@2x.png]]
 		- ![[CleanShot 2024-03-17 at 00.30.33@2x.png]]
 		- notice that `main` is at the top of the call stack
-		- let's use ``
+		- let's use *step into* to go into `swap`
+			- notice how I change my variables:
+			- ![[CleanShot 2024-03-17 at 00.32.20@2x.png]]
+			- these are the variables passed into swap
+			- why do you think `temp` has a value of *257*?
+				- @ it's because it is a garbage value or junk value
+			- once I run `swap`, `temp` will be set to `a`
+				- ![[CleanShot 2024-03-17 at 00.33.34@2x.png]]
+				- once line 18 is run, it will be set to the result of dereferencing `*a`
+				- what is at the end of the pointer `a?` (`*a`)?
+					- the value 10
+				- at line 18, set `temp` to 10
 
 
 ## Shorts
