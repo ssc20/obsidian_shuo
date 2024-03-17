@@ -200,10 +200,86 @@ void swap(int *a, int *b)
 		- memory leaks...
 		- you working on your own computer, opening files, opening fiels, never closing them
 		- if you ever want to send it to someone else, you should close it, so no 2 programs are opening a file at the same time
+- ? *How can we actually write to a file?*
 ```c
 FILE *f = fopen("hi.txt", "r");
 ```
+- this is the syntax we can use to write to a file
+	- `fopen` takes 2 arguments
+	- ![[CleanShot 2024-03-17 at 11.30.00@2x.png]]
+	- first, the file
+		- `hi.txt`
+	- then, the second argument: `r`
+		- this is the mode we're using to open this file
+		- there are 2 modes: `r` and `w`
+	- @ what do you think `fopen` returns to us, based on on what you see on the left-hand side?
+		- it *doesn't* return the contents of `hi.txt` (this is close, but not quite)
+		- it's probably a pointer to an address in memory
+			- we have a variable/pointer `f` 
+			- its type is `FILE *`
+			- when we see `type *`, that it is a pointer to that type
+		- within C, there is a type in all caps called `FILE`, which is basically a way of trying to access the file
+			- suffice for now, this allows you to access the file.
+- you can imagine that `f` points to the very beginning of the file `hi.txt`
+- `fopen` returns you the location of this file in memory so you can actually see where it's stored
+	- like you trying in GUI to figure out what directory, what drive, etc. is a file
 
+- Questions
+	- ? why do the modes matter?
+		- `r` stands for read
+		- `w` stands for write
+			- allows you to change/modify in some way
+		- I would say for now, just keep in mind that `fopen` might do 2 different things
+			- it might set up the file in different ways for reading and for writing
+			- *reading* requires us to look at that file and see what it is right now
+			- *writing* we have to set up the process to be able to change that file in some way
+		- you can also use modes to read/write at the same time, as well as others in the C standard library
+
+- use `fclose(f);` to close the file (giving the function pointer to that file `f`)
+	- ![[CleanShot 2024-03-17 at 11.37.51@2x.png]]
+	- we can no longer read or write from it
+
+- let's say we *do* want to read or write from a file
+	- ![[CleanShot 2024-03-17 at 11.38.17@2x.png]]
+	- a file on the right side
+	- program on the left-hand side with some variables
+	- maybe we want to store whatever is inside this file in some variable
+	- as-in, we want to get it into our program so we can modify/use it in some way
+		- if we were to *read* this file, it would be like taking a copy of some chunk of our file and putting it inside of our program
+- so I will take a copy of it, and put it inside this variable called `text`
+	- ![[CleanShot 2024-03-17 at 11.40.05@2x.png]]
+	- now it's inside my program, I have a copy of it that I can use it, modify it as desired
+	- simply a copy though
+- if I want to *write/modify* the values in txt and I want to put that in the file
+	- I could write data by copying what I have in this particular variable of `text` and appending it to the file
+		- ![[CleanShot 2024-03-17 at 11.42.01@2x.png]]
+- Question
+	- ? how do we actually add data to them and read data from them?
+
+#### Key Functions
+- `fread` reads data from a file into a buffer* (or take data from the file and add into our program)
+- `fwrite` writes data from a buffer to a file (or take data from our program and add it to a file)
+- a buffer is a chunk of memory that can temporarily store some data from the file
+	- a buffer is simply: a particular name for a kind of variable that stores, often, file contents
+
+#### Thought Question
+- ? If we want to read an entire file, why use a buffer?
+	- Or, why might you *not* want to read the entire file into memory at once?
+
+- try to avoid overflow, running out of memory
+- run out of segmentation fault
+- the common idea is that maybe the file is too big to load in memory
+- often times too, we don't know how *big* the file is
+
+- this allows us to look at some particular pieces of our file and not the entire file all at once
+- if we have this buffer now, it's worth asking, **how could we get data into that buffer?**
+
+#### Reading from a File
+##### Questions to Answer
+- **From where** are you reading?
+	- what file am I trying to get data from?
+- **To where** are you reading?
+	- where am I trying to read that dat ainto
 
 ## Shorts
 ### Call Stacks
