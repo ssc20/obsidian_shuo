@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5c97885c79420b63",
@@ -206,8 +207,8 @@
   },
   "active": "5476e0851599ccf2",
   "lastOpenFiles": [
-    "2024-03-17.md",
     "Spaces/Home/CS50/CS50 Notes.md",
+    "2024-03-17.md",
     "CleanShot 2024-03-17 at 13.50.08@2x.png",
     "CleanShot 2024-03-17 at 13.48.17@2x.png",
     "CleanShot 2024-03-17 at 13.46.58@2x.png",

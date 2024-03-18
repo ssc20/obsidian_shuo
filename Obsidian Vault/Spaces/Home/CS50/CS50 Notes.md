@@ -345,7 +345,7 @@ Questions
 		- ...which is stored in individual characters -- we could say the individual chunks of this file are simply 1 byte long
 		- we could tell `fread()` we are reading chunks that are 1 byte big
 	- ? the next question: *how many should I read all at once?*
-		- we can read 4, 2, 1 at a time, whatever it is:
+		- we can read 4, 2, 1 at a time, whatever it is: (number of chunks)
 		- let's say I want to read in 4 byte sliding windows.
 		- I'm looking at my file, I want to read whatever is in the first 4 chunks.
 			- my pointer `f` points the first one.
