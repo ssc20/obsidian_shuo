@@ -1,1 +1,1 @@
-Mikayla and I have been in a committed relationship for the past few years.A75539A3AF6C
+Mikayla and I have been in a committed relationship for the past few years. To my memory, we began dating around 2020, just before the pandemic, while I was still working at Cineplex. We met off of Bumble, a dating app, while she lived in Orillia, a small town far from Toronto. 
