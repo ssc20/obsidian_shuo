@@ -8,43 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1d0691a9b27cbcdc",
+            "id": "8197fb10945e60e6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2cbf04602a0a8a48",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5476e0851599ccf2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Mikayla Manifesto.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,8 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5c97885c79420b63",
@@ -120,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md"
+                "file": "Mikayla Manifesto.md"
               }
             }
           },
@@ -148,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Mikayla Manifesto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "file": "Mikayla Manifesto.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -205,8 +179,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "5476e0851599ccf2",
+  "active": "8197fb10945e60e6",
   "lastOpenFiles": [
+    "2024-03-18.md",
+    "Mikayla Manifesto.md",
+    "Home.md",
     "Spaces/Home/CS50/CS50 Notes.md",
     "2024-03-17.md",
     "CleanShot 2024-03-17 at 13.50.08@2x.png",
@@ -220,7 +197,6 @@
     "CleanShot 2024-03-17 at 13.22.38@2x.png",
     "CleanShot 2024-03-17 at 13.20.12@2x.png",
     "CleanShot 2024-03-17 at 00.21.24.mp4",
-    "Home.md",
     "CleanShot 2024-03-10 at 15.46.33.mp4",
     "2024-03-10.md",
     "conflict-files-obsidian-git.md",
@@ -237,7 +213,6 @@
     "Spaces/Home/Writing/TLOU/Rebuttals/Ellie's (lack of a) character arc & why the result is an unsatisfying story.md",
     "Spaces/Home/Writing/TLOU",
     "Spaces/Home/Writing/TLOU/Rebuttals",
-    "Untitled.md",
     "Spaces/Home/Philosophy/Objectivism.md",
     "202402242224.md",
     "Spaces/Home/Untitled.canvas",
