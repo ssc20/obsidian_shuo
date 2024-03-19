@@ -54,6 +54,7 @@ tags:
 	- 8 bits for blue
 	- 8 bits for green
 	- 8 bits for red
+- 
 
 
 ### Volume
