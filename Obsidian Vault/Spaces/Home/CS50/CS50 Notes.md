@@ -54,7 +54,34 @@ tags:
 	- 8 bits for blue
 	- 8 bits for green
 	- 8 bits for red
+- (Some BMPs also store the entire bitmap backwards, with an image's top row at the end of the BMP file)
+	- (But we've stored this problem set's BMPs as described here in, with each bitmap's top row first and bottom row last)
+- In other words, were we to convert the 1-bit smiley above to a 24-bit smiley, substituting red for black
+	- a 24-bit BMP would store this bitmap as follows, where `0000ff` signifies *red* and `ffffff` signifies *white*
+	- we've highlighted in red all instances of `0000ff`
+	- ![[CleanShot 2024-03-18 at 22.08.07.png]]
+- Because we've presented these bits from left to right, top to bottom:
+	- in 8 columns, you can actually see the red smiley if you take a step back
+
+- To be clear, recall that a hexadecimal digit represents 4 bits
+	- accordingly, `ffffff` in hexadecimal actually signifies `111111111111111111111111`
+- Notice that you could represent a bitmap as a 2-dimensional array of pixels: 
+	- where the image is an array of rows
+	- each row is an array of pixels
+	- Indeed, that's how we've chosen to represent bitmap images in this problem
+
+##### Image Filtering
+- What does it even mean to filter an image?
+	- you can think of *filtering an image* as taking the pixels of some original image, and modifying each pixel in such a way that a particular effect is apparent in the resulting image
+
+#### Understanding 
+Let's now take a look at some of the files provided to you as distribution code to get an understanding for what's inside of them
+
+###### `bmp.h`
+- Open up `bmp.h` (as by double-clicking on it in the file browser) and have a lok
+- you'll see definitions of the headers we've mentioned (`BITMAPINFOHEADER` and `BITMAPFILEHEADER`)
 - 
+
 
 
 ### Volume
