@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mikayla Manifesto.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4a197f084eeb736b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,7 +108,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mikayla Manifesto.md"
+                "file": "Spaces/Home/CS50/CS50 Notes.md"
               }
             }
           },
@@ -123,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mikayla Manifesto.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mikayla Manifesto.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,10 +193,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "8197fb10945e60e6",
+  "active": "4a197f084eeb736b",
   "lastOpenFiles": [
-    "2024-03-18.md",
+    "CleanShot 2024-03-18 at 21.49.41.png",
     "Mikayla Manifesto.md",
+    "2024-03-18.md",
     "Home.md",
     "Spaces/Home/CS50/CS50 Notes.md",
     "2024-03-17.md",
