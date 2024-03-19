@@ -36,6 +36,24 @@ tags:
 - In this problem, you'll manipulate these R, G, and B values of individual pixels ultimately creating your very own image filters.
 - In a file called `helpers.c` in a folder called `filter-less`, write a program to apply filters to BMPs
 
+#### Background
+##### A Bit(map) More Technical
+- Recall that a file is just a sequence of bits arranged in some fashion
+- A 24-bit BMP file, then, is essentially just a sequence of bits, (almost) every 24 of which happen to represent some pixel's color
+	- a BMP file also contains some "metadata"
+		- information such as an image's height and width
+	- this metadata is stored at the beginning of the file in the form of 2 data structures generally referred to as "headers", not to be confused with C's header files
+		- (incidentally, these headers have evolved over time)
+		- (This problem uses the latest version of Microsoft's BMP format, 4.0., which debuted with Windows 95)
+- The first of these headers is `BITMAPFILEHEADER` which is 14 bytes long
+	- ! recall that 1 byte equals 8 bits
+- The second of these headers, called `BITMAPINFOHEADER`, is 40 bytes long
+- immediately following these headers is the actual bitmap:
+	-  an array of bytes, **triples** of which represent a pixel's color
+- However, BMP stores these triples backwards (i.e., as BGR) with: 
+	- 8 bits for blue
+	- 8 bits for green
+	- 8 bits for red
 
 
 ### Volume
