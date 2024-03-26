@@ -22,7 +22,14 @@ typedef int32_t LONG;
 typedef uint16_t WORD;
 ```
 
-- BYTE, uint8_t: 
+- BYTE, uint8_t: 8 bits OR 1 BYTE
+- DWORD, uint32_t: 32 bits or 4 BYTES
+- LONG, int32_t: 32 bits, 4 BYTES, (signed integer)
+- WORD, uint16_T: 16 bits, 2 BYTES
+
+`BITMAPFILEHEADER;`
+8 + 32 + 8 + 8 + 32
+= 100 bits
 
 
 ## PSET4
@@ -128,9 +135,6 @@ typedef struct
 BITMAPINFOHEADER;
 ```
 
-
-
-
 - in addition, that file defines: 
 	- `BYTE`
 	- `DWORD`
@@ -158,7 +162,7 @@ BITMAPINFOHEADER;
 
 
 ##### `filter.c`
-- let's open u `filter.c`
+- let's open up `filter.c`
 	- this file has already been written for you, but there are a couple important points worth noting here
 - First, notice the definition of `filters` on line 10
 	- that string tells the program what the allowable command-line arguments to the program are:

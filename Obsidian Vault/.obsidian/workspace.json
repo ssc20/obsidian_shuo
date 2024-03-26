@@ -20,6 +20,24 @@
             }
           }
         ]
+      },
+      {
+        "id": "d26ac833f1467390",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "93bcdc95b09668af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -176,11 +194,11 @@
       "templater-obsidian:Templater": false,
       "homepage:Open homepage": false,
       "obsidian-statusbar-pomo:Start pomodoro": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-day-planner:Timeline": false
+      "obsidian-day-planner:Timeline": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "dd74e4d5db66e27a",
+  "active": "93bcdc95b09668af",
   "lastOpenFiles": [
     "Home.md",
     "2024-03-22.md",
