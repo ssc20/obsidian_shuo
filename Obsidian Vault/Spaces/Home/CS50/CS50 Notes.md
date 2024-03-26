@@ -31,6 +31,8 @@ typedef uint16_t WORD;
 8 + 32 + 8 + 8 + 32
 = 100 bits
 
+2 BYTES + 4 BYTES + 2 BYTES + 2 BYTES + 4 BYTES
+
 
 ## PSET4
 
