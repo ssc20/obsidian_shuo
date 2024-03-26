@@ -78,8 +78,9 @@ tags:
 Let's now take a look at some of the files provided to you as distribution code to get an understanding for what's inside of them
 
 ###### `bmp.h`
-- Open up `bmp.h` (as by double-clicking on it in the file browser) and have a lok
-- you'll see definitions of the headers we've mentioned (`BITMAPINFOHEADER` and `BITMAPFILEHEADER`)
+- Open up `bmp.h` (as by double-clicking on it in the file browser) and have a look
+- you'll see definitions of the headers we've mentioned
+	-  (`BITMAPINFOHEADER` and `BITMAPFILEHEADER`)
 - in addition, that file defines: 
 	- `BYTE`
 	- `DWORD`
