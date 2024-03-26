@@ -86,7 +86,7 @@ Let's now take a look at some of the files provided to you as distribution code 
 	- `DWORD`
 	- `LONG`
 	- `WORD`
-- ...data types normally found in the world of Windows programming 
+- *...data types normally found in the world of Windows programming* 
 - notice how they're just aliases for primitives with which you are (hopefully) already familiar
 	- it appears that `BITMAPFILEHEADER` and `BITMAPINFOHEADER` make use of these types
 - @ Most importantly: this file also defines a `struct` called `RGBTRIPLE` which quite simply "encapsulates" 3 bytes
