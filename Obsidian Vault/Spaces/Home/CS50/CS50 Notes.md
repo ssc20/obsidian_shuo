@@ -81,6 +81,45 @@ Let's now take a look at some of the files provided to you as distribution code 
 - Open up `bmp.h` (as by double-clicking on it in the file browser) and have a look
 - you'll see definitions of the headers we've mentioned
 	-  (`BITMAPINFOHEADER` and `BITMAPFILEHEADER`)
+
+```c
+// The BITMAPFILEHEADER structure contains information about the type, size,
+// and layout of a file that contains a DIB [device-independent bitmap].
+// Adapted from http://msdn.microsoft.com/en-us/library/dd183374(VS.85).aspx.
+
+typedef struct
+{
+    WORD   bfType;
+    DWORD  bfSize;
+    WORD   bfReserved1;
+    WORD   bfReserved2;
+    DWORD  bfOffBits;
+} __attribute__((__packed__))
+BITMAPFILEHEADER;
+// --++---
+// The BITMAPINFOHEADER structure contains information about the
+// dimensions and color format of a DIB [device-independent bitmap].
+// Adapted from http://msdn.microsoft.com/en-us/library/dd183376(VS.85).aspx.
+typedef struct
+{
+    DWORD  biSize;
+    LONG   biWidth;
+    LONG   biHeight;
+    WORD   biPlanes;
+    WORD   biBitCount;
+    DWORD  biCompression;
+    DWORD  biSizeImage;
+    LONG   biXPelsPerMeter;
+    LONG   biYPelsPerMeter;
+    DWORD  biClrUsed;
+    DWORD  biClrImportant;
+} __attribute__((__packed__))
+BITMAPINFOHEADER;
+```
+
+
+
+
 - in addition, that file defines: 
 	- `BYTE`
 	- `DWORD`

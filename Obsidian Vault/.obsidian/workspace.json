@@ -13,24 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Home.md",
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "614a3741c538d827",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.11"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -105,7 +94,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md"
+              }
             }
           },
           {
@@ -132,6 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,13 +140,14 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Spaces/Home/CS50/CS50 Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "86f6d818d29ebee3",
+            "id": "f3878ad36070f8f9",
             "type": "leaf",
             "state": {
               "type": "timeline",
@@ -183,11 +176,11 @@
       "templater-obsidian:Templater": false,
       "homepage:Open homepage": false,
       "obsidian-statusbar-pomo:Start pomodoro": false,
-      "obsidian-day-planner:Timeline": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-day-planner:Timeline": false
     }
   },
-  "active": "614a3741c538d827",
+  "active": "dd74e4d5db66e27a",
   "lastOpenFiles": [
     "Home.md",
     "2024-03-22.md",
